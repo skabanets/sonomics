@@ -1,8 +1,9 @@
-import { Industries } from "../sections";
+import { WhyUs, Industries } from "../sections";
 
 const Home = () => {
   return (
     <>
+      <WhyUs />
       <Industries />
     </>
   );
