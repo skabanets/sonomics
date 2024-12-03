@@ -82,7 +82,7 @@ html[data-theme="dark"] {
 }
 
 body {
-  @apply bg-primaryBgColor font-montserrat text-mainTextColor min-h-screen transition-all duration-300 ease-in;
+  @apply min-h-screen bg-primaryBgColor font-montserrat leading-6 text-mainTextColor transition-all duration-300 ease-in;
 }
 
 h1 {
