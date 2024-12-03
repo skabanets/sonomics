@@ -1,5 +1,11 @@
+import { Industries } from "../sections";
+
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <>
+      <Industries />
+    </>
+  );
 };
 
 export default Home;
