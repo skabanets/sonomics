@@ -16,7 +16,7 @@ export const ViewAllLink = ({
   return (
     <Link
       to={link}
-      className={`flex items-center gap-2.5 text-[20px] font-extrabold leading-[30px] ${textColor}`}
+      className={`flex items-center gap-[10px] text-[20px] font-extrabold leading-[30px] ${textColor}`}
     >
       View all
       <Icon id="arrow" className={`size-[15px] ${iconColor}`} />
