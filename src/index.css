@@ -1,3 +1,130 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Fonts */
+@font-face {
+  font-family: "Montserrat";
+  src:
+    url("./assets/fonts/Montserrat-Regular.woff2") format("woff2"),
+    url("./assets/fonts/Montserrat-Regular.woff") format("woff"),
+    url("./assets/fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src:
+    url("./assets/fonts/Montserrat-Medium.woff2") format("woff2"),
+    url("./assets/fonts/Montserrat-Medium.woff") format("woff"),
+    url("./assets/fonts/Montserrat-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src:
+    url("./assets/fonts/Montserrat-SemiBold.woff2") format("woff2"),
+    url("./assets/fonts/Montserrat-SemiBold.woff") format("woff"),
+    url("./assets/fonts/Montserrat-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src:
+    url("./assets/fonts/Montserrat-ExtraBold.woff2") format("woff2"),
+    url("./assets/fonts/Montserrat-ExtraBold.woff") format("woff"),
+    url("./assets/fonts/Montserrat-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Light Theme */
+html[data-theme="light"] {
+  --primary-bg: #ffffff;
+  --secondary-bg: #f3f2f2;
+  --black-bg: #161515;
+  --dark-bg: #323031;
+
+  --main-text: #323031;
+  --secondary-text: #74716f;
+  --white-text: #ffffff;
+  --secondary-light-text: #c1bebf;
+
+  --accent-red: #fc561d;
+  --accent-yellow: #f8b332;
+  --accent-orange: #fa7b26;
+}
+
+/* Dark Theme */
+html[data-theme="dark"] {
+  --primary-bg: #161515;
+  --secondary-bg-color: #161515;
+  --black-bg-color: #161515;
+  --dark-bg-color: #323031;
+
+  --main-text: #ffffff;
+  --secondary-text: #c1bebf;
+  --white-text: #ffffff;
+  --secondary-light-text: #c1bebf;
+
+  --accent-red: #fc561d;
+  --accent-yellow: #f8b332;
+  --accent-orange: #fa7b26;
+}
+
+body {
+  @apply bg-primaryBgColor font-montserrat text-mainTextColor min-h-screen transition-all duration-300 ease-in;
+}
+
+h1 {
+  @apply text-[70px] font-extrabold leading-[92px];
+}
+
+h2 {
+  @apply text-[40px] font-extrabold leading-[58px];
+}
+
+h3 {
+  @apply text-[24px] font-semibold leading-[36px];
+}
+
+h4 {
+  @apply text-[20px] font-extrabold leading-[30px];
+}
+
+h5 {
+  @apply text-[18px] font-extrabold leading-[28px];
+}
+
+h6 {
+  @apply text-[20px] font-normal leading-[36px];
+}
+
+.big-text {
+  @apply text-[18px] font-normal leading-[30px];
+}
+
+.small-text {
+  @apply text-[16px] font-normal leading-[24px];
+}
+
+.bold-text {
+  @apply text-[16px] font-semibold leading-[26px];
+}
+
+.label {
+  @apply text-[12px] font-semibold leading-[20px];
+}
+
+.transition {
+  @apply transition-all duration-300 ease-in;
+}
