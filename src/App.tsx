@@ -10,6 +10,7 @@ const Services = lazy(() => import("./pages/Services"));
 const Industries = lazy(() => import("./pages/Industries"));
 const CaseStudy = lazy(() => import("./pages/CaseStudy"));
 const About = lazy(() => import("./pages/About"));
+
 export const App = () => {
   return (
     <Routes>
