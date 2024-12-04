@@ -7,3 +7,4 @@ export * from "./themeMode";
 export * from "./navLinks";
 export * from "./socialLinks";
 export * from "./caseStudies";
+export * from "./sonomicsNumbers";
