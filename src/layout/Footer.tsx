@@ -8,7 +8,7 @@ export const Footer = () => {
   return (
     <footer className="bg-blackBgColor pb-[20px] pt-[80px]">
       <div className="container flex pb-[40px]">
-        <div className="mr-[416px] w-[281px] space-y-[22px]">
+        <div className="mr-auto w-[281px] space-y-[22px]">
           {" "}
           <Logo className="fill-whiteTextColor" />
           <h2 className="text-whiteTextColor">Let&#8217;s work together</h2>
@@ -44,7 +44,7 @@ export const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="border-grey600Color container max-w-[1280px] border-t pt-[30px] text-center">
+      <div className="container max-w-[1280px] border-t border-grey600Color pt-[30px] text-center">
         <p className="small-text text-white">© 2024 Sonomics, Inc. All rights reserved</p>
       </div>
     </footer>
