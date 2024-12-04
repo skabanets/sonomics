@@ -11,7 +11,6 @@ interface CaseCardProps {
 
 export const CaseCard = ({ caseStudy }: CaseCardProps) => {
   const { casesImages } = images;
-  console.log(casesImages);
 
   return (
     <li className="group w-[600px]">
@@ -31,12 +30,9 @@ export const CaseCard = ({ caseStudy }: CaseCardProps) => {
           <CustomTitle
             type="h3"
             wrapperStyles="flex flex items-center gap-[15px]"
-            text="Case study name"
+            text={caseStudy.name}
           />
-          <p className="opacity-[0.6]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore
-          </p>
+          <p className="opacity-[0.6]">{caseStudy.description}</p>
         </div>
       </Link>
     </li>
