@@ -94,7 +94,7 @@ html[data-theme="dark"] {
 }
 
 body {
-  @apply min-h-screen bg-primaryBgColor font-montserrat leading-6 text-mainTextColor transition-all duration-300 ease-in;
+  @apply min-h-screen bg-primaryBgColor font-montserrat leading-6 text-mainTextColor;
 }
 
 #root {
@@ -150,7 +150,7 @@ h6 {
 }
 
 .active {
-  @apply text-navlinkActiveColor border-navlinkActiveColor border-b;
+  @apply border-b border-navlinkActiveColor text-navlinkActiveColor;
 }
 
 .react-switch-bg {

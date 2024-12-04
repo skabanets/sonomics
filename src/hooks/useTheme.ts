@@ -1,4 +1,4 @@
-import { useLayoutEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 
 import { ThemeMode } from "../constants";
 
@@ -7,6 +7,10 @@ export const useTheme = () => {
   const initialTheme = ThemeMode.DARK === savedTheme ? savedTheme : ThemeMode.LIGHT;
 
   const [theme, setTheme] = useState(initialTheme);
+
+  useEffect(() => {
+    document.body.classList.add("transition");
+  }, []);
 
   useLayoutEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
