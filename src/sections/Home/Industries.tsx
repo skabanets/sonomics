@@ -1,4 +1,5 @@
-import { CustomLink, IndustryCard } from "../../components";
+import { Link } from "react-router-dom";
+import { CustomTitle, IndustryCard } from "../../components";
 
 import { industries, routes } from "../../constants";
 
@@ -11,14 +12,19 @@ export const Industries = () => {
           {industries.map((industry) => (
             <IndustryCard key={industry.id} industry={industry} />
           ))}
-          <div className="flex h-[317px] w-[200px] items-center justify-center rounded-[20px] bg-darkBgColor p-[30px]">
-            <CustomLink
-              link={routes.Industries}
-              layout="gap"
-              textColor="text-whiteTextColor"
-              iconColor="fill-whiteTextColor"
-            />
-          </div>
+          <li className="rounded-[20px] border border-transparent bg-darkBgColor transition hover:border-accentYellowColor">
+            <Link
+              to={routes.Industries}
+              className="flex h-[317px] w-[200px] items-center justify-center"
+            >
+              <CustomTitle
+                type="h4"
+                wrapperStyles="flex items-center gap-[10px]"
+                iconColor="fill-whiteTextColor"
+                titleStyles="text-whiteTextColor"
+              />
+            </Link>
+          </li>
         </ul>
       </div>
     </section>
