@@ -1,4 +1,6 @@
-import { Icon } from "../components";
+import { Link } from "react-router-dom";
+
+import { CustomTitle, Icon } from "../components";
 
 import { Industry } from "../types";
 
@@ -8,15 +10,20 @@ interface IndustryCardProps {
 
 export const IndustryCard = ({ industry }: IndustryCardProps) => {
   return (
-    <li className="flex h-[317px] w-[340px] flex-col gap-[38px] rounded-[20px] bg-darkBgColor p-[30px]">
-      <Icon id={industry.icon} className="size-10 fill-accentYellowColor" />
-      <div className="flex flex-col gap-[8px]">
-        <div className="flex items-center justify-between">
-          <h5 className="leading-[27px] text-whiteTextColor">{industry.name}</h5>
-          <Icon id="arrow" className="size-[15px] fill-whiteTextColor" />
+    <li className="rounded-[20px] border border-solid border-transparent bg-darkBgColor transition hover:border-accentYellowColor">
+      <Link to={industry.link} className="flex h-[317px] w-[340px] flex-col gap-[38px] p-[30px]">
+        <Icon id={industry.icon} className="size-10 fill-accentYellowColor" />
+        <div className="flex flex-col gap-[8px]">
+          <CustomTitle
+            type="h5"
+            wrapperStyles="flex items-center justify-between"
+            iconColor="fill-whiteTextColor"
+            titleStyles="text-whiteTextColor"
+            text={industry.name}
+          />
+          <p className="text-secondaryLightTextColor opacity-[0.6]">{industry.description}</p>
         </div>
-        <p className="text-secondaryLightTextColor opacity-[0.6]">{industry.description}</p>
-      </div>
+      </Link>
     </li>
   );
 };
