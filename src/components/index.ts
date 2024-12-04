@@ -10,3 +10,4 @@ export * from "./Logo";
 export * from "./ThemeToggle";
 export * from "./Button";
 export * from "./NavMenu";
+export * from "./CaseCard";
