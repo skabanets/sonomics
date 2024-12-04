@@ -160,3 +160,7 @@ h6 {
 .react-switch-handle {
   @apply !translate-x-themeToggleTranslate;
 }
+
+.view-link {
+  @apply relative transition before:absolute before:bottom-0 before:left-0 before:h-[1.5px] before:w-0 before:bg-accentRedColor before:transition-all hover:before:w-full;
+}
