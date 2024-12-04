@@ -63,14 +63,17 @@ html[data-theme="light"] {
   --accent-red: #fc561d;
   --accent-yellow: #f8b332;
   --accent-orange: #fa7b26;
+  --navlink-active-color: #fc561d;
+
+  --theme-toggle-translate: 5px;
 }
 
 /* Dark Theme */
 html[data-theme="dark"] {
   --primary-bg: #161515;
-  --secondary-bg-color: #161515;
-  --black-bg-color: #161515;
-  --dark-bg-color: #323031;
+  --secondary-bg: #161515;
+  --black-bg: #161515;
+  --dark-bg: #323031;
   --theme-toggle-bg: #323031;
 
   --main-text: #ffffff;
@@ -81,6 +84,9 @@ html[data-theme="dark"] {
   --accent-red: #fc561d;
   --accent-yellow: #f8b332;
   --accent-orange: #fa7b26;
+  --navlink-active-color: #f8b332;
+
+  --theme-toggle-translate: 27.5px;
 }
 
 body {
@@ -132,9 +138,13 @@ h6 {
 }
 
 .active {
-  @apply text-accentRedColor;
+  @apply text-navlinkActiveColor border-navlinkActiveColor border-b;
 }
 
 .react-switch-bg {
   @apply shadow-[inset_0_1px_3px_rgba(0,0,0,0.15)];
+}
+
+.react-switch-handle {
+  @apply !translate-x-themeToggleTranslate;
 }
