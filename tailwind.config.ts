@@ -25,6 +25,11 @@ export default {
         accentRedColor: "var(--accent-red)",
         accentYellowColor: "var(--accent-yellow)",
         accentOrangeColor: "var(--accent-orange)",
+
+        navlinkActiveColor: "var(--navlink-active-color)",
+      },
+      spacing: {
+        themeToggleTranslate: "var(--theme-toggle-translate)",
       },
     },
   },
