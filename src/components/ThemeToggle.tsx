@@ -25,6 +25,7 @@ export const ThemeToggle = () => {
 
   return (
     <Switch
+      className=""
       width={49}
       height={23}
       borderRadius={170}
@@ -36,12 +37,12 @@ export const ThemeToggle = () => {
       uncheckedHandleIcon={<ToggleIndicator />}
       checkedHandleIcon={<ToggleIndicator />}
       checkedIcon={
-        <div className="flex h-full w-full items-center justify-center">
+        <div className="flex h-full w-full items-center justify-start py-[4px] pl-[5px]">
           <Icon id="sun" className="size-[16px] fill-[#f3f2f2]" />
         </div>
       }
       uncheckedIcon={
-        <div className="flex h-full w-full items-center justify-center">
+        <div className="flex h-full w-full items-center justify-end py-[4px] pr-[5px]">
           <Icon id="moon" className="size-[16px] fill-secondaryTextColor" />
         </div>
       }
