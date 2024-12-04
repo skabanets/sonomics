@@ -1,9 +1,11 @@
-import { AboutSonomics } from "../sections";
+import { AboutSonomics, SonomicsNumbers, SuccessfulStories } from "../sections";
 
 const About = () => {
   return (
     <>
       <AboutSonomics />
+      <SonomicsNumbers />
+      <SuccessfulStories />
     </>
   );
 };
