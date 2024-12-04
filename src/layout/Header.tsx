@@ -1,8 +1,4 @@
-import { NavLink } from "react-router-dom";
-
-import { Button, Logo, ThemeToggle } from "../components";
-
-import { navLinks } from "../constants";
+import { Button, Logo, NavMenu, ThemeToggle } from "../components";
 
 export const Header = () => {
   return (
@@ -12,16 +8,7 @@ export const Header = () => {
           <Logo applyThemeColor />
           <div className="flex items-center gap-[50px]">
             <ThemeToggle />
-            <ul className="flex gap-[50px] font-medium text-mainTextColor transition">
-              {navLinks.map(({ text, link }, index) => (
-                <li key={index}>
-                  {" "}
-                  <NavLink className="py-[5px]" to={link}>
-                    {text}
-                  </NavLink>{" "}
-                </li>
-              ))}
-            </ul>
+            <NavMenu className="flex gap-[50px] font-medium text-mainTextColor transition" />
             <Button label="Contact us" />
           </div>
         </nav>
