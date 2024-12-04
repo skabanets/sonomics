@@ -94,7 +94,7 @@ html[data-theme="dark"] {
 }
 
 body {
-  @apply min-h-screen bg-primaryBgColor font-montserrat leading-6 text-mainTextColor transition-all duration-300 ease-in;
+  @apply min-h-screen bg-primaryBgColor font-montserrat leading-6 text-mainTextColor;
 }
 
 #root {
@@ -163,4 +163,8 @@ h6 {
 
 .view-link {
   @apply relative transition before:absolute before:bottom-0 before:left-0 before:h-[1.5px] before:w-0 before:bg-accentRedColor before:transition-all hover:before:w-full;
+}
+
+.scale-on-hover {
+  @apply transform transition-transform duration-500 group-hover:scale-110;
 }
