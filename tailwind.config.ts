@@ -27,6 +27,8 @@ export default {
         accentOrangeColor: "var(--accent-orange)",
 
         navlinkActiveColor: "var(--navlink-active-color)",
+
+        grey600Color: "var(--grey-600)",
       },
       spacing: {
         themeToggleTranslate: "var(--theme-toggle-translate)",

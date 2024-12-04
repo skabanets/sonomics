@@ -65,6 +65,8 @@ html[data-theme="light"] {
   --accent-orange: #fa7b26;
   --navlink-active-color: #fc561d;
 
+  --grey-600: #74716f;
+
   --theme-toggle-translate: 5px;
 }
 
@@ -86,11 +88,21 @@ html[data-theme="dark"] {
   --accent-orange: #fa7b26;
   --navlink-active-color: #f8b332;
 
+  --grey-600: #74716f;
+
   --theme-toggle-translate: 27.5px;
 }
 
 body {
   @apply min-h-screen bg-primaryBgColor font-montserrat leading-6 text-mainTextColor transition-all duration-300 ease-in;
+}
+
+#root {
+  @apply flex min-h-screen flex-col;
+}
+
+main {
+  @apply grow-[1];
 }
 
 h1 {
