@@ -9,7 +9,7 @@ export const Button = ({ label, width = "w-[170px]", ...rest }: ButtonProps) => 
   return (
     <button
       type="button"
-      className={`flex h-[47px] ${width} items-center justify-center gap-[10px] rounded-[90px] bg-accentRedColor px-[23px] py-[10px] text-[18px] font-medium leading-[1.5] text-whiteTextColor`}
+      className={`flex h-[47px] ${width} items-center justify-center gap-[10px] rounded-[90px] bg-accentRedColor px-[23px] py-[10px] text-[18px] font-medium leading-[1.5] text-whiteTextColor transition hover:bg-accentOrangeColor focus-visible:bg-accentOrangeColor active:bg-accentOrangeColor`}
       {...rest}
     >
       {label}
