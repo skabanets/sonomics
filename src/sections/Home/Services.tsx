@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-import { CustomLink, Divider } from "../../components";
+import { CustomTitle, Divider } from "../../components";
 
 import { serviceLinks, routes } from "../../constants";
 
@@ -10,25 +11,28 @@ export const Services = () => {
       <div className="container flex flex-row justify-between">
         <h2 className="w-[412px] pt-[4px]">What we can do for our clients</h2>
         <div className="flex w-[630px] flex-col gap-[25px]">
-          {serviceLinks.map((link) => (
-            <React.Fragment key={link.id}>
+          {serviceLinks.map((service) => (
+            <React.Fragment key={service.id}>
               <Divider />
-              <CustomLink
-                text={link.text}
-                layout="justify-between"
-                textColor="text-mainTextColor"
-                iconColor="fill-mainTextColor"
-                padding="px-[10px]"
-              />
+              <Link to={service.link}>
+                <CustomTitle
+                  type="h4"
+                  wrapperStyles="flex items-center justify-between px-[10px]"
+                  text={service.text}
+                />
+              </Link>
             </React.Fragment>
           ))}
           <Divider />
-          <CustomLink
-            link={routes.Services}
-            text="More services"
-            layout="justify-between"
-            padding="px-[10px]"
-          />
+          <Link to={routes.Services}>
+            <CustomTitle
+              type="h4"
+              wrapperStyles="flex items-center justify-between px-[10px]"
+              titleStyles="text-accentRedColor"
+              iconColor="fill-accentRedColor"
+              text="More services"
+            />
+          </Link>
           <Divider />
         </div>
       </div>
