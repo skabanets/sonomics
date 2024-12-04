@@ -9,3 +9,4 @@ export * from "./Divider";
 export * from "./Logo";
 export * from "./ThemeToggle";
 export * from "./Button";
+export * from "./NavMenu";
