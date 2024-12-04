@@ -19,6 +19,10 @@ export const ThemeToggle = () => {
     }
   }, [theme]);
 
+  const ToggleIndicator = () => (
+    <div className="size-[16px] rounded-full bg-accentYellowColor"></div>
+  );
+
   return (
     <Switch
       width={49}
@@ -29,16 +33,16 @@ export const ThemeToggle = () => {
       checked={theme === ThemeMode.DARK}
       onColor={bgColor}
       offColor={bgColor}
-      uncheckedHandleIcon={<div className="size-[16px] rounded-full bg-accentYellowColor"></div>}
-      checkedHandleIcon={<div className="size-[16px] rounded-full bg-accentYellowColor"></div>}
+      uncheckedHandleIcon={<ToggleIndicator />}
+      checkedHandleIcon={<ToggleIndicator />}
       checkedIcon={
         <div className="flex h-full w-full items-center justify-center">
-          <Icon id="sun" className="h-4 w-4" />
+          <Icon id="sun" className="size-[16px] fill-[#f3f2f2]" />
         </div>
       }
       uncheckedIcon={
         <div className="flex h-full w-full items-center justify-center">
-          <Icon id="moon" className="h-4 w-4" />
+          <Icon id="moon" className="size-[16px] fill-secondaryTextColor" />
         </div>
       }
       activeBoxShadow="none"
