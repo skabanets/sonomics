@@ -1,5 +1,11 @@
+import { AboutSonomics } from "../sections";
+
 const About = () => {
-  return <div>About</div>;
+  return (
+    <>
+      <AboutSonomics />
+    </>
+  );
 };
 
 export default About;
