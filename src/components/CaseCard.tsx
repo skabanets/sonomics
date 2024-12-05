@@ -7,23 +7,32 @@ import { CaseStudy } from "../types";
 
 interface CaseCardProps {
   caseStudy: CaseStudy;
+  containerStyles?: string;
+  imageWidth?: number;
+  imageHeight?: number;
 }
 
-export const CaseCard = ({ caseStudy }: CaseCardProps) => {
+export const CaseCard = ({
+  caseStudy,
+  containerStyles = "w-[600px]",
+  imageWidth = 600,
+  imageHeight = 500,
+}: CaseCardProps) => {
   const { casesImages } = images;
 
   return (
-    <li className="group w-[600px]">
+    <div className={`group h-auto ${containerStyles}`}>
       <Link to={caseStudy.link}>
-        <div className="relative overflow-hidden rounded-[40px] bg-[#D9D9D9]">
+        <div className="relative overflow-hidden rounded-[40px]">
           <img
             srcSet={`${casesImages[caseStudy.image]} 1x, ${casesImages[caseStudy.retinaImage]} 2x`}
             src={casesImages[caseStudy.image]}
             alt="Case study 1"
-            width="600"
-            height="500"
+            width={imageWidth}
+            height={imageHeight}
             loading="lazy"
             className="scale-on-hover"
+            style={{ height: `${imageHeight}px` }}
           />
         </div>
         <div className="flex flex-col gap-[10px] pt-[20px]">
@@ -35,6 +44,6 @@ export const CaseCard = ({ caseStudy }: CaseCardProps) => {
           <p className="opacity-[0.6]">{caseStudy.description}</p>
         </div>
       </Link>
-    </li>
+    </div>
   );
 };
