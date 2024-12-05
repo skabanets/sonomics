@@ -8,3 +8,5 @@ export * from "./navLinks";
 export * from "./socialLinks";
 export * from "./caseStudies";
 export * from "./sonomicsNumbers";
+export * from "./teamMembers";
+export * from "./accentColors";
