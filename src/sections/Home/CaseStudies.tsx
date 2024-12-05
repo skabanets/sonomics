@@ -2,36 +2,13 @@ import { Link } from "react-router-dom";
 
 import { CaseCard, CustomTitle } from "../../components";
 
-import { caseStudies, routes } from "../../constants";
+import { caseStudieStyles, caseStudies, routes } from "../../constants";
 import { CaseStudy } from "../../types";
 
 export const CaseStudies = () => {
-  const styles = [
-    {
-      containerStyles: "w-[540px] mr-auto",
-      width: 540,
-      height: 500,
-    },
-    {
-      containerStyles: "w-[620px]",
-      width: 620,
-      height: 370,
-    },
-    {
-      containerStyles: "w-[620px]",
-      width: 620,
-      height: 370,
-    },
-    {
-      containerStyles: "w-[540px] ml-auto",
-      width: 540,
-      height: 500,
-    },
-  ];
-
   const styledCaseStudies = caseStudies.map((caseStudy, index) => ({
     ...caseStudy,
-    styles: styles[index],
+    styles: caseStudieStyles[index],
   }));
 
   const columns = [styledCaseStudies.slice(0, 2), styledCaseStudies.slice(2, 4)];

@@ -1,4 +1,4 @@
-import { WhyUs, Industries, Services } from "../sections";
+import { WhyUs, Industries, Services, CaseStudies } from "../sections";
 
 const Home = () => {
   return (
@@ -6,6 +6,7 @@ const Home = () => {
       <WhyUs />
       <Industries />
       <Services />
+      <CaseStudies />
     </>
   );
 };
