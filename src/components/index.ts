@@ -12,3 +12,4 @@ export * from "./Button";
 export * from "./NavMenu";
 export * from "./CaseCard";
 export * from "./TeamMemberCard";
+export * from "./ContactForm";

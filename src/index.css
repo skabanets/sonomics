@@ -144,7 +144,15 @@ h6 {
 }
 
 .label {
-  @apply text-[12px] font-semibold leading-[20px];
+  @apply text-[12px] font-medium leading-[20px] text-secondaryTextColor;
+}
+
+.input {
+  @apply border-b-2 border-solid bg-transparent px-[5px] pb-[9px] pt-[1px] leading-[24px] outline-none placeholder:text-secondaryTextColor;
+}
+
+.error {
+  @apply absolute left-[5px] top-[56px] text-sm text-red-500;
 }
 
 .transition {
