@@ -22,11 +22,11 @@ export const SuccessfulStories = () => {
             />
           </Link>
         </div>
-        <ul className="flex flex-row gap-[80px]">
+        <div className="flex flex-row gap-[80px]">
           {cases.map((caseStudy) => (
             <CaseCard key={caseStudy.id} caseStudy={caseStudy as CaseStudy} />
           ))}
-        </ul>
+        </div>
       </div>
     </section>
   );
