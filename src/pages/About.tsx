@@ -1,4 +1,11 @@
-import { AboutSonomics, OurMission, SonomicsNumbers, SuccessfulStories, Team } from "../sections";
+import {
+  AboutSonomics,
+  LetsTalk,
+  OurMission,
+  SonomicsNumbers,
+  SuccessfulStories,
+  Team,
+} from "../sections";
 
 const About = () => {
   return (
@@ -8,6 +15,7 @@ const About = () => {
       <SonomicsNumbers />
       <Team />
       <SuccessfulStories />
+      <LetsTalk />
     </>
   );
 };

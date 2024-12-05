@@ -7,3 +7,4 @@ export * from "./About/OurMission";
 export * from "./About/SonomicsNumbers";
 export * from "./About/SuccessfulStories";
 export * from "./About/Team";
+export * from "./About/LetsTalk";
