@@ -10,3 +10,4 @@ export * from "./caseStudies";
 export * from "./sonomicsNumbers";
 export * from "./teamMembers";
 export * from "./accentColors";
+export * from "./caseStudieStyles";
