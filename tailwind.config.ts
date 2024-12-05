@@ -21,6 +21,7 @@ export default {
         secondaryBgColor: "var(--secondary-bg)",
         blackBgColor: "var(--black-bg)",
         darkBgColor: "var(--dark-bg)",
+        ourMisionBgColor: "var(--our-mision-bg)",
 
         mainTextColor: "var(--main-text)",
         secondaryTextColor: "var(--secondary-text)",

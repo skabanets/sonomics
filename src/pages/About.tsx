@@ -1,9 +1,10 @@
-import { AboutSonomics, SonomicsNumbers, SuccessfulStories, Team } from "../sections";
+import { AboutSonomics, OurMission, SonomicsNumbers, SuccessfulStories, Team } from "../sections";
 
 const About = () => {
   return (
     <>
       <AboutSonomics />
+      <OurMission />
       <SonomicsNumbers />
       <Team />
       <SuccessfulStories />
