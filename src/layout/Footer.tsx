@@ -45,7 +45,7 @@ export const Footer = () => {
         </div>
       </div>
       <div className="container max-w-[1280px] border-t border-grey600Color pt-[30px] text-center">
-        <p className="small-text text-white">© 2024 Sonomics, Inc. All rights reserved</p>
+        <p className="small-text text-white">&copy; 2024 Sonomics, Inc. All rights reserved</p>
       </div>
     </footer>
   );

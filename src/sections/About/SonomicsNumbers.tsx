@@ -18,7 +18,7 @@ export const SonomicsNumbers = () => {
               </p>
               <h4 className="w-[490px]">{title}</h4>
 
-              <Divider />
+              {index < sonomicsNumbers.length - 1 && <Divider />}
             </li>
           ))}
         </ul>
