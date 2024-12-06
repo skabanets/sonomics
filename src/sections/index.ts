@@ -1,3 +1,4 @@
+export * from "./Home/Hero";
 export * from "./Home/WhyUs";
 export * from "./Home/Industries";
 export * from "./Home/Services";
