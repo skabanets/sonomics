@@ -28,6 +28,7 @@ export default {
         secondaryTextColor: "var(--secondary-text)",
         whiteTextColor: "var(--white-text)",
         secondaryLightTextColor: "var(--secondary-light-text)",
+        customTitleColor: "var(--custom-title)",
 
         accentRedColor: "var(--accent-red)",
         accentYellowColor: "var(--accent-yellow)",

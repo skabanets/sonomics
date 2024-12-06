@@ -39,6 +39,8 @@ export const CaseCard = ({
           <CustomTitle
             type="h3"
             wrapperStyles="flex flex items-center gap-[15px]"
+            titleStyles="text-mainTextColor group-hover:text-customTitleColor"
+            iconColor="fill-mainTextColor group-hover:fill-customTitleColor"
             text={caseStudy.name}
           />
           <p className="opacity-[0.6]">{caseStudy.description}</p>
