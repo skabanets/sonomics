@@ -163,6 +163,10 @@ h6 {
   @apply border-b border-navlinkActiveColor text-navlinkActiveColor;
 }
 
+.footer .active {
+  @apply border-accentYellowColor text-accentYellowColor;
+}
+
 .react-switch-bg {
   @apply shadow-[inset_0_1px_3px_rgba(0,0,0,0.15)];
 }
