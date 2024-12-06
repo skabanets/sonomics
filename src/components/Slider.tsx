@@ -70,10 +70,10 @@ export const Slider = ({ slides }: SliderProps) => {
               {slides.map((slide, index) => (
                 <div
                   key={slide.id}
-                  className={`h-[3px] bg-white transition ${
+                  className={`h-[3px] transition ${
                     slides.indexOf(activeSlide) === index
-                      ? "w-[15px] rounded-[70px]"
-                      : "w-[3px] rounded-full"
+                      ? "w-[15px] rounded-[70px] bg-white"
+                      : "w-[3px] rounded-full bg-[#EAE9EA]"
                   }`}
                 />
               ))}
