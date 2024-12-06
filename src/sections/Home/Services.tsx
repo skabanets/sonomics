@@ -14,22 +14,23 @@ export const Services = () => {
           {serviceLinks.map((service) => (
             <React.Fragment key={service.id}>
               <Divider />
-              <Link to={service.link}>
+              <Link to={service.link} className="group">
                 <CustomTitle
                   type="h4"
-                  wrapperStyles="flex items-center justify-between px-[10px]"
+                  wrapperStyles="flex items-center justify-between px-[10px] group-hover:text-accentYellowColor"
+                  iconColor="fill-mainTextColor group-hover:fill-accentYellowColor"
                   text={service.text}
                 />
               </Link>
             </React.Fragment>
           ))}
           <Divider />
-          <Link to={routes.Services}>
+          <Link to={routes.Services} className="group">
             <CustomTitle
               type="h4"
               wrapperStyles="flex items-center justify-between px-[10px]"
-              titleStyles="text-accentRedColor"
-              iconColor="fill-accentRedColor"
+              titleStyles="text-accentRedColor group-hover:text-accentYellowColor"
+              iconColor="fill-accentRedColor group-hover:fill-accentYellowColor"
               text="More services"
             />
           </Link>

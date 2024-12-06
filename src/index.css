@@ -60,6 +60,7 @@ html[data-theme="light"] {
   --secondary-text: #74716f;
   --white-text: #ffffff;
   --secondary-light-text: #c1bebf;
+  --custom-title: #fc561d;
 
   --accent-red: #fc561d;
   --accent-yellow: #f8b332;
@@ -84,6 +85,7 @@ html[data-theme="dark"] {
   --secondary-text: #c1bebf;
   --white-text: #ffffff;
   --secondary-light-text: #c1bebf;
+  --custom-title: #f8b332;
 
   --accent-red: #fc561d;
   --accent-yellow: #f8b332;
@@ -176,7 +178,7 @@ h6 {
 }
 
 .view-link {
-  @apply relative transition before:absolute before:bottom-0 before:left-0 before:h-[1.5px] before:w-0 before:bg-accentRedColor before:transition-all hover:before:w-full;
+  @apply relative transition-all before:absolute before:bottom-0 before:left-0 before:h-[1.5px] before:w-0 before:bg-accentRedColor before:duration-300 before:ease-in hover:before:w-full;
 }
 
 .scale-on-hover {
