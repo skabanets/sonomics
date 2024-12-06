@@ -13,3 +13,4 @@ export * from "./NavMenu";
 export * from "./CaseCard";
 export * from "./TeamMemberCard";
 export * from "./ContactForm";
+export * from "./Slider";
