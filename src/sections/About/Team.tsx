@@ -1,3 +1,6 @@
+import { useState } from "react";
+import ReactSlider from "react-slider";
+
 import { Icon, TeamMemberCard } from "../../components";
 
 import { images } from "../../assets";
@@ -6,8 +9,23 @@ import { TeamMember } from "../../types";
 
 export const Team = () => {
   const { teamImages } = images;
+
+  const CARD_WIDTH = 340;
+  const GAP = 20;
+  const CONTAINER_WIDTH = 1350;
+
+  const totalWidth = teamMembers.length * CARD_WIDTH + (teamMembers.length - 1) * GAP;
+  const maxTranslateValue = totalWidth - CONTAINER_WIDTH;
+
+  const [translateValue, setTranslateValue] = useState(0);
+  const [dragIconName, setDragIconName] = useState("drag-hand");
+
+  const handleSliderChange = (value: number) => {
+    setTranslateValue((maxTranslateValue * value) / 100);
+  };
+
   return (
-    <section className="relative bg-blackBgColor pb-[100px] pt-[80px] before:absolute before:left-0 before:top-[624px] before:h-[1px] before:w-full before:bg-whiteTextColor before:content-['''']">
+    <section className="relative bg-blackBgColor pb-[60px] pt-[80px] before:absolute before:left-0 before:top-[624px] before:h-[1px] before:w-full before:bg-whiteTextColor before:content-['''']">
       <div className="container">
         <div className="relative mb-[80px] flex items-center gap-[230px]">
           <img
@@ -38,11 +56,12 @@ export const Team = () => {
         </div>
         <div className="pt-[60px]">
           <h2 className="mb-[40px] text-whiteTextColor">Meet the team</h2>
-          <div className="mr-[-80px] overflow-hidden">
+          <div className="mb-[40px] mr-[-80px] overflow-hidden">
             <ul
-              className={`flex gap-[20px]`}
+              className="flex gap-[20px] transition"
               style={{
-                width: `calc(340px * ${teamMembers.length} + ${(teamMembers.length - 1) * 20}px)`,
+                width: totalWidth,
+                transform: `translateX(-${translateValue}px)`,
               }}
             >
               {teamMembers.map((member, index) => (
@@ -50,6 +69,20 @@ export const Team = () => {
               ))}
             </ul>
           </div>
+          <ReactSlider
+            className="relative h-[49px]"
+            thumbClassName="react-slider-thumb top-1/2 translate-y-[-50%] w-[49px] h-[49px] flex items-center justify-center bg-darkBgColor rounded-full border border-accentYellowColor outline-none hover:h-[59px] hover:w-[59px] focus-visible:h-[59px] focus-visible:w-[59px] cursor-pointer"
+            trackClassName="absolute top-1/2 left-0 translate-y-[-50%] h-[3px] rounded-[70px] bg-secondaryDarkBgColor cursor-pointer"
+            onChange={handleSliderChange}
+            onBeforeChange={() => setDragIconName("drag-hand-active")}
+            onAfterChange={() => setDragIconName("drag-hand")}
+            // eslint-disable-next-line
+            renderThumb={({ key, ...rest }, state) => (
+              <div key={state.index} {...rest}>
+                <Icon id={dragIconName} className="size-[25px] fill-whiteTextColor" />
+              </div>
+            )}
+          />
         </div>
       </div>
     </section>
