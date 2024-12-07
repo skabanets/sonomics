@@ -112,47 +112,65 @@ main {
 }
 
 h1 {
-  @apply text-[70px] font-extrabold leading-[92px];
+  @apply text-[70px] font-extrabold leading-[92px] transition;
 }
 
 h2 {
-  @apply text-[40px] font-extrabold leading-[54px];
+  @apply text-[40px] font-extrabold leading-[54px] transition;
 }
 
 h3 {
-  @apply text-[24px] font-semibold leading-[36px];
+  @apply text-[24px] font-semibold leading-[36px] transition;
 }
 
 h4 {
-  @apply text-[20px] font-extrabold leading-[30px];
+  @apply text-[20px] font-extrabold leading-[30px] transition;
 }
 
 h5 {
-  @apply text-[18px] font-extrabold leading-[28px];
+  @apply text-[18px] font-extrabold leading-[28px] transition;
 }
 
 h6 {
-  @apply text-[20px] font-normal leading-[36px];
+  @apply text-[20px] font-normal leading-[36px] transition;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px var(--theme-toggle-bg) inset;
+  box-shadow: 0 0 0px 1000px var(--theme-toggle-bg) inset;
+  -webkit-text-fill-color: var(--main-text) !important;
+  caret-color: var(--main-text);
+}
+
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px var(--theme-toggle-bg) inset;
+  box-shadow: 0 0 0px 1000px var(--theme-toggle-bg) inset;
+  -webkit-text-fill-color: var(--main-text) !important;
+  caret-color: var(--main-text);
 }
 
 .big-text {
-  @apply text-[18px] font-normal leading-[30px];
+  @apply text-[18px] font-normal leading-[30px] transition;
 }
 
 .small-text {
-  @apply text-[16px] font-normal leading-[24px];
+  @apply text-[16px] font-normal leading-[24px] transition;
 }
 
 .bold-text {
-  @apply text-[16px] font-semibold leading-[26px];
+  @apply text-[16px] font-semibold leading-[26px] transition;
 }
 
 .label {
-  @apply text-[12px] font-medium leading-[20px] text-secondaryTextColor;
+  @apply text-[12px] font-medium leading-[20px] text-secondaryTextColor transition;
 }
 
 .input {
-  @apply border-b-2 border-solid bg-transparent px-[5px] pb-[9px] pt-[1px] leading-[24px] outline-none placeholder:text-secondaryTextColor;
+  @apply border-b-2 border-solid bg-transparent px-[5px] pb-[9px] pt-[1px] leading-[24px] outline-none transition placeholder:text-secondaryTextColor;
 }
 
 .error {
