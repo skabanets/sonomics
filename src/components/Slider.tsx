@@ -27,7 +27,7 @@ export const Slider = ({ slides }: SliderProps) => {
         slidesPerView={1}
         loop={true}
         autoplay={{
-          delay: 4000,
+          delay: 3000,
           disableOnInteraction: false,
         }}
         navigation={{
