@@ -18,7 +18,7 @@ export const CustomTitle = ({
   const Tag = type;
 
   return (
-    <div className={`transition ${wrapperStyles}`}>
+    <div className={wrapperStyles}>
       <Tag className={titleStyles}>{text}</Tag>
       <Icon id="arrow" className={`size-[15px] transition ${iconColor}`} />
     </div>
