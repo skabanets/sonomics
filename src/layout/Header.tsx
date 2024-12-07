@@ -9,8 +9,8 @@ export const Header = () => {
           <div className="flex items-center gap-[50px]">
             <ThemeToggle />
             <NavMenu
-              listClass="flex gap-[50px] font-medium text-mainTextColor transition"
-              linkClass="hover:text-navlinkActiveColor focus-visible:text-navlinkActiveColor active:text-navlinkActiveColor transition"
+              listClass="flex gap-[50px] font-medium text-mainTextColor"
+              linkClass="hover:text-navlinkActiveColor focus-visible:text-navlinkActiveColor active:text-navlinkActiveColor"
             />
             <Button label="Contact us" />
           </div>

@@ -13,7 +13,7 @@ export const NavMenu = ({ listClass, linkClass }: NavMenuProps) => {
       {navLinks.map(({ text, link }, index) => (
         <li key={index}>
           {" "}
-          <NavLink className={`py-[5px] ${linkClass}`} to={link}>
+          <NavLink className={`py-[5px] transition ${linkClass}`} to={link}>
             {text}
           </NavLink>{" "}
         </li>
