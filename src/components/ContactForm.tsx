@@ -30,7 +30,7 @@ export const ContactForm = () => {
             className={`input ${errors.name ? "border-red-500" : "border-mainTextColor"}`}
             {...register("name", { required: "Name is required" })}
           />
-          {errors.name && <span className="error">{errors.name.message}</span>}
+          {errors.name && <span className="error top-[56px]">{errors.name.message}</span>}
         </div>
         <div className="relative flex w-1/2 flex-col">
           <label className="label">Email</label>
@@ -45,7 +45,7 @@ export const ContactForm = () => {
             })}
             className={`input ${errors.email ? "border-red-500" : "border-mainTextColor"}`}
           />
-          {errors.email && <span className="error">{errors.email.message}</span>}
+          {errors.email && <span className="error top-[56px]">{errors.email.message}</span>}
         </div>
       </div>
       <div className="relative mb-[40px] mt-[30px] flex flex-col">
@@ -56,7 +56,7 @@ export const ContactForm = () => {
           className={`input resize-none ${errors.message ? "border-red-500" : "border-mainTextColor"}`}
           placeholder="Write your message..."
         />
-        {errors.message && <span className="error">{errors.message.message}</span>}
+        {errors.message && <span className="error top-[105px]">{errors.message.message}</span>}
       </div>
       <Button label="Send request" width="w-fit" type="submit" />
     </form>

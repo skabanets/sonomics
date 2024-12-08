@@ -178,7 +178,7 @@ textarea:-webkit-autofill:focus {
 }
 
 .error {
-  @apply absolute left-[5px] top-[56px] text-sm text-red-500;
+  @apply absolute left-[5px] text-sm text-red-500;
 }
 
 .transition {
