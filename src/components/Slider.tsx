@@ -62,8 +62,11 @@ export const Slider = ({ slides }: SliderProps) => {
               {activeSlide.name}
             </h3>
           </Link>
-          <div className="flex items-center gap-[30px]">
-            <button onClick={() => swiperRef.current?.swiper.slidePrev()}>
+          <div className="flex items-center gap-[22px]">
+            <button
+              onClick={() => swiperRef.current?.swiper.slidePrev()}
+              className="flex h-[24px] w-[24px] items-center justify-center"
+            >
               <Icon id="arrow-left" className="h-[20px] w-[12px] fill-whiteTextColor" />
             </button>
             <div className="flex gap-[5px]">
@@ -78,7 +81,10 @@ export const Slider = ({ slides }: SliderProps) => {
                 />
               ))}
             </div>
-            <button onClick={() => swiperRef.current?.swiper.slideNext()}>
+            <button
+              onClick={() => swiperRef.current?.swiper.slideNext()}
+              className="flex h-[24px] w-[24px] items-center justify-center"
+            >
               <Icon id="arrow-right" className="h-[20px] w-[12px] fill-whiteTextColor" />
             </button>
           </div>
