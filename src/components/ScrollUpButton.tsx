@@ -8,7 +8,7 @@ export const ScrollUpButton = () => {
   return (
     <button
       type="button"
-      className="flex size-[40px] items-center justify-center rounded-full border border-whiteTextColor bg-darkBgColor p-[10px] transition-all duration-300 hover:border-accentYellowColor focus-visible:border-accentYellowColor"
+      className="group flex size-[40px] items-center justify-center rounded-full border border-whiteTextColor bg-darkBgColor p-[10px] transition hover:border-accentYellowColor focus-visible:border-accentYellowColor"
       onClick={handleClick}
     >
       <Icon
