@@ -50,9 +50,10 @@ export const ContactForm = () => {
       </div>
       <div className="relative mb-[40px] mt-[30px] flex flex-col">
         <label className="label">Message</label>
-        <input
+        <textarea
+          rows={3}
           {...register("message", { required: "Message is required" })}
-          className={`input ${errors.message ? "border-red-500" : "border-mainTextColor"}`}
+          className={`input resize-none ${errors.message ? "border-red-500" : "border-mainTextColor"}`}
           placeholder="Write your message..."
         />
         {errors.message && <span className="error">{errors.message.message}</span>}
