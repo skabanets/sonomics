@@ -22,15 +22,21 @@ export const LetsTalk = () => {
             <p className="big-text">Our contacts</p>
             <ul className="flex gap-[15px]">
               <li>
-                <Link to="tel:+12345678990" className="flex items-center gap-[10px]">
-                  <Icon id="phone" className="h-[13px] w-[13px] fill-accentRedColor" />
-                  <h5>+1 234 567-89-90</h5>
+                <Link to="tel:+12345678990" className="group flex items-center gap-[10px]">
+                  <Icon
+                    id="phone"
+                    className="h-[13px] w-[13px] fill-accentRedColor transition group-hover:fill-customTitleColor"
+                  />
+                  <h5 className="group-hover:text-customTitleColor">+1 234 567-89-90</h5>
                 </Link>
               </li>
               <li>
-                <Link to="mailto:info@sonomics.com" className="flex items-center gap-[10px]">
-                  <Icon id="email" className="h-[14px] w-[15px] fill-accentRedColor" />
-                  <h5>info@sonomics.com</h5>
+                <Link to="mailto:info@sonomics.com" className="group flex items-center gap-[10px]">
+                  <Icon
+                    id="email"
+                    className="h-[14px] w-[15px] fill-accentRedColor transition group-hover:fill-customTitleColor"
+                  />
+                  <h5 className="group-hover:text-customTitleColor">info@sonomics.com</h5>
                 </Link>
               </li>
               <li>
@@ -38,10 +44,13 @@ export const LetsTalk = () => {
                   to="https://www.google.com/maps?q=Barcelona,+Spain"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-[10px]"
+                  className="group flex items-center gap-[10px]"
                 >
-                  <Icon id="location" className="h-[15px] w-[15px] fill-accentRedColor" />
-                  <h5>Barcelona, Spain</h5>
+                  <Icon
+                    id="location"
+                    className="h-[15px] w-[15px] fill-accentRedColor transition group-hover:fill-customTitleColor"
+                  />
+                  <h5 className="group-hover:text-customTitleColor">Barcelona, Spain</h5>
                 </Link>
               </li>
             </ul>
@@ -52,9 +61,8 @@ export const LetsTalk = () => {
               src={commonImages.barcelona_1x}
               alt="View of Barcelona"
               width={619}
-              height={217}
               loading="lazy"
-              className="object-cover"
+              className="h-[266px] object-cover"
             />
           </div>
         </div>
