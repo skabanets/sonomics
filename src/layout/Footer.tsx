@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import { Logo, NavMenu } from "../components";
+import { Logo, NavMenu, ScrollUpButton } from "../components";
 
 import { socialLinks } from "../constants";
 
@@ -57,8 +57,12 @@ export const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="container max-w-[1280px] border-t border-grey600Color pt-[30px] text-center">
+      <div className="container flex items-center justify-between border-t border-grey600Color px-0 pt-[30px] lg:max-w-[1280px]">
         <p className="small-text text-white">&copy; 2024 Sonomics, Inc. All rights reserved</p>
+        <div className="small-text flex items-center justify-end gap-[15px] text-whiteTextColor">
+          <span className="group-hover:-translate-x-full group-hover:opacity-0"> To top </span>
+          <ScrollUpButton />
+        </div>
       </div>
     </footer>
   );
