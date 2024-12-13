@@ -13,18 +13,16 @@ const modalRoot = document.querySelector("#modal-root")!;
 export const Modal = ({ children, toggleModal, handleClickOnBackdrop }: ModalProps) => {
   return ReactDOM.createPortal(
     <div
-      className="bg-backdropBgColor fixed inset-0 z-50 flex items-center justify-center"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-backdropBgColor"
       onClick={(e) => handleClickOnBackdrop(e)}
     >
-      <div className="bg-modalBgColor relative z-10 max-h-[95dvh] min-h-[300px] min-w-[300px] max-w-[330px] rounded-[20px] p-[50px]">
-        <div className="absolute right-[20px] top-[20px] flex items-center gap-[10px]">
+      <div className="relative z-10 max-h-[95dvh] min-h-[300px] min-w-[300px] rounded-[20px] bg-themeToggleBgColor p-[50px]">
+        <div className="small-text absolute right-[20px] top-[20px] flex items-center gap-[10px]">
           Close
-          <button type="button" className="small-text" onClick={toggleModal}>
-            {" "}
-            <Icon id="close" className="size-[20px] fill-darkBgColor" />
+          <button type="button" onClick={toggleModal}>
+            <Icon id="close" className="size-[20px] fill-mainTextColor" />
           </button>
         </div>
-
         {children}
       </div>
     </div>,
