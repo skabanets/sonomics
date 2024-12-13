@@ -16,3 +16,4 @@ export * from "./ContactForm";
 export * from "./Slider";
 export * from "./ScrollUpButton";
 export * from "./AnimatedNumber";
+export * from "./Modal";
