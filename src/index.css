@@ -66,12 +66,11 @@ html[data-theme="light"] {
   --white-text: #ffffff;
   --secondary-light-text: #c1bebf;
   --placeholder-text: #ada9a6;
-  --custom-title: #fc561d;
 
   --accent-red: #fc561d;
   --accent-yellow: #f8b332;
   --accent-orange: #fa7b26;
-  --navlink-active-color: #fc561d;
+  --theme-accent-color: #fc561d;
 
   --grey-600: #74716f;
 
@@ -97,12 +96,11 @@ html[data-theme="dark"] {
   --white-text: #ffffff;
   --secondary-light-text: #c1bebf;
   --placeholder-text: #ada9a6;
-  --custom-title: #f8b332;
 
   --accent-red: #fc561d;
   --accent-yellow: #f8b332;
   --accent-orange: #fa7b26;
-  --navlink-active-color: #f8b332;
+  --theme-accent-color: #f8b332;
 
   --grey-600: #74716f;
 
@@ -197,7 +195,7 @@ textarea:-webkit-autofill:focus {
 
 .header .active,
 .footer .active {
-  @apply border-b border-navlinkActiveColor text-navlinkActiveColor;
+  @apply border-themeAccentColor text-themeAccentColor border-b;
 }
 
 .footer .active {

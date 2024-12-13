@@ -58,16 +58,19 @@ export const Slider = ({ slides }: SliderProps) => {
       {activeSlide && (
         <div className="absolute bottom-0 z-50 flex h-[137px] w-full items-center justify-between overflow-hidden bg-gradient-to-b from-[rgba(0,0,0,0)] to-black px-[30px] pb-[33px] pt-[68px]">
           <Link to={activeSlide.link} className="group">
-            <h3 className="text-white transition group-hover:text-navlinkActiveColor">
+            <h3 className="group-hover:text-themeAccentColor text-whiteTextColor transition">
               {activeSlide.name}
             </h3>
           </Link>
           <div className="flex items-center gap-[22px]">
             <button
               onClick={() => swiperRef.current?.swiper.slidePrev()}
-              className="flex h-[24px] w-[24px] items-center justify-center"
+              className="group flex h-[24px] w-[24px] items-center justify-center"
             >
-              <Icon id="arrow-left" className="h-[20px] w-[12px] fill-whiteTextColor" />
+              <Icon
+                id="arrow-left"
+                className="group-hover:fill-themeAccentColor h-[20px] w-[12px] fill-whiteTextColor transition"
+              />
             </button>
             <div className="flex gap-[5px]">
               {slides.map((slide, index) => (
@@ -75,7 +78,7 @@ export const Slider = ({ slides }: SliderProps) => {
                   key={slide.id}
                   className={`h-[3px] transition ${
                     slides.indexOf(activeSlide) === index
-                      ? "w-[15px] rounded-[70px] bg-white"
+                      ? "w-[15px] rounded-[70px] bg-whiteTextColor"
                       : "w-[3px] rounded-full bg-[#EAE9EA]"
                   }`}
                 />
@@ -83,9 +86,12 @@ export const Slider = ({ slides }: SliderProps) => {
             </div>
             <button
               onClick={() => swiperRef.current?.swiper.slideNext()}
-              className="flex h-[24px] w-[24px] items-center justify-center"
+              className="group flex h-[24px] w-[24px] items-center justify-center"
             >
-              <Icon id="arrow-right" className="h-[20px] w-[12px] fill-whiteTextColor" />
+              <Icon
+                id="arrow-right"
+                className="group-hover:fill-themeAccentColor h-[20px] w-[12px] fill-whiteTextColor transition"
+              />
             </button>
           </div>
         </div>
