@@ -56,6 +56,8 @@ html[data-theme="light"] {
   --secondary-dark-bg: #3c3a3b;
   --our-mision-bg: #161515;
   --theme-toggle-bg: #f3f2f2;
+  --backdrop-bg: #3c3a3b99;
+  --modal-bg: #f3f2f2;
 
   --main-text: #323031;
   --secondary-text: #74716f;
@@ -82,6 +84,8 @@ html[data-theme="dark"] {
   --secondary-dark-bg: #3c3a3b;
   --our-mision-bg: #323031;
   --theme-toggle-bg: #323031;
+  --backdrop-bg: #3c3a3b99;
+  --modal-bg: #f3f2f2;
 
   --main-text: #ffffff;
   --secondary-text: #c1bebf;

@@ -24,6 +24,8 @@ export default {
         secondaryDarkBgColor: "var(--secondary-dark-bg)",
         ourMisionBgColor: "var(--our-mision-bg)",
         themeToggleBgColor: "var(--theme-toggle-bg)",
+        backdropBgColor: "var(--backdrop-bg)",
+        modalBgColor: "var(--modal-bg)",
 
         mainTextColor: "var(--main-text)",
         secondaryTextColor: "var(--secondary-text)",
