@@ -2,7 +2,7 @@ import { Oval } from "react-loader-spinner";
 
 export const Loader = () => {
   return (
-    <div className="fixed inset-0 z-[100] flex h-full w-full items-center justify-center bg-[#030303] opacity-[0.7]">
+    <div className="bg-backdropBgColor fixed inset-0 z-[100] flex h-full w-full items-center justify-center">
       <Oval
         visible={true}
         height="80"
