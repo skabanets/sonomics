@@ -17,7 +17,7 @@ export const Services = () => {
               <Link to={service.link} className="group">
                 <CustomTitle
                   type="h4"
-                  wrapperStyles="flex items-center justify-between px-[10px] group-hover:text-accentYellowColor"
+                  wrapperStyles="flex items-center justify-between px-[10px] group-hover:text-accentYellowColor group-hover:px-[20px] transition"
                   iconColor="fill-mainTextColor group-hover:fill-accentYellowColor"
                   text={service.text}
                 />
@@ -28,7 +28,7 @@ export const Services = () => {
           <Link to={routes.Services} className="group">
             <CustomTitle
               type="h4"
-              wrapperStyles="flex items-center justify-between px-[10px]"
+              wrapperStyles="flex items-center justify-between px-[10px] group-hover:px-[20px] transition"
               titleStyles="text-accentRedColor group-hover:text-accentYellowColor"
               iconColor="fill-accentRedColor group-hover:fill-accentYellowColor"
               text="More services"
