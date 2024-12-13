@@ -26,11 +26,14 @@ export default {
         themeToggleBgColor: "var(--theme-toggle-bg)",
         backdropBgColor: "var(--backdrop-bg)",
         modalBgColor: "var(--modal-bg)",
+        formFieldBgColor: "var(--form-field-bg)",
+        fieldBorderColor: "var(--field-border)",
 
         mainTextColor: "var(--main-text)",
         secondaryTextColor: "var(--secondary-text)",
         whiteTextColor: "var(--white-text)",
         secondaryLightTextColor: "var(--secondary-light-text)",
+        placeholderTextColor: "var(--placeholder-text)",
         customTitleColor: "var(--custom-title)",
 
         accentRedColor: "var(--accent-red)",

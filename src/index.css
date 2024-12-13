@@ -58,11 +58,14 @@ html[data-theme="light"] {
   --theme-toggle-bg: #f3f2f2;
   --backdrop-bg: #3c3a3b99;
   --modal-bg: #f3f2f2;
+  --form-field-bg: #ffffff;
+  --field-border: #ffffff;
 
   --main-text: #323031;
   --secondary-text: #74716f;
   --white-text: #ffffff;
   --secondary-light-text: #c1bebf;
+  --placeholder-text: #ada9a6;
   --custom-title: #fc561d;
 
   --accent-red: #fc561d;
@@ -86,11 +89,14 @@ html[data-theme="dark"] {
   --theme-toggle-bg: #323031;
   --backdrop-bg: #3c3a3b99;
   --modal-bg: #f3f2f2;
+  --form-field-bg: #3c3a3b;
+  --field-border: #eae9ea;
 
   --main-text: #ffffff;
   --secondary-text: #c1bebf;
   --white-text: #ffffff;
   --secondary-light-text: #c1bebf;
+  --placeholder-text: #ada9a6;
   --custom-title: #f8b332;
 
   --accent-red: #fc561d;
@@ -145,8 +151,8 @@ h6 {
 
 input:-webkit-autofill,
 textarea:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0px 1000px var(--theme-toggle-bg) inset;
-  box-shadow: 0 0 0px 1000px var(--theme-toggle-bg) inset;
+  -webkit-box-shadow: 0 0 0px 1000px var(--form-field-bg) inset;
+  box-shadow: 0 0 0px 1000px var(--form-field-bg) inset;
   -webkit-text-fill-color: var(--main-text) !important;
   caret-color: var(--main-text);
 }
@@ -155,8 +161,8 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 textarea:-webkit-autofill:hover,
 textarea:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0px 1000px var(--theme-toggle-bg) inset;
-  box-shadow: 0 0 0px 1000px var(--theme-toggle-bg) inset;
+  -webkit-box-shadow: 0 0 0px 1000px var(--form-field-bg) inset;
+  box-shadow: 0 0 0px 1000px var(--form-field-bg) inset;
   -webkit-text-fill-color: var(--main-text) !important;
   caret-color: var(--main-text);
 }
@@ -177,12 +183,12 @@ textarea:-webkit-autofill:focus {
   @apply text-[12px] font-medium leading-[20px] text-secondaryTextColor transition;
 }
 
-.input {
-  @apply border-b-2 border-solid bg-transparent px-[5px] pb-[9px] pt-[1px] leading-[24px] outline-none transition placeholder:text-secondaryTextColor;
+.form-field {
+  @apply bg-formFieldBgColor placeholder:text-placeholderTextColor border border-solid px-[20px] py-[10px] font-montserrat text-[12px] font-medium leading-[20px] outline-none transition;
 }
 
 .error {
-  @apply absolute left-[5px] text-sm text-red-500;
+  @apply absolute left-[20px] text-[12px] text-red-500;
 }
 
 .transition {
