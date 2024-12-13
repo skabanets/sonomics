@@ -1,10 +1,9 @@
-import { Button, Logo, Modal, NavMenu, ThemeToggle } from "../components";
+import { Button, ContactForm, Logo, Modal, NavMenu, ThemeToggle } from "../components";
 
 import { useModal } from "../hooks";
 
 export const Header = () => {
   const [isOpen, toggleModal, handleClickOnBackdrop] = useModal();
-  console.log(isOpen);
 
   return (
     <>
@@ -25,7 +24,7 @@ export const Header = () => {
       </header>
       {isOpen && (
         <Modal toggleModal={toggleModal} handleClickOnBackdrop={handleClickOnBackdrop}>
-          Modal Content
+          <ContactForm />
         </Modal>
       )}
     </>
