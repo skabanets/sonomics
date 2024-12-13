@@ -34,13 +34,11 @@ export default {
         whiteTextColor: "var(--white-text)",
         secondaryLightTextColor: "var(--secondary-light-text)",
         placeholderTextColor: "var(--placeholder-text)",
-        customTitleColor: "var(--custom-title)",
 
         accentRedColor: "var(--accent-red)",
         accentYellowColor: "var(--accent-yellow)",
         accentOrangeColor: "var(--accent-orange)",
-
-        navlinkActiveColor: "var(--navlink-active-color)",
+        themeAccentColor: "var(--theme-accent-color)",
 
         grey600Color: "var(--grey-600)",
       },
