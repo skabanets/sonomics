@@ -60,6 +60,7 @@ html[data-theme="light"] {
   --modal-bg: #f3f2f2;
   --form-field-bg: #ffffff;
   --field-border: #ffffff;
+  --scroll-thumb-color: #7f7f7f;
 
   --main-text: #323031;
   --secondary-text: #74716f;
@@ -90,6 +91,7 @@ html[data-theme="dark"] {
   --modal-bg: #f3f2f2;
   --form-field-bg: #3c3a3b;
   --field-border: #eae9ea;
+  --scroll-thumb-color: #a3a3a3;
 
   --main-text: #ffffff;
   --secondary-text: #c1bebf;
@@ -223,4 +225,38 @@ textarea:-webkit-autofill:focus {
 
 .scale-on-hover {
   @apply transform transition-transform duration-500 group-hover:scale-110;
+}
+
+.scrollbar {
+  --thumb-color: var(--scroll-thumb-color);
+  --track-color: transparent;
+  overflow: auto;
+  scrollbar-color: auto !important;
+}
+
+/* Firefox */
+@-moz-document url-prefix() {
+  .scrollbar {
+    scrollbar-width: auto;
+    scrollbar-color: var(--thumb-color) var(--track-color) !important;
+  }
+}
+
+/* Chrome, Safari, Edge */
+@supports selector(::-webkit-scrollbar) {
+  .scrollbar::-webkit-scrollbar {
+    width: 7px;
+    height: 6px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    background: var(--track-color);
+    border-radius: 8px;
+    margin-block: 16px;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: var(--thumb-color);
+    border-radius: 8px;
+  }
 }
