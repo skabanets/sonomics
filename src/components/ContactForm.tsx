@@ -25,7 +25,7 @@ export const ContactForm = () => {
   return (
     <div className="w-[527px]">
       <div className="mb-[30px]">
-        <h2 className="mb-[20px]">Let’s talk</h2>
+        <h2 className="mb-[20px]">Let&#8217;s talk</h2>
         <p className="big-text">Any question or remarks? Just write us a message!</p>
       </div>
       <form className="flex flex-col gap-[20px]" onSubmit={handleSubmit(onSubmit)}>
@@ -80,7 +80,7 @@ export const ContactForm = () => {
           <textarea
             rows={5}
             {...register("message", { required: "Message is required" })}
-            className={`form-field resize-none rounded-[20px] ${errors.message ? "border-red-500" : "border-fieldBorderColor"}`}
+            className={`form-field scrollbar resize-none rounded-[20px] ${errors.message ? "border-red-500" : "border-fieldBorderColor"}`}
             placeholder="Write your message"
           />
           {errors.message && <span className="error top-[152px]">{errors.message.message}</span>}
