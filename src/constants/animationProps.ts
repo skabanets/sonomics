@@ -8,6 +8,6 @@ export const slideInWithFade = {
 export const opacityFade = {
   initial: { opacity: 0 },
   whileInView: { opacity: 1 },
-  transition: { duration: 2, ease: "easeOut", delay: 0.1 },
+  transition: { duration: 2, ease: "easeOut", delay: 0.25 },
   viewport: { once: true, amount: 0.1 },
 };
