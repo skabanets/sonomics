@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 import { CaseCard, CustomTitle } from "../../components";
 
-import { caseStudies, routes } from "../../constants";
+import { slideInWithFade, caseStudies, routes } from "../../constants";
 import { CaseStudy } from "../../types";
 
 export const SuccessfulStories = () => {
@@ -10,7 +11,7 @@ export const SuccessfulStories = () => {
 
   return (
     <section className="py-[100px]">
-      <div className="container flex flex-col gap-[60px]">
+      <motion.div className="container flex flex-col gap-[60px]" {...slideInWithFade}>
         <div className="flex items-center justify-between">
           <h2>Successful stories</h2>
           <Link to={routes.CaseStudy} className="view-link">
@@ -27,7 +28,7 @@ export const SuccessfulStories = () => {
             <CaseCard key={caseStudy.id} caseStudy={caseStudy as CaseStudy} />
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 import { ContactForm, Icon } from "../../components";
 
-import { contacts } from "../../constants";
+import { slideInWithFade, contacts } from "../../constants";
 import { images } from "../../assets";
 
 export const LetsTalk = () => {
@@ -10,7 +11,7 @@ export const LetsTalk = () => {
 
   return (
     <section className="bg-themeToggleBgColor py-[80px]">
-      <div className="container flex flex-row justify-between">
+      <motion.div className="container flex flex-row justify-between" {...slideInWithFade}>
         <ContactForm />
         <div className="w-[620px]">
           <div className="mb-[30px] mt-[28px] flex flex-col gap-[20px]">
@@ -47,7 +48,7 @@ export const LetsTalk = () => {
             />
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

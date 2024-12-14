@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 import { CaseCard, CustomTitle } from "../../components";
 
-import { caseStudieStyles, caseStudies, routes } from "../../constants";
+import { slideInWithFade, caseStudieStyles, caseStudies, routes } from "../../constants";
 import { CaseStudy } from "../../types";
 
 export const CaseStudies = () => {
@@ -16,7 +17,7 @@ export const CaseStudies = () => {
   return (
     <section className="pb-[100px] pt-[80px]">
       <div className="container flex flex-col gap-[60px]">
-        <div className="flex items-center justify-between">
+        <motion.div className="flex items-center justify-between" {...slideInWithFade}>
           <h2>Case studies</h2>
           <Link to={routes.CaseStudy} className="view-link">
             <CustomTitle
@@ -26,19 +27,19 @@ export const CaseStudies = () => {
               titleStyles="text-accentRedColor"
             />
           </Link>
-        </div>
+        </motion.div>
         <div className="flex gap-[40px]">
           {columns.map((column, columnIndex) => (
             <div key={columnIndex} className="flex flex-col gap-[80px]">
               {column.map((caseStudy) => (
-                <div className="w-[620px]" key={caseStudy.id}>
+                <motion.div className="w-[620px]" key={caseStudy.id} {...slideInWithFade}>
                   <CaseCard
                     caseStudy={caseStudy as CaseStudy}
                     containerStyles={caseStudy.styles.containerStyles}
                     imageWidth={caseStudy.styles.width}
                     imageHeight={caseStudy.styles.height}
                   />
-                </div>
+                </motion.div>
               ))}
             </div>
           ))}

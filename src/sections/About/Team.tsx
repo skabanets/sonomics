@@ -1,10 +1,11 @@
 import { useState } from "react";
 import ReactSlider from "react-slider";
+import { motion } from "framer-motion";
 
 import { Icon, TeamMemberCard } from "../../components";
 
 import { images } from "../../assets";
-import { teamMembers } from "../../constants";
+import { slideInWithFade, teamMembers } from "../../constants";
 import { TeamMember } from "../../types";
 
 export const Team = () => {
@@ -27,7 +28,10 @@ export const Team = () => {
   return (
     <section className="relative bg-blackBgColor pb-[60px] pt-[80px] before:absolute before:left-0 before:top-[624px] before:h-[1px] before:w-full before:bg-whiteTextColor before:content-['''']">
       <div className="container">
-        <div className="relative mb-[80px] flex items-center gap-[230px]">
+        <motion.div
+          className="relative mb-[80px] flex items-center gap-[230px]"
+          {...slideInWithFade}
+        >
           <img
             srcSet={`${teamImages.ceo_1x} 1x, ${teamImages.ceo_2x} 2x`}
             src={teamImages.ceo_1x}
@@ -53,8 +57,8 @@ export const Team = () => {
             id="quotes"
             className="absolute left-[635px] top-0 h-[97px] w-[99px] fill-accentYellowColor"
           />
-        </div>
-        <div className="pt-[60px]">
+        </motion.div>
+        <motion.div className="pt-[60px]" {...slideInWithFade}>
           <h2 className="mb-[40px] text-whiteTextColor">Meet the team</h2>
           <div className="mb-[40px] mr-[-80px] overflow-hidden">
             <ul
@@ -83,7 +87,7 @@ export const Team = () => {
               </div>
             )}
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );
