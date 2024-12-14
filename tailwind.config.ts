@@ -25,7 +25,6 @@ export default {
         ourMisionBgColor: "var(--our-mision-bg)",
         themeToggleBgColor: "var(--theme-toggle-bg)",
         backdropBgColor: "var(--backdrop-bg)",
-        modalBgColor: "var(--modal-bg)",
         formFieldBgColor: "var(--form-field-bg)",
         fieldBorderColor: "var(--field-border)",
 
