@@ -34,7 +34,7 @@ export const ContactForm = () => {
             <label className="label">First name</label>
             <input
               type="text"
-              className={`form-field rounded-[20px] ${errors.firstName ? "border-red-500" : "border-fieldBorderColor"}`}
+              className={`form-field rounded-[20px] ${errors.firstName ? "!border-red-500" : "border-fieldBorderColor"}`}
               {...register("firstName", {
                 required: "Name is required",
               })}
@@ -49,7 +49,7 @@ export const ContactForm = () => {
             <label className="label">Last name</label>
             <input
               type="text"
-              className={`form-field rounded-[20px] ${errors.lastName ? "border-red-500" : "border-fieldBorderColor"}`}
+              className={`form-field rounded-[20px] ${errors.lastName ? "!border-red-500" : "border-fieldBorderColor"}`}
               {...register("lastName", {
                 required: "Name is required",
               })}
@@ -70,7 +70,7 @@ export const ContactForm = () => {
                 message: "Invalid email address",
               },
             })}
-            className={`form-field rounded-[20px] ${errors.email ? "border-red-500" : "border-fieldBorderColor"}`}
+            className={`form-field rounded-[20px] ${errors.email ? "!border-red-500" : "border-fieldBorderColor"}`}
             placeholder="Enter email"
           />
           {errors.email && <span className="error top-[72px]">{errors.email.message}</span>}
@@ -80,7 +80,7 @@ export const ContactForm = () => {
           <textarea
             rows={5}
             {...register("message", { required: "Message is required" })}
-            className={`form-field scrollbar resize-none rounded-[20px] ${errors.message ? "border-red-500" : "border-fieldBorderColor"}`}
+            className={`form-field scrollbar resize-none rounded-[20px] ${errors.message ? "!border-red-500" : "border-fieldBorderColor"}`}
             placeholder="Write your message"
           />
           {errors.message && <span className="error top-[152px]">{errors.message.message}</span>}
