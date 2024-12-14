@@ -57,7 +57,6 @@ html[data-theme="light"] {
   --our-mision-bg: #161515;
   --theme-toggle-bg: #f3f2f2;
   --backdrop-bg: #3c3a3b99;
-  --modal-bg: #f3f2f2;
   --form-field-bg: #ffffff;
   --field-border: #ffffff;
   --scroll-thumb-color: #7f7f7f;
@@ -88,7 +87,6 @@ html[data-theme="dark"] {
   --our-mision-bg: #323031;
   --theme-toggle-bg: #323031;
   --backdrop-bg: #3c3a3b99;
-  --modal-bg: #f3f2f2;
   --form-field-bg: #3c3a3b;
   --field-border: #eae9ea;
   --scroll-thumb-color: #a3a3a3;
@@ -183,8 +181,16 @@ textarea:-webkit-autofill:focus {
   @apply text-[12px] font-medium leading-[20px] text-secondaryTextColor transition;
 }
 
+.modal .label {
+  @apply text-mainTextColor;
+}
+
 .form-field {
   @apply bg-formFieldBgColor placeholder:text-placeholderTextColor border border-solid px-[20px] py-[10px] font-montserrat text-[12px] font-medium leading-[20px] outline-none transition;
+}
+
+.modal .form-field {
+  @apply border-transparent;
 }
 
 .error {
