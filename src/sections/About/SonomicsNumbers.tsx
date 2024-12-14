@@ -2,13 +2,15 @@ import { motion } from "framer-motion";
 
 import { AnimatedNumber, Divider } from "../../components";
 
-import { sonomicsNumbers } from "../../constants";
+import { opacityFade, sonomicsNumbers } from "../../constants";
 
 export const SonomicsNumbers = () => {
   return (
     <section className="py-[100px]">
       <div className="container relative">
-        <h2 className="sticky top-[100px] z-10 w-[300px] pt-[20px]">Sonomics in numbers</h2>
+        <motion.h2 className="sticky top-[100px] z-10 w-[300px] pt-[20px]" {...opacityFade}>
+          Sonomics in numbers
+        </motion.h2>
         <ul className="ml-auto mt-[-128px] w-[774px] overflow-hidden">
           {sonomicsNumbers.map(({ title, number }, index) => (
             <motion.li

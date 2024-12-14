@@ -1,7 +1,18 @@
+import { motion } from "framer-motion";
+
 import { images } from "../../assets";
+import { opacityFade } from "../../constants";
 
 export const OurMission = () => {
   const { commonImages } = images;
+
+  const ourMissionProps = {
+    ...opacityFade,
+    transition: {
+      ...opacityFade.transition,
+      delay: 0.6,
+    },
+  };
 
   return (
     <section className="bg-ourMisionBgColor">
@@ -14,7 +25,10 @@ export const OurMission = () => {
           height="600"
           className="w-1/2 object-cover"
         />
-        <div className="flex w-1/2 flex-col justify-center pl-[70px] pr-[150px] transition">
+        <motion.div
+          className="flex w-1/2 flex-col justify-center pl-[70px] pr-[150px] transition"
+          {...ourMissionProps}
+        >
           <h2 className="mb-[24px] text-whiteTextColor">Our mission</h2>
           <h4 className="mb-[20px] text-accentYellowColor">End-to-End Application Development</h4>
           <p className="big-text text-whiteTextColor">
@@ -23,7 +37,7 @@ export const OurMission = () => {
             dolor sit amet, consectetur adipiscing elit, sed do eiusmod.Ut enim ad minim veniam,
             quis nostrud. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
           </p>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
