@@ -1,4 +1,5 @@
 import ReactDOM from "react-dom";
+import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
 import { Icon } from "../components";
@@ -12,6 +13,14 @@ interface ModalProps {
 const modalRoot = document.querySelector("#modal-root")!;
 
 export const Modal = ({ children, toggleModal, handleClickOnBackdrop }: ModalProps) => {
+  const modalRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (modalRef.current) {
+      modalRef.current.focus();
+    }
+  }, []);
+
   return ReactDOM.createPortal(
     <motion.div
       className="fixed inset-0 z-50 flex items-center justify-center bg-backdropBgColor"
@@ -20,10 +29,18 @@ export const Modal = ({ children, toggleModal, handleClickOnBackdrop }: ModalPro
       animate={{ opacity: 1 }}
       transition={{ duration: 0.2, ease: "easeOut", delay: 0.2 }}
     >
-      <div className="modal relative z-10 max-h-[95dvh] min-h-[300px] min-w-[300px] rounded-[20px] bg-secondaryBgColor p-[50px]">
+      <div
+        ref={modalRef}
+        tabIndex={-1}
+        className="modal relative z-10 max-h-[95dvh] min-h-[300px] min-w-[300px] rounded-[20px] bg-secondaryBgColor p-[50px] outline-none"
+      >
         <div className="small-text absolute right-[20px] top-[20px] flex items-center gap-[10px]">
           Close
-          <button type="button" onClick={toggleModal}>
+          <button
+            type="button"
+            onClick={toggleModal}
+            className="focus-visible:outline focus-visible:outline-mainTextColor"
+          >
             <Icon id="close" className="size-[20px] fill-mainTextColor" />
           </button>
         </div>
