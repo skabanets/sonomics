@@ -58,7 +58,7 @@ export const Slider = ({ slides }: SliderProps) => {
       {activeSlide && (
         <div className="absolute bottom-0 z-50 flex h-[137px] w-full items-center justify-between overflow-hidden bg-gradient-to-b from-[rgba(0,0,0,0)] to-black px-[30px] pb-[33px] pt-[68px]">
           <Link to={activeSlide.link} className="group">
-            <h3 className="group-hover:text-themeAccentColor text-whiteTextColor transition">
+            <h3 className="text-whiteTextColor transition group-hover:text-themeAccentColor group-focus-visible:text-themeAccentColor">
               {activeSlide.name}
             </h3>
           </Link>
@@ -69,7 +69,7 @@ export const Slider = ({ slides }: SliderProps) => {
             >
               <Icon
                 id="arrow-left"
-                className="group-hover:fill-themeAccentColor h-[20px] w-[12px] fill-whiteTextColor transition"
+                className="h-[20px] w-[12px] fill-whiteTextColor transition group-hover:fill-themeAccentColor group-focus-visible:fill-themeAccentColor"
               />
             </button>
             <div className="flex gap-[5px]">
@@ -90,7 +90,7 @@ export const Slider = ({ slides }: SliderProps) => {
             >
               <Icon
                 id="arrow-right"
-                className="group-hover:fill-themeAccentColor h-[20px] w-[12px] fill-whiteTextColor transition"
+                className="h-[20px] w-[12px] fill-whiteTextColor transition group-hover:fill-themeAccentColor group-focus-visible:fill-themeAccentColor"
               />
             </button>
           </div>

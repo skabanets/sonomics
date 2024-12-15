@@ -21,7 +21,7 @@ export const CaseCard = ({
   const { casesImages } = images;
 
   return (
-    <div className={`group h-auto ${containerStyles}`}>
+    <div className={`group h-auto ${containerStyles}`} tabIndex={0}>
       <Link to={caseStudy.link}>
         <div className="relative overflow-hidden rounded-[40px]">
           <img
@@ -39,8 +39,8 @@ export const CaseCard = ({
           <CustomTitle
             type="h3"
             wrapperStyles="flex flex items-center gap-[15px]"
-            titleStyles="text-mainTextColor group-hover:text-themeAccentColor"
-            iconColor="fill-mainTextColor group-hover:fill-themeAccentColor"
+            titleStyles="text-mainTextColor group-hover:text-themeAccentColor group-focus-visible:text-themeAccentColor"
+            iconColor="fill-mainTextColor group-hover:fill-themeAccentColor group-focus-visible:fill-themeAccentColor"
             text={caseStudy.name}
           />
           <p className="opacity-[0.6]">{caseStudy.description}</p>

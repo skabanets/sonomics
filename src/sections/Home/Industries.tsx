@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { CustomTitle, IndustryCard } from "../../components";
 
 import { slideInWithFade, industries, routes } from "../../constants";
+import { Industry } from "../../types";
 
 const industriesContainerVariants = {
   hidden: { opacity: 0 },
@@ -43,18 +44,20 @@ export const Industries = () => {
             <motion.li
               key={industry.id}
               variants={cardVariants}
-              className="rounded-[20px] border border-solid border-transparent bg-darkBgColor transition hover:border-accentYellowColor"
+              className="rounded-[20px] border border-solid border-transparent bg-darkBgColor transition hover:border-accentYellowColor focus-visible:border-accentYellowColor"
+              tabIndex={0}
             >
-              <IndustryCard industry={industry} />
+              <IndustryCard industry={industry as Industry} />
             </motion.li>
           ))}
           <motion.li
             variants={cardVariants}
-            className="rounded-[20px] border border-transparent bg-darkBgColor transition hover:border-accentYellowColor"
+            className="rounded-[20px] border border-solid border-transparent bg-darkBgColor transition hover:border-accentYellowColor focus-visible:border-accentYellowColor"
+            tabIndex={0}
           >
             <Link
               to={routes.Industries}
-              className="flex h-[317px] w-[200px] items-center justify-center"
+              className="flex h-[346px] w-[200px] items-center justify-center"
             >
               <CustomTitle
                 type="h4"
