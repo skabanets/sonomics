@@ -4,23 +4,26 @@ export const industries = [
     name: "Fintech",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
-    icon: "fintech",
+    image: "fintech_1x",
+    retinaImage: "fintech_2x",
     link: "/industries",
   },
   {
     id: 2,
-    name: "Healthcare",
+    name: "Ecommerce",
     description:
-      "Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
-    icon: "healthcare",
+      "Ut enim ad minim veniam, quis nostrud. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
+    image: "ecommerce_1x",
+    retinaImage: "ecommerce_2x",
     link: "/industries",
   },
   {
     id: 3,
-    name: "Ecommerce",
+    name: "Cryptocurrency",
     description:
-      "Ut enim ad minim veniam, quis nostrud. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
-    icon: "ecommerce",
+      "Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
+    image: "crypto_1x",
+    retinaImage: "crypto_2x",
     link: "/industries",
   },
 ];
