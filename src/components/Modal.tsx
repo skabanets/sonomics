@@ -1,4 +1,5 @@
 import ReactDOM from "react-dom";
+import { motion } from "framer-motion";
 
 import { Icon } from "../components";
 
@@ -12,9 +13,12 @@ const modalRoot = document.querySelector("#modal-root")!;
 
 export const Modal = ({ children, toggleModal, handleClickOnBackdrop }: ModalProps) => {
   return ReactDOM.createPortal(
-    <div
+    <motion.div
       className="fixed inset-0 z-50 flex items-center justify-center bg-backdropBgColor"
       onClick={(e) => handleClickOnBackdrop(e)}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.2, ease: "easeOut", delay: 0.2 }}
     >
       <div className="modal relative z-10 max-h-[95dvh] min-h-[300px] min-w-[300px] rounded-[20px] bg-secondaryBgColor p-[50px]">
         <div className="small-text absolute right-[20px] top-[20px] flex items-center gap-[10px]">
@@ -25,7 +29,7 @@ export const Modal = ({ children, toggleModal, handleClickOnBackdrop }: ModalPro
         </div>
         {children}
       </div>
-    </div>,
+    </motion.div>,
     modalRoot
   );
 };
