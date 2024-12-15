@@ -16,7 +16,7 @@ export const Footer = () => {
         <nav className="mr-[130px]">
           <NavMenu
             listClass="flex flex-col gap-[30px] text-whiteTextColor"
-            linkClass="hover:text-accentYellowColor focus-visible:text-accentYellowColor active:text-accentYellowColor"
+            linkClass="hover:text-accentYellowColor focus-visible:text-accentYellowColor"
           />
         </nav>
         <div>
@@ -26,7 +26,7 @@ export const Footer = () => {
               <li>
                 <Link
                   to="tel:+12345678990"
-                  className="transition hover:text-accentYellowColor focus-visible:text-accentYellowColor active:text-accentYellowColor"
+                  className="transition hover:text-accentYellowColor focus-visible:text-accentYellowColor"
                 >
                   +1 234 567-89-90
                 </Link>
@@ -34,7 +34,7 @@ export const Footer = () => {
               <li>
                 <Link
                   to="mailto:info@sonomics.com"
-                  className="transition hover:text-accentYellowColor focus-visible:text-accentYellowColor active:text-accentYellowColor"
+                  className="transition hover:text-accentYellowColor focus-visible:text-accentYellowColor"
                 >
                   info@sonomics.com
                 </Link>

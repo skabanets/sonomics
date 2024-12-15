@@ -15,7 +15,7 @@ export const Header = () => {
               <ThemeToggle />
               <NavMenu
                 listClass="flex gap-[50px] font-medium text-mainTextColor"
-                linkClass="hover:text-themeAccentColor focus-visible:text-themeAccentColor active:text-themeAccentColor"
+                linkClass="hover:text-themeAccentColor focus-visible:text-themeAccentColor"
               />
               <Button label="Contact us" onClick={toggleModal} />
             </div>
