@@ -28,9 +28,11 @@ export const LetsTalk = () => {
                     >
                       <Icon
                         id={id}
-                        className="group-hover:fill-themeAccentColor h-[15px] w-[15px] fill-accentRedColor transition"
+                        className="h-[15px] w-[15px] fill-accentRedColor transition group-hover:fill-themeAccentColor group-focus-visible:fill-themeAccentColor"
                       />
-                      <p className="bold-text group-hover:text-themeAccentColor">{text}</p>
+                      <p className="bold-text group-hover:text-themeAccentColor group-focus-visible:text-themeAccentColor">
+                        {text}
+                      </p>
                     </Link>
                   </li>
                 ))}

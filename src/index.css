@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  * {
+    @apply outline-none;
+  }
+}
+
 /* Fonts */
 @font-face {
   font-family: "Montserrat";
@@ -186,7 +192,7 @@ textarea:-webkit-autofill:focus {
 }
 
 .form-field {
-  @apply bg-formFieldBgColor placeholder:text-placeholderTextColor border border-solid px-[20px] py-[10px] font-montserrat text-[12px] font-medium leading-[20px] outline-none transition;
+  @apply border border-solid bg-formFieldBgColor px-[20px] py-[10px] font-montserrat text-[12px] font-medium leading-[20px] outline-none transition placeholder:text-placeholderTextColor;
 }
 
 .modal .form-field {
@@ -203,7 +209,7 @@ textarea:-webkit-autofill:focus {
 
 .header .active,
 .footer .active {
-  @apply border-themeAccentColor text-themeAccentColor border-b;
+  @apply border-b border-themeAccentColor text-themeAccentColor;
 }
 
 .footer .active {
@@ -226,11 +232,11 @@ textarea:-webkit-autofill:focus {
 }
 
 .view-link {
-  @apply relative transition-all before:absolute before:bottom-0 before:left-0 before:h-[1.5px] before:w-0 before:bg-accentRedColor before:duration-300 before:ease-in hover:before:w-full;
+  @apply relative transition-all before:absolute before:bottom-0 before:left-0 before:h-[1.5px] before:w-0 before:bg-accentRedColor before:duration-300 before:ease-in hover:before:w-full focus-visible:before:w-full;
 }
 
 .scale-on-hover {
-  @apply transform transition-transform duration-500 group-hover:scale-110;
+  @apply transform transition-transform duration-500 group-hover:scale-110 group-focus-visible:scale-110;
 }
 
 .scrollbar {

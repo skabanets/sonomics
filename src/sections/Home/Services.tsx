@@ -18,8 +18,8 @@ export const Services = () => {
               <Link to={service.link} className="group">
                 <CustomTitle
                   type="h4"
-                  wrapperStyles="flex items-center justify-between px-[10px] group-hover:text-accentYellowColor group-hover:px-[20px] transition"
-                  iconColor="fill-mainTextColor group-hover:fill-accentYellowColor"
+                  wrapperStyles="flex items-center justify-between px-[10px] group-hover:text-accentYellowColor group-hover:px-[20px] transition group-focus-visible:text-accentYellowColor group-focus-visible:px-[20px]"
+                  iconColor="fill-mainTextColor group-hover:fill-accentYellowColor group-focus-visible:fill-accentYellowColor"
                   text={service.text}
                 />
               </Link>
@@ -29,9 +29,9 @@ export const Services = () => {
           <Link to={routes.Services} className="group">
             <CustomTitle
               type="h4"
-              wrapperStyles="flex items-center justify-between px-[10px] group-hover:px-[20px] transition"
-              titleStyles="text-accentRedColor group-hover:text-accentYellowColor"
-              iconColor="fill-accentRedColor group-hover:fill-accentYellowColor"
+              wrapperStyles="flex items-center justify-between px-[10px] group-hover:px-[20px] transition group-focus-visible:text-accentYellowColor group-focus-visible:px-[20px]"
+              titleStyles="text-accentRedColor group-hover:text-accentYellowColor group-focus-visible:text-accentYellowColor"
+              iconColor="fill-accentRedColor group-hover:fill-accentYellowColor group-focus-visible:fill-accentYellowColor"
               text="More services"
             />
           </Link>
