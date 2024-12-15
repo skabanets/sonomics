@@ -1,3 +1,11 @@
+// Industries
+import fintech_1x from "./images/industries/fintech@1x.webp";
+import fintech_2x from "./images/industries/fintech@2x.webp";
+import ecommerce_1x from "./images/industries/ecommerce@1x.webp";
+import ecommerce_2x from "./images/industries/ecommerce@2x.webp";
+import crypto_1x from "./images/industries/crypto@1x.webp";
+import crypto_2x from "./images/industries/crypto@2x.webp";
+
 // Cases
 import case1_1x from "./images/cases/case-1@1x.webp";
 import case1_2x from "./images/cases/case-1@2x.webp";
@@ -24,6 +32,14 @@ import barcelona_1x from "./images/common/barcelona@1x.webp";
 import barcelona_2x from "./images/common/barcelona@2x.webp";
 
 export const images = {
+  industriesImages: {
+    fintech_1x,
+    fintech_2x,
+    ecommerce_1x,
+    ecommerce_2x,
+    crypto_1x,
+    crypto_2x,
+  },
   casesImages: {
     case1_1x,
     case1_2x,
