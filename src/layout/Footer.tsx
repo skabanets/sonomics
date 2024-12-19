@@ -48,7 +48,7 @@ export const Footer = () => {
                   to={link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex h-[35px] w-[112px] items-center justify-center rounded-[90px] border border-accentRedColor px-[25px] py-[10px] text-[12px] text-whiteTextColor transition hover:bg-accentRedColor focus-visible:bg-accentRedColor active:bg-accentRedColor"
+                  className="flex h-[40px] w-[112px] items-center justify-center rounded-[90px] border border-accentRedColor px-[25px] py-[10px] text-[12px] text-whiteTextColor transition hover:bg-accentRedColor focus-visible:bg-accentRedColor active:bg-accentRedColor"
                 >
                   {text}
                 </Link>
@@ -57,7 +57,7 @@ export const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="container flex items-center justify-between border-t border-grey600Color px-0 pt-[28px] lg:max-w-[1280px]">
+      <div className="container flex items-center justify-between border-t border-grey600Color px-0 pt-[20px] lg:max-w-[1280px]">
         <p className="small-text text-white">&copy; 2024 Sonomics, Inc. All rights reserved</p>
         <div className="small-text flex items-center justify-end gap-[15px] text-whiteTextColor">
           <span className="group-hover:-translate-x-full group-hover:opacity-0"> To top </span>

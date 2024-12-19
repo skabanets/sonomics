@@ -40,6 +40,7 @@ export const Modal = ({ children, toggleModal, handleClickOnBackdrop }: ModalPro
             type="button"
             onClick={toggleModal}
             className="focus-visible:outline focus-visible:outline-mainTextColor"
+            aria-label="Close modal"
           >
             <Icon id="close" className="size-[20px] fill-mainTextColor" />
           </button>
