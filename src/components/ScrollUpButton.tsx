@@ -10,6 +10,7 @@ export const ScrollUpButton = () => {
       type="button"
       className="group flex size-[40px] items-center justify-center rounded-full border border-whiteTextColor bg-darkBgColor p-[10px] transition hover:border-accentYellowColor focus-visible:border-accentYellowColor"
       onClick={handleClick}
+      aria-label="Scroll to top"
     >
       <Icon
         id="arrow-right"
