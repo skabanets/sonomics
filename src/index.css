@@ -239,6 +239,17 @@ textarea:-webkit-autofill:focus {
   @apply transform transition-transform duration-500 group-hover:scale-110 group-focus-visible:scale-110;
 }
 
+.our-services-bg {
+  @apply bg-[length:508px_633px] bg-[position:bottom_0_right_calc(50%-345px)] bg-no-repeat;
+  background-image: url("./assets/images/services/our-services_desk@1x.webp");
+}
+
+@media (min-resolution: 1.5dppx), (min-device-pixel-ratio: 2) {
+  .our-services-bg {
+    background-image: url("./assets/images/services/our-services_desk@2x.webp");
+  }
+}
+
 .scrollbar {
   --thumb-color: var(--scroll-thumb-color);
   --track-color: transparent;
