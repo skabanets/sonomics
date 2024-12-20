@@ -10,3 +10,4 @@ export * from "./About/SuccessfulStories";
 export * from "./About/Team";
 export * from "./About/LetsTalk";
 export * from "./Services/OurServices";
+export * from "./Services/OurCoreServices";
