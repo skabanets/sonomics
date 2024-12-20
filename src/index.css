@@ -78,6 +78,7 @@ html[data-theme="light"] {
   --accent-orange: #fa7b26;
   --theme-accent-color: #fc561d;
 
+  --dark-border: #161515;
   --grey-600: #74716f;
 
   --theme-toggle-translate: 5px;
@@ -108,6 +109,7 @@ html[data-theme="dark"] {
   --accent-orange: #fa7b26;
   --theme-accent-color: #f8b332;
 
+  --dark-border: #c1bebf;
   --grey-600: #74716f;
 
   --theme-toggle-translate: 27.5px;
