@@ -4,6 +4,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import { SharedLayout } from "./layout";
 
 import { routes } from "./constants";
+import { useScrollManager } from "./hooks";
 
 const Home = lazy(() => import("./pages/Home"));
 const Services = lazy(() => import("./pages/Services"));
@@ -12,6 +13,8 @@ const CaseStudy = lazy(() => import("./pages/CaseStudy"));
 const About = lazy(() => import("./pages/About"));
 
 export const App = () => {
+  useScrollManager();
+
   return (
     <Routes>
       <Route path="/" element={<SharedLayout />}>
