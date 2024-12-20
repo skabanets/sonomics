@@ -1,7 +1,7 @@
 import { Icon } from "../components";
 
 interface CustomTitleProps {
-  type: "h3" | "h4" | "h5";
+  type: "h3" | "h4" | "h5" | "p";
   wrapperStyles: string;
   iconColor?: string;
   titleStyles?: string;
