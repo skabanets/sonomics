@@ -39,6 +39,7 @@ export default {
         accentOrangeColor: "var(--accent-orange)",
         themeAccentColor: "var(--theme-accent-color)",
 
+        darkBorderColor: "var(--dark-border)",
         grey600Color: "var(--grey-600)",
       },
       spacing: {
