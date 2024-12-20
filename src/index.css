@@ -113,10 +113,6 @@ html[data-theme="dark"] {
   --theme-toggle-translate: 27.5px;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   @apply min-h-screen bg-primaryBgColor font-montserrat leading-6 text-mainTextColor;
 }
