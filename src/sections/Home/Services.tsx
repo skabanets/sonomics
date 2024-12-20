@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 import { CustomTitle, Divider } from "../../components";
 
-import { serviceLinks, routes, slideInWithFade } from "../../constants";
+import { services, routes, slideInWithFade } from "../../constants";
 
 export const Services = () => {
   return (
@@ -12,7 +12,7 @@ export const Services = () => {
       <motion.div className="container flex flex-row justify-between" {...slideInWithFade}>
         <h2 className="w-[412px] pt-[4px]">What we can do for our clients</h2>
         <div className="flex w-[630px] flex-col gap-[25px]">
-          {serviceLinks.map((service) => (
+          {services.map((service) => (
             <React.Fragment key={service.id}>
               <Divider />
               <Link to={service.link} className="group">
