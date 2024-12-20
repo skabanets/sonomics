@@ -20,7 +20,7 @@ export const Services = () => {
                   type="h4"
                   wrapperStyles="flex items-center justify-between px-[10px] group-hover:text-accentYellowColor group-hover:px-[20px] transition group-focus-visible:text-accentYellowColor group-focus-visible:px-[20px]"
                   iconColor="fill-mainTextColor group-hover:fill-accentYellowColor group-focus-visible:fill-accentYellowColor"
-                  text={service.text}
+                  text={service.name}
                 />
               </Link>
             </React.Fragment>
