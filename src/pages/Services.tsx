@@ -1,9 +1,10 @@
-import { OurServices } from "../sections";
+import { OurCoreServices, OurServices } from "../sections";
 
 const Services = () => {
   return (
     <>
       <OurServices />
+      <OurCoreServices />
     </>
   );
 };
