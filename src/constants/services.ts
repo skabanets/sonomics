@@ -1,7 +1,7 @@
 export const services = [
   {
     id: 1,
-    text: "End-to-End Application Development",
+    name: "End-to-End Application Development",
     cardTitle: "End-to-End application development",
     link: "/services",
     features: [
@@ -13,7 +13,7 @@ export const services = [
   },
   {
     id: 2,
-    text: "Artificial Intelligence (AI) Integration",
+    name: "Artificial Intelligence (AI) Integration",
     cardTitle: "Transform your business with artificial intelligence",
     link: "/services",
     features: [
@@ -25,7 +25,7 @@ export const services = [
   },
   {
     id: 3,
-    text: "Agile Methodologies",
+    name: "Agile Methodologies",
     cardTitle: "Deliverables in 2 weeks: experience our demo version",
     link: "/services",
     features: [
