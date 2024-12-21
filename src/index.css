@@ -66,6 +66,7 @@ html[data-theme="light"] {
   --form-field-bg: #ffffff;
   --field-border: #ffffff;
   --scroll-thumb-color: #7f7f7f;
+  --slider-btn-bg: #ffffff;
 
   --main-text: #323031;
   --secondary-text: #74716f;
@@ -77,6 +78,7 @@ html[data-theme="light"] {
   --accent-yellow: #f8b332;
   --accent-orange: #fa7b26;
   --theme-accent-color: #fc561d;
+  --inverse-color: #161515;
 
   --dark-border: #161515;
   --grey-600: #74716f;
@@ -97,6 +99,7 @@ html[data-theme="dark"] {
   --form-field-bg: #3c3a3b;
   --field-border: #eae9ea;
   --scroll-thumb-color: #a3a3a3;
+  --slider-btn-bg: #323031;
 
   --main-text: #ffffff;
   --secondary-text: #c1bebf;
@@ -108,6 +111,7 @@ html[data-theme="dark"] {
   --accent-yellow: #f8b332;
   --accent-orange: #fa7b26;
   --theme-accent-color: #f8b332;
+  --inverse-color: #ffffff;
 
   --dark-border: #c1bebf;
   --grey-600: #74716f;
