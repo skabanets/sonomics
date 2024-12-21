@@ -13,3 +13,4 @@ export * from "./accentColors";
 export * from "./caseStudieStyles";
 export * from "./contacts";
 export * from "./animationProps";
+export * from "./whyChooseUsPoints";
