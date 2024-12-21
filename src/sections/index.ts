@@ -8,6 +8,6 @@ export * from "./About/OurMission";
 export * from "./About/SonomicsNumbers";
 export * from "./About/SuccessfulStories";
 export * from "./About/Team";
-export * from "./About/LetsTalk";
 export * from "./Services/OurServices";
 export * from "./Services/OurCoreServices";
+export * from "./Common/LetsTalk";
