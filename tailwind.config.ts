@@ -27,6 +27,7 @@ export default {
         backdropBgColor: "var(--backdrop-bg)",
         formFieldBgColor: "var(--form-field-bg)",
         fieldBorderColor: "var(--field-border)",
+        sliderBtnBgColor: "var(--slider-btn-bg)",
 
         mainTextColor: "var(--main-text)",
         secondaryTextColor: "var(--secondary-text)",
@@ -38,6 +39,7 @@ export default {
         accentYellowColor: "var(--accent-yellow)",
         accentOrangeColor: "var(--accent-orange)",
         themeAccentColor: "var(--theme-accent-color)",
+        inverseColor: "var(--inverse-color)",
 
         darkBorderColor: "var(--dark-border)",
         grey600Color: "var(--grey-600)",
