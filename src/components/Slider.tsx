@@ -66,6 +66,7 @@ export const Slider = ({ slides }: SliderProps) => {
             <button
               onClick={() => swiperRef.current?.swiper.slidePrev()}
               className="group flex h-[24px] w-[24px] items-center justify-center"
+              aria-label="Previous slide"
             >
               <Icon
                 id="arrow-left"
@@ -87,6 +88,7 @@ export const Slider = ({ slides }: SliderProps) => {
             <button
               onClick={() => swiperRef.current?.swiper.slideNext()}
               className="group flex h-[24px] w-[24px] items-center justify-center"
+              aria-label="Next slide"
             >
               <Icon
                 id="arrow-right"
