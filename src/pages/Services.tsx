@@ -1,10 +1,11 @@
-import { LetsTalk, OurCoreServices, OurServices } from "../sections";
+import { LetsTalk, OurCoreServices, OurServices, WhyChooseUs } from "../sections";
 
 const Services = () => {
   return (
     <>
       <OurServices />
       <OurCoreServices />
+      <WhyChooseUs />
       <LetsTalk />
     </>
   );
