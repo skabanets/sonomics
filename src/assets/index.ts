@@ -12,6 +12,16 @@ import case1_2x from "./images/cases/case-1@2x.webp";
 import case2_1x from "./images/cases/case-2@1x.webp";
 import case2_2x from "./images/cases/case-2@2x.webp";
 
+// Why Choose Us
+import industry_expertise_desk_1x from "./images/why-choose-us/industry-expertise_desk@1x.webp";
+import industry_expertise_desk_2x from "./images/why-choose-us/industry-expertise_desk@2x.webp";
+import client_centric_approach_desk_1x from "./images/why-choose-us/client-centric-approach_desk@1x.webp";
+import client_centric_approach_desk_2x from "./images/why-choose-us/client-centric-approach_desk@2x.webp";
+import agile_delivery_desk_1x from "./images/why-choose-us/agile-delivery_desk@1x.webp";
+import agile_delivery_desk_2x from "./images/why-choose-us/agile-delivery_desk@2x.webp";
+import innovation_desk_1x from "./images/why-choose-us/innovation_desk@1x.webp";
+import innovation_desk_2x from "./images/why-choose-us/innovation_desk@2x.webp";
+
 // Team
 import ceo_1x from "./images/team/ceo@1x.webp";
 import ceo_2x from "./images/team/ceo@2x.webp";
@@ -45,6 +55,16 @@ export const images = {
     case1_2x,
     case2_1x,
     case2_2x,
+  },
+  whyChooseUsImages: {
+    industry_expertise_desk_1x,
+    industry_expertise_desk_2x,
+    client_centric_approach_desk_1x,
+    client_centric_approach_desk_2x,
+    agile_delivery_desk_1x,
+    agile_delivery_desk_2x,
+    innovation_desk_1x,
+    innovation_desk_2x,
   },
   teamImages: {
     ceo_1x,
