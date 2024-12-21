@@ -1,6 +1,6 @@
 import { images } from "../assets";
 import { colors } from "../constants";
-import { TeamMember } from "../types";
+import type { TeamMember } from "../types";
 
 interface TeamMemberCardProps {
   item: TeamMember;
