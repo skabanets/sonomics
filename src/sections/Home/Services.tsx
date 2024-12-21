@@ -7,12 +7,14 @@ import { CustomTitle, Divider } from "../../components";
 import { services, routes, slideInWithFade } from "../../constants";
 
 export const Services = () => {
+  const servicesLinks = services.slice(0, 3);
+
   return (
     <section className="bg-secondaryBgColor py-[80px]">
       <motion.div className="container flex flex-row justify-between" {...slideInWithFade}>
         <h2 className="w-[412px] pt-[4px]">What we can do for our clients</h2>
         <div className="flex w-[630px] flex-col gap-[25px]">
-          {services.map((service) => (
+          {servicesLinks.map((service) => (
             <React.Fragment key={service.id}>
               <Divider />
               <Link to={service.link} className="group">
