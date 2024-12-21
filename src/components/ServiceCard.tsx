@@ -12,10 +12,7 @@ export const ServiceCard = ({ service }: IServiceCardProps) => {
   const { link, cardTitle, features } = service;
 
   return (
-    <Link
-      to={link}
-      className="border-darkBorderColor flex h-[436px] w-[390px] flex-col items-start gap-[20px] rounded-[10px] border border-solid bg-themeToggleBgColor p-[30px] transition hover:bg-primaryBgColor focus-visible:bg-primaryBgColor"
-    >
+    <Link to={link} className="flex h-full flex-col items-start gap-[20px]">
       <h4>{cardTitle}</h4>
       <ul className="flex flex-1 flex-col gap-[10px]">
         {features.map((feature, index) => (
