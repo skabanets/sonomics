@@ -19,6 +19,7 @@ export const OurCoreServices = () => {
             <button
               onClick={() => swiperRef.current?.slidePrev()}
               className="bg-sliderBtnBgColor border-darkBorderColor group flex h-[50px] w-[50px] items-center justify-center rounded-[10px] border border-solid transition hover:border-themeAccentColor focus-visible:border-themeAccentColor"
+              aria-label="Previous slide"
             >
               <Icon
                 id="arrow-left-bold"
@@ -28,6 +29,7 @@ export const OurCoreServices = () => {
             <button
               onClick={() => swiperRef.current?.slideNext()}
               className="bg-sliderBtnBgColor border-darkBorderColor group flex h-[50px] w-[50px] items-center justify-center rounded-[10px] border border-solid transition hover:border-themeAccentColor focus-visible:border-themeAccentColor"
+              aria-label="Next slide"
             >
               <Icon
                 id="arrow-right-bold"
