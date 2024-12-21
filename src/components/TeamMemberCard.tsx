@@ -17,7 +17,7 @@ export const TeamMemberCard = ({ item, index }: TeamMemberCardProps) => {
 
   const beforeBgColor = `bg-${colors[index % colors.length]}`;
   return (
-    <li className="w-[340px]">
+    <li className="w-[340px] last:mr-[80px]">
       <img
         srcSet={`${teamImages[desk[0]]} 1x, ${teamImages[desk[1]]} 2x`}
         src={teamImages[desk[0]]}
