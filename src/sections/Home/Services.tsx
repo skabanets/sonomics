@@ -20,7 +20,8 @@ export const Services = () => {
               <Link to={service.link} className="group">
                 <CustomTitle
                   type="h4"
-                  wrapperStyles="flex items-center justify-between px-[10px] group-hover:text-accentYellowColor group-hover:px-[20px] transition group-focus-visible:text-accentYellowColor group-focus-visible:px-[20px]"
+                  wrapperStyles="flex items-center justify-between px-[10px] group-hover:px-[20px] transition group-focus-visible:px-[20px]"
+                  titleStyles="group-hover:text-accentYellowColor group-focus-visible:text-accentYellowColor"
                   iconColor="fill-mainTextColor group-hover:fill-accentYellowColor group-focus-visible:fill-accentYellowColor"
                   text={service.name}
                 />
@@ -31,7 +32,7 @@ export const Services = () => {
           <Link to={routes.Services} className="group">
             <CustomTitle
               type="h4"
-              wrapperStyles="flex items-center justify-between px-[10px] group-hover:px-[20px] transition group-focus-visible:text-accentYellowColor group-focus-visible:px-[20px]"
+              wrapperStyles="flex items-center justify-between px-[10px] group-hover:px-[20px] transition group-focus-visible:px-[20px]"
               titleStyles="text-accentRedColor group-hover:text-accentYellowColor group-focus-visible:text-accentYellowColor"
               iconColor="fill-accentRedColor group-hover:fill-accentYellowColor group-focus-visible:fill-accentYellowColor"
               text="More services"
