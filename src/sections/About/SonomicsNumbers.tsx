@@ -9,12 +9,12 @@ export const SonomicsNumbers = () => {
     <section className="py-[100px]">
       <div className="container relative">
         <motion.h2
-          className="sticky top-[100px] z-10 w-[300px] pb-[500px] pt-[20px]"
+          className="sticky top-[100px] z-10 w-[300px] pt-[20px] after:block after:h-[500px] after:content-['''']"
           {...opacityFade}
         >
           Sonomics in numbers
         </motion.h2>
-        <ul className="ml-auto mt-[-128px] w-[774px] overflow-hidden">
+        <ul className="ml-auto mt-[-628px] w-[774px] overflow-hidden">
           {sonomicsNumbers.map(({ title, number }, index) => (
             <motion.li
               initial={{ opacity: 0 }}
