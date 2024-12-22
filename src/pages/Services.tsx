@@ -1,4 +1,10 @@
-import { LetsTalk, OurCoreServices, OurServices, WhyChooseUs } from "../sections";
+import {
+  LetsTalk,
+  OurCoreServices,
+  OurServices,
+  ServicesCaseStudy,
+  WhyChooseUs,
+} from "../sections";
 
 const Services = () => {
   return (
@@ -6,6 +12,7 @@ const Services = () => {
       <OurServices />
       <OurCoreServices />
       <WhyChooseUs />
+      <ServicesCaseStudy />
       <LetsTalk />
     </>
   );
