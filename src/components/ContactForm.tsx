@@ -36,7 +36,7 @@ export const ContactForm = () => {
               type="text"
               className={`form-field rounded-[20px] ${errors.firstName ? "!border-red-500" : "border-fieldBorderColor"}`}
               {...register("firstName", {
-                required: "Name is required",
+                required: "First name is required",
               })}
               placeholder="Enter first name"
               maxLength={50}
@@ -51,7 +51,7 @@ export const ContactForm = () => {
               type="text"
               className={`form-field rounded-[20px] ${errors.lastName ? "!border-red-500" : "border-fieldBorderColor"}`}
               {...register("lastName", {
-                required: "Name is required",
+                required: "Last name is required",
               })}
               maxLength={50}
               placeholder="Enter last name"
