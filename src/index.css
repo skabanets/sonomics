@@ -246,9 +246,17 @@ textarea:-webkit-autofill:focus {
   background-image: url("./assets/images/services/our-services_desk@1x.webp");
 }
 
+.services-case-study-bg {
+  @apply bg-cover bg-[position:center_0] bg-no-repeat;
+  background-image: url("./assets/images/services-case-study/services-case-study_desk@1x.webp");
+}
+
 @media (min-resolution: 1.5dppx), (min-device-pixel-ratio: 2) {
   .our-services-bg {
     background-image: url("./assets/images/services/our-services_desk@2x.webp");
+  }
+  .services-case-study-bg {
+    background-image: url("./assets/images/services-case-study/services-case-study_desk@2x.webp");
   }
 }
 
