@@ -18,22 +18,22 @@ export const OurCoreServices = () => {
           <div className="flex gap-[20px]">
             <button
               onClick={() => swiperRef.current?.slidePrev()}
-              className="bg-sliderBtnBgColor border-darkBorderColor group flex h-[50px] w-[50px] items-center justify-center rounded-[10px] border border-solid transition hover:border-themeAccentColor focus-visible:border-themeAccentColor"
+              className="bg-sliderBgColor group flex h-[50px] w-[50px] items-center justify-center rounded-[10px] border border-solid border-darkBorderColor transition hover:border-themeAccentColor focus-visible:border-themeAccentColor"
               aria-label="Previous slide"
             >
               <Icon
                 id="arrow-left-bold"
-                className="fill-inverseColor h-[15px] w-[15px] transition group-hover:fill-themeAccentColor group-focus-visible:fill-themeAccentColor"
+                className="h-[15px] w-[15px] fill-inverseColor transition group-hover:fill-themeAccentColor group-focus-visible:fill-themeAccentColor"
               />
             </button>
             <button
               onClick={() => swiperRef.current?.slideNext()}
-              className="bg-sliderBtnBgColor border-darkBorderColor group flex h-[50px] w-[50px] items-center justify-center rounded-[10px] border border-solid transition hover:border-themeAccentColor focus-visible:border-themeAccentColor"
+              className="bg-sliderBgColor group flex h-[50px] w-[50px] items-center justify-center rounded-[10px] border border-solid border-darkBorderColor transition hover:border-themeAccentColor focus-visible:border-themeAccentColor"
               aria-label="Next slide"
             >
               <Icon
                 id="arrow-right-bold"
-                className="fill-inverseColor h-[15px] w-[15px] transition group-hover:fill-themeAccentColor group-focus-visible:fill-themeAccentColor"
+                className="h-[15px] w-[15px] fill-inverseColor transition group-hover:fill-themeAccentColor group-focus-visible:fill-themeAccentColor"
               />
             </button>
           </div>
@@ -51,7 +51,7 @@ export const OurCoreServices = () => {
               {services.map((service) => (
                 <SwiperSlide
                   key={service.id}
-                  className="border-darkBorderColor h-[436px] w-[390px] rounded-[10px] border border-solid bg-primaryBgColor p-[30px] transition last:mr-[80px] hover:bg-themeToggleBgColor focus-visible:bg-themeToggleBgColor"
+                  className="bg-sliderBgColor h-[436px] w-[390px] rounded-[10px] border border-solid border-darkBorderColor p-[30px] transition last:mr-[80px] hover:bg-secondaryBgColor focus-visible:bg-secondaryBgColor"
                 >
                   <ServiceCard service={service} />
                 </SwiperSlide>
