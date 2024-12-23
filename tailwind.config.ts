@@ -43,6 +43,7 @@ export default {
 
         darkBorderColor: "var(--dark-border)",
         grey600Color: "var(--grey-600)",
+        disabledBtnColor: "var(--disabled-btn)",
       },
       spacing: {
         themeToggleTranslate: "var(--theme-toggle-translate)",

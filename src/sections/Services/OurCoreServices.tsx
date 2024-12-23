@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { motion } from "framer-motion";
@@ -9,6 +9,14 @@ import { services, slideInWithFade } from "../../constants";
 
 export const OurCoreServices = () => {
   const swiperRef = useRef<any>(null);
+  const [isBeginning, setIsBeginning] = useState(true);
+  const [isEnd, setIsEnd] = useState(false);
+
+  const handleSwiper = (swiper: any) => {
+    swiperRef.current = swiper;
+    setIsBeginning(swiper.isBeginning);
+    setIsEnd(swiper.isEnd);
+  };
 
   return (
     <section className="bg-secondaryBgColor pt-[100px]">
@@ -18,22 +26,24 @@ export const OurCoreServices = () => {
           <div className="flex gap-[20px]">
             <button
               onClick={() => swiperRef.current?.slidePrev()}
-              className="bg-sliderBgColor group flex h-[50px] w-[50px] items-center justify-center rounded-[10px] border border-solid border-darkBorderColor transition hover:border-themeAccentColor focus-visible:border-themeAccentColor"
+              className={`group flex h-[50px] w-[50px] items-center justify-center rounded-[10px] border border-solid transition ${isBeginning ? "border-disabledBtnColor cursor-not-allowed bg-formFieldBgColor" : "bg-sliderBgColor border-darkBorderColor hover:border-themeAccentColor focus-visible:border-themeAccentColor"}`}
               aria-label="Previous slide"
+              disabled={isBeginning}
             >
               <Icon
                 id="arrow-left-bold"
-                className="h-[15px] w-[15px] fill-inverseColor transition group-hover:fill-themeAccentColor group-focus-visible:fill-themeAccentColor"
+                className={`h-[15px] w-[15px] transition ${isBeginning ? "fill-disabledBtnColor" : "fill-inverseColor group-hover:fill-themeAccentColor group-focus-visible:fill-themeAccentColor"}`}
               />
             </button>
             <button
               onClick={() => swiperRef.current?.slideNext()}
-              className="bg-sliderBgColor group flex h-[50px] w-[50px] items-center justify-center rounded-[10px] border border-solid border-darkBorderColor transition hover:border-themeAccentColor focus-visible:border-themeAccentColor"
+              className={`group flex h-[50px] w-[50px] items-center justify-center rounded-[10px] border border-solid transition ${isEnd ? "border-disabledBtnColor cursor-not-allowed bg-formFieldBgColor" : "bg-sliderBgColor border-darkBorderColor hover:border-themeAccentColor focus-visible:border-themeAccentColor"}`}
               aria-label="Next slide"
+              disabled={isEnd}
             >
               <Icon
                 id="arrow-right-bold"
-                className="h-[15px] w-[15px] fill-inverseColor transition group-hover:fill-themeAccentColor group-focus-visible:fill-themeAccentColor"
+                className={`h-[15px] w-[15px] transition ${isEnd ? "fill-disabledBtnColor" : "fill-inverseColor group-hover:fill-themeAccentColor group-focus-visible:fill-themeAccentColor"}`}
               />
             </button>
           </div>
@@ -46,12 +56,17 @@ export const OurCoreServices = () => {
               slidesPerView="auto"
               slidesPerGroup={2}
               loop={false}
-              onSwiper={(swiper) => (swiperRef.current = swiper)}
+              onSwiper={(swiper) => handleSwiper(swiper)}
+              onSlideChange={(swiper) => {
+                setIsBeginning(swiper.isBeginning);
+                setIsEnd(swiper.isEnd);
+              }}
             >
               {services.map((service) => (
                 <SwiperSlide
                   key={service.id}
                   className="bg-sliderBgColor h-[436px] w-[390px] rounded-[10px] border border-solid border-darkBorderColor p-[30px] transition last:mr-[80px] hover:bg-secondaryBgColor focus-visible:bg-secondaryBgColor"
+                  tabIndex={0}
                 >
                   <ServiceCard service={service} />
                 </SwiperSlide>

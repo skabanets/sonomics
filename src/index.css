@@ -82,6 +82,7 @@ html[data-theme="light"] {
 
   --dark-border: #161515;
   --grey-600: #74716f;
+  --disabled-btn: #c1bebf;
 
   --theme-toggle-translate: 5px;
 }
@@ -115,6 +116,7 @@ html[data-theme="dark"] {
 
   --dark-border: #c1bebf;
   --grey-600: #74716f;
+  --disabled-btn: #74716f;
 
   --theme-toggle-translate: 27.5px;
 }
