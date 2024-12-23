@@ -66,7 +66,7 @@ html[data-theme="light"] {
   --form-field-bg: #ffffff;
   --field-border: #ffffff;
   --scroll-thumb-color: #7f7f7f;
-  --slider-btn-bg: #ffffff;
+  --slider-bg: #ffffff;
 
   --main-text: #323031;
   --secondary-text: #74716f;
@@ -99,7 +99,7 @@ html[data-theme="dark"] {
   --form-field-bg: #3c3a3b;
   --field-border: #eae9ea;
   --scroll-thumb-color: #a3a3a3;
-  --slider-btn-bg: #323031;
+  --slider-bg: #323031;
 
   --main-text: #ffffff;
   --secondary-text: #c1bebf;
