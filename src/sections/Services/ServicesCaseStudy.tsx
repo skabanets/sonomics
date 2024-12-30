@@ -27,15 +27,14 @@ export const ServicesCaseStudy = () => {
   }, [yOffset]);
 
   return (
-    <motion.section
+    <section
       ref={ref}
       className="services-case-study-bg py-[120px]"
       style={{
         backgroundPosition: `center ${backgroundPositionY}`,
       }}
-      {...slideInWithFade}
     >
-      <div className="container">
+      <motion.div className="container" {...slideInWithFade}>
         <h5 className="mb-[20px] text-whiteTextColor">Case study name</h5>
         <h2 className="mb-[20px] w-[600px] text-whiteTextColor">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
@@ -50,7 +49,7 @@ export const ServicesCaseStudy = () => {
             titleStyles="text-accentRedColor"
           />
         </Link>
-      </div>
-    </motion.section>
+      </motion.div>
+    </section>
   );
 };
