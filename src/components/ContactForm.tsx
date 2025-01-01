@@ -1,4 +1,5 @@
 import { SubmitHandler, useForm } from "react-hook-form";
+import emailjs from "@emailjs/browser";
 
 import { Button } from "../components";
 
@@ -22,9 +23,31 @@ export const ContactForm = ({ onClose }: ContactFormProps) => {
   } = useForm<FormValues>();
 
   const onSubmit: SubmitHandler<FormValues> = (data) => {
-    console.log(data);
-    reset();
-    onClose?.();
+    const { firstName, lastName, message, email } = data;
+
+    const serviceId = import.meta.env.VITE_APP_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY;
+
+    emailjs
+      .send(
+        serviceId,
+        templateId,
+        {
+          from_name: `${firstName} ${lastName}`,
+          message: message,
+          from_email: email,
+        },
+        publicKey
+      )
+      .then(() => {
+        console.log("Message successfully sent!");
+        onClose?.();
+        reset();
+      })
+      .catch(() => {
+        console.log("An error occurred, please try again later.");
+      });
   };
 
   return (
