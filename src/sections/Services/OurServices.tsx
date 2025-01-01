@@ -34,7 +34,7 @@ export const OurServices = () => {
       </motion.section>
       {isOpen && (
         <Modal {...{ toggleModal, handleClickOnBackdrop }}>
-          <ContactForm toggleModal={toggleModal} />
+          <ContactForm onClose={toggleModal} />
         </Modal>
       )}
     </>

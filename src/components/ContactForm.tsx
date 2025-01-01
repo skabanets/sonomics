@@ -3,7 +3,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { Button } from "../components";
 
 interface ContactFormProps {
-  toggleModal?: () => void;
+  onClose?: () => void;
 }
 
 interface FormValues {
@@ -13,7 +13,7 @@ interface FormValues {
   message: string;
 }
 
-export const ContactForm = ({ toggleModal }: ContactFormProps) => {
+export const ContactForm = ({ onClose }: ContactFormProps) => {
   const {
     register,
     handleSubmit,
@@ -24,7 +24,7 @@ export const ContactForm = ({ toggleModal }: ContactFormProps) => {
   const onSubmit: SubmitHandler<FormValues> = (data) => {
     console.log(data);
     reset();
-    toggleModal?.();
+    onClose?.();
   };
 
   return (
