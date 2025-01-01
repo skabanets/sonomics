@@ -24,7 +24,7 @@ export const Header = () => {
       </header>
       {isOpen && (
         <Modal {...{ toggleModal, handleClickOnBackdrop }}>
-          <ContactForm />
+          <ContactForm onClose={toggleModal} />
         </Modal>
       )}
     </>
