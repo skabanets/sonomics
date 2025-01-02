@@ -79,6 +79,7 @@ html[data-theme="light"] {
   --accent-orange: #fa7b26;
   --theme-accent-color: #fc561d;
   --inverse-color: #161515;
+  --error-color: #ff4343;
 
   --dark-border: #161515;
   --grey-600: #74716f;
@@ -113,6 +114,7 @@ html[data-theme="dark"] {
   --accent-orange: #fa7b26;
   --theme-accent-color: #f8b332;
   --inverse-color: #ffffff;
+  --error-color: #ff4343;
 
   --dark-border: #c1bebf;
   --grey-600: #74716f;
@@ -188,7 +190,7 @@ textarea:-webkit-autofill:focus {
 }
 
 .label {
-  @apply text-[12px] font-medium leading-[20px] text-secondaryTextColor transition;
+  @apply text-[12px] font-medium leading-[20px] transition;
 }
 
 .modal .label {
@@ -196,7 +198,7 @@ textarea:-webkit-autofill:focus {
 }
 
 .form-field {
-  @apply border border-solid bg-formFieldBgColor px-[20px] py-[10px] font-montserrat text-[12px] font-medium leading-[20px] outline-none transition placeholder:text-placeholderTextColor;
+  @apply border border-solid bg-formFieldBgColor px-[20px] py-[10px] font-montserrat text-[12px] font-medium leading-[20px] outline-none transition;
 }
 
 .modal .form-field {
@@ -204,7 +206,7 @@ textarea:-webkit-autofill:focus {
 }
 
 .error {
-  @apply absolute left-[20px] text-[12px] text-red-500;
+  @apply text-errorColor absolute left-[20px] text-[12px] font-medium leading-[20px];
 }
 
 .transition {
