@@ -1,9 +1,9 @@
 export const services = [
   {
     id: 1,
-    name: "End-to-End Application Development",
+    name: "End-to-end application development",
     cardTitle: "End-to-End application development",
-    link: "/services",
+    link: "/services1",
     features: [
       "Custom software development tailored to your business goals",
       "Mobile and web application development",
@@ -13,9 +13,9 @@ export const services = [
   },
   {
     id: 2,
-    name: "Artificial Intelligence (AI) Integration",
+    name: "Artificial Intelligence (AI)",
     cardTitle: "Transform your business with artificial intelligence",
-    link: "/services",
+    link: "/services2",
     features: [
       "Leverage machine learning for predictive analytics",
       "Automate repetitive processes to free up resources",
@@ -25,9 +25,9 @@ export const services = [
   },
   {
     id: 3,
-    name: "Agile Methodologies",
+    name: "Deliverables in two weeks: experience our demo version",
     cardTitle: "Deliverables in 2 weeks: experience our demo version",
-    link: "/services",
+    link: "/services3",
     features: [
       "Quick turnaround demo to showcase immediate value",
       "Real-time feedback and customization based on your needs",
@@ -36,9 +36,9 @@ export const services = [
   },
   {
     id: 4,
-    name: "End-to-End Application Development",
+    name: "Requirement analysis & development planning",
     cardTitle: "End-to-End application development",
-    link: "/services",
+    link: "/services4",
     features: [
       "Custom software development tailored to your business goals",
       "Mobile and web application development",
@@ -48,9 +48,9 @@ export const services = [
   },
   {
     id: 5,
-    name: "Artificial Intelligence (AI) Integration",
+    name: "Agile methodologies: scrum, kanban, and hybrid Approaches",
     cardTitle: "Transform your business with artificial intelligence",
-    link: "/services",
+    link: "/services5",
     features: [
       "Leverage machine learning for predictive analytics",
       "Automate repetitive processes to free up resources",
@@ -60,9 +60,9 @@ export const services = [
   },
   {
     id: 6,
-    name: "Agile Methodologies",
+    name: "Optimize business processes with tailored systems (CRM)",
     cardTitle: "Deliverables in 2 weeks: experience our demo version",
-    link: "/services",
+    link: "/services6",
     features: [
       "Quick turnaround demo to showcase immediate value",
       "Real-time feedback and customization based on your needs",
@@ -71,9 +71,9 @@ export const services = [
   },
   {
     id: 7,
-    name: "End-to-End Application Development",
+    name: "Cloud integration with leading providers",
     cardTitle: "End-to-End application development",
-    link: "/services",
+    link: "/services7",
     features: [
       "Custom software development tailored to your business goals",
       "Mobile and web application development",
