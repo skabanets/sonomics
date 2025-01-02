@@ -40,6 +40,7 @@ export default {
         accentOrangeColor: "var(--accent-orange)",
         themeAccentColor: "var(--theme-accent-color)",
         inverseColor: "var(--inverse-color)",
+        errorColor: "var(--error-color)",
 
         darkBorderColor: "var(--dark-border)",
         grey600Color: "var(--grey-600)",

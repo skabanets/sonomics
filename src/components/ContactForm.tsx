@@ -59,10 +59,14 @@ export const ContactForm = ({ onClose }: ContactFormProps) => {
       <form className="flex flex-col gap-[20px]" onSubmit={handleSubmit(onSubmit)}>
         <div className="fex-row flex gap-[30px]">
           <div className="relative flex w-1/2 flex-col gap-[10px]">
-            <label className="label">First name</label>
+            <label
+              className={`label ${errors.firstName ? "text-errorColor" : "text-secondaryTextColor"}`}
+            >
+              First name
+            </label>
             <input
               type="text"
-              className={`form-field rounded-[20px] ${errors.firstName ? "!border-red-500" : "border-fieldBorderColor"}`}
+              className={`form-field rounded-[20px] ${errors.firstName ? "!border-errorColor placeholder:text-errorColor" : "border-fieldBorderColor placeholder:text-placeholderTextColor"}`}
               {...register("firstName", {
                 required: "First name is required",
               })}
@@ -74,10 +78,14 @@ export const ContactForm = ({ onClose }: ContactFormProps) => {
             )}
           </div>
           <div className="relative flex w-1/2 flex-col gap-[10px]">
-            <label className="label">Last name</label>
+            <label
+              className={`label ${errors.lastName ? "text-errorColor" : "text-secondaryTextColor"}`}
+            >
+              Last name
+            </label>
             <input
               type="text"
-              className={`form-field rounded-[20px] ${errors.lastName ? "!border-red-500" : "border-fieldBorderColor"}`}
+              className={`form-field rounded-[20px] ${errors.lastName ? "!border-errorColor placeholder:text-errorColor" : "border-fieldBorderColor placeholder:text-placeholderTextColor"}`}
               {...register("lastName", {
                 required: "Last name is required",
               })}
@@ -88,7 +96,11 @@ export const ContactForm = ({ onClose }: ContactFormProps) => {
           </div>
         </div>
         <div className="relative flex flex-col gap-[10px]">
-          <label className="label">Email</label>
+          <label
+            className={`label ${errors.email ? "text-errorColor" : "text-secondaryTextColor"}`}
+          >
+            Email
+          </label>
           <input
             type="email"
             {...register("email", {
@@ -98,17 +110,21 @@ export const ContactForm = ({ onClose }: ContactFormProps) => {
                 message: "Invalid email address",
               },
             })}
-            className={`form-field rounded-[20px] ${errors.email ? "!border-red-500" : "border-fieldBorderColor"}`}
+            className={`form-field rounded-[20px] ${errors.email ? "!border-errorColor placeholder:text-errorColor" : "border-fieldBorderColor placeholder:text-placeholderTextColor"}`}
             placeholder="Enter email"
           />
           {errors.email && <span className="error top-[72px]">{errors.email.message}</span>}
         </div>
         <div className="relative mb-[10px] flex flex-col gap-[10px]">
-          <label className="label">Message</label>
+          <label
+            className={`label ${errors.message ? "text-errorColor" : "text-secondaryTextColor"}`}
+          >
+            Message
+          </label>
           <textarea
             rows={5}
             {...register("message", { required: "Message is required" })}
-            className={`form-field scrollbar resize-none rounded-[20px] ${errors.message ? "!border-red-500" : "border-fieldBorderColor"}`}
+            className={`form-field scrollbar resize-none rounded-[20px] ${errors.message ? "!border-errorColor placeholder:text-errorColor" : "border-fieldBorderColor placeholder:text-placeholderTextColor"}`}
             placeholder="Write your message"
           />
           {errors.message && <span className="error top-[152px]">{errors.message.message}</span>}
