@@ -23,12 +23,12 @@ export const ContactForm = ({ onClose }: ContactFormProps) => {
     formState: { errors },
   } = useForm<FormValues>();
 
+  const serviceId = import.meta.env.VITE_APP_EMAILJS_SERVICE_ID as string;
+  const templateId = import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID as string;
+  const publicKey = import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY as string;
+
   const onSubmit: SubmitHandler<FormValues> = (data) => {
     const { firstName, lastName, message, email } = data;
-
-    const serviceId = import.meta.env.VITE_APP_EMAILJS_SERVICE_ID;
-    const templateId = import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID;
-    const publicKey = import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY;
 
     emailjs
       .send(
