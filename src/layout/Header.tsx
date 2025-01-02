@@ -7,9 +7,9 @@ export const Header = () => {
 
   return (
     <>
-      <header className="header pt-[40px]">
+      <header className="header pt-[40px] transition !duration-150">
         <div className="container flex items-center">
-          <nav className="flex w-full justify-between">
+          <nav className="relative z-10 flex w-full justify-between">
             <Logo applyThemeColor />
             <div className="flex items-center gap-[50px]">
               <ThemeToggle />
