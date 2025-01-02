@@ -61,7 +61,9 @@ html[data-theme="light"] {
   --dark-bg: #323031;
   --secondary-dark-bg: #3c3a3b;
   --our-mision-bg: #161515;
+  --lets-talk-bg: #f3f2f2;
   --theme-toggle-bg: #f3f2f2;
+  --nav-menu-bg: #fff;
   --backdrop-bg: #3c3a3b99;
   --form-field-bg: #ffffff;
   --field-border: #ffffff;
@@ -96,7 +98,9 @@ html[data-theme="dark"] {
   --dark-bg: #323031;
   --secondary-dark-bg: #3c3a3b;
   --our-mision-bg: #323031;
-  --theme-toggle-bg: #323031;
+  --lets-talk-bg: #323031;
+  --theme-toggle-bg: #3c3a3b;
+  --nav-menu-bg: #323031;
   --backdrop-bg: #3c3a3b99;
   --form-field-bg: #3c3a3b;
   --field-border: #eae9ea;
@@ -206,7 +210,7 @@ textarea:-webkit-autofill:focus {
 }
 
 .error {
-  @apply text-errorColor absolute left-[20px] text-[12px] font-medium leading-[20px];
+  @apply absolute left-[20px] text-[12px] font-medium leading-[20px] text-errorColor;
 }
 
 .transition {
@@ -262,6 +266,19 @@ textarea:-webkit-autofill:focus {
   .services-case-study-bg {
     background-image: url("./assets/images/services-case-study/services-case-study_desk@2x.webp");
   }
+}
+
+.submenu {
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease;
+}
+
+.header .submenu.visible {
+  opacity: 1;
+  visibility: visible;
 }
 
 .scrollbar {
