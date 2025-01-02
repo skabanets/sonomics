@@ -10,7 +10,7 @@ export const LetsTalk = () => {
   const { commonImages } = images;
 
   return (
-    <section className="bg-themeToggleBgColor py-[80px]">
+    <section className="bg-letsTalkBgColor py-[80px]">
       <motion.div className="container flex flex-row justify-between" {...slideInWithFade}>
         <ContactForm />
         <div className="w-[620px]">
