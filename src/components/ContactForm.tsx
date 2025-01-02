@@ -1,4 +1,5 @@
 import { SubmitHandler, useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
 
 import { Button } from "../components";
@@ -41,12 +42,12 @@ export const ContactForm = ({ onClose }: ContactFormProps) => {
         publicKey
       )
       .then(() => {
-        console.log("Message successfully sent!");
+        toast.success("Message successfully sent!");
         onClose?.();
         reset();
       })
       .catch(() => {
-        console.log("An error occurred, please try again later.");
+        toast.error("Error! Please try again.");
       });
   };
 
