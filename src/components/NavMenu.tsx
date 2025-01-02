@@ -5,40 +5,79 @@ import { useTheme } from "../hooks";
 import { navLinks, ThemeMode } from "../constants";
 
 interface NavMenuProps {
+  headerRef: React.RefObject<HTMLDivElement>;
   listClass: string;
   linkClass: string;
 }
 
-export const NavMenu = ({ listClass, linkClass }: NavMenuProps) => {
+export const NavMenu = ({ headerRef, listClass, linkClass }: NavMenuProps) => {
   const [openSubMenuIndex, setOpenSubMenuIndex] = useState<number | null>(null);
+  const [isLinkClicked, setIsLinkClicked] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
 
   const navMenuRef = useRef<HTMLUListElement | null>(null);
   const subMenuRef = useRef<HTMLDivElement | null>(null);
   const { theme } = useTheme();
 
   useEffect(() => {
-    const header = document.querySelector("header");
-
-    if (header) {
+    const headerElement = headerRef?.current;
+    if (headerElement) {
       if (navLinks[openSubMenuIndex as number]?.subLinks && theme === ThemeMode.DARK) {
-        header.style.backgroundColor = "var(--nav-menu-bg)";
+        headerRef.current.style.backgroundColor = "var(--nav-menu-bg)";
       } else {
-        header.style.backgroundColor = "";
+        headerRef.current.style.backgroundColor = "";
       }
       subMenuRef.current?.focus();
     }
 
     return () => {
-      if (header) {
-        header.style.backgroundColor = "";
+      if (headerElement) {
+        headerElement.style.backgroundColor = "";
       }
     };
-  }, [openSubMenuIndex, theme]);
+  }, [headerRef, openSubMenuIndex, theme]);
 
-  const handleMouseEnter = (index: number) => setOpenSubMenuIndex(index);
+  useEffect(() => {
+    let ticking = false;
+
+    const handleScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          setScrollPosition(window.scrollY);
+          setOpenSubMenuIndex(null);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    document.addEventListener("scroll", handleScroll);
+
+    return () => {
+      document.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    setOpenSubMenuIndex(null);
+  }, [scrollPosition]);
+
+  const handleNavLinkClick = () => {
+    setIsLinkClicked(true);
+    setOpenSubMenuIndex(null);
+  };
+
+  const handleMouseEnter = (index: number) => {
+    setOpenSubMenuIndex(index);
+    setIsLinkClicked(false);
+  };
 
   const handleMouseLeave = (e: MouseEvent<HTMLElement>) => {
-    if (navMenuRef.current && !navMenuRef.current.contains(e.relatedTarget as Node)) {
+    if (
+      !isLinkClicked &&
+      navMenuRef.current &&
+      !navMenuRef.current.contains(e.relatedTarget as Node)
+    ) {
       setOpenSubMenuIndex(null);
     }
   };
@@ -52,11 +91,18 @@ export const NavMenu = ({ listClass, linkClass }: NavMenuProps) => {
           onMouseLeave={handleMouseLeave}
         >
           {" "}
-          <NavLink className={`inline-block py-[2px] transition ${linkClass}`} to={link}>
+          <NavLink
+            to={link}
+            className={`inline-block py-[2px] transition ${linkClass}`}
+            onClick={handleNavLinkClick}
+          >
             {text}
           </NavLink>{" "}
           <div
-            className={`submenu ${subLinks && openSubMenuIndex === index ? "visible" : ""} bg-navMenuBgColor fixed left-0 right-0 top-[120px]`}
+            className={`submenu ${subLinks && openSubMenuIndex === index ? "visible" : ""} bg-navMenuBgColor fixed left-0 right-0`}
+            style={{
+              top: 120 - scrollPosition + "px",
+            }}
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={handleMouseLeave}
           >
@@ -77,6 +123,7 @@ export const NavMenu = ({ listClass, linkClass }: NavMenuProps) => {
               <Link
                 to={link}
                 className="view-link text-themeAccentColor before:h-[2px] before:bg-themeAccentColor"
+                onClick={handleNavLinkClick}
               >
                 <h2>{text}</h2>
               </Link>
