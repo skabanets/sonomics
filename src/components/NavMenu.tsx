@@ -5,7 +5,7 @@ import { useTheme } from "../hooks";
 import { navLinks, ThemeMode } from "../constants";
 
 interface NavMenuProps {
-  headerRef: React.RefObject<HTMLDivElement>;
+  headerRef?: React.RefObject<HTMLDivElement>;
   listClass: string;
   linkClass: string;
 }
@@ -21,8 +21,9 @@ export const NavMenu = ({ headerRef, listClass, linkClass }: NavMenuProps) => {
 
   useEffect(() => {
     const headerElement = headerRef?.current;
-    if (headerElement) {
-      if (navLinks[openSubMenuIndex as number]?.subLinks && theme === ThemeMode.DARK) {
+
+    if (headerElement && navLinks[openSubMenuIndex as number]?.subLinks) {
+      if (theme === ThemeMode.DARK) {
         headerRef.current.style.backgroundColor = "var(--nav-menu-bg)";
       } else {
         headerRef.current.style.backgroundColor = "";
@@ -38,6 +39,8 @@ export const NavMenu = ({ headerRef, listClass, linkClass }: NavMenuProps) => {
   }, [headerRef, openSubMenuIndex, theme]);
 
   useEffect(() => {
+    if (!headerRef) return;
+
     let ticking = false;
 
     const handleScroll = () => {
@@ -56,7 +59,7 @@ export const NavMenu = ({ headerRef, listClass, linkClass }: NavMenuProps) => {
     return () => {
       document.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [headerRef]);
 
   useEffect(() => {
     setOpenSubMenuIndex(null);
