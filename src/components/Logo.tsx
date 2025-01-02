@@ -13,7 +13,7 @@ export const Logo = ({ applyThemeColor, className = "" }: LogoProps) => {
   return (
     <Link
       to={routes.Home}
-      className="flex items-center gap-4"
+      className="relative z-10 flex items-center gap-4"
       aria-label="Sonomics - Go to homepage"
     >
       <Icon id="logo-icon" className="h-[40px] w-[34px]" />
