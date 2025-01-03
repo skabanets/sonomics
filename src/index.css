@@ -254,17 +254,26 @@ textarea:-webkit-autofill:focus {
   background-image: url("./assets/images/services/our-services_desk@1x.webp");
 }
 
-.services-case-study-bg {
+.parallax-bg {
   @apply bg-cover bg-[position:center_0] bg-no-repeat;
-  background-image: url("./assets/images/services-case-study/services-case-study_desk@1x.webp");
+  background-image: url("./assets/images/services-case-study/parallax_desk@1x.webp");
+}
+.services-case-study {
+  @apply relative before:absolute before:left-1/2 before:top-[-80px] before:h-[1px] before:w-full before:max-w-[1280px] before:-translate-x-1/2 before:bg-mainTextColor before:content-[''] after:mt-[25px] after:block after:h-[486px] after:w-full after:rounded-[20px] after:bg-cover after:bg-[position:center_0] after:bg-no-repeat after:content-[''];
+}
+.services-case-study::after {
+  background-image: var(--services-case-study-bg-image1x);
 }
 
 @media (min-resolution: 1.5dppx), (min-device-pixel-ratio: 2) {
   .our-services-bg {
     background-image: url("./assets/images/services/our-services_desk@2x.webp");
   }
-  .services-case-study-bg {
-    background-image: url("./assets/images/services-case-study/services-case-study_desk@2x.webp");
+  .parallax-bg {
+    background-image: url("./assets/images/services-case-study/parallax_desk@2x.webp");
+  }
+  .services-case-study::after {
+    background-image: var(--services-case-study-bg-image2x);
   }
 }
 

@@ -11,5 +11,6 @@ export * from "./About/Team";
 export * from "./Services/OurServices";
 export * from "./Services/OurCoreServices";
 export * from "./Services/WhyChooseUs";
-export * from "./Services/ServicesCaseStudy";
+export * from "./Services/common/ServicesCaseStudy";
+export * from "./Services/common/ServicesCaseStudyParallax";
 export * from "./Common/LetsTalk";
