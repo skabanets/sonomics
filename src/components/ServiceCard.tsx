@@ -9,11 +9,11 @@ interface IServiceCardProps {
 }
 
 export const ServiceCard = ({ service }: IServiceCardProps) => {
-  const { link, cardTitle, features } = service;
+  const { link, title, features } = service;
 
   return (
     <Link to={link} className="flex h-full flex-col items-start gap-[20px]">
-      <h4>{cardTitle}</h4>
+      <h4>{title}</h4>
       <ul className="flex flex-1 flex-col gap-[10px]">
         {features.map((feature, index) => (
           <li
