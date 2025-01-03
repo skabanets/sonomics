@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
 
-import { CustomTitle } from "../../components";
+import { CustomTitle } from "../../../components";
 
-import { routes, slideInWithFade } from "../../constants";
+import { routes, slideInWithFade } from "../../../constants";
 
-export const ServicesCaseStudy = () => {
+export const ServicesCaseStudyParallax = () => {
   const ref = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -29,7 +29,7 @@ export const ServicesCaseStudy = () => {
   return (
     <section
       ref={ref}
-      className="services-case-study-bg py-[120px]"
+      className="parallax-bg py-[120px]"
       style={{
         backgroundPosition: `center ${backgroundPositionY}`,
       }}
@@ -40,7 +40,7 @@ export const ServicesCaseStudy = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
           ut labore et dolore
         </h2>
-        <Link to={routes.CaseStudy} className="view-link inline-block w-[130px]">
+        <Link to={routes.CaseStudy} className="view-link inline-block">
           <CustomTitle
             text="Read more"
             type="h5"
