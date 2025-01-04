@@ -871,7 +871,7 @@ export const services: Service[] = [
         "To deliver optimized business processes, we leverage a range of robust tools and technologies:",
       cards: [
         {
-          technologyTitle: "Business process management (BPM) systems",
+          technologyTitle: "Business process management (BPM) systems:",
           technologyProperties: [
             {
               name: "Platforms:",
@@ -1081,7 +1081,7 @@ export const services: Service[] = [
       accentWords: ["From migration", "deliver cloud solutions"],
     },
     technologies: {
-      sectionTitle: "Technologies powering our cloud solutions",
+      sectionTitle: "Technologies powering our cloud solutions:",
       description:
         "We leverage industry-leading tools and platforms to deliver secure, efficient, and future-ready cloud solutions:",
       cards: [
@@ -1120,7 +1120,7 @@ export const services: Service[] = [
           ],
         },
         {
-          technologyTitle: "Cost optimization and resource management",
+          technologyTitle: "Cost optimization and resource management:",
           technologyProperties: [
             {
               name: "Serverless computing:",
