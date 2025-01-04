@@ -12,7 +12,7 @@ export interface Offers {
   offersList: OfferDate[];
 }
 
-interface OfferDate {
+export interface OfferDate {
   offerName: string;
   details: string[];
   keyBenefits?: string[];
