@@ -5,13 +5,13 @@ import { Accordion, Button, ContactForm, Modal } from "../../../components";
 import { slideInWithFade } from "../../../constants";
 import { useModal } from "../../../hooks";
 import { images } from "../../../assets";
-import { Offers } from "../../../types";
+import type { Offers } from "../../../types";
 
-interface WhatWeOfferProps {
+interface ServicesWhatWeOfferProps {
   offers: Offers;
 }
 
-export const WhatWeOffer = ({ offers }: WhatWeOfferProps) => {
+export const ServicesWhatWeOffer = ({ offers }: ServicesWhatWeOfferProps) => {
   const [isOpen, toggleModal, handleClickOnBackdrop] = useModal();
 
   const { sectionTitle, image, retinaImage, offersList } = offers;
