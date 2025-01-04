@@ -19,3 +19,4 @@ export * from "./AnimatedNumber";
 export * from "./Modal";
 export * from "./ServiceCard";
 export * from "./BackLink";
+export * from "./Accordion";
