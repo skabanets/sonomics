@@ -4,6 +4,7 @@ import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom"
 import { SharedLayout } from "./layout";
 
 import { routes } from "./constants";
+import { ThemeProvider } from "./context";
 
 const Home = lazy(() => import("./pages/Home"));
 const Services = lazy(() => import("./pages/Services"));
@@ -34,5 +35,9 @@ async function getLoader() {
 }
 
 export const App = () => {
-  return <RouterProvider router={router} />;
+  return (
+    <ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
+  );
 };

@@ -1,8 +1,8 @@
 import { MouseEvent, useEffect, useRef, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
-import { useTheme } from "../hooks";
 import { navLinks, ThemeMode } from "../constants";
+import { useTheme } from "../hooks";
 
 interface NavMenuProps {
   headerRef?: React.RefObject<HTMLDivElement>;
@@ -17,12 +17,13 @@ export const NavMenu = ({ headerRef, listClass, linkClass }: NavMenuProps) => {
 
   const navMenuRef = useRef<HTMLUListElement | null>(null);
   const subMenuRef = useRef<HTMLDivElement | null>(null);
+
   const { theme } = useTheme();
 
   useEffect(() => {
     const headerElement = headerRef?.current;
 
-    if (headerElement && navLinks[openSubMenuIndex as number]?.subLinks) {
+    if (headerElement && openSubMenuIndex !== null && navLinks[openSubMenuIndex]?.subLinks) {
       if (theme === ThemeMode.DARK) {
         headerRef.current.style.backgroundColor = "var(--nav-menu-bg)";
       } else {
@@ -76,10 +77,12 @@ export const NavMenu = ({ headerRef, listClass, linkClass }: NavMenuProps) => {
   };
 
   const handleMouseLeave = (e: MouseEvent<HTMLElement>) => {
+    const relatedTarget = e.relatedTarget;
     if (
       !isLinkClicked &&
       navMenuRef.current &&
-      !navMenuRef.current.contains(e.relatedTarget as Node)
+      relatedTarget instanceof Node &&
+      !navMenuRef.current.contains(relatedTarget as Node)
     ) {
       setOpenSubMenuIndex(null);
     }
@@ -102,22 +105,14 @@ export const NavMenu = ({ headerRef, listClass, linkClass }: NavMenuProps) => {
             {text}
           </NavLink>{" "}
           <div
-            className={`submenu ${subLinks && openSubMenuIndex === index ? "visible" : ""} bg-navMenuBgColor fixed left-0 right-0`}
+            className={`submenu ${subLinks && openSubMenuIndex === index ? "visible" : ""} fixed left-0 right-0 bg-navMenuBgColor`}
             style={{
               top: 120 - scrollPosition + "px",
             }}
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={handleMouseLeave}
           >
-            <div
-              className={`absolute left-0 top-[-42px] h-[42px] w-full bg-transparent`}
-              style={{
-                backgroundColor:
-                  theme === ThemeMode.DARK && openSubMenuIndex === index
-                    ? "var(--nav-menu-bg)"
-                    : "",
-              }}
-            ></div>
+            <div className={`absolute left-0 top-[-42px] h-[42px] w-full bg-navMenuBgColor`}></div>
             <div
               className="mx-auto flex max-w-[1280px] items-center justify-between border-t-[1px] border-t-mainTextColor px-0 py-[30px]"
               ref={subMenuRef}
@@ -136,6 +131,7 @@ export const NavMenu = ({ headerRef, listClass, linkClass }: NavMenuProps) => {
                     <NavLink
                       className={`label inline-block size-full text-mainTextColor ${linkClass}`}
                       to={subLink.link}
+                      onClick={handleNavLinkClick}
                     >
                       {subLink.name}
                     </NavLink>
