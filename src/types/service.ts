@@ -41,7 +41,7 @@ export interface Technologies {
   description?: string;
 }
 
-interface TechnologyCard {
+export interface TechnologyCard {
   technologyTitle: string;
   technologyProperties: TechnologyData[];
 }
