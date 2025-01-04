@@ -14,8 +14,8 @@ export const services: Service[] = [
       "Ongoing updates and feature enhancements to keep your software relevant",
     ],
     hero: {
-      image: "",
-      retinaImage: "",
+      image: "end_to_end_1x",
+      retinaImage: "end_to_end_2x",
       text: [
         "At Sonomics, we provide comprehensive End-to-End Application Development services, managing the entire software lifecycle — from concept and planning to deployment and ongoing support. Whether you need to create an application from scratch or enhance an existing product, our team of experienced developers, designers, and engineers is here to bring your vision to life.",
         "We ensure your software aligns with business goals, adheres to the latest industry standards, and delivers exceptional user experiences across platforms.",
@@ -148,8 +148,8 @@ export const services: Service[] = [
       "Implement AI-powered chatbots to streamline customer service",
     ],
     hero: {
-      image: "",
-      retinaImage: "",
+      image: "ai_1x",
+      retinaImage: "ai_2x",
       text: [
         "In today’s fast-paced and competitive market, Artificial Intelligence (AI) is a game-changer for businesses looking to innovate, scale, and maintain an edge. At Sonomics, we specialize in seamlessly integrating AI into your existing business framework to deliver measurable improvements in efficiency, decision-making, and customer satisfaction.",
         "Whether it’s automating repetitive tasks, analyzing large datasets for actionable insights, or enhancing customer engagement with AI-powered solutions, our expert team will tailor the right AI technologies to drive your business performance to the next level.",
@@ -298,8 +298,8 @@ export const services: Service[] = [
       "Pilot projects to test and validate ideas before full-scale implementation",
     ],
     hero: {
-      image: "",
-      retinaImage: "",
+      image: "demo_version_1x",
+      retinaImage: "demo_version_2x",
       text: [
         "That’s why we offer a fully functional demo version of your software solution within just two weeks. This gives you the opportunity to see, test, and experience how our systems can revolutionize your workflows before committing to a full-scale implementation.",
         "Our rapid delivery model ensures you gain valuable insights, immediate impact, and the confidence to move forward with your digital transformation goals.",
@@ -453,8 +453,8 @@ export const services: Service[] = [
       "Ongoing updates and feature enhancements to keep your software relevant",
     ],
     hero: {
-      image: "",
-      retinaImage: "",
+      image: "analysis_and_planning_1x",
+      retinaImage: "analysis_and_planning_2x",
       text: [
         "We dedicate time to thorough requirement analysis and strategic development planning. By working closely with stakeholders, we ensure that every detail aligns with your goals, challenges, and long-term vision.",
         "Our structured planning process provides you with a tailored roadmap to success—ensuring smooth execution, predictable results, and on-time delivery.",
@@ -588,8 +588,8 @@ export const services: Service[] = [
       "Implement AI-powered chatbots to streamline customer service",
     ],
     hero: {
-      image: "",
-      retinaImage: "",
+      image: "agile_1x",
+      retinaImage: "agile_2x",
       text: [
         "At Sonomics, we embrace Agile project management methodologies to deliver software solutions with speed, flexibility, and precision. By leveraging Scrum, Kanban, and Hybrid approaches, we ensure that our processes are tailored to meet the unique demands of your business, resulting in adaptable and client-focused solutions.",
       ],
@@ -780,8 +780,8 @@ export const services: Service[] = [
       "Pilot projects to test and validate ideas before full-scale implementation",
     ],
     hero: {
-      image: "",
-      retinaImage: "",
+      image: "crm_1x",
+      retinaImage: "crm_2x",
       text: [
         "At Sonomics, we specialize in designing and implementing tailored systems that optimize your internal processes, break down communication silos, and enhance collaboration across all departments. From front-line staff to senior executives, our solutions ensure that every team member operates within an integrated, highly efficient system.",
         "By conducting a thorough assessment of your current operations, we identify pain points, inefficiencies, and opportunities for process improvement. We don’t believe in one-size-fits-all solutions—our bespoke systems are tailored to align with your unique goals, workflows, and organizational needs.",
@@ -988,8 +988,8 @@ export const services: Service[] = [
       "Ongoing updates and feature enhancements to keep your software relevant",
     ],
     hero: {
-      image: "",
-      retinaImage: "",
+      image: "cloud_1x",
+      retinaImage: "cloud_2x",
       text: [
         "At Sonomics, we specialize in helping organizations seamlessly migrate to the cloud and optimize their cloud environments for security, scalability, and cost-efficiency.",
         "Whether you’re taking your first step into the cloud or enhancing an existing setup, our team of cloud experts ensures you unlock the full potential of cloud services from leading providers such as AWS (Amazon Web Services), Microsoft Azure, and Google Cloud Platform (GCP).",
