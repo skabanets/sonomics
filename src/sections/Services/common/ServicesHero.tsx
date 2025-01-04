@@ -1,10 +1,11 @@
 import { useParams } from "react-router-dom";
+import { motion } from "framer-motion";
 
 import { BackLink, Button, ContactForm, Modal } from "../../../components";
 
 import { useModal, useTheme } from "../../../hooks";
 import type { Hero } from "../../../types";
-import { routes, ThemeMode } from "../../../constants";
+import { routes, slideInWithFade, ThemeMode } from "../../../constants";
 import { images } from "../../../assets";
 
 interface ServicesHeroProps {
@@ -34,12 +35,15 @@ export const ServicesHero = ({ title, hero }: ServicesHeroProps) => {
   const {
     servicesDetails: { heroImages },
   } = images;
+
   const { boldText, text, image, retinaImage } = hero;
+  const img = heroImages[image as keyof typeof heroImages];
+  const retinaImg = heroImages[retinaImage as keyof typeof heroImages];
 
   return (
     <>
-      <section className="pb-[80px] pt-[120px]">
-        <div className="container">
+      <section className="pb-[80px] pt-[100px]">
+        <motion.div className="container" {...slideInWithFade}>
           <BackLink to={routes.Services} label="Back to services" className="mb-[20px]" />
           <h1 className="mb-[30px] max-w-[920px]">{title}</h1>
           <div className="flex items-center justify-between">
@@ -53,15 +57,15 @@ export const ServicesHero = ({ title, hero }: ServicesHeroProps) => {
               <Button label="Let's discuss your project" width="w-[300px]" onClick={toggleModal} />
             </div>
             <img
-              srcSet={`${heroImages[image as keyof typeof heroImages]} 1x, ${heroImages[retinaImage as keyof typeof heroImages]} 2x`}
-              src={heroImages[image as keyof typeof heroImages]}
-              alt="Image"
+              srcSet={`${img} 1x, ${retinaImg} 2x`}
+              src={img}
+              alt={title}
               width={imageWidth}
               height="406"
               className={`rounded-t-[20px] object-cover ${id !== routes.CloudIntegration.slice(10) ? "rounded-b-[20px]" : ""} ${theme === ThemeMode.LIGHT ? "brightness-[90%]" : ""}`}
             />
           </div>
-        </div>
+        </motion.div>
       </section>
       {isOpen && (
         <Modal {...{ toggleModal, handleClickOnBackdrop }}>
