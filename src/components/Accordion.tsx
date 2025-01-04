@@ -26,16 +26,17 @@ export const Accordion = ({ offersList }: AccordionProps) => {
             className="px-[10px] py-[25px] transition"
           >
             <summary
-              className="flex items-center justify-between"
-              onClick={(e) => e.preventDefault()}
+              className="flex cursor-pointer items-center justify-between"
+              onClick={(e) => {
+                e.preventDefault();
+                toggleAccordion(index);
+              }}
             >
               <h4 className="w-[610px]">{offer.offerName}</h4>
-              <button onClick={() => toggleAccordion(index)}>
-                <Icon
-                  id={openIndex === index ? "minus" : "plus"}
-                  className="size-5 fill-mainTextColor"
-                />
-              </button>
+              <Icon
+                id={openIndex === index ? "minus" : "plus"}
+                className="size-5 fill-mainTextColor"
+              />
             </summary>
             <div
               className={`big-text mt-[10px] overflow-hidden transition ${
