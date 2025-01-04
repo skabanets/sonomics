@@ -11,6 +11,8 @@ import case1_1x from "./images/cases/case-1@1x.webp";
 import case1_2x from "./images/cases/case-1@2x.webp";
 import case2_1x from "./images/cases/case-2@1x.webp";
 import case2_2x from "./images/cases/case-2@2x.webp";
+import case_lg_1_1x from "./images/cases/case-lg-1_desk@1x.webp";
+import case_lg_1_2x from "./images/cases/case-lg-2_desk@2x.webp";
 
 // Why Choose Us
 import industry_expertise_desk_1x from "./images/why-choose-us/industry-expertise_desk@1x.webp";
@@ -40,6 +42,22 @@ import our_mission_1x from "./images/common/our-mission@1x.webp";
 import our_mission_2x from "./images/common/our-mission@2x.webp";
 import barcelona_1x from "./images/common/barcelona@1x.webp";
 import barcelona_2x from "./images/common/barcelona@2x.webp";
+
+//service-details-hero
+import end_to_end_1x from "./images/service-details/hero/end-to-end_desk@1x.webp";
+import end_to_end_2x from "./images/service-details/hero/end-to-end_desk@2x.webp";
+import ai_1x from "./images/service-details/hero/ai_desk@1x.webp";
+import ai_2x from "./images/service-details/hero/ai_desk@2x.webp";
+import demo_version_1x from "./images/service-details/hero/demo-version_desk@1x.webp";
+import demo_version_2x from "./images/service-details/hero/demo-version_desk@2x.webp";
+import analysis_and_planning_1x from "./images/service-details/hero/analysis-and-planning_desk@1x.webp";
+import analysis_and_planning_2x from "./images/service-details/hero/analysis-and-planning_desk@2x.webp";
+import agile_1x from "./images/service-details/hero/agile_desk@1x.webp";
+import agile_2x from "./images/service-details/hero/agile_desk@2x.webp";
+import crm_1x from "./images/service-details/hero/crm_desk@1x.webp";
+import crm_2x from "./images/service-details/hero/crm_desk@2x.webp";
+import cloud_1x from "./images/service-details/hero/cloud_desk@1x.webp";
+import cloud_2x from "./images/service-details/hero/cloud_desk@2x.webp";
 
 //service-details-offers
 import end_to_end_offers_1x from "./images/service-details/offers/end-to-end-offers@1x.webp";
@@ -141,6 +159,8 @@ export const images = {
     case1_2x,
     case2_1x,
     case2_2x,
+    case_lg_1_1x,
+    case_lg_1_2x,
   },
   whyChooseUsImages: {
     industry_expertise_desk_1x,
@@ -171,6 +191,22 @@ export const images = {
     barcelona_2x,
   },
   servicesDetails: {
+    heroImages: {
+      end_to_end_1x,
+      end_to_end_2x,
+      ai_1x,
+      ai_2x,
+      demo_version_1x,
+      demo_version_2x,
+      analysis_and_planning_1x,
+      analysis_and_planning_2x,
+      agile_1x,
+      agile_2x,
+      crm_1x,
+      crm_2x,
+      cloud_1x,
+      cloud_2x,
+    },
     offersImages: {
       end_to_end_offers_1x,
       end_to_end_offers_2x,
