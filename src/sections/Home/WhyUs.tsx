@@ -14,7 +14,7 @@ export const WhyUs = () => {
   return (
     <section className="py-[100px]">
       <motion.div
-        className="align-center mx-auto flex w-[920px] flex-col items-center justify-center gap-2.5"
+        className="align-center container flex max-w-[920px] flex-col items-center justify-center gap-2.5"
         {...whyUsAnimationProps}
       >
         <h6 className="text-secondaryTextColor">Why Sonomics</h6>
