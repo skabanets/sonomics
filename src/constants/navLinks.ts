@@ -1,8 +1,9 @@
+import { routes } from "./routes";
 import { services } from "./services";
 
 export const navLinks = [
-  { text: "Services", link: "/services", subLinks: services },
-  { text: "Industries", link: "/industries" },
-  { text: "Case study", link: "/case-study" },
-  { text: "About", link: "/about" },
+  { text: "Services", link: routes.Services, subLinks: services },
+  { text: "Industries", link: routes.Industries },
+  { text: "Case study", link: routes.CaseStudy },
+  { text: "About", link: routes.About },
 ];
