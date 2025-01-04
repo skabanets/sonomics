@@ -1,25 +1,6 @@
-import { useEffect, useLayoutEffect, useState } from "react";
-
-import { ThemeMode } from "../constants";
+import { useContext } from "react";
+import { ThemeContext } from "../context";
 
 export const useTheme = () => {
-  const savedTheme = localStorage.getItem("theme") ?? ThemeMode.LIGHT;
-  const initialTheme = ThemeMode.DARK === savedTheme ? savedTheme : ThemeMode.LIGHT;
-
-  const [theme, setTheme] = useState(initialTheme);
-
-  useEffect(() => {
-    document.body.classList.add("transition");
-  }, []);
-
-  useLayoutEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem("theme", theme);
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme(theme === ThemeMode.LIGHT ? ThemeMode.DARK : ThemeMode.LIGHT);
-  };
-
-  return { theme, toggleTheme };
+  return useContext(ThemeContext);
 };
