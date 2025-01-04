@@ -226,6 +226,10 @@ textarea:-webkit-autofill:focus {
   @apply border-accentYellowColor text-accentYellowColor;
 }
 
+.submenu .active {
+  @apply border-none underline;
+}
+
 .react-switch-bg {
   @apply shadow-[inset_0_1px_3px_rgba(0,0,0,0.15)];
 }
@@ -256,7 +260,7 @@ textarea:-webkit-autofill:focus {
 
 .parallax-bg {
   @apply bg-cover bg-[position:center_0] bg-no-repeat;
-  background-image: url("./assets/images/services-case-study/parallax_desk@1x.webp");
+  background-image: url("./assets/images/services/parallax_desk@1x.webp");
 }
 .services-case-study {
   @apply relative before:absolute before:left-1/2 before:top-[-80px] before:h-[1px] before:w-full before:max-w-[1280px] before:-translate-x-1/2 before:bg-mainTextColor before:content-[''] after:mt-[25px] after:block after:h-[486px] after:w-full after:rounded-[20px] after:bg-cover after:bg-[position:center_0] after:bg-no-repeat after:content-[''];
@@ -270,7 +274,7 @@ textarea:-webkit-autofill:focus {
     background-image: url("./assets/images/services/our-services_desk@2x.webp");
   }
   .parallax-bg {
-    background-image: url("./assets/images/services-case-study/parallax_desk@2x.webp");
+    background-image: url("./assets/images/services/parallax_desk@2x.webp");
   }
   .services-case-study::after {
     background-image: var(--services-case-study-bg-image2x);
@@ -281,8 +285,8 @@ textarea:-webkit-autofill:focus {
   opacity: 0;
   visibility: hidden;
   transition:
-    opacity 0.2s ease,
-    visibility 0.2s ease;
+    opacity 0.15s ease,
+    visibility 0.15s ease;
 }
 
 .header .submenu.visible {
