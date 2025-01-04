@@ -547,7 +547,7 @@ export const services: Service[] = [
             "We work collaboratively with your team to identify and document key business requirements, processes, and challenges.",
             "Through stakeholder interviews, workshops, and data analysis, we uncover pain points and align technical solutions with your operational needs.",
           ],
-          icon: "",
+          icon: "advantage-1",
         },
         {
           name: "Detailed Project Scope Definition",
@@ -555,7 +555,7 @@ export const services: Service[] = [
             "We create a clear project scope that outlines deliverables, priorities, and constraints.",
             "This detailed scope eliminates ambiguities, ensures alignment, and establishes a solid foundation for efficient execution.",
           ],
-          icon: "",
+          icon: "advantage-2",
         },
         {
           name: "Tailored system architecture and deployment plans",
@@ -563,7 +563,7 @@ export const services: Service[] = [
             "Our team designs customized system architectures and deployment strategies that address scalability, performance, and security.",
             "We prioritize future-proofing your system to support growth and adaptability.",
           ],
-          icon: "",
+          icon: "advantage-3",
         },
         {
           name: "Transparent Timelines and Agile Milestones",
@@ -571,7 +571,7 @@ export const services: Service[] = [
             "Using agile methodologies, we establish milestones with well-defined timelines, ensuring full visibility and accountability at every phase.",
             "Regular progress updates and feedback loops allow us to adapt quickly to changes while maintaining project momentum.",
           ],
-          icon: "",
+          icon: "advantage-4",
         },
       ],
     },
@@ -752,19 +752,19 @@ export const services: Service[] = [
       items: [
         {
           description: "Deliver incremental features quickly and efficiently.",
-          icon: "",
+          icon: "advantage-1",
         },
         {
           description: "Foster continuous communication and collaboration with stakeholders.",
-          icon: "",
+          icon: "advantage-2",
         },
         {
           description: "Accommodate evolving requirements and market changes.",
-          icon: "",
+          icon: "advantage-3",
         },
         {
           description: "Improve product quality through iterative development and feedback.",
-          icon: "",
+          icon: "advantage-4",
         },
       ],
     },
@@ -947,31 +947,31 @@ export const services: Service[] = [
           name: "Improved productivity",
           description:
             "Streamlined workflows and automated processes allow employees to focus on high-value tasks.",
-          icon: "",
+          icon: "advantage-1",
         },
         {
           name: "Elimination of redundancies:",
           description:
             "By identifying inefficiencies, we eliminate duplicative efforts and optimize resource utilization.",
-          icon: "",
+          icon: "advantage-2",
         },
         {
           name: "Enhanced collaboration",
           description:
             "Integrated systems promote seamless communication and teamwork across departments.",
-          icon: "",
+          icon: "advantage-5",
         },
         {
           name: "Real-time insights",
           description:
             "Our solutions provide real-time visibility into operations, enabling data-driven decisions and better oversight.",
-          icon: "",
+          icon: "advantage-4",
         },
         {
           name: "Scalable systems",
           description:
             "Whether you’re a growing startup or an established enterprise, our systems are designed to scale with your business needs.",
-          icon: "",
+          icon: "advantage-3",
         },
       ],
     },
@@ -1141,31 +1141,31 @@ export const services: Service[] = [
           name: "Scalability and flexibility",
           description:
             "Scale resources up or down as your business needs evolve, ensuring maximum agility.",
-          icon: "",
+          icon: "advantage-1",
         },
         {
           name: "Reduced IT costs",
           description:
             "Eliminate costly hardware investments and maintenance with a pay-as-you-go cloud model.",
-          icon: "",
+          icon: "advantage-2",
         },
         {
           name: "Enhanced security",
           description:
             "Implement enterprise-grade security measures to protect against cyber threats and data breaches.",
-          icon: "",
+          icon: "advantage-5",
         },
         {
           name: "High availability and uptime",
           description:
             "Benefit from cloud providers’ robust infrastructure to ensure uninterrupted business operations.",
-          icon: "",
+          icon: "advantage-4",
         },
         {
           name: "Seamless collaboration",
           description:
             "Enable remote teams to collaborate effectively with secure access to cloud-based tools and applications.",
-          icon: "",
+          icon: "advantage-3",
         },
       ],
     },
