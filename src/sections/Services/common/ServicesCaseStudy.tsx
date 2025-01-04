@@ -17,8 +17,8 @@ export const ServicesCaseStudy = ({
   name,
   description,
   link,
-  bgImage1x = "",
-  bgImage2x = "",
+  bgImage1x,
+  bgImage2x,
 }: ServicesCaseStudyProps) => {
   return (
     <section
