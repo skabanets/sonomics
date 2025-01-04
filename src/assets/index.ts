@@ -41,6 +41,92 @@ import our_mission_2x from "./images/common/our-mission@2x.webp";
 import barcelona_1x from "./images/common/barcelona@1x.webp";
 import barcelona_2x from "./images/common/barcelona@2x.webp";
 
+//service-details-offers
+import end_to_end_offers_1x from "./images/service-details/offers/end-to-end-offers@1x.webp";
+import end_to_end_offers_2x from "./images/service-details/offers/end-to-end-offers@2x.webp";
+import ai_offers_1x from "./images/service-details/offers/ai-offers@1x.webp";
+import ai_offers_2x from "./images/service-details/offers/ai-offers@2x.webp";
+import demo_version_offers_1x from "./images/service-details/offers/demo-version-offers@1x.webp";
+import demo_version_offers_2x from "./images/service-details/offers/demo-version-offers@2x.webp";
+import analysis_and_planning_offers_1x from "./images/service-details/offers/analysis-and-planning-offers@1x.webp";
+import analysis_and_planning_offers_2x from "./images/service-details/offers/analysis-and-planning-offers@2x.webp";
+import agile_offers_1x from "./images/service-details/offers/agile-offers@1x.webp";
+import agile_offers_2x from "./images/service-details/offers/agile-offers@2x.webp";
+import crm_offers_1x from "./images/service-details/offers/crm-offers@1x.webp";
+import crm_offers_2x from "./images/service-details/offers/crm-offers@2x.webp";
+import cloud_offers_1x from "./images/service-details/offers/cloud-offers@1x.webp";
+import cloud_offers_2x from "./images/service-details/offers/cloud-offers@2x.webp";
+
+//service-details-why-choose-sonomics
+import end_to_end_item1_1x from "./images/service-details/why-choose-sonomics/end-to-end-item1@1x.webp";
+import end_to_end_item1_2x from "./images/service-details/why-choose-sonomics/end-to-end-item1@2x.webp";
+import end_to_end_item2_1x from "./images/service-details/why-choose-sonomics/end-to-end-item2@1x.webp";
+import end_to_end_item2_2x from "./images/service-details/why-choose-sonomics/end-to-end-item2@2x.webp";
+import end_to_end_item3_1x from "./images/service-details/why-choose-sonomics/end-to-end-item3@1x.webp";
+import end_to_end_item3_2x from "./images/service-details/why-choose-sonomics/end-to-end-item3@2x.webp";
+import end_to_end_item4_1x from "./images/service-details/why-choose-sonomics/end-to-end-item4@1x.webp";
+import end_to_end_item4_2x from "./images/service-details/why-choose-sonomics/end-to-end-item4@2x.webp";
+import ai_item1_1x from "./images/service-details/why-choose-sonomics/ai-item1@1x.webp";
+import ai_item1_2x from "./images/service-details/why-choose-sonomics/ai-item1@2x.webp";
+import ai_item2_1x from "./images/service-details/why-choose-sonomics/ai-item2@1x.webp";
+import ai_item2_2x from "./images/service-details/why-choose-sonomics/ai-item2@2x.webp";
+import ai_item3_1x from "./images/service-details/why-choose-sonomics/ai-item3@1x.webp";
+import ai_item3_2x from "./images/service-details/why-choose-sonomics/ai-item3@2x.webp";
+import ai_item4_1x from "./images/service-details/why-choose-sonomics/ai-item4@1x.webp";
+import ai_item4_2x from "./images/service-details/why-choose-sonomics/ai-item4@2x.webp";
+import ai_item5_1x from "./images/service-details/why-choose-sonomics/ai-item5@1x.webp";
+import ai_item5_2x from "./images/service-details/why-choose-sonomics/ai-item5@2x.webp";
+import demo_version_item1_1x from "./images/service-details/why-choose-sonomics/demo-version-item1@1x.webp";
+import demo_version_item1_2x from "./images/service-details/why-choose-sonomics/demo-version-item1@2x.webp";
+import demo_version_item2_1x from "./images/service-details/why-choose-sonomics/demo-version-item2@1x.webp";
+import demo_version_item2_2x from "./images/service-details/why-choose-sonomics/demo-version-item2@2x.webp";
+import demo_version_item3_1x from "./images/service-details/why-choose-sonomics/demo-version-item3@1x.webp";
+import demo_version_item3_2x from "./images/service-details/why-choose-sonomics/demo-version-item3@2x.webp";
+import demo_version_item4_1x from "./images/service-details/why-choose-sonomics/demo-version-item4@1x.webp";
+import demo_version_item4_2x from "./images/service-details/why-choose-sonomics/demo-version-item4@2x.webp";
+import demo_version_item5_1x from "./images/service-details/why-choose-sonomics/demo-version-item5@1x.webp";
+import demo_version_item5_2x from "./images/service-details/why-choose-sonomics/demo-version-item5@2x.webp";
+import analysis_and_planning_item1_1x from "./images/service-details/why-choose-sonomics/analysis-and-planning-item1@1x.webp";
+import analysis_and_planning_item1_2x from "./images/service-details/why-choose-sonomics/analysis-and-planning-item1@2x.webp";
+import analysis_and_planning_item2_1x from "./images/service-details/why-choose-sonomics/analysis-and-planning-item2@1x.webp";
+import analysis_and_planning_item2_2x from "./images/service-details/why-choose-sonomics/analysis-and-planning-item2@2x.webp";
+import analysis_and_planning_item3_1x from "./images/service-details/why-choose-sonomics/analysis-and-planning-item3@1x.webp";
+import analysis_and_planning_item3_2x from "./images/service-details/why-choose-sonomics/analysis-and-planning-item3@2x.webp";
+import analysis_and_planning_item4_1x from "./images/service-details/why-choose-sonomics/analysis-and-planning-item4@1x.webp";
+import analysis_and_planning_item4_2x from "./images/service-details/why-choose-sonomics/analysis-and-planning-item4@2x.webp";
+import analysis_and_planning_item5_1x from "./images/service-details/why-choose-sonomics/analysis-and-planning-item5@1x.webp";
+import analysis_and_planning_item5_2x from "./images/service-details/why-choose-sonomics/analysis-and-planning-item5@2x.webp";
+import agile_item1_1x from "./images/service-details/why-choose-sonomics/agile-item1@1x.webp";
+import agile_item1_2x from "./images/service-details/why-choose-sonomics/agile-item1@2x.webp";
+import agile_item2_1x from "./images/service-details/why-choose-sonomics/agile-item2@1x.webp";
+import agile_item2_2x from "./images/service-details/why-choose-sonomics/agile-item2@2x.webp";
+import agile_item3_1x from "./images/service-details/why-choose-sonomics/agile-item3@1x.webp";
+import agile_item3_2x from "./images/service-details/why-choose-sonomics/agile-item3@2x.webp";
+import agile_item4_1x from "./images/service-details/why-choose-sonomics/agile-item4@1x.webp";
+import agile_item4_2x from "./images/service-details/why-choose-sonomics/agile-item4@2x.webp";
+import agile_item5_1x from "./images/service-details/why-choose-sonomics/agile-item5@1x.webp";
+import agile_item5_2x from "./images/service-details/why-choose-sonomics/agile-item5@2x.webp";
+import crm_item1_1x from "./images/service-details/why-choose-sonomics/crm-item1@1x.webp";
+import crm_item1_2x from "./images/service-details/why-choose-sonomics/crm-item1@2x.webp";
+import crm_item2_1x from "./images/service-details/why-choose-sonomics/crm-item2@1x.webp";
+import crm_item2_2x from "./images/service-details/why-choose-sonomics/crm-item2@2x.webp";
+import crm_item3_1x from "./images/service-details/why-choose-sonomics/crm-item3@1x.webp";
+import crm_item3_2x from "./images/service-details/why-choose-sonomics/crm-item3@2x.webp";
+import crm_item4_1x from "./images/service-details/why-choose-sonomics/crm-item4@1x.webp";
+import crm_item4_2x from "./images/service-details/why-choose-sonomics/crm-item4@2x.webp";
+import crm_item5_1x from "./images/service-details/why-choose-sonomics/crm-item5@1x.webp";
+import crm_item5_2x from "./images/service-details/why-choose-sonomics/crm-item5@2x.webp";
+import cloud_item1_1x from "./images/service-details/why-choose-sonomics/cloud-item1@1x.webp";
+import cloud_item1_2x from "./images/service-details/why-choose-sonomics/cloud-item1@2x.webp";
+import cloud_item2_1x from "./images/service-details/why-choose-sonomics/cloud-item2@1x.webp";
+import cloud_item2_2x from "./images/service-details/why-choose-sonomics/cloud-item2@2x.webp";
+import cloud_item3_1x from "./images/service-details/why-choose-sonomics/cloud-item3@1x.webp";
+import cloud_item3_2x from "./images/service-details/why-choose-sonomics/cloud-item3@2x.webp";
+import cloud_item4_1x from "./images/service-details/why-choose-sonomics/cloud-item4@1x.webp";
+import cloud_item4_2x from "./images/service-details/why-choose-sonomics/cloud-item4@2x.webp";
+import cloud_item5_1x from "./images/service-details/why-choose-sonomics/cloud-item5@1x.webp";
+import cloud_item5_2x from "./images/service-details/why-choose-sonomics/cloud-item5@2x.webp";
+
 export const images = {
   industriesImages: {
     fintech_1x,
@@ -83,5 +169,93 @@ export const images = {
     our_mission_2x,
     barcelona_1x,
     barcelona_2x,
+  },
+  servicesDetails: {
+    offersImages: {
+      end_to_end_offers_1x,
+      end_to_end_offers_2x,
+      ai_offers_1x,
+      ai_offers_2x,
+      demo_version_offers_1x,
+      demo_version_offers_2x,
+      analysis_and_planning_offers_1x,
+      analysis_and_planning_offers_2x,
+      agile_offers_1x,
+      agile_offers_2x,
+      crm_offers_1x,
+      crm_offers_2x,
+      cloud_offers_1x,
+      cloud_offers_2x,
+    },
+    whyChooseSonomics: {
+      end_to_end_item1_1x,
+      end_to_end_item1_2x,
+      end_to_end_item2_1x,
+      end_to_end_item2_2x,
+      end_to_end_item3_1x,
+      end_to_end_item3_2x,
+      end_to_end_item4_1x,
+      end_to_end_item4_2x,
+      ai_item1_1x,
+      ai_item1_2x,
+      ai_item2_1x,
+      ai_item2_2x,
+      ai_item3_1x,
+      ai_item3_2x,
+      ai_item4_1x,
+      ai_item4_2x,
+      ai_item5_1x,
+      ai_item5_2x,
+      demo_version_item1_1x,
+      demo_version_item1_2x,
+      demo_version_item2_1x,
+      demo_version_item2_2x,
+      demo_version_item3_1x,
+      demo_version_item3_2x,
+      demo_version_item4_1x,
+      demo_version_item4_2x,
+      demo_version_item5_1x,
+      demo_version_item5_2x,
+      analysis_and_planning_item1_1x,
+      analysis_and_planning_item1_2x,
+      analysis_and_planning_item2_1x,
+      analysis_and_planning_item2_2x,
+      analysis_and_planning_item3_1x,
+      analysis_and_planning_item3_2x,
+      analysis_and_planning_item4_1x,
+      analysis_and_planning_item4_2x,
+      analysis_and_planning_item5_1x,
+      analysis_and_planning_item5_2x,
+      agile_item1_1x,
+      agile_item1_2x,
+      agile_item2_1x,
+      agile_item2_2x,
+      agile_item3_1x,
+      agile_item3_2x,
+      agile_item4_1x,
+      agile_item4_2x,
+      agile_item5_1x,
+      agile_item5_2x,
+      crm_item1_1x,
+      crm_item1_2x,
+      crm_item2_1x,
+      crm_item2_2x,
+      crm_item3_1x,
+      crm_item3_2x,
+      crm_item4_1x,
+      crm_item4_2x,
+      crm_item5_1x,
+      crm_item5_2x,
+      cloud_item1_1x,
+      cloud_item1_2x,
+      cloud_item2_1x,
+      cloud_item2_2x,
+      cloud_item3_1x,
+      cloud_item3_2x,
+      cloud_item4_1x,
+      cloud_item4_2x,
+      cloud_item5_1x,
+      cloud_item5_2x,
+    },
   },
 };

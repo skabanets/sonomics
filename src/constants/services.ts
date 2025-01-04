@@ -23,8 +23,8 @@ export const services: Service[] = [
     },
     offers: {
       sectionTitle: "What we offer",
-      image: "",
-      retinaImage: "",
+      image: "end_to_end_offers_1x",
+      retinaImage: "end_to_end_offers_2x",
       offersList: [
         {
           offerName: "Custom software development",
@@ -52,36 +52,36 @@ export const services: Service[] = [
         },
       ],
     },
-    whyChooseUs: {
+    whyChooseSonomics: {
       sectionTitle: "Why choose Sonomics",
       items: [
         {
           title: "End-to-end cloud expertise",
           description:
             "We handle every phase, from planning and development to post-launch support.",
-          image: "",
-          retinaImage: "",
+          image: "end_to_end_item1_1x",
+          retinaImage: "end_to_end_item1_2x",
         },
         {
           title: "Scalable and Future-Ready Solutions",
           description:
             "Applications built for long-term growth, capable of scaling alongside your business needs.",
-          image: "",
-          retinaImage: "",
+          image: "end_to_end_item2_1x",
+          retinaImage: "end_to_end_item2_2x",
         },
         {
           title: "User-centric design",
           description:
             "We prioritize usability, ensuring exceptional experiences for customers and internal teams.",
-          image: "",
-          retinaImage: "",
+          image: "end_to_end_item3_1x",
+          retinaImage: "end_to_end_item3_2x",
         },
         {
           title: "Reliable performance",
           description:
             "Optimized applications that deliver speed, stability, and efficiency across platforms.",
-          image: "",
-          retinaImage: "",
+          image: "end_to_end_item4_1x",
+          retinaImage: "end_to_end_item4_2x",
         },
       ],
     },
@@ -157,8 +157,8 @@ export const services: Service[] = [
     },
     offers: {
       sectionTitle: "What we offer",
-      image: "",
-      retinaImage: "",
+      image: "ai_offers_1x",
+      retinaImage: "ai_offers_2x",
       offersList: [
         {
           offerName: "Predictive analytics with machine learning",
@@ -186,41 +186,41 @@ export const services: Service[] = [
         },
       ],
     },
-    whyChooseUs: {
+    whyChooseSonomics: {
       sectionTitle: "Why choose Sonomics for AI integration?",
       items: [
         {
           title: "Customized AI solutions",
           description:
             "Tailored strategies and AI tools designed specifically for your business goals and industry challenges.",
-          image: "",
-          retinaImage: "",
+          image: "ai_item1_1x",
+          retinaImage: "ai_item1_2x",
         },
         {
           title: "Improved Operational Efficiency",
           description: "Automate manual processes, reducing costs and maximizing productivity.",
-          image: "",
-          retinaImage: "",
+          image: "ai_item2_1x",
+          retinaImage: "ai_item2_2x",
         },
         {
           title: "Data-driven insights",
           description:
             "Leverage AI to uncover hidden opportunities, optimize performance, and improve decision-making accuracy.",
-          image: "",
-          retinaImage: "",
+          image: "ai_item3_1x",
+          retinaImage: "ai_item3_2x",
         },
         {
           title: "Enhanced Customer Engagement",
           description:
             "Intelligent chatbots and personalized solutions that create seamless, satisfying user experiences.",
-          image: "",
-          retinaImage: "",
+          image: "ai_item4_1x",
+          retinaImage: "ai_item4_2x",
         },
         {
           title: "Scalable and future-ready artificial intelligence",
           description: "Systems designed to adapt and scale alongside your business as it evolves.",
-          image: "",
-          retinaImage: "",
+          image: "ai_item5_1x",
+          retinaImage: "ai_item5_2x",
         },
       ],
     },
@@ -309,8 +309,8 @@ export const services: Service[] = [
     },
     offers: {
       sectionTitle: "What we offer",
-      image: "",
-      retinaImage: "",
+      image: "demo_version_offers_1x",
+      retinaImage: "demo_version_offers_2x",
       offersList: [
         {
           offerName: "Quick turnaround prototypes to demonstrate value",
@@ -338,43 +338,43 @@ export const services: Service[] = [
         },
       ],
     },
-    whyChooseUs: {
+    whyChooseSonomics: {
       sectionTitle: "Why choose Sonomics for rapid prototyping",
       items: [
         {
           title: "Speed and efficiency",
           description:
             "Get a tangible prototype delivered in just two weeks to see early results and quick value.",
-          image: "",
-          retinaImage: "",
+          image: "demo_version_item1_1x",
+          retinaImage: "demo_version_item1_2x",
         },
         {
           title: "Iterative improvements",
           description:
             "We prioritize your feedback to refine and customize the demo based on real user needs and insights.",
-          image: "",
-          retinaImage: "",
+          image: "demo_version_item2_1x",
+          retinaImage: "demo_version_item2_2x",
         },
         {
           title: "Risk reduction",
           description:
             "Validate concepts and test ideas in a controlled environment before committing to full-scale implementation.",
-          image: "",
-          retinaImage: "",
+          image: "demo_version_item3_1x",
+          retinaImage: "demo_version_item3_2x",
         },
         {
           title: "Cost-effective approach",
           description:
             "Save time and resources by focusing on core functionalities first and scaling later.",
-          image: "",
-          retinaImage: "",
+          image: "demo_version_item4_1x",
+          retinaImage: "demo_version_item4_2x",
         },
         {
           title: "Seamless cloud integration",
           description:
             "Deploy your demo version on leading cloud platforms for performance, scalability, and reliability.",
-          image: "",
-          retinaImage: "",
+          image: "demo_version_item5_1x",
+          retinaImage: "demo_version_item5_2x",
         },
       ],
     },
@@ -464,8 +464,8 @@ export const services: Service[] = [
     },
     offers: {
       sectionTitle: "Technology-driven planning",
-      image: "",
-      retinaImage: "",
+      image: "analysis_and_planning_offers_1x",
+      retinaImage: "analysis_and_planning_offers_2x",
       offersList: [
         {
           offerName: "Data-driven requirement analysis",
@@ -497,43 +497,43 @@ export const services: Service[] = [
         },
       ],
     },
-    whyChooseUs: {
+    whyChooseSonomics: {
       sectionTitle: "Why choose Sonomics for requirement analysis & planning",
       items: [
         {
           title: "Strategic Clarity",
           description:
             "A structured, transparent process that eliminates guesswork and provides a clear roadmap to success.",
-          image: "",
-          retinaImage: "",
+          image: "analysis_and_planning_item1_1x",
+          retinaImage: "analysis_and_planning_item1_2x",
         },
         {
           title: "Client-Centric Approach",
           description:
             "We collaborate with stakeholders to ensure all requirements reflect your unique business priorities.",
-          image: "",
-          retinaImage: "",
+          image: "analysis_and_planning_item2_1x",
+          retinaImage: "analysis_and_planning_item2_2x",
         },
         {
           title: "Risk Mitigation",
           description:
             "Thorough analysis and meticulous planning help identify risks early and mitigate them before they impact the project.",
-          image: "",
-          retinaImage: "",
+          image: "analysis_and_planning_item3_1x",
+          retinaImage: "analysis_and_planning_item3_2x",
         },
         {
           title: "Scalable Architecture",
           description:
             "Our deployment plans ensure systems remain adaptable, future-ready, and capable of handling business growth.",
-          image: "",
-          retinaImage: "",
+          image: "analysis_and_planning_item4_1x",
+          retinaImage: "analysis_and_planning_item4_2x",
         },
         {
           title: "Timely Delivery",
           description:
             "Agile milestones and real-time tracking ensure projects remain on schedule without compromising quality.",
-          image: "",
-          retinaImage: "",
+          image: "analysis_and_planning_item5_1x",
+          retinaImage: "analysis_and_planning_item5_2x",
         },
       ],
     },
@@ -596,8 +596,8 @@ export const services: Service[] = [
     },
     offers: {
       sectionTitle: "Our agile methodologies",
-      image: "",
-      retinaImage: "",
+      image: "agile_offers_1x",
+      retinaImage: "agile_offers_2x",
       offersList: [
         {
           offerName: "Scrum for Iterative Development",
@@ -643,43 +643,43 @@ export const services: Service[] = [
         },
       ],
     },
-    whyChooseUs: {
+    whyChooseSonomics: {
       sectionTitle: "Why Sonomics excels with agile methodologies",
       items: [
         {
           title: "Adaptive development",
           description:
             "We tailor Agile frameworks to suit your specific project requirements, ensuring optimal efficiency and flexibility.",
-          image: "",
-          retinaImage: "",
+          image: "agile_item1_1x",
+          retinaImage: "agile_item1_2x",
         },
         {
           title: "Faster time-to-market",
           description:
             "Incremental delivery and real-time collaboration allow us to bring features to life faster.",
-          image: "",
-          retinaImage: "",
+          image: "agile_item2_1x",
+          retinaImage: "agile_item2_2x",
         },
         {
           title: "Enhanced collaboration",
           description:
             "Regular communication, feedback loops, and task visibility keep stakeholders engaged and aligned.",
-          image: "",
-          retinaImage: "",
+          image: "agile_item3_1x",
+          retinaImage: "agile_item3_2x",
         },
         {
           title: "Continuous improvement",
           description:
             "Agile's iterative nature ensures ongoing evaluation and improvement of processes and deliverables.",
-          image: "",
-          retinaImage: "",
+          image: "agile_item4_1x",
+          retinaImage: "agile_item4_2x",
         },
         {
           title: "Scalable solutions",
           description:
             "Whether your business requires structured sprints, flexible workflows, or a hybrid blend, our Agile processes adapt to your growth and evolving goals.",
-          image: "",
-          retinaImage: "",
+          image: "agile_item5_1x",
+          retinaImage: "agile_item5_2x",
         },
       ],
     },
@@ -791,8 +791,8 @@ export const services: Service[] = [
     },
     offers: {
       sectionTitle: "How we optimize your business processes",
-      image: "",
-      retinaImage: "",
+      image: "crm_offers_1x",
+      retinaImage: "crm_offers_2x",
       offersList: [
         {
           offerName: "Customized business process management (BPM) systems",
@@ -824,43 +824,43 @@ export const services: Service[] = [
         },
       ],
     },
-    whyChooseUs: {
+    whyChooseSonomics: {
       sectionTitle: "Why choose Sonomics for business process optimization?",
       items: [
         {
           title: "Tailored approach",
           description:
             "We create systems specifically designed to meet your business goals and operational requirements.",
-          image: "",
-          retinaImage: "",
+          image: "crm_item1_1x",
+          retinaImage: "crm_item1_2x",
         },
         {
           title: "Data-driven insights",
           description:
             "We analyze your processes to identify gaps and inefficiencies, delivering solutions that drive measurable results.",
-          image: "",
-          retinaImage: "",
+          image: "crm_item2_1x",
+          retinaImage: "crm_item2_2x",
         },
         {
           title: "Seamless integration",
           description:
             "Our experts ensure compatibility with your existing tools and systems for a unified workflow.",
-          image: "",
-          retinaImage: "",
+          image: "crm_item3_1x",
+          retinaImage: "crm_item3_2x",
         },
         {
           title: "Expertise you can trust",
           description:
             "Backed by years of experience and industry-leading tools, we optimize processes to help you stay ahead of the competition.",
-          image: "",
-          retinaImage: "",
+          image: "crm_item4_1x",
+          retinaImage: "crm_item4_2x",
         },
         {
           title: "Sustainable results",
           description:
             "Our solutions are scalable, adaptable, and future-ready, ensuring your business is positioned for long-term success.",
-          image: "",
-          retinaImage: "",
+          image: "crm_item5_1x",
+          retinaImage: "crm_item5_2x",
         },
       ],
     },
@@ -999,8 +999,8 @@ export const services: Service[] = [
     },
     offers: {
       sectionTitle: "Our cloud integration services",
-      image: "",
-      retinaImage: "",
+      image: "cloud_offers_1x",
+      retinaImage: "cloud_offers_2x",
       offersList: [
         {
           offerName: "Cloud migration and infrastructure setup",
@@ -1035,43 +1035,43 @@ export const services: Service[] = [
         },
       ],
     },
-    whyChooseUs: {
+    whyChooseSonomics: {
       sectionTitle: "Why choose Sonomics for cloud integration?",
       items: [
         {
           title: "End-to-end cloud expertise",
           description:
             "From strategy and planning to deployment and optimization, we handle every aspect of cloud integration.",
-          image: "",
-          retinaImage: "",
+          image: "cloud_item1_1x",
+          retinaImage: "cloud_item1_2x",
         },
         {
           title: "Tailored solutions",
           description:
             "We customize cloud architectures to align with your business goals, ensuring maximum performance and efficiency.",
-          image: "",
-          retinaImage: "",
+          image: "cloud_item2_1x",
+          retinaImage: "cloud_item2_2x",
         },
         {
           title: "Security-centric approach",
           description:
             "Our focus on cloud security ensures your data and systems remain protected at all times.",
-          image: "",
-          retinaImage: "",
+          image: "cloud_item3_1x",
+          retinaImage: "cloud_item3_2x",
         },
         {
           title: "Cost-effective solutions",
           description:
             "Through strategic resource management and optimization, we help you reduce cloud expenses while maximizing value.",
-          image: "",
-          retinaImage: "",
+          image: "cloud_item4_1x",
+          retinaImage: "cloud_item4_2x",
         },
         {
           title: "Reliable performance",
           description:
             "Our solutions guarantee high uptime, scalability, and availability, empowering you to meet growing demands.",
-          image: "",
-          retinaImage: "",
+          image: "cloud_item5_1x",
+          retinaImage: "cloud_item5_2x",
         },
       ],
     },
