@@ -15,10 +15,12 @@ const ServiceDetails = () => {
     }
   }, [service, navigate]);
 
+  if (!service) return null;
+
   return (
-    <div>
-      <h1>{service?.title}</h1>
-    </div>
+    <>
+      <h1>{service.title}</h1>
+    </>
   );
 };
 
