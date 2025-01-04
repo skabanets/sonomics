@@ -1,11 +1,11 @@
-interface Hero {
+export interface Hero {
   image: string;
   retinaImage: string;
   text: string[];
   boldText?: string;
 }
 
-interface Offers {
+export interface Offers {
   sectionTitle: string;
   image: string;
   retinaImage: string;
@@ -18,24 +18,24 @@ interface OfferDate {
   keyBenefits?: string[];
 }
 
-interface WhyChooseUs {
+export interface WhyChooseSonomics {
   sectionTitle: string;
-  items: WhyChooseUsItem[];
+  items: WhyChooseSonomicsItem[];
 }
 
-interface WhyChooseUsItem {
+interface WhyChooseSonomicsItem {
   title: string;
   description: string;
   image: string;
   retinaImage: string;
 }
 
-interface Expertise {
+export interface Expertise {
   text: string;
   accentWords: string[];
 }
 
-interface Technologies {
+export interface Technologies {
   sectionTitle: string;
   cards: TechnologyCard[];
   description?: string;
@@ -51,7 +51,7 @@ interface TechnologyData {
   text: string | string[];
 }
 
-interface ApproachAndAdvantages {
+export interface ApproachAndAdvantages {
   sectionTitle: string;
   items: ApproachAndAdvantagesItem[];
 }
@@ -70,7 +70,7 @@ export interface Service {
   features: string[];
   hero: Hero;
   offers: Offers;
-  whyChooseUs: WhyChooseUs;
+  whyChooseSonomics: WhyChooseSonomics;
   caseStudyId: number;
   expertise?: Expertise;
   technologies?: Technologies;
