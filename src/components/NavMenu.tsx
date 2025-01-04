@@ -121,7 +121,7 @@ export const NavMenu = ({ headerRef, listClass, linkClass }: NavMenuProps) => {
               <Link
                 to={link}
                 className="view-link text-themeAccentColor before:h-[2px] before:bg-themeAccentColor"
-                onClick={handleNavLinkClick}
+                reloadDocument
               >
                 <h2>{text}</h2>
               </Link>
@@ -131,7 +131,7 @@ export const NavMenu = ({ headerRef, listClass, linkClass }: NavMenuProps) => {
                     <NavLink
                       className={`label inline-block size-full text-mainTextColor ${linkClass}`}
                       to={subLink.link}
-                      onClick={handleNavLinkClick}
+                      reloadDocument
                     >
                       {subLink.name}
                     </NavLink>
