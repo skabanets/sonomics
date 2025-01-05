@@ -48,30 +48,32 @@ export const ServicesTechnologies = ({ technologies, id }: ServicesTechnologiesP
       <motion.div className="container" {...slideInWithFade}>
         <div className={`flex justify-between ${description ? "items-end" : "items-center"}`}>
           <div>
-            <h2>{sectionTitle}</h2>
-            {description && <p className="big-text mt-[30px] w-[622px]">{description}</p>}
+            <h2 className="text-whiteTextColor">{sectionTitle}</h2>
+            {description && (
+              <p className="big-text mt-[30px] w-[622px] text-whiteTextColor">{description}</p>
+            )}
           </div>
           <div className={`${!(isDesktop && cards.length <= 3) ? "flex gap-[20px]" : "hidden"}`}>
             <button
               onClick={() => swiperRef.current?.slidePrev()}
-              className={`group flex h-[50px] w-[50px] items-center justify-center rounded-[10px] border border-solid transition ${isBeginning ? "cursor-not-allowed border-disabledBtnColor bg-formFieldBgColor" : "border-darkBorderColor bg-sliderBgColor hover:border-themeAccentColor focus-visible:border-themeAccentColor"}`}
+              className={`group flex h-[50px] w-[50px] items-center justify-center rounded-[10px] border border-solid transition ${isBeginning ? "cursor-not-allowed border-grey600Color bg-secondaryDarkBgColor" : "border-whiteTextColor bg-darkBgColor hover:border-accentYellowColor focus-visible:border-accentYellowColor"}`}
               aria-label="Previous slide"
               disabled={isBeginning}
             >
               <Icon
                 id="arrow-left-bold"
-                className={`h-[15px] w-[15px] transition ${isBeginning ? "fill-disabledBtnColor" : "fill-inverseColor group-hover:fill-themeAccentColor group-focus-visible:fill-themeAccentColor"}`}
+                className={`h-[15px] w-[15px] transition ${isBeginning ? "fill-grey600Color" : "fill-whiteTextColor group-hover:fill-accentYellowColor group-focus-visible:fill-accentYellowColor"}`}
               />
             </button>
             <button
               onClick={() => swiperRef.current?.slideNext()}
-              className={`group flex h-[50px] w-[50px] items-center justify-center rounded-[10px] border border-solid transition ${isEnd ? "cursor-not-allowed border-disabledBtnColor bg-formFieldBgColor" : "border-darkBorderColor bg-sliderBgColor hover:border-themeAccentColor focus-visible:border-themeAccentColor"}`}
+              className={`group flex h-[50px] w-[50px] items-center justify-center rounded-[10px] border border-solid transition ${isEnd ? "cursor-not-allowed border-grey600Color bg-secondaryDarkBgColor" : "border-whiteTextColor bg-darkBgColor hover:border-accentYellowColor focus-visible:border-accentYellowColor"}`}
               aria-label="Next slide"
               disabled={isEnd}
             >
               <Icon
                 id="arrow-right-bold"
-                className={`h-[15px] w-[15px] transition ${isEnd ? "fill-disabledBtnColor" : "fill-inverseColor group-hover:fill-themeAccentColor group-focus-visible:fill-themeAccentColor"}`}
+                className={`h-[15px] w-[15px] transition ${isEnd ? "fill-grey600Color" : "fill-whiteTextColor group-hover:fill-accentYellowColor group-focus-visible:fill-accentYellowColor"}`}
               />
             </button>
           </div>

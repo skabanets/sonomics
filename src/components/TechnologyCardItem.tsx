@@ -18,17 +18,18 @@ export const TechnologyCardItem = ({ card, cardHeight }: TechnologyCardItemProps
             className="relative pl-[16px] before:absolute before:left-0 before:top-[10px] before:h-[6px] before:w-[6px] before:rounded-full before:bg-accentYellowColor"
           >
             {typeof technology.text === "string" ? (
-              <p className="small-text text-secondaryTextColor">
-                <span className="bold-text text-white">{technology.name}</span> {technology.text}
+              <p className="small-text text-secondaryLightTextColor">
+                <span className="bold-text text-whiteTextColor">{technology.name}</span>{" "}
+                {technology.text}
               </p>
             ) : (
               <>
-                <p className="bold-text text-white">{technology.name}</p>
+                <p className="bold-text text-whiteTextColor">{technology.name}</p>
                 <ul>
                   {technology.text.map((info, index) => (
                     <li
                       key={index}
-                      className="small-text relative pl-[12px] text-secondaryTextColor before:absolute before:left-0 before:top-[10.5px] before:h-[3px] before:w-[3px] before:rounded-full before:bg-mainTextColor"
+                      className="small-text relative pl-[12px] text-secondaryLightTextColor before:absolute before:left-0 before:top-[10.5px] before:h-[3px] before:w-[3px] before:rounded-full before:bg-mainTextColor"
                     >
                       {info}
                     </li>
