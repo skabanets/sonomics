@@ -81,9 +81,10 @@ export const Team = () => {
               onChange={handleSliderChange}
               onBeforeChange={() => setDragIconName("drag-hand-active")}
               onAfterChange={() => setDragIconName("drag-hand")}
+              ariaLabel="Team slider"
               // eslint-disable-next-line
               renderThumb={({ key, ...rest }, state) => (
-                <div key={state.index} {...rest}>
+                <div key={state.index} aria-label={`Slider thumb ${state.index + 1}`} {...rest}>
                   <Icon id={dragIconName} className="size-[25px] fill-whiteTextColor" />
                 </div>
               )}

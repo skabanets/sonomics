@@ -47,6 +47,7 @@ export const ThemeToggle = () => {
         </div>
       }
       activeBoxShadow="none"
+      aria-label="Theme Toggle"
     />
   );
 };
