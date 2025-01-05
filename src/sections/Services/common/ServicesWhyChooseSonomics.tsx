@@ -23,20 +23,21 @@ export const ServicesWhyChooseSonomics = ({ content }: ServicesWhyChooseSonomics
   return (
     <>
       <section className="py-[100px]">
-        <motion.div className="container" {...slideInWithFade}>
-          <div className="mb-[40px] flex items-center justify-between">
+        <div className="container">
+          <motion.div className="mb-[40px] flex items-center justify-between" {...slideInWithFade}>
             <h2 className="max-w-[852px] font-black leading-[58px]">{sectionTitle}</h2>
             <Button label="Let's discuss your project" width="w-[300px]" onClick={toggleModal} />
-          </div>
+          </motion.div>
           <ul className="ml-[-10px] flex flex-wrap gap-[50px]">
             {items.map((item, index) => {
               const img = whyChooseSonomics[item.image as keyof typeof whyChooseSonomics];
               const retinaImg =
                 whyChooseSonomics[item.retinaImage as keyof typeof whyChooseSonomics];
               return (
-                <li
+                <motion.li
                   key={index}
                   className="flex w-[620px] rounded-[40px] bg-letsTalkBgColor transition"
+                  {...slideInWithFade}
                 >
                   <img
                     srcSet={`${img} 1x, ${retinaImg} 2x`}
@@ -51,11 +52,11 @@ export const ServicesWhyChooseSonomics = ({ content }: ServicesWhyChooseSonomics
                     <h5>{item.title}</h5>
                     <p className="small-text text-secondaryTextColor">{item.description}</p>
                   </div>
-                </li>
+                </motion.li>
               );
             })}
           </ul>
-        </motion.div>
+        </div>
       </section>
       {isOpen && (
         <Modal {...{ toggleModal, handleClickOnBackdrop }}>
