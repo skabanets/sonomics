@@ -24,9 +24,9 @@ export const ServicesWhatWeOffer = ({ offers }: ServicesWhatWeOfferProps) => {
 
   return (
     <>
-      <motion.section className="bg-letsTalkBgColor py-[80px]" {...slideInWithFade}>
-        <div className="container">
-          <div className="flex items-center justify-between">
+      <section className="bg-letsTalkBgColor py-[80px]">
+        <motion.div className="container">
+          <div className="flex items-center justify-between" {...slideInWithFade}>
             <h2>{sectionTitle}</h2>
             <Button label="Let's discuss your project" width="w-auto" onClick={toggleModal} />
           </div>
@@ -42,8 +42,8 @@ export const ServicesWhatWeOffer = ({ offers }: ServicesWhatWeOfferProps) => {
             />
             <Accordion offersList={offersList} />
           </div>
-        </div>
-      </motion.section>
+        </motion.div>
+      </section>
       {isOpen && (
         <Modal {...{ toggleModal, handleClickOnBackdrop }}>
           <ContactForm onClose={toggleModal} />

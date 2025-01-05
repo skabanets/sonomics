@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 import { Button, ContactForm, Modal } from "../../../components";
 
 import { useModal, useTheme } from "../../../hooks";
@@ -21,7 +23,7 @@ export const ServicesWhyChooseSonomics = ({ content }: ServicesWhyChooseSonomics
   return (
     <>
       <section className="py-[100px]">
-        <div className="container" {...slideInWithFade}>
+        <motion.div className="container" {...slideInWithFade}>
           <div className="mb-[40px] flex items-center justify-between">
             <h2 className="max-w-[852px] font-black leading-[58px]">{sectionTitle}</h2>
             <Button label="Let's discuss your project" width="w-[300px]" onClick={toggleModal} />
@@ -53,7 +55,7 @@ export const ServicesWhyChooseSonomics = ({ content }: ServicesWhyChooseSonomics
               );
             })}
           </ul>
-        </div>
+        </motion.div>
       </section>
       {isOpen && (
         <Modal {...{ toggleModal, handleClickOnBackdrop }}>
