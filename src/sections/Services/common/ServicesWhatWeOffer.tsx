@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 
 import { Accordion, Button, ContactForm, Modal } from "../../../components";
 
-import { slideInWithFade } from "../../../constants";
-import { useModal } from "../../../hooks";
+import { slideInWithFade, ThemeMode } from "../../../constants";
+import { useModal, useTheme } from "../../../hooks";
 import { images } from "../../../assets";
 import type { Offers } from "../../../types";
 
@@ -13,6 +13,8 @@ interface ServicesWhatWeOfferProps {
 
 export const ServicesWhatWeOffer = ({ offers }: ServicesWhatWeOfferProps) => {
   const [isOpen, toggleModal, handleClickOnBackdrop] = useModal();
+
+  const { theme } = useTheme();
 
   const { sectionTitle, image, retinaImage, offersList } = offers;
   const {
@@ -38,7 +40,7 @@ export const ServicesWhatWeOffer = ({ offers }: ServicesWhatWeOfferProps) => {
               width={530}
               height={510}
               loading="lazy"
-              className="h-[510px] rounded-[15px] object-cover"
+              className={`h-[510px] rounded-[15px] object-cover ${theme === ThemeMode.LIGHT ? "brightness-[90%]" : ""}`}
             />
             <Accordion offersList={offersList} />
           </div>
