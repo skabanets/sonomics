@@ -44,8 +44,8 @@ export const ServicesTechnologies = ({ technologies, id }: ServicesTechnologiesP
   };
 
   return (
-    <motion.section className="bg-blackBgColor py-[80px]" {...slideInWithFade}>
-      <div className="container">
+    <section className="bg-blackBgColor py-[80px]">
+      <motion.div className="container" {...slideInWithFade}>
         <div className={`flex justify-between ${description ? "items-end" : "items-center"}`}>
           <div>
             <h2>{sectionTitle}</h2>
@@ -96,7 +96,7 @@ export const ServicesTechnologies = ({ technologies, id }: ServicesTechnologiesP
             ))}
           </Swiper>
         </div>
-      </div>
-    </motion.section>
+      </motion.div>
+    </section>
   );
 };

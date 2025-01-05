@@ -9,12 +9,12 @@ export const Hero = () => {
   return (
     <section className="pt-[60px]">
       <motion.div className="container flex gap-[80px]" {...slideInWithFade}>
-        <motion.div className="flex w-[600px] flex-col gap-[22px] pt-[40px]">
+        <div className="flex w-[600px] flex-col gap-[22px] pt-[40px]">
           <h1>Empower your business with our leading IT solutions</h1>
           <h6 className="secondaryTextColor">
             Product Engineering, DevOps, Cloud, UI/UX, Quality Engineering, Mobile Development
           </h6>
-        </motion.div>
+        </div>
         <div>
           <Slider slides={caseStudies as CaseStudy[]} />
         </div>
