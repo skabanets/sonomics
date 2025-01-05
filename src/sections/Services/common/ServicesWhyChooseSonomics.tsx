@@ -28,7 +28,7 @@ export const ServicesWhyChooseSonomics = ({ content }: ServicesWhyChooseSonomics
             <h2 className="max-w-[852px] font-black leading-[58px]">{sectionTitle}</h2>
             <Button label="Let's discuss your project" width="w-[300px]" onClick={toggleModal} />
           </motion.div>
-          <ul className="ml-[-10px] flex flex-wrap gap-[50px]">
+          <ul className="flex flex-wrap gap-[40px]">
             {items.map((item, index) => {
               const img = whyChooseSonomics[item.image as keyof typeof whyChooseSonomics];
               const retinaImg =
