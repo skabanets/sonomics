@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { CustomTitle } from "../../../components";
 
 import { slideInWithFade } from "../../../constants";
-import { CaseStudy } from "../../../types";
+import type { CaseStudy } from "../../../types";
 
 interface ServicesCaseStudyProps {
   caseStudy: CaseStudy;
