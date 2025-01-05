@@ -45,7 +45,11 @@ export const ServicesHero = ({ title, hero }: ServicesHeroProps) => {
       <section className="pb-[80px] pt-[100px]">
         <motion.div className="container" {...slideInWithFade}>
           <BackLink to={routes.Services} label="Back to services" className="mb-[20px]" />
-          <h1 className="mb-[30px] max-w-[920px]">{title}</h1>
+          <h1
+            className={`mb-[30px] ${id === routes.AgileMethodologies.slice(10) ? "max-w-[1182px]" : "max-w-[918px]"}`}
+          >
+            {title}
+          </h1>
           <div className="flex items-center justify-between">
             <div className="max-w-[675px]">
               {boldText && <h5 className="mb-[20px]">{boldText}</h5>}

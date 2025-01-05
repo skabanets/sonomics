@@ -392,7 +392,8 @@ textarea:-webkit-autofill:focus {
 .accordion-icon {
   transition:
     visibility 0.4s ease,
-    transform 0.4s ease;
+    transform 0.4s ease,
+    fill 0.3s ease-in;
 }
 
 .accordion-details .accordion-icon-minus,

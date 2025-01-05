@@ -13,15 +13,15 @@ export const Accordion = ({ offersList }: AccordionProps) => {
       {offersList.map((offer) => (
         <li key={offer.offerName}>
           <details name="offer" className="accordion-details px-[10px] py-[25px] transition">
-            <summary className="relative flex cursor-pointer items-center justify-between">
+            <summary className="group relative flex cursor-pointer items-center justify-between">
               <h4 className="w-[610px]">{offer.offerName}</h4>
               <Icon
                 id="plus"
-                className="accordion-icon accordion-icon-plus absolute right-0 top-1/2 size-5 -translate-y-1/2 fill-mainTextColor"
+                className="accordion-icon accordion-icon-plus absolute right-0 top-1/2 size-5 -translate-y-1/2 fill-mainTextColor group-hover:fill-themeAccentColor group-focus-visible:fill-themeAccentColor"
               />
               <Icon
                 id="minus"
-                className="accordion-icon accordion-icon-minus size-5 fill-mainTextColor"
+                className="accordion-icon accordion-icon-minus size-5 fill-mainTextColor group-hover:fill-themeAccentColor group-focus-visible:fill-themeAccentColor"
               />
             </summary>
           </details>
