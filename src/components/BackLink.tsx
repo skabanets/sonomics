@@ -11,7 +11,7 @@ export const BackLink = ({ label, className = "", ...rest }: BackLinkProps) => {
       {...rest}
       className={`inline-block text-secondaryTextColor hover:text-themeAccentColor focus-visible:text-themeAccentColor ${className}`}
     >
-      <h6 className="underline">{label}</h6>
+      <h6 className="border-b-[1.5px] border-b-current leading-[20px]">{label}</h6>
     </Link>
   );
 };
