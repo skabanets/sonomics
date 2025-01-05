@@ -4,22 +4,15 @@ import { motion } from "framer-motion";
 import { CustomTitle } from "../../../components";
 
 import { slideInWithFade } from "../../../constants";
+import { CaseStudy } from "../../../types";
 
 interface ServicesCaseStudyProps {
-  name: string;
-  description: string;
-  link: string;
-  bgImage1x: string;
-  bgImage2x: string;
+  caseStudy: CaseStudy;
 }
 
-export const ServicesCaseStudy = ({
-  name,
-  description,
-  link,
-  bgImage1x,
-  bgImage2x,
-}: ServicesCaseStudyProps) => {
+export const ServicesCaseStudy = ({ caseStudy }: ServicesCaseStudyProps) => {
+  const { name, description, link, bgImage1x, bgImage2x } = caseStudy;
+
   return (
     <section
       className="bg-blackBgColor py-[80px]"
