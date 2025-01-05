@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import { Divider, Icon } from "../components";
 
 import { OfferDate } from "../types";
@@ -9,40 +7,26 @@ interface AccordionProps {
 }
 
 export const Accordion = ({ offersList }: AccordionProps) => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  const toggleAccordion = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
   return (
     <ul className="w-[680px] pt-[45px]">
       <Divider />
-      {offersList.map((offer, index) => (
+      {offersList.map((offer) => (
         <li key={offer.offerName}>
-          <details
-            name="offer"
-            open={openIndex === index}
-            className="px-[10px] py-[25px] transition"
-          >
-            <summary
-              className="flex cursor-pointer items-center justify-between"
-              onClick={(e) => {
-                e.preventDefault();
-                toggleAccordion(index);
-              }}
-            >
+          <details name="offer" className="accordion-details px-[10px] py-[25px] transition">
+            <summary className="relative flex cursor-pointer items-center justify-between">
               <h4 className="w-[610px]">{offer.offerName}</h4>
               <Icon
-                id={openIndex === index ? "minus" : "plus"}
-                className="size-5 fill-mainTextColor"
+                id="plus"
+                className="accordion-icon accordion-icon-plus absolute right-0 top-1/2 size-5 -translate-y-1/2 fill-mainTextColor"
+              />
+              <Icon
+                id="minus"
+                className="accordion-icon accordion-icon-minus size-5 fill-mainTextColor"
               />
             </summary>
-            <div
-              className={`big-text mt-[10px] overflow-hidden transition ${
-                openIndex === index ? "max-h-screen" : "max-h-0"
-              }`}
-            >
+          </details>
+          <div className={`accordion-content big-text px-[10px] transition`}>
+            <div className="overflow-hidden">
               <ul>
                 {offer.details.map((detail, index) => (
                   <li key={index}>{detail}</li>
@@ -65,7 +49,7 @@ export const Accordion = ({ offersList }: AccordionProps) => {
                 </div>
               )}
             </div>
-          </details>
+          </div>
           <Divider />
         </li>
       ))}
