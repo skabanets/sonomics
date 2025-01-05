@@ -1,6 +1,7 @@
 import { images } from "../assets";
 
 const { casesImages } = images;
+
 export const caseStudies = [
   {
     id: 1,

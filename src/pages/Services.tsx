@@ -7,15 +7,15 @@ import {
 } from "../sections";
 
 import { caseStudies } from "../constants";
+import type { CaseStudy } from "../types";
 
 const Services = () => {
-  const { name, link, description, bgImage1x, bgImage2x } = caseStudies[0];
   return (
     <>
       <OurServices />
       <OurCoreServices />
       <WhyChooseUs />
-      <ServicesCaseStudy {...{ name, description, link, bgImage1x, bgImage2x }} />
+      <ServicesCaseStudy caseStudy={caseStudies[0] as CaseStudy} />
       <LetsTalk />
     </>
   );
