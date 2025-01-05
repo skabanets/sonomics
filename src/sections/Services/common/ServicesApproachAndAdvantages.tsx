@@ -84,7 +84,7 @@ export const ServicesApproachAndAdvantages = ({
     return (
       <section className="py-[100px]">
         <motion.div className="container relative flex justify-end" {...slideInWithFade}>
-          <h2 className="absolute left-0 top-0 w-[269px]">{sectionTitle}</h2>
+          <h2 className="absolute left-[80px] top-0 w-[269px]">{sectionTitle}</h2>
           <ul className="grid-card-container">
             <li className="empty-cell"></li>
             {items.map((item, index) => (
