@@ -67,11 +67,13 @@ export const ContactForm = ({ onClose }: ContactFormProps) => {
           <div className="fex-row flex gap-[30px]">
             <div className="relative flex w-1/2 flex-col gap-[10px]">
               <label
+                htmlFor={`${onClose ? "modal-first-name" : "first-name"}`}
                 className={`label ${errors.firstName ? "text-errorColor" : "text-secondaryTextColor"}`}
               >
                 First name
               </label>
               <input
+                id={`${onClose ? "modal-first-name" : "first-name"}`}
                 type="text"
                 className={`form-field rounded-[20px] ${errors.firstName ? "!border-errorColor placeholder:text-errorColor" : "border-fieldBorderColor placeholder:text-placeholderTextColor"}`}
                 {...register("firstName", {
@@ -86,11 +88,13 @@ export const ContactForm = ({ onClose }: ContactFormProps) => {
             </div>
             <div className="relative flex w-1/2 flex-col gap-[10px]">
               <label
+                htmlFor={`${onClose ? "modal-last-name" : "last-name"}`}
                 className={`label ${errors.lastName ? "text-errorColor" : "text-secondaryTextColor"}`}
               >
                 Last name
               </label>
               <input
+                id={`${onClose ? "modal-last-name" : "last-name"}`}
                 type="text"
                 className={`form-field rounded-[20px] ${errors.lastName ? "!border-errorColor placeholder:text-errorColor" : "border-fieldBorderColor placeholder:text-placeholderTextColor"}`}
                 {...register("lastName", {
@@ -106,11 +110,13 @@ export const ContactForm = ({ onClose }: ContactFormProps) => {
           </div>
           <div className="relative flex flex-col gap-[10px]">
             <label
+              htmlFor={`${onClose ? "modal-email" : "email"}`}
               className={`label ${errors.email ? "text-errorColor" : "text-secondaryTextColor"}`}
             >
               Email
             </label>
             <input
+              id={`${onClose ? "modal-email" : "email"}`}
               type="email"
               {...register("email", {
                 required: "Email is required",
@@ -126,11 +132,13 @@ export const ContactForm = ({ onClose }: ContactFormProps) => {
           </div>
           <div className="relative mb-[10px] flex flex-col gap-[10px]">
             <label
+              htmlFor={`${onClose ? "modal-message" : "message"}`}
               className={`label ${errors.message ? "text-errorColor" : "text-secondaryTextColor"}`}
             >
               Message
             </label>
             <textarea
+              id={`${onClose ? "modal-message" : "message"}`}
               rows={5}
               {...register("message", { required: "Message is required" })}
               className={`form-field scrollbar resize-none rounded-[20px] ${errors.message ? "!border-errorColor placeholder:text-errorColor" : "border-fieldBorderColor placeholder:text-placeholderTextColor"}`}
