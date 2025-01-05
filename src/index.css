@@ -338,3 +338,38 @@ textarea:-webkit-autofill:focus {
     border-radius: 8px;
   }
 }
+
+.grid-card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 40px 40px;
+  grid-template-areas:
+    ". item-1 item-2"
+    "item-3 item-4 item-5";
+}
+
+.item-1 {
+  grid-area: item-1;
+}
+
+.item-2 {
+  grid-area: item-2;
+}
+
+.item-3 {
+  grid-area: item-3;
+}
+
+.item-4 {
+  grid-area: item-4;
+}
+
+.item-5 {
+  grid-area: item-5;
+}
+
+.empty-cell {
+  grid-area: auto;
+  visibility: hidden;
+}
