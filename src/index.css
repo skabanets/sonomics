@@ -373,3 +373,40 @@ textarea:-webkit-autofill:focus {
   grid-area: auto;
   visibility: hidden;
 }
+
+.accordion-content {
+  display: grid;
+  grid-template-rows: 0fr;
+}
+
+.accordion-details[open] {
+  padding-bottom: 0;
+}
+
+.accordion-details[open] + .accordion-content {
+  grid-template-rows: 1fr;
+  padding-bottom: 25px;
+  margin-top: 10px;
+}
+
+.accordion-icon {
+  transition:
+    visibility 0.4s ease,
+    transform 0.4s ease;
+}
+
+.accordion-details .accordion-icon-minus,
+.accordion-details[open] .accordion-icon-plus {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.accordion-details .accordion-icon-plus,
+.accordion-details[open] .accordion-icon-minus {
+  opacity: 1;
+  visibility: visible;
+}
+
+.accordion-details[open] .accordion-icon {
+  transform: rotate(180deg);
+}
