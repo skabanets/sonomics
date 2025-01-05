@@ -25,8 +25,8 @@ export const ServicesWhatWeOffer = ({ offers }: ServicesWhatWeOfferProps) => {
   return (
     <>
       <section className="bg-letsTalkBgColor py-[80px]">
-        <motion.div className="container">
-          <div className="flex items-center justify-between" {...slideInWithFade}>
+        <motion.div className="container" {...slideInWithFade}>
+          <div className="flex items-center justify-between">
             <h2>{sectionTitle}</h2>
             <Button label="Let's discuss your project" width="w-auto" onClick={toggleModal} />
           </div>
