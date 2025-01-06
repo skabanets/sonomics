@@ -10,7 +10,7 @@ export const Header = () => {
   return (
     <>
       <header ref={headerRef} className="header pt-[40px]">
-        <div className="container flex items-center">
+        <div className="full-hd-container flex items-center">
           <nav className="relative z-10 flex w-full justify-between">
             <Logo applyThemeColor />
             <div className="flex items-center gap-[50px]">

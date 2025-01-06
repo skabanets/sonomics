@@ -7,7 +7,7 @@ import { socialLinks } from "../constants";
 export const Footer = () => {
   return (
     <footer className="footer bg-blackBgColor pb-[40px] pt-[80px]">
-      <div className="container flex pb-[40px]">
+      <div className="full-hd-container flex pb-[40px]">
         <div className="mr-auto w-[281px] space-y-[22px]">
           {" "}
           <Logo className="fill-whiteTextColor" />
@@ -57,7 +57,7 @@ export const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="container flex items-center justify-between border-t border-grey600Color px-0 pt-[20px] lg:max-w-[1280px]">
+      <div className="full-hd-container relative left-0 flex items-center justify-between pt-[20px] before:absolute before:top-[-20px] before:h-[1px] before:w-[calc(100vw-160px)] before:max-w-[1760px] before:bg-grey600Color before:content-['']">
         <p className="small-text text-white">&copy; 2024 Sonomics, Inc. All rights reserved</p>
         <div className="small-text flex items-center justify-end gap-[15px] text-whiteTextColor">
           <span className="group-hover:-translate-x-full group-hover:opacity-0"> To top </span>
