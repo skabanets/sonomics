@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 import { Divider, Icon } from "../components";
 
-import { OfferDate } from "../types";
+import type { OfferDate } from "../types";
 
 interface AccordionProps {
   offersList: OfferDate[];
@@ -10,28 +10,53 @@ interface AccordionProps {
 
 export const Accordion = ({ offersList }: AccordionProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [intervalId, setIntervalId] = useState<number | null>(null);
+
+  const intervalIdRef = useRef<number | null>(null);
+  const accordionRef = useRef<HTMLUListElement>(null);
 
   useEffect(() => {
-    const id = window.setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % offersList.length);
-    }, 3500);
-    setIntervalId(id);
+    const startInterval = () => {
+      if (intervalIdRef.current) {
+        clearInterval(intervalIdRef.current);
+      }
+      intervalIdRef.current = setInterval(() => {
+        setActiveIndex((prev) => (prev + 1) % offersList.length);
+      }, 3500);
+    };
+
+    const stopInterval = () => {
+      if (intervalIdRef.current) {
+        clearInterval(intervalIdRef.current);
+        intervalIdRef.current = null;
+      }
+    };
+
+    const accordion = accordionRef.current;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          startInterval();
+        } else {
+          stopInterval();
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (accordion) {
+      observer.observe(accordion);
+    }
 
     return () => {
-      clearInterval(id);
+      if (accordion) {
+        observer.unobserve(accordion);
+      }
+      stopInterval();
     };
   }, [offersList.length]);
 
-  const handleSummaryClick = () => {
-    if (intervalId) {
-      clearInterval(intervalId);
-      setIntervalId(null);
-    }
-  };
-
   return (
-    <ul className="w-[680px] pt-[45px]">
+    <ul ref={accordionRef} className="w-[680px] pt-[45px]">
       <Divider />
       {offersList.map((offer, index) => (
         <li key={offer.offerName}>
@@ -42,7 +67,10 @@ export const Accordion = ({ offersList }: AccordionProps) => {
           >
             <summary
               className="group relative flex cursor-pointer items-center justify-between"
-              onClick={handleSummaryClick}
+              onClick={() => {
+                intervalIdRef.current && clearInterval(intervalIdRef.current);
+                intervalIdRef.current = null;
+              }}
             >
               <h4 className="w-[610px]">{offer.offerName}</h4>
               <Icon
