@@ -2,7 +2,12 @@ import { motion } from "framer-motion";
 
 import { Icon } from "../../../components";
 
-import { routes, slideInWithFade } from "../../../constants";
+import {
+  cardVariants,
+  industriesContainerVariants,
+  routes,
+  slideInWithFade,
+} from "../../../constants";
 import { ApproachAndAdvantages } from "../../../types";
 
 interface ServicesApproachAndAdvantagesProps {
@@ -27,9 +32,15 @@ export const ServicesApproachAndAdvantages = ({
       <section className="py-[100px]">
         <motion.div className="container flex justify-between" {...slideInWithFade}>
           <h2 className="w-[430px]">{sectionTitle}</h2>
-          <ul className="grid grid-cols-2 gap-[40px]">
+          <motion.ul
+            className="grid grid-cols-2 gap-[40px]"
+            variants={industriesContainerVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.3 }}
+          >
             {items.map((item, index) => (
-              <li key={index}>
+              <motion.li key={index} variants={cardVariants}>
                 <div className="flex h-[390px] w-[370px] flex-col items-start gap-[30px] rounded-bl-[20px] rounded-br-[20px] border-t-2 border-solid border-themeAccentColor bg-letsTalkBgColor px-[30px] py-[40px] transition">
                   <div className="flex items-center gap-[20px]">
                     <Icon
@@ -48,9 +59,9 @@ export const ServicesApproachAndAdvantages = ({
                     </ul>
                   )}
                 </div>
-              </li>
+              </motion.li>
             ))}
-          </ul>
+          </motion.ul>
         </motion.div>
       </section>
     );
@@ -61,10 +72,17 @@ export const ServicesApproachAndAdvantages = ({
       <section>
         <motion.div className="container flex flex-col gap-[40px]" {...slideInWithFade}>
           <h2>{sectionTitle}</h2>
-          <ul className="flex justify-between">
+          <motion.ul
+            className="flex justify-between"
+            variants={industriesContainerVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.3 }}
+          >
             {items.map((item, index) => (
-              <li
+              <motion.li
                 key={index}
+                variants={cardVariants}
                 className="flex h-[260px] w-[300px] flex-col items-start gap-[20px] rounded-bl-[20px] rounded-br-[20px] border-t-2 border-solid border-themeAccentColor bg-letsTalkBgColor px-[30px] pt-[40px] transition"
               >
                 <Icon
@@ -72,9 +90,9 @@ export const ServicesApproachAndAdvantages = ({
                   className="size-[60px] fill-themeAccentColor stroke-themeAccentColor"
                 />
                 <p className="big-text">{item.description}</p>
-              </li>
+              </motion.li>
             ))}
-          </ul>
+          </motion.ul>
         </motion.div>
       </section>
     );
@@ -85,11 +103,18 @@ export const ServicesApproachAndAdvantages = ({
       <section className="py-[100px]">
         <motion.div className="container relative flex justify-end" {...slideInWithFade}>
           <h2 className="absolute left-[80px] top-0 w-[269px]">{sectionTitle}</h2>
-          <ul className="grid-card-container">
+          <motion.ul
+            className="grid-card-container"
+            variants={industriesContainerVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.3 }}
+          >
             <li className="empty-cell"></li>
             {items.map((item, index) => (
-              <li
+              <motion.li
                 key={index}
+                variants={cardVariants}
                 className={`flex h-[310px] w-[370px] flex-col items-start gap-[30px] rounded-bl-[20px] rounded-br-[20px] border-t-2 border-solid border-themeAccentColor bg-letsTalkBgColor px-[30px] py-[40px] transition item-${index + 1}`}
               >
                 <Icon
@@ -100,9 +125,9 @@ export const ServicesApproachAndAdvantages = ({
                   <h4>{item.name}</h4>
                   <p className="small-text text-secondaryTextColor">{item.description}</p>
                 </div>
-              </li>
+              </motion.li>
             ))}
-          </ul>
+          </motion.ul>
         </motion.div>
       </section>
     );
