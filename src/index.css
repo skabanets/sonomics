@@ -150,6 +150,12 @@ main {
   @apply grow-[1];
 }
 
+.full-hd-container {
+  padding-inline: 80px;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
 h1 {
   @apply text-[70px] font-extrabold leading-[92px] transition;
 }
