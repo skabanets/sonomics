@@ -10,7 +10,7 @@ export const AboutSonomics = () => {
         <h1>
           We're <span className="text-accentYellowColor"> driving </span> your
           <span className="text-accentYellowColor"> business</span> growth, ensuring stability and
-          fostering expertise.
+          fostering expertise
         </h1>
       </motion.div>
     </section>
