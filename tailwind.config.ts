@@ -51,6 +51,9 @@ export default {
       spacing: {
         themeToggleTranslate: "var(--theme-toggle-translate)",
       },
+      boxShadow: {
+        "custom-inset": "inset 0px 5px 10px 0px rgba(0, 0, 0, 0.25)",
+      },
     },
   },
   corePlugins: {
