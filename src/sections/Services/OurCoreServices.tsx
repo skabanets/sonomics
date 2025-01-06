@@ -26,7 +26,7 @@ export const OurCoreServices = () => {
           <div className="flex gap-[20px]">
             <button
               onClick={() => swiperRef.current?.slidePrev()}
-              className={`group flex h-[50px] w-[50px] items-center justify-center rounded-[10px] border border-solid transition ${isBeginning ? "border-disabledBtnColor cursor-not-allowed bg-formFieldBgColor" : "bg-sliderBgColor border-darkBorderColor hover:border-themeAccentColor focus-visible:border-themeAccentColor"}`}
+              className={`group flex h-[50px] w-[50px] items-center justify-center rounded-[10px] border border-solid transition ${isBeginning ? "cursor-not-allowed border-disabledBtnColor bg-formFieldBgColor" : "border-darkBorderColor bg-sliderBgColor hover:border-themeAccentColor focus-visible:border-themeAccentColor"}`}
               aria-label="Previous slide"
               disabled={isBeginning}
             >
@@ -37,7 +37,7 @@ export const OurCoreServices = () => {
             </button>
             <button
               onClick={() => swiperRef.current?.slideNext()}
-              className={`group flex h-[50px] w-[50px] items-center justify-center rounded-[10px] border border-solid transition ${isEnd ? "border-disabledBtnColor cursor-not-allowed bg-formFieldBgColor" : "bg-sliderBgColor border-darkBorderColor hover:border-themeAccentColor focus-visible:border-themeAccentColor"}`}
+              className={`group flex h-[50px] w-[50px] items-center justify-center rounded-[10px] border border-solid transition ${isEnd ? "cursor-not-allowed border-disabledBtnColor bg-formFieldBgColor" : "border-darkBorderColor bg-sliderBgColor hover:border-themeAccentColor focus-visible:border-themeAccentColor"}`}
               aria-label="Next slide"
               disabled={isEnd}
             >
@@ -49,10 +49,10 @@ export const OurCoreServices = () => {
           </div>
         </div>
         <div className="border-b border-solid border-mainTextColor pb-[89px]">
-          <div className="mr-[-80px] mt-[60px] flex overflow-hidden">
+          <div className="mt-[60px] flex overflow-hidden">
             <Swiper
               modules={[Navigation]}
-              spaceBetween={30}
+              spaceBetween={40}
               slidesPerView="auto"
               slidesPerGroup={2}
               loop={false}
@@ -65,7 +65,7 @@ export const OurCoreServices = () => {
               {services.map((service) => (
                 <SwiperSlide
                   key={service.id}
-                  className="bg-sliderBgColor h-[436px] w-[390px] rounded-[10px] border border-solid border-darkBorderColor p-[30px] transition last:mr-[80px] hover:bg-secondaryBgColor focus-visible:bg-secondaryBgColor"
+                  className="h-[436px] w-[400px] rounded-[10px] border border-solid border-darkBorderColor bg-sliderBgColor p-[30px] transition hover:bg-secondaryBgColor focus-visible:bg-secondaryBgColor"
                   tabIndex={0}
                 >
                   <ServiceCard service={service} />

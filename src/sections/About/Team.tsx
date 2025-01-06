@@ -26,7 +26,7 @@ export const Team = () => {
   };
 
   return (
-    <section className="relative bg-blackBgColor pb-[60px] pt-[80px] before:absolute before:left-0 before:top-[624px] before:h-[1px] before:w-full before:bg-whiteTextColor before:content-['''']">
+    <section className="relative overflow-hidden bg-blackBgColor pb-[60px] pt-[80px] before:absolute before:left-0 before:top-[624px] before:h-[1px] before:w-full before:bg-whiteTextColor before:content-['''']">
       <div className="container">
         <motion.div
           className="relative mb-[80px] flex items-center gap-[230px]"
@@ -60,7 +60,7 @@ export const Team = () => {
         </motion.div>
         <motion.div className="pt-[60px]" {...slideInWithFade}>
           <h2 className="mb-[40px] text-whiteTextColor">Meet the team</h2>
-          <div className="mb-[40px] mr-[-80px] overflow-hidden">
+          <div className="mb-[40px]">
             <ul
               className="flex gap-[20px] transition"
               style={{
