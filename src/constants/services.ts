@@ -87,7 +87,7 @@ export const services: Service[] = [
     },
     caseStudyId: 1,
     expertise: {
-      text: "With our end-to-end development approach, you gain a trusted partner who ensures every stage of the development process is executed with precision, efficiency, and reliability.",
+      text: "With our end-to-end development approach, you gain a trusted partner who ensures every stage of the development process is executed with precision, efficiency, and reliability",
       accentWords: ["gain a trusted partner"],
     },
     technologies: {
@@ -187,7 +187,7 @@ export const services: Service[] = [
       ],
     },
     whyChooseSonomics: {
-      sectionTitle: "Why choose Sonomics for AI integration?",
+      sectionTitle: "Why choose Sonomics for AI integration",
       items: [
         {
           title: "Customized AI solutions",
@@ -226,7 +226,7 @@ export const services: Service[] = [
     },
     caseStudyId: 2,
     expertise: {
-      text: "By integrating AI into your operations, we help you scale faster, improve accuracy, and create sustainable competitive advantages, all while reducing operational overhead.",
+      text: "By integrating AI into your operations, we help you scale faster, improve accuracy, and create sustainable competitive advantages, all while reducing operational overhead",
       accentWords: ["we help", "create sustainable competitive advantages"],
     },
     technologies: {
@@ -380,7 +380,7 @@ export const services: Service[] = [
     },
     caseStudyId: 1,
     expertise: {
-      text: "By delivering a working demo early in the process, we minimize uncertainty and set the stage for seamless development, ensuring you feel confident in your investment and our approach.",
+      text: "By delivering a working demo early in the process, we minimize uncertainty and set the stage for seamless development, ensuring you feel confident in your investment and our approach",
       accentWords: ["delivering a working demo", "ensuring you feel confident"],
     },
     technologies: {
@@ -685,7 +685,7 @@ export const services: Service[] = [
     },
     caseStudyId: 1,
     expertise: {
-      text: "Whether you need a highly-structured iterative approach, a flexible task-driven workflow, or a customized blend of both, Sonomics has the expertise to align agile methodologies with your goals.",
+      text: "Whether you need a highly-structured iterative approach, a flexible task-driven workflow, or a customized blend of both, Sonomics has the expertise to align agile methodologies with your goals",
       accentWords: ["highly-structured iterative", "flexible", "has the expertise"],
     },
     technologies: {
@@ -825,7 +825,7 @@ export const services: Service[] = [
       ],
     },
     whyChooseSonomics: {
-      sectionTitle: "Why choose Sonomics for business process optimization?",
+      sectionTitle: "Why choose Sonomics for business process optimization",
       items: [
         {
           title: "Tailored approach",
@@ -1036,7 +1036,7 @@ export const services: Service[] = [
       ],
     },
     whyChooseSonomics: {
-      sectionTitle: "Why choose Sonomics for cloud integration?",
+      sectionTitle: "Why choose Sonomics for cloud integration",
       items: [
         {
           title: "End-to-end cloud expertise",
@@ -1077,11 +1077,11 @@ export const services: Service[] = [
     },
     caseStudyId: 1,
     expertise: {
-      text: "From migration and infrastructure setup to ongoing monitoring and cost optimization, we deliver cloud solutions that empower your business with a significant reduction in IT overhead.",
+      text: "From migration and infrastructure setup to ongoing monitoring and cost optimization, we deliver cloud solutions that empower your business with a significant reduction in IT overhead",
       accentWords: ["From migration", "deliver cloud solutions"],
     },
     technologies: {
-      sectionTitle: "Technologies powering our cloud solutions:",
+      sectionTitle: "Technologies powering our cloud solutions",
       description:
         "We leverage industry-leading tools and platforms to deliver secure, efficient, and future-ready cloud solutions:",
       cards: [
