@@ -114,7 +114,7 @@ export const NavMenu = ({ headerRef, listClass, linkClass }: NavMenuProps) => {
           >
             <div className={`absolute left-0 top-[-42px] h-[42px] w-full bg-navMenuBgColor`}></div>
             <div
-              className="full-hd-container relative flex max-w-[1760px] items-center justify-between border-t-[1px] border-t-mainTextColor py-[30px] before:absolute before:left-[23%] before:top-1/2 before:block before:h-[100px] before:w-[1px] before:-translate-y-1/2 before:bg-mainTextColor before:content-['']"
+              className="relative mx-auto flex w-[calc(100vw-160px)] max-w-[1760px] items-center justify-between border-t-[1px] border-t-mainTextColor py-[30px]"
               ref={subMenuRef}
               tabIndex={-1}
             >
@@ -125,6 +125,7 @@ export const NavMenu = ({ headerRef, listClass, linkClass }: NavMenuProps) => {
               >
                 <h2>{text}</h2>
               </Link>
+              <hr className="h-[100px] w-[1px] border-none bg-mainTextColor" />
               <ul className="flex h-[102px] w-[970px] flex-col flex-wrap gap-x-[30px] gap-y-[20px]">
                 {subLinks?.map((subLink, subIndex) => (
                   <li key={subIndex} className="w-[220px]">
