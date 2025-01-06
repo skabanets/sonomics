@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 import { Divider, Icon } from "../components";
 
 import { OfferDate } from "../types";
@@ -7,13 +9,41 @@ interface AccordionProps {
 }
 
 export const Accordion = ({ offersList }: AccordionProps) => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [intervalId, setIntervalId] = useState<number | null>(null);
+
+  useEffect(() => {
+    const id = window.setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % offersList.length);
+    }, 3500);
+    setIntervalId(id);
+
+    return () => {
+      clearInterval(id);
+    };
+  }, [offersList.length]);
+
+  const handleSummaryClick = () => {
+    if (intervalId) {
+      clearInterval(intervalId);
+      setIntervalId(null);
+    }
+  };
+
   return (
     <ul className="w-[680px] pt-[45px]">
       <Divider />
-      {offersList.map((offer) => (
+      {offersList.map((offer, index) => (
         <li key={offer.offerName}>
-          <details name="offer" className="accordion-details px-[10px] py-[25px] transition">
-            <summary className="group relative flex cursor-pointer items-center justify-between">
+          <details
+            name="offer"
+            className="accordion-details px-[10px] py-[25px] transition"
+            open={activeIndex === index}
+          >
+            <summary
+              className="group relative flex cursor-pointer items-center justify-between"
+              onClick={handleSummaryClick}
+            >
               <h4 className="w-[610px]">{offer.offerName}</h4>
               <Icon
                 id="plus"
