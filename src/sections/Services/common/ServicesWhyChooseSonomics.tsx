@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 
 import { Button, ContactForm, Modal } from "../../../components";
 
-import { useModal, useTheme } from "../../../hooks";
-import { slideInWithFade, ThemeMode } from "../../../constants";
+import { useModal } from "../../../hooks";
+import { slideInWithFade } from "../../../constants";
 import type { WhyChooseSonomics } from "../../../types";
 import { images } from "../../../assets";
 
@@ -13,8 +13,6 @@ interface ServicesWhyChooseSonomicsProps {
 
 export const ServicesWhyChooseSonomics = ({ content }: ServicesWhyChooseSonomicsProps) => {
   const [isOpen, toggleModal, handleClickOnBackdrop] = useModal();
-  const { theme } = useTheme();
-
   const {
     servicesDetails: { whyChooseSonomics },
   } = images;
@@ -45,7 +43,7 @@ export const ServicesWhyChooseSonomics = ({ content }: ServicesWhyChooseSonomics
                     alt={sectionTitle}
                     width="286"
                     height="301"
-                    className={`rounded-l-[40px] bg-letsTalkBgColor object-cover ${theme === ThemeMode.LIGHT ? "brightness-[90%]" : ""}`}
+                    className={`rounded-l-[40px] bg-letsTalkBgColor object-cover`}
                   />
                   <div className="flex flex-col justify-center gap-[10px] p-[30px]">
                     {" "}
