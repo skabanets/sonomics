@@ -3,30 +3,14 @@ import { motion } from "framer-motion";
 
 import { CustomTitle, IndustryCard } from "../../components";
 
-import { slideInWithFade, industries, routes } from "../../constants";
+import {
+  slideInWithFade,
+  industries,
+  routes,
+  industriesContainerVariants,
+  cardVariants,
+} from "../../constants";
 import { Industry } from "../../types";
-
-const industriesContainerVariants = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.25,
-    },
-  },
-};
-
-const cardVariants = {
-  hidden: { opacity: 0, x: 100 },
-  show: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 0.8,
-      ease: "easeInOut",
-    },
-  },
-};
 
 export const Industries = () => {
   return (
