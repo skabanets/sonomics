@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 
 import { BackLink, Button, ContactForm, Modal } from "../../../components";
 
-import { useModal, useTheme } from "../../../hooks";
+import { useModal } from "../../../hooks";
 import type { Hero } from "../../../types";
-import { routes, slideInWithFade, ThemeMode } from "../../../constants";
+import { routes, slideInWithFade } from "../../../constants";
 import { images } from "../../../assets";
 
 interface ServicesHeroProps {
@@ -15,8 +15,6 @@ interface ServicesHeroProps {
 
 export const ServicesHero = ({ title, hero }: ServicesHeroProps) => {
   const { id } = useParams();
-
-  const { theme } = useTheme();
 
   const [isOpen, toggleModal, handleClickOnBackdrop] = useModal();
 
@@ -66,7 +64,7 @@ export const ServicesHero = ({ title, hero }: ServicesHeroProps) => {
               alt={title}
               width={imageWidth}
               height="406"
-              className={`rounded-t-[20px] object-cover ${id !== routes.CloudIntegration.slice(10) ? "rounded-b-[20px]" : ""} ${theme === ThemeMode.LIGHT ? "brightness-[90%]" : ""}`}
+              className={`rounded-t-[20px] object-cover ${id !== routes.CloudIntegration.slice(10) ? "rounded-b-[20px]" : ""}`}
             />
           </div>
         </motion.div>
