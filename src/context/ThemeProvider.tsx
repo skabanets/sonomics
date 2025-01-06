@@ -1,5 +1,4 @@
 import React, { createContext, useEffect, useLayoutEffect, useState } from "react";
-
 import { ThemeMode } from "../constants";
 
 export const ThemeContext = createContext<{
@@ -11,9 +10,15 @@ export const ThemeContext = createContext<{
 });
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const savedTheme = localStorage.getItem("theme") ?? ThemeMode.LIGHT;
-  const initialTheme = ThemeMode.DARK === savedTheme ? savedTheme : ThemeMode.LIGHT;
-  const [theme, setTheme] = useState(initialTheme);
+  const getDefaultTheme = (): string => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) return savedTheme;
+    return window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? ThemeMode.DARK
+      : ThemeMode.LIGHT;
+  };
+
+  const [theme, setTheme] = useState<string>(getDefaultTheme);
 
   useEffect(() => {
     document.body.classList.add("transition");
