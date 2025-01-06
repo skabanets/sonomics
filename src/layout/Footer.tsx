@@ -58,9 +58,9 @@ export const Footer = () => {
         </div>
       </div>
       <div className="full-hd-container relative left-0 flex items-center justify-between pt-[20px] before:absolute before:top-[-20px] before:h-[1px] before:w-[calc(100vw-160px)] before:max-w-[1760px] before:bg-grey600Color before:content-['']">
-        <p className="small-text text-white">&copy; 2024 Sonomics, Inc. All rights reserved</p>
+        <p className="small-text text-white">&copy; 2025 Sonomics, Inc. All rights reserved</p>
         <div className="small-text flex items-center justify-end gap-[15px] text-whiteTextColor">
-          <span className="group-hover:-translate-x-full group-hover:opacity-0"> To top </span>
+          <span> To top </span>
           <ScrollUpButton />
         </div>
       </div>
