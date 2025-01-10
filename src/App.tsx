@@ -12,6 +12,7 @@ const Industries = lazy(() => import("./pages/Industries"));
 const CaseStudy = lazy(() => import("./pages/CaseStudy"));
 const About = lazy(() => import("./pages/About"));
 const ServiceDetails = lazy(() => import("./pages/ServiceDetails"));
+const CaseStudyDetails = lazy(() => import("./pages/CaseStudyDetails"));
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,7 @@ const router = createBrowserRouter([
       { path: routes.CaseStudy, loader: getLoader, element: <CaseStudy /> },
       { path: routes.About, loader: getLoader, element: <About /> },
       { path: `${routes.Services}/:id`, loader: getLoader, element: <ServiceDetails /> },
+      { path: `${routes.CaseStudy}/:id`, loader: getLoader, element: <CaseStudyDetails /> },
     ],
   },
   { path: "*", element: <Navigate to="/" replace /> },
