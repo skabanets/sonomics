@@ -22,4 +22,6 @@ export * from "./Services/common/ServicesExpertise";
 export * from "./Services/common/ServicesTechnologies";
 export * from "./Services/common/ServicesApproachAndAdvantages";
 
+export * from "./CaseStudy/ClientSuccessStories";
+
 export * from "./Common/LetsTalk";
