@@ -13,6 +13,13 @@ import case2_1x from "./images/cases/case-2@1x.webp";
 import case2_2x from "./images/cases/case-2@2x.webp";
 import case_lg_1_1x from "./images/cases/case-lg-1_desk@1x.webp";
 import case_lg_1_2x from "./images/cases/case-lg-2_desk@2x.webp";
+// Case-details
+import case_details_item1_desk_1x from "./images/case-details/hero/case-details-item1_desk@1x.webp";
+import case_details_item1_desk_2x from "./images/case-details/hero/case-details-item1_desk@2x.webp";
+import case_details_item2_desk_1x from "./images/case-details/hero/case-details-item2_desk@1x.webp";
+import case_details_item2_desk_2x from "./images/case-details/hero/case-details-item2_desk@2x.webp";
+import case_details_item3_desk_1x from "./images/case-details/hero/case-details-item3_desk@1x.webp";
+import case_details_item3_desk_2x from "./images/case-details/hero/case-details-item3_desk@2x.webp";
 
 // Why Choose Us
 import industry_expertise_desk_1x from "./images/why-choose-us/industry-expertise_desk@1x.webp";
@@ -292,6 +299,16 @@ export const images = {
       cloud_item4_2x,
       cloud_item5_1x,
       cloud_item5_2x,
+    },
+  },
+  caseDetails: {
+    heroImages: {
+      case_details_item1_desk_1x,
+      case_details_item1_desk_2x,
+      case_details_item2_desk_1x,
+      case_details_item2_desk_2x,
+      case_details_item3_desk_1x,
+      case_details_item3_desk_2x,
     },
   },
 };
