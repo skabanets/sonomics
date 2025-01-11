@@ -21,3 +21,4 @@ export * from "./ServiceCard";
 export * from "./BackLink";
 export * from "./Accordion";
 export * from "./TechnologyCardItem";
+export * from "./FunctionalModuleCard";
