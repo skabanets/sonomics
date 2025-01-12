@@ -9,7 +9,7 @@ import { slideInWithFade } from "../../../constants";
 const items = [
   {
     id: 1,
-    title: "Backend",
+    title: "Backend:",
     description: "Java with Spring framework for modular, scalable microservices.",
   },
   {
@@ -81,7 +81,7 @@ export const CaseStudyTechnologies = () => {
               key={id}
               className="w-[320px] rounded-b-[20px] border-t-[5px] border-t-accentYellowColor bg-darkBgColor p-[30px] transition"
             >
-              <h4 className="text-whiteTextColor">{title}</h4>
+              <h4 className="mb-[20px] text-whiteTextColor">{title}</h4>
               <p className="small-text text-secondaryLightTextColor">{description}</p>
             </li>
           ))}

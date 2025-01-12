@@ -31,7 +31,7 @@ export const CaseStudyServices = () => {
 
   return (
     <>
-      <section className="pb-[80px] pt-[100px]">
+      <section className="pt-[100px]">
         <motion.div
           className="container sticky top-[40px] mb-[30px] flex items-start justify-between"
           {...slideInWithFade}
@@ -79,6 +79,7 @@ export const CaseStudyServices = () => {
                       width="492"
                       height="320"
                       className="h-[320px] rounded-[20px] object-cover"
+                      loading="lazy"
                     />
                   </div>
                 </motion.div>

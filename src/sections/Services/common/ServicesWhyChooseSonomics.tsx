@@ -48,6 +48,7 @@ export const ServicesWhyChooseSonomics = ({ content }: ServicesWhyChooseSonomics
                     width="286"
                     height="301"
                     className={`rounded-l-[40px] bg-letsTalkBgColor object-cover`}
+                    loading="lazy"
                   />
                   <div className="flex flex-col justify-center gap-[10px] p-[30px]">
                     {" "}
