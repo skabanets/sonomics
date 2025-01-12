@@ -15,7 +15,7 @@ export const Team = () => {
 
   const cardWidth = 340;
   const gap = 20;
-  const containerWidth = useBreakpointValue([1350, 736, 355]);
+  const containerWidth = useBreakpointValue([1280, 736, 355]);
   const itemsCount = teamMembers.length;
 
   const totalWidth = itemsCount * cardWidth + (itemsCount - 1) * gap;
