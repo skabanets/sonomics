@@ -22,9 +22,13 @@ import case_details_item2_desk_2x from "./images/case-details/hero/case-details-
 import case_details_item3_desk_1x from "./images/case-details/hero/case-details-item3_desk@1x.webp";
 import case_details_item3_desk_2x from "./images/case-details/hero/case-details-item3_desk@2x.webp";
 
-//Case-details-overviw
+//Case-details-overview
 import fintech_overview_parallax_1x from "./images/case-details/overview/fintech-overview-parallax@1x.webp";
 import fintech_overview_parallax_2x from "./images/case-details/overview/fintech-overview-parallax@2x.webp";
+
+// Case-details-achivements
+import case_achivements_item1_desk_1x from "./images/case-details/achivements/achivements-item1_desk@1x.webp";
+import case_achivements_item1_desk_2x from "./images/case-details/achivements/achivements-item1_desk@2x.webp";
 
 // Why Choose Us
 import industry_expertise_desk_1x from "./images/why-choose-us/industry-expertise_desk@1x.webp";
@@ -318,6 +322,10 @@ export const images = {
     overviewImages: {
       fintech_overview_parallax_1x,
       fintech_overview_parallax_2x,
+    },
+    achivementsImages: {
+      case_achivements_item1_desk_1x,
+      case_achivements_item1_desk_2x,
     },
   },
 };

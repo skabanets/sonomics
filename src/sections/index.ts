@@ -23,5 +23,12 @@ export * from "./Services/common/ServicesTechnologies";
 export * from "./Services/common/ServicesApproachAndAdvantages";
 
 export * from "./CaseStudy/ClientSuccessStories";
+export * from "./CaseStudy/common/CaseStudyHero";
+export * from "./CaseStudy/common/CaseStudyOverview";
+export * from "./CaseStudy/common/CaseStudyChallenges";
+export * from "./CaseStudy/common/CaseStudyServices";
+export * from "./CaseStudy/common/CaseStudyFunctionalModules";
+export * from "./CaseStudy/common/CaseStudyTechnologies";
+export * from "./CaseStudy/common/CaseStudyAchivements";
 
 export * from "./Common/LetsTalk";
