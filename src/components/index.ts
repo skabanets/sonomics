@@ -22,3 +22,4 @@ export * from "./BackLink";
 export * from "./Accordion";
 export * from "./TechnologyCardItem";
 export * from "./FunctionalModuleCard";
+export * from "./SliderWithThumb";

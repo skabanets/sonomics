@@ -1,28 +1,27 @@
 import { useState } from "react";
-import ReactSlider from "react-slider";
 import { motion } from "framer-motion";
 
-import { Icon, TeamMemberCard } from "../../components";
+import { Icon, SliderWithThumb, TeamMemberCard } from "../../components";
 
-import { images } from "../../assets";
 import { slideInWithFade, teamMembers } from "../../constants";
-import { TeamMember } from "../../types";
+import { useBreakpointValue } from "../../hooks";
+import type { TeamMember } from "../../types";
+import { images } from "../../assets";
 
 export const Team = () => {
+  const [sliderValues, setSliderValues] = useState({ translateValue: 0, totalWidth: 0 });
+
   const { teamImages } = images;
 
-  const CARD_WIDTH = 340;
-  const GAP = 20;
-  const CONTAINER_WIDTH = 1350;
+  const cardWidth = 340;
+  const gap = 20;
+  const containerWidth = useBreakpointValue([1350, 736, 355]);
+  const itemsCount = teamMembers.length;
 
-  const totalWidth = teamMembers.length * CARD_WIDTH + (teamMembers.length - 1) * GAP;
-  const maxTranslateValue = totalWidth - CONTAINER_WIDTH;
+  const totalWidth = itemsCount * cardWidth + (itemsCount - 1) * gap;
 
-  const [translateValue, setTranslateValue] = useState(0);
-  const [dragIconName, setDragIconName] = useState("drag-hand");
-
-  const handleSliderChange = (value: number) => {
-    setTranslateValue((maxTranslateValue * value) / 100);
+  const handleSliderChange = (values: { translateValue: number; totalWidth: number }) => {
+    setSliderValues(values);
   };
 
   return (
@@ -60,34 +59,20 @@ export const Team = () => {
         </motion.div>
         <motion.div className="pt-[60px]" {...slideInWithFade}>
           <h2 className="mb-[40px] text-whiteTextColor">Meet the team</h2>
-          <div className="mb-[40px]">
-            <ul
-              className="flex gap-[20px] transition"
-              style={{
-                width: totalWidth,
-                transform: `translateX(-${translateValue}px)`,
-              }}
-            >
-              {teamMembers.map((member, index) => (
-                <TeamMemberCard key={index} item={member as TeamMember} index={index} />
-              ))}
-            </ul>
-          </div>
+          <ul
+            className="mb-[40px] flex gap-[20px] transition"
+            style={{
+              width: sliderValues.totalWidth || totalWidth,
+              transform: `translateX(-${sliderValues.translateValue}px)`,
+            }}
+          >
+            {teamMembers.map((member, index) => (
+              <TeamMemberCard key={index} item={member as TeamMember} index={index} />
+            ))}
+          </ul>
           <div className="group" tabIndex={0}>
-            <ReactSlider
-              className="relative h-[49px] cursor-pointer"
-              thumbClassName="react-slider-thumb top-1/2 translate-y-[-50%] w-[49px] h-[49px] flex items-center justify-center bg-darkBgColor rounded-full border border-accentYellowColor outline-none group-hover:h-[59px] group-hover:w-[59px] group-focus-visible:h-[59px] group-focus-visible:w-[59px] cursor-pointer"
-              trackClassName="absolute top-1/2 left-0 translate-y-[-50%] h-[3px] rounded-[70px] bg-secondaryDarkBgColor group-hover:bg-accentYellowColor group-focus-visible:bg-accentYellowColor transition"
-              onChange={handleSliderChange}
-              onBeforeChange={() => setDragIconName("drag-hand-active")}
-              onAfterChange={() => setDragIconName("drag-hand")}
-              ariaLabel="Team slider"
-              // eslint-disable-next-line
-              renderThumb={({ key, ...rest }, state) => (
-                <div key={state.index} aria-label={`Slider thumb ${state.index + 1}`} {...rest}>
-                  <Icon id={dragIconName} className="size-[25px] fill-whiteTextColor" />
-                </div>
-              )}
+            <SliderWithThumb
+              {...{ itemsCount, containerWidth, cardWidth, gap, onChange: handleSliderChange }}
             />
           </div>
         </motion.div>
