@@ -7,7 +7,7 @@ import { opacityFade, sonomicsNumbers } from "../../constants";
 export const SonomicsNumbers = () => {
   return (
     <section className="py-[100px]">
-      <div className="container relative">
+      <div className="container">
         <motion.h2
           className="sticky top-[100px] z-10 w-[300px] pt-[20px] after:block after:h-[500px] after:content-['''']"
           {...opacityFade}

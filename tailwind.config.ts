@@ -5,6 +5,9 @@ export default {
     "before:bg-accentRedColor",
     "before:bg-accentYellowColor",
     "before:bg-accentOrangeColor",
+    "bg-accentRedColor",
+    "bg-accentYellowColor",
+    "bg-accentOrangeColor",
   ],
   theme: {
     fontFamily: {

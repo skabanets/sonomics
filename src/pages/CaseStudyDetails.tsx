@@ -1,5 +1,5 @@
 const CaseStudyDetails = () => {
-  return <div>CaseStudyDetails</div>;
+  return <>CaseStudyDetails</>;
 };
 
 export default CaseStudyDetails;
