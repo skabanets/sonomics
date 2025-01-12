@@ -8,6 +8,9 @@ export default {
     "bg-accentRedColor",
     "bg-accentYellowColor",
     "bg-accentOrangeColor",
+    "border-accentRedColor",
+    "border-accentYellowColor",
+    "border-accentOrangeColor",
   ],
   theme: {
     fontFamily: {
