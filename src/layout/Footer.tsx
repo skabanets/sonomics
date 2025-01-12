@@ -19,8 +19,8 @@ export const Footer = () => {
             linkClass="hover:text-accentYellowColor focus-visible:text-accentYellowColor"
           />
         </nav>
-        <div>
-          <address className="mb-[50px] not-italic">
+        <div className="flex flex-col justify-between">
+          <address className="not-italic">
             <p className="label mb-[15px] text-secondaryLightTextColor">Contact us</p>
             <ul className="bold-text flex flex-col gap-[15px] text-whiteTextColor">
               <li>
@@ -57,7 +57,7 @@ export const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="full-hd-container relative left-0 flex items-center justify-between pt-[20px] before:absolute before:top-[-20px] before:h-[1px] before:w-[calc(100vw-160px)] before:max-w-[1760px] before:bg-grey600Color before:content-['']">
+      <div className="full-hd-container relative left-0 flex items-center justify-between pt-[20px] before:absolute before:top-0 before:h-[1px] before:w-[calc(100vw-160px)] before:max-w-[1760px] before:bg-grey600Color before:content-['']">
         <p className="small-text text-white">&copy; 2025 Sonomics, Inc. All rights reserved</p>
         <div className="small-text flex items-center justify-end gap-[15px] text-whiteTextColor">
           <span> To top </span>
