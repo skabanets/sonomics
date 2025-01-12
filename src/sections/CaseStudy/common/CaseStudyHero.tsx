@@ -1,6 +1,8 @@
+import { motion } from "framer-motion";
+
 import { BackLink } from "../../../components";
 
-import { routes } from "../../../constants";
+import { routes, slideInWithFade } from "../../../constants";
 import { images } from "../../../assets";
 
 export const CaseStudyHero = () => {
@@ -31,7 +33,7 @@ export const CaseStudyHero = () => {
 
   return (
     <section className="py-[80px]">
-      <div className="container">
+      <motion.div className="container" {...slideInWithFade}>
         <BackLink to={routes.CaseStudy} label="Back to case studies" className="mb-[20px]" />
         <h1 className="mb-[60px] max-w-[1100px]">Fintech transformation success</h1>
         <ul className="flex h-[260px] gap-[40px]">
@@ -48,7 +50,7 @@ export const CaseStudyHero = () => {
             </li>
           ))}
         </ul>
-      </div>
+      </motion.div>
     </section>
   );
 };
