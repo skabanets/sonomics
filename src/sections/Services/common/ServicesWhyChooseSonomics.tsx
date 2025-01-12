@@ -24,7 +24,11 @@ export const ServicesWhyChooseSonomics = ({ content }: ServicesWhyChooseSonomics
         <div className="container">
           <motion.div className="mb-[40px] flex items-center justify-between" {...slideInWithFade}>
             <h2 className="max-w-[852px] font-black leading-[58px]">{sectionTitle}</h2>
-            <Button label="Let’s discuss your project" width="w-[300px]" onClick={toggleModal} />
+            <Button
+              label="Let&#8217;s discuss your project"
+              width="w-[300px]"
+              onClick={toggleModal}
+            />
           </motion.div>
           <ul className="flex flex-wrap gap-[40px]">
             {items.map((item, index) => {

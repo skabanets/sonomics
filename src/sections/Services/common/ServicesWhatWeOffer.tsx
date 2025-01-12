@@ -28,7 +28,7 @@ export const ServicesWhatWeOffer = ({ offers }: ServicesWhatWeOfferProps) => {
         <motion.div className="container" {...slideInWithFade}>
           <div className="flex items-center justify-between">
             <h2>{sectionTitle}</h2>
-            <Button label="Let’s discuss your project" width="w-auto" onClick={toggleModal} />
+            <Button label="Let&#8217;s discuss your project" width="w-auto" onClick={toggleModal} />
           </div>
           <div className="flex items-start justify-between pt-[40px]">
             <img
