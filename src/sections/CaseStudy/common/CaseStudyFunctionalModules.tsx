@@ -52,7 +52,7 @@ export const CaseStudyFunctionalModules = () => {
         <motion.div className="container" {...slideInWithFade}>
           <div className="flex items-center justify-between">
             <h2>Functional Modules Delivered</h2>
-            <Button label="Let's discuss your project" width="w-auto" onClick={toggleModal} />
+            <Button label="Let’s discuss your project" width="w-auto" onClick={toggleModal} />
           </div>
           <motion.ul
             className="mt-[40px] flex flex-wrap gap-[25px]"

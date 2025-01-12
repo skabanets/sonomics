@@ -56,7 +56,7 @@ export const ServicesHero = ({ title, hero }: ServicesHeroProps) => {
                   {text}
                 </p>
               ))}
-              <Button label="Let's discuss your project" width="w-[300px]" onClick={toggleModal} />
+              <Button label="Let’s discuss your project" width="w-[300px]" onClick={toggleModal} />
             </div>
             <img
               srcSet={`${img} 1x, ${retinaImg} 2x`}
