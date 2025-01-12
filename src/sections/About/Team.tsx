@@ -70,11 +70,10 @@ export const Team = () => {
               <TeamMemberCard key={index} item={member as TeamMember} index={index} />
             ))}
           </ul>
-          <div className="group" tabIndex={0}>
-            <SliderWithThumb
-              {...{ itemsCount, containerWidth, cardWidth, gap, onChange: handleSliderChange }}
-            />
-          </div>
+
+          <SliderWithThumb
+            {...{ itemsCount, containerWidth, cardWidth, gap, onChange: handleSliderChange }}
+          />
         </motion.div>
       </div>
     </section>
