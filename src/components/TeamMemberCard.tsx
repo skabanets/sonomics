@@ -1,5 +1,5 @@
 import { images } from "../assets";
-import { colors } from "../constants";
+import { teamColors } from "../constants";
 import type { TeamMember } from "../types";
 
 interface TeamMemberCardProps {
@@ -15,7 +15,8 @@ export const TeamMemberCard = ({ item, index }: TeamMemberCardProps) => {
   } = item;
   const { teamImages } = images;
 
-  const beforeBgColor = `bg-${colors[index % colors.length]}`;
+  const beforeBgColor = `bg-${teamColors[index % teamColors.length]}`;
+
   return (
     <li className="w-[340px] last:mr-[80px]">
       <img

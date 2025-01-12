@@ -1,6 +1,6 @@
 import { Button, ContactForm, Modal } from "../../../components";
 
-import { colors, services } from "../../../constants";
+import { caseStudyColors, services } from "../../../constants";
 import { useModal } from "../../../hooks";
 import { images } from "../../../assets";
 
@@ -25,7 +25,6 @@ export const CaseStudyServices = () => {
         <div className="container">
           <div className="mb-[30px] flex items-start justify-between">
             <div className="max-w-[815px]">
-              {" "}
               <h2 className="mb-[20px]">Services</h2>
               <h6>
                 To address these challenges, Sonomics applied our End-to-End Application Development
@@ -34,13 +33,12 @@ export const CaseStudyServices = () => {
                 a comprehensive solution:
               </h6>
             </div>
-            <Button label="Let's discuss your project" width="w-[300px]" onClick={toggleModal} />
+            <Button label="Let’s discuss your project" width="w-[300px]" onClick={toggleModal} />
           </div>
         </div>
         <ul className="flex flex-col gap-[30px]">
           {items.map(({ name, image, retinaImage }, index) => {
-            const updatedColors = [colors[1], colors[2], colors[0]];
-            const itemBgColor = `bg-${updatedColors[index % colors.length]}`;
+            const itemBgColor = `bg-${caseStudyColors[index % caseStudyColors.length]}`;
 
             const img = heroImages[image as keyof typeof heroImages];
             const retinaImg = heroImages[retinaImage as keyof typeof heroImages];
