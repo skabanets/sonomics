@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 import { SliderWithThumb } from "../../../components";
 
 import { useBreakpointValue } from "../../../hooks";
+import { slideInWithFade } from "../../../constants";
 
 const items = [
   {
@@ -65,7 +67,7 @@ export const CaseStudyTechnologies = () => {
 
   return (
     <section className="overflow-hidden bg-blackBgColor py-[80px]">
-      <div className="container">
+      <motion.div className="container" {...slideInWithFade}>
         <h2 className="mb-[60px] text-whiteTextColor">Technologies used</h2>
         <ul
           className="mb-[40px] flex gap-[40px] transition"
@@ -87,7 +89,7 @@ export const CaseStudyTechnologies = () => {
         <SliderWithThumb
           {...{ itemsCount, containerWidth, cardWidth, gap, onChange: handleSliderChange }}
         />
-      </div>
+      </motion.div>
     </section>
   );
 };
