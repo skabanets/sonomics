@@ -104,43 +104,47 @@ export const NavMenu = ({ headerRef, listClass, linkClass }: NavMenuProps) => {
           >
             {text}
           </NavLink>{" "}
-          <div
-            className={`submenu ${subLinks && openSubMenuIndex === index ? "visible" : ""} fixed left-0 right-0 bg-navMenuBgColor`}
-            style={{
-              top: 120 - scrollPosition + "px",
-            }}
-            onMouseEnter={() => handleMouseEnter(index)}
-            onMouseLeave={handleMouseLeave}
-          >
-            <div className={`absolute left-0 top-[-42px] h-[42px] w-full bg-navMenuBgColor`}></div>
+          {subLinks && headerRef && (
             <div
-              className="relative mx-auto flex w-[calc(100vw-160px)] max-w-[1760px] items-center justify-between border-t-[1px] border-t-mainTextColor py-[30px]"
-              ref={subMenuRef}
-              tabIndex={-1}
+              className={`submenu ${openSubMenuIndex === index ? "visible" : ""} fixed left-0 right-0 bg-navMenuBgColor`}
+              style={{
+                top: 120 - scrollPosition + "px",
+              }}
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={handleMouseLeave}
             >
-              <Link
-                to={link}
-                className="view-link text-themeAccentColor before:h-[2px] before:bg-themeAccentColor"
-                reloadDocument
+              <div
+                className={`absolute left-0 top-[-42px] h-[42px] w-full bg-navMenuBgColor`}
+              ></div>
+              <div
+                className="relative mx-auto flex w-[calc(100vw-160px)] max-w-[1760px] items-center justify-between border-t-[1px] border-t-mainTextColor py-[30px]"
+                ref={subMenuRef}
+                tabIndex={-1}
               >
-                <h2>{text}</h2>
-              </Link>
-              <hr className="h-[100px] w-[1px] border-none bg-mainTextColor" />
-              <ul className="flex h-[102px] w-[970px] flex-col flex-wrap gap-x-[30px] gap-y-[20px]">
-                {subLinks?.map((subLink, subIndex) => (
-                  <li key={subIndex} className="w-[220px]">
-                    <NavLink
-                      className={`label inline-block size-full text-mainTextColor ${linkClass}`}
-                      to={subLink.link}
-                      reloadDocument
-                    >
-                      {subLink.name}
-                    </NavLink>
-                  </li>
-                ))}
-              </ul>
+                <Link
+                  to={link}
+                  className="view-link text-themeAccentColor before:h-[2px] before:bg-themeAccentColor"
+                  reloadDocument
+                >
+                  <h2>{text}</h2>
+                </Link>
+                <hr className="h-[100px] w-[1px] border-none bg-mainTextColor" />
+                <ul className="flex h-[102px] w-[970px] flex-col flex-wrap gap-x-[30px] gap-y-[20px]">
+                  {subLinks.map((subLink, subIndex) => (
+                    <li key={subIndex} className="w-[220px]">
+                      <NavLink
+                        className={`label inline-block size-full text-mainTextColor ${linkClass}`}
+                        to={subLink.link}
+                        reloadDocument
+                      >
+                        {subLink.name}
+                      </NavLink>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-          </div>
+          )}
         </li>
       ))}
     </ul>
