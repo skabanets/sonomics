@@ -30,7 +30,7 @@ const items = [
   },
   {
     id: 5,
-    title: "Backend",
+    title: "Backend:",
     description: "Java with Spring framework for modular, scalable microservices.",
   },
   {
