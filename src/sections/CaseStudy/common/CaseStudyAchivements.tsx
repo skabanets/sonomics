@@ -72,7 +72,7 @@ export const CaseStudyAchivements = () => {
               alt="Achivement"
               width="640"
               height="890"
-              className="h-[890px] w-1/2 rounded-r-[40px] object-cover"
+              className="w-1/2 rounded-r-[40px] object-cover"
               loading="lazy"
             />
           </div>

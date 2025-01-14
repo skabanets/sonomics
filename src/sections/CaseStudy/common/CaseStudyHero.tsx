@@ -36,21 +36,21 @@ export const CaseStudyHero = () => {
       <motion.div className="container" {...slideInWithFade}>
         <BackLink to={routes.CaseStudy} label="Back to case studies" className="mb-[20px]" />
         <h1 className="mb-[60px] max-w-[1100px]">Fintech transformation success</h1>
-        <ul className="flex h-[260px] gap-[40px]">
-          {items.map(({ id, title, image, retinaImage }) => (
-            <li key={id} className="even:mt-auto">
-              <img
-                srcSet={`${image} 1x, ${retinaImage} 2x`}
-                src={image}
-                alt={title}
-                width="400"
-                height="210"
-                className="h-[210px] rounded-[20px] object-cover"
-              />
-            </li>
-          ))}
-        </ul>
       </motion.div>
+      <motion.ul className="full-hd-container flex gap-[40px]" {...slideInWithFade}>
+        {items.map(({ id, title, image, retinaImage }) => (
+          <li key={id} className="w-1/3 even:mt-[4vw]">
+            <img
+              srcSet={`${image} 1x, ${retinaImage} 2x`}
+              src={image}
+              alt={title}
+              width={400}
+              height={210}
+              className="aspect-[400/210] w-full rounded-[20px] object-cover"
+            />
+          </li>
+        ))}
+      </motion.ul>
     </section>
   );
 };
