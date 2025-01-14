@@ -36,11 +36,8 @@ export const CaseStudyOverview = () => {
   return (
     <>
       <section className="bg-letsTalkBgColor pt-[80px]">
-        <div className="container">
-          <motion.div
-            className="flex justify-between border-b-[1px] border-mainTextColor pb-[80px]"
-            {...overviewAnimationProps}
-          >
+        <div className="full-hd-container">
+          <motion.div className="container flex justify-between" {...overviewAnimationProps}>
             <div className="flex w-[407px] flex-col gap-[36px]">
               <div>
                 <h3>Client</h3>
