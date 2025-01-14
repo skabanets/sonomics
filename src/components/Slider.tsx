@@ -57,12 +57,12 @@ export const Slider = ({ slides }: SliderProps) => {
       </Swiper>
       {activeSlide && (
         <div className="absolute bottom-0 z-50 flex h-[137px] w-full items-center justify-between overflow-hidden bg-gradient-to-b from-[rgba(0,0,0,0)] to-black px-[30px] pb-[33px] pt-[68px]">
-          <Link to={activeSlide.link} className="group">
+          <Link to={activeSlide.link} className="group line-clamp-1 w-[370px]">
             <h3 className="text-whiteTextColor transition group-hover:text-themeAccentColor group-focus-visible:text-themeAccentColor">
               {activeSlide.name}
             </h3>
           </Link>
-          <div className="flex items-center gap-[22px]">
+          <div className="flex items-center gap-[18px]">
             <button
               onClick={() => swiperRef.current?.swiper.slidePrev()}
               className="group flex h-[24px] w-[24px] items-center justify-center"
