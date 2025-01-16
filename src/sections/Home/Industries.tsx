@@ -5,12 +5,12 @@ import { CustomTitle, IndustryCard } from "../../components";
 
 import {
   slideInWithFade,
-  industries,
   routes,
   industriesContainerVariants,
   cardVariants,
+  homeIndustries,
 } from "../../constants";
-import { Industry } from "../../types";
+import type { Industry } from "../../types";
 
 export const Industries = () => {
   return (
@@ -24,9 +24,9 @@ export const Industries = () => {
           whileInView="show"
           viewport={{ once: true, amount: 0.3 }}
         >
-          {industries.map((industry) => (
+          {homeIndustries.map((industry, index) => (
             <motion.li
-              key={industry.id}
+              key={index}
               variants={cardVariants}
               className="rounded-[20px] border border-solid border-transparent bg-darkBgColor transition hover:border-accentYellowColor focus-visible:border-accentYellowColor"
               tabIndex={0}
