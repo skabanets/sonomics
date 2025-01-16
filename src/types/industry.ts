@@ -1,10 +1,25 @@
-import { images } from "../assets";
-
 export interface Industry {
-  id: number;
   name: string;
-  description: string;
-  image: keyof typeof images.industriesImages;
-  retinaImage: keyof typeof images.industriesImages;
+  description: string[];
   link: string;
+  technologies: {
+    title: string;
+    description: string;
+  };
+  services: {
+    title: string;
+    description: string;
+  };
+  caseStudy: {
+    title: string;
+    description: string;
+    link: string;
+  };
+  images: {
+    image: string;
+    retinaImage: string;
+    icon: string;
+    retinaIcon: string;
+  };
+  buttonText: string;
 }
