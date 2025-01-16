@@ -1,10 +1,23 @@
 // Industries
+import telecommunications_1x from "./images/industries/telecommunications@1x.webp";
+import telecommunications_2x from "./images/industries/telecommunications@2x.webp";
+import media_research_1x from "./images/industries/media-research@1x.webp";
+import media_research_2x from "./images/industries/media-research@2x.webp";
 import fintech_1x from "./images/industries/fintech@1x.webp";
 import fintech_2x from "./images/industries/fintech@2x.webp";
 import ecommerce_1x from "./images/industries/ecommerce@1x.webp";
 import ecommerce_2x from "./images/industries/ecommerce@2x.webp";
 import crypto_1x from "./images/industries/crypto@1x.webp";
 import crypto_2x from "./images/industries/crypto@2x.webp";
+import health_care_1x from "./images/industries/health-care@1x.webp";
+import health_care_2x from "./images/industries/health-care@2x.webp";
+
+import fintech_icon_1x from "./images/industries/fintech-icon@1x.webp";
+import fintech_icon_2x from "./images/industries/fintech-icon@2x.webp";
+import ecommerce_icon_1x from "./images/industries/ecommerce-icon@1x.webp";
+import ecommerce_icon_2x from "./images/industries/ecommerce-icon@2x.webp";
+import crypto_icon_1x from "./images/industries/crypto-icon@1x.webp";
+import crypto_icon_2x from "./images/industries/crypto-icon@2x.webp";
 
 // Cases
 import case1_1x from "./images/cases/case-1@1x.webp";
@@ -173,6 +186,18 @@ export const images = {
     ecommerce_2x,
     crypto_1x,
     crypto_2x,
+    health_care_1x,
+    health_care_2x,
+    media_research_1x,
+    media_research_2x,
+    telecommunications_1x,
+    telecommunications_2x,
+    fintech_icon_1x,
+    fintech_icon_2x,
+    ecommerce_icon_1x,
+    ecommerce_icon_2x,
+    crypto_icon_1x,
+    crypto_icon_2x,
   },
   casesImages: {
     case1_1x,
