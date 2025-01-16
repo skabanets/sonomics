@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 import { CustomTitle } from "../components";
 
-import { Industry } from "../types";
+import type { Industry } from "../types";
 import { images } from "../assets";
 
 interface IndustryCardProps {
@@ -11,12 +11,17 @@ interface IndustryCardProps {
 
 export const IndustryCard = ({ industry }: IndustryCardProps) => {
   const { industriesImages } = images;
+  const { name, description, images: imgs } = industry;
+
+  const icon = industriesImages[imgs.icon as keyof typeof industriesImages];
+  const retinaIcon = industriesImages[imgs.retinaIcon as keyof typeof industriesImages];
+
   return (
     <Link to={industry.link} className="flex h-[346px] w-[340px] flex-col gap-[38px] p-[30px]">
       <img
-        srcSet={`${industriesImages[industry.image]} 1x, ${industriesImages[industry.retinaImage]} 2x`}
-        src={industriesImages[industry.image]}
-        alt="Case study 1"
+        srcSet={`${icon} 1x, ${retinaIcon} 2x`}
+        src={icon}
+        alt={name}
         width={70}
         loading="lazy"
       />
@@ -26,10 +31,10 @@ export const IndustryCard = ({ industry }: IndustryCardProps) => {
           wrapperStyles="flex items-center justify-between"
           iconColor="fill-whiteTextColor"
           titleStyles="text-whiteTextColor"
-          text={industry.name}
+          text={name}
         />
-        <p className="small-text text-secondaryLightTextColor opacity-[0.6]">
-          {industry.description}
+        <p className="small-text line-clamp-5 text-secondaryLightTextColor opacity-[0.6]">
+          {description[0]}
         </p>
       </div>
     </Link>
