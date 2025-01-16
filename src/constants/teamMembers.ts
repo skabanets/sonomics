@@ -1,47 +1,40 @@
-export const teamMembers = [
+import { TeamMember } from "../types";
+
+export const teamMembers: TeamMember[] = [
   {
     name: "Alexey Chuhaiov",
     role: "Chief Executive Officer",
-    images: { desk: ["alexey_chuhaiov_desk_1x", "alexey_chuhaiov_desk_2x"] },
+    image: "alexey_chuhaiov_1x",
+    retinaImage: "alexey_chuhaiov_2x",
   },
   {
     name: "Oleksii Zhylenko",
     role: "Chief Technology Officer",
-    images: { desk: ["oleksii_zhylenko_desk_1x", "oleksii_zhylenko_desk_2x"] },
+    image: "oleksii_zhylenko_1x",
+    retinaImage: "oleksii_zhylenko_2x",
   },
   {
     name: "Irina Grekova",
     role: "Chief Administrative Officer",
-    images: { desk: ["irina_grekova_desk_1x", "irina_grekova_desk_2x"] },
+    image: "irina_grekova_1x",
+    retinaImage: "irina_grekova_2x",
   },
   {
-    name: "Heorhii Popov",
+    name: "Kate Slavhorodska",
     role: "Head of Sales",
-    images: { desk: ["heorhii_popov_desk_1x", "heorhii_popov_desk_2x"] },
+    image: "kate_slavhorodska_1x",
+    retinaImage: "kate_slavhorodska_2x",
   },
   {
-    name: "Alexey Chuhaiov",
-    role: "Chief Executive Officer",
-    images: { desk: ["alexey_chuhaiov_desk_1x", "alexey_chuhaiov_desk_2x"] },
+    name: "Maryna Spivakova",
+    role: "Recruiter Specialist",
+    image: "maryna_spivakova_1x",
+    retinaImage: "maryna_spivakova_2x",
   },
   {
-    name: "Oleksii Zhylenko",
-    role: "Chief Technology Officer",
-    images: { desk: ["oleksii_zhylenko_desk_1x", "oleksii_zhylenko_desk_2x"] },
-  },
-  {
-    name: "Irina Grekova",
-    role: "Chief Administrative Officer",
-    images: { desk: ["irina_grekova_desk_1x", "irina_grekova_desk_2x"] },
-  },
-  {
-    name: "Heorhii Popov",
-    role: "Head of Sales",
-    images: { desk: ["heorhii_popov_desk_1x", "heorhii_popov_desk_2x"] },
-  },
-  {
-    name: "Irina Grekova",
-    role: "Chief Administrative Officer",
-    images: { desk: ["irina_grekova_desk_1x", "irina_grekova_desk_2x"] },
+    name: "Vladislav Chernovolov",
+    role: "Head of Development",
+    image: "vladislav_chernovolov_1x",
+    retinaImage: "vladislav_chernovolov_2x",
   },
 ];
