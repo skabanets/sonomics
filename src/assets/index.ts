@@ -44,14 +44,18 @@ import innovation_desk_2x from "./images/why-choose-us/innovation_desk@2x.webp";
 import ceo_1x from "./images/team/ceo@1x.webp";
 import ceo_2x from "./images/team/ceo@2x.webp";
 
-import alexey_chuhaiov_desk_1x from "./images/team/alexey-chuhaiov_desk@1x.webp";
-import alexey_chuhaiov_desk_2x from "./images/team/alexey-chuhaiov_desk@2x.webp";
-import oleksii_zhylenko_desk_1x from "./images/team/oleksii-zhylenko_desk@1x.webp";
-import oleksii_zhylenko_desk_2x from "./images/team/oleksii-zhylenko_desk@2x.webp";
-import irina_grekova_desk_1x from "./images/team/irina-grekova_desk@1x.webp";
-import irina_grekova_desk_2x from "./images/team/irina-grekova_desk@2x.webp";
-import heorhii_popov_desk_1x from "./images/team/heorhii-popov_desk@1x.webp";
-import heorhii_popov_desk_2x from "./images/team/heorhii-popov_desk@2x.webp";
+import alexey_chuhaiov_1x from "./images/team/alexey-chuhaiov@1x.webp";
+import alexey_chuhaiov_2x from "./images/team/alexey-chuhaiov@2x.webp";
+import oleksii_zhylenko_1x from "./images/team/oleksii-zhylenko@1x.webp";
+import oleksii_zhylenko_2x from "./images/team/oleksii-zhylenko@2x.webp";
+import irina_grekova_1x from "./images/team/irina-grekova@1x.webp";
+import irina_grekova_2x from "./images/team/irina-grekova@2x.webp";
+import kate_slavhorodska_1x from "./images/team/kate-slavhorodska@1x.webp";
+import kate_slavhorodska_2x from "./images/team/kate-slavhorodska@2x.webp";
+import maryna_spivakova_1x from "./images/team/maryna-spivakova@1x.webp";
+import maryna_spivakova_2x from "./images/team/maryna-spivakova@2x.webp";
+import vladislav_chernovolov_1x from "./images/team/vladislav-chernovolov@1x.webp";
+import vladislav_chernovolov_2x from "./images/team/vladislav-chernovolov@2x.webp";
 
 // Common
 import our_mission_1x from "./images/common/our-mission@1x.webp";
@@ -191,14 +195,18 @@ export const images = {
   teamImages: {
     ceo_1x,
     ceo_2x,
-    alexey_chuhaiov_desk_1x,
-    alexey_chuhaiov_desk_2x,
-    oleksii_zhylenko_desk_1x,
-    oleksii_zhylenko_desk_2x,
-    irina_grekova_desk_1x,
-    irina_grekova_desk_2x,
-    heorhii_popov_desk_1x,
-    heorhii_popov_desk_2x,
+    alexey_chuhaiov_1x,
+    alexey_chuhaiov_2x,
+    oleksii_zhylenko_1x,
+    oleksii_zhylenko_2x,
+    irina_grekova_1x,
+    irina_grekova_2x,
+    kate_slavhorodska_1x,
+    kate_slavhorodska_2x,
+    maryna_spivakova_1x,
+    maryna_spivakova_2x,
+    vladislav_chernovolov_1x,
+    vladislav_chernovolov_2x,
   },
   commonImages: {
     our_mission_1x,
