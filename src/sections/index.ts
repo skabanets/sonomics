@@ -31,4 +31,7 @@ export * from "./CaseStudy/common/CaseStudyFunctionalModules";
 export * from "./CaseStudy/common/CaseStudyTechnologies";
 export * from "./CaseStudy/common/CaseStudyAchivements";
 
+export * from "./Industries/IndustryHero";
+export * from "./Industries/IndustrySlider";
+
 export * from "./Common/LetsTalk";
