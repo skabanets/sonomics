@@ -8,20 +8,19 @@ interface TeamMemberCardProps {
 }
 
 export const TeamMemberCard = ({ item, index }: TeamMemberCardProps) => {
-  const {
-    name,
-    role,
-    images: { desk },
-  } = item;
+  const { name, role, image, retinaImage } = item;
   const { teamImages } = images;
+
+  const img = teamImages[image as keyof typeof teamImages];
+  const retinaImg = teamImages[retinaImage as keyof typeof teamImages];
 
   const beforeBgColor = `bg-${teamColors[index % teamColors.length]}`;
 
   return (
     <li className="w-[340px]">
       <img
-        srcSet={`${teamImages[desk[0]]} 1x, ${teamImages[desk[1]]} 2x`}
-        src={teamImages[desk[0]]}
+        srcSet={`${img} 1x, ${retinaImg} 2x`}
+        src={img}
         alt={item.name}
         width="340"
         height="340"
