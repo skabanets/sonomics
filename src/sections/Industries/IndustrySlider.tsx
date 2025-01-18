@@ -88,7 +88,7 @@ export const IndustrySlider = () => {
       case 3:
         return "bg-darkBgColor";
       default:
-        return "bg-secondaryBgColor";
+        return "bg-letsTalkBgColor";
     }
   };
 
