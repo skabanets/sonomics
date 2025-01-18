@@ -1,15 +1,12 @@
 import { useEffect, useState } from "react";
 
 export const useDynamicDimensions = () => {
-  const [slideMargin, setSlideMargin] = useState(0);
+  const [slidePadding, setSlidePadding] = useState(0);
   const [slideHeight, setSlideHeight] = useState(0);
-  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
 
   useEffect(() => {
     const calculateDimensions = () => {
       const currentHeight = window.innerHeight;
-
-      setWindowHeight(currentHeight);
 
       let margin = 0;
       if (currentHeight < 800) {
@@ -24,7 +21,7 @@ export const useDynamicDimensions = () => {
         margin = 100;
       }
 
-      setSlideMargin(margin);
+      setSlidePadding(margin);
 
       const height = currentHeight - margin * 2 - 56;
       setSlideHeight(height);
@@ -38,5 +35,5 @@ export const useDynamicDimensions = () => {
     };
   }, []);
 
-  return { slideMargin, slideHeight, windowHeight };
+  return { slidePadding, slideHeight };
 };
