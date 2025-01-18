@@ -1,12 +1,16 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
+import { useDynamicDimensions } from "../../hooks";
 import { industries, slideInWithFade } from "../../constants";
 
 export const IndustrySlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [scrollState, setScrollState] = useState(false);
   const sectionRef = useRef<HTMLUListElement>(null);
+  const { slideMargin, slideHeight } = useDynamicDimensions();
+
+  console.log(slideMargin, slideHeight);
 
   const activeNavStyles = "bold-text border-themeAccentColor border-t-2 bg-navMenuBgColor";
 
@@ -103,13 +107,12 @@ export const IndustrySlider = () => {
 
   console.log(currentIndex);
 
-  // const height = window.innerHeight;
+  const height = window.innerHeight;
   //className="h-screen bg-secondaryBgColor"
 
   return (
-    <section className="h-[calc(100dvh+10px)] bg-orange-300">
-      <motion.div className="container h-full" {...industrySliderAnimationProps}>
-        {/* Navigation Menu */}
+    <section className="bg-orange-300">
+      <motion.div className="container h-[calc(100dvh+10px)]" {...industrySliderAnimationProps}>
         <ul className="flex items-center gap-[20px] bg-secondaryBgColor" ref={sectionRef}>
           {industries.map((industry, index) => (
             <li
@@ -124,16 +127,18 @@ export const IndustrySlider = () => {
           ))}
         </ul>
 
-        <div className="relative flex h-[calc(100%-56px)] w-full flex-col pb-[70px] pt-[34px]">
+        <div className={`relative my-[${slideMargin}px] flex h-full w-full flex-col`}>
           <motion.div
             key={currentIndex}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5, ease: "easeOut", delay: 0.25 }}
-            className="h-[822px] bg-yellow-300"
+            className={`bg-yellow-300 h-[${slideHeight}px]`}
           >
             <h2>{scrollState ? "true" : "false"}</h2>
             <p>{industries[currentIndex].name}</p>
+            <p>{slideHeight}</p>
+            <p>{slideMargin}</p>
           </motion.div>
 
           <div className="absolute right-[-38px] top-1/2 flex translate-y-[-50%] flex-col gap-[15px]">
