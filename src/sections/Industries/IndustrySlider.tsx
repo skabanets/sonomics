@@ -2,12 +2,12 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 import { industries, slideInWithFade } from "../../constants";
-import { Industry } from "../../types";
 
 export const IndustrySlider = () => {
-  const [activeIndustry, setActiveIndustry] = useState<Industry>(industries[0]);
-  const [scrollState, setScrollState] = useState<"default" | "stuck" | "unstuck">("default");
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [scrollState, setScrollState] = useState(false);
   const sectionRef = useRef<HTMLUListElement>(null);
+
   const activeNavStyles = "bold-text border-themeAccentColor border-t-2 bg-navMenuBgColor";
 
   const industrySliderAnimationProps = {
@@ -18,118 +18,139 @@ export const IndustrySlider = () => {
     },
   };
 
+  const handleMenuClick = (index: number) => {
+    setCurrentIndex(index);
+    setScrollState(true);
+
+    if (sectionRef.current) {
+      sectionRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       if (sectionRef.current) {
         const sectionTop = sectionRef.current.getBoundingClientRect().top;
+        const sectionBottom = sectionRef.current.getBoundingClientRect().bottom;
 
-        if (sectionTop <= 0 && scrollState !== "stuck") {
-          setScrollState("stuck");
+        if (sectionTop <= 0 && currentIndex !== industries.length - 1) {
+          setScrollState(true);
+          sectionRef.current.scrollIntoView({
+            block: "start",
+          });
         }
 
-        if (sectionTop > 0 && scrollState === "stuck") {
-          setScrollState("unstuck");
+        if (sectionTop > 0) {
+          setScrollState(false);
         }
 
-        if (sectionTop < 0 && activeIndustry.name === industries[industries.length - 1].name) {
-          setScrollState("unstuck");
+        if (currentIndex === industries.length - 1 && sectionBottom >= 0) {
+          setScrollState(false);
         }
       }
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [scrollState, activeIndustry]);
+  }, [scrollState, currentIndex]);
+
+  const blockScroll = (e: WheelEvent) => {
+    e.preventDefault();
+  };
 
   useEffect(() => {
-    let lastScrollY = window.scrollY;
-
-    const handleScrollBehavior = () => {
-      const currentScrollY = window.scrollY;
-
-      if (sectionRef.current) {
-        const sectionTop = sectionRef.current.getBoundingClientRect().top;
-
-        if (scrollState === "stuck" && activeIndustry.name === industries[0].name) {
-          if (currentScrollY > lastScrollY) {
-            window.scrollTo(0, lastScrollY);
-          }
-        } else if (
-          scrollState === "stuck" &&
-          activeIndustry.name === industries[industries.length - 1].name
-        ) {
-          if (sectionTop <= 0 && currentScrollY < lastScrollY) {
-            window.scrollTo(0, lastScrollY);
-          }
-        } else if (
-          scrollState === "stuck" &&
-          activeIndustry.name !== industries[0].name &&
-          activeIndustry.name !== industries[industries.length - 1].name
-        ) {
-          document.body.style.overflow = "hidden";
-        } else {
-          document.body.style.overflow = "";
-        }
+    const handleWheel = (e: WheelEvent) => {
+      if (
+        scrollState === true &&
+        currentIndex !== 0 &&
+        currentIndex &&
+        currentIndex !== industries.length - 1
+      ) {
+        blockScroll(e);
       }
 
-      lastScrollY = window.scrollY;
+      if (scrollState === true && currentIndex === 0 && e.deltaY > 0) {
+        blockScroll(e);
+      }
+
+      if (scrollState === true && currentIndex === industries.length - 1 && e.deltaY < 0) {
+        blockScroll(e);
+      }
+
+      if (
+        sectionRef.current &&
+        scrollState === false &&
+        currentIndex === industries.length - 1 &&
+        e.deltaY < 0
+      ) {
+        setScrollState(true);
+        sectionRef.current.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
     };
 
-    const handleScroll = () => handleScrollBehavior();
-
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("wheel", handleWheel, { passive: false });
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-      document.body.style.overflow = "";
+      window.removeEventListener("wheel", handleWheel);
     };
-  }, [scrollState, activeIndustry, industries]);
+  }, [currentIndex, scrollState]);
+
+  console.log(currentIndex);
+
+  // const height = window.innerHeight;
+  //className="h-screen bg-secondaryBgColor"
 
   return (
-    <section className="h-screen bg-secondaryBgColor">
+    <section className="h-[calc(100dvh+10px)] bg-orange-300">
       <motion.div className="container h-full" {...industrySliderAnimationProps}>
-        <ul
-          className={`transition ${
-            scrollState === "stuck" ? "sticky top-0" : ""
-          } flex items-center gap-[20px] bg-secondaryBgColor`}
-          ref={sectionRef}
-        >
+        {/* Navigation Menu */}
+        <ul className="flex items-center gap-[20px] bg-secondaryBgColor" ref={sectionRef}>
           {industries.map((industry, index) => (
             <li
               key={index}
-              className={`h-[56px] cursor-pointer px-[20px] py-[15px] transition ${
-                activeIndustry?.name === industry.name ? activeNavStyles : "small-text"
+              className={`h-[56px] cursor-pointer px-[20px] py-[15px] ${
+                currentIndex === index ? activeNavStyles : "small-text"
               }`}
-              onClick={() => setActiveIndustry(industry)}
+              onClick={() => handleMenuClick(index)}
             >
               {industry.name}
             </li>
           ))}
         </ul>
-        <div className="relative flex h-full w-full flex-col justify-between py-[80px]">
-          <motion.h2
-            key={activeIndustry.name}
+
+        <div className="relative flex h-[calc(100%-56px)] w-full flex-col pb-[70px] pt-[34px]">
+          <motion.div
+            key={currentIndex}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5, ease: "easeOut", delay: 0.25 }}
+            className="h-[822px] bg-yellow-300"
           >
-            {activeIndustry.name}
-          </motion.h2>
-          <div className="absolute right-[-38px] top-1/2 flex translate-y-[-50%] flex-col gap-[10px]">
+            <h2>{scrollState ? "true" : "false"}</h2>
+            <p>{industries[currentIndex].name}</p>
+          </motion.div>
+
+          <div className="absolute right-[-38px] top-1/2 flex translate-y-[-50%] flex-col gap-[15px]">
             {industries.map((industry, index) => (
               <div
                 key={index}
                 className="group relative cursor-pointer transition"
-                onClick={() => setActiveIndustry(industry)}
+                onClick={() => handleMenuClick(index)}
               >
-                <span className="absolute right-[15px] top-1/2 translate-y-[-50%] whitespace-nowrap rounded-[10px] bg-navMenuBgColor px-[7px] py-[5px] text-mainTextColor opacity-0 transition group-hover:opacity-100">
+                <span className="absolute right-[15px] top-1/2 translate-y-[-50%] whitespace-nowrap rounded-[10px] bg-navMenuBgColor px-[7px] py-[5px] text-mainTextColor opacity-0 transition group-hover:opacity-100 group-focus-visible:opacity-100">
                   {industry.name}
                 </span>
                 <div
                   className={`transition ${
-                    industries.indexOf(activeIndustry) === index
+                    currentIndex === index
                       ? "h-[35px] w-[9px] rounded-[70px] bg-darkBgColor"
-                      : "h-[10px] w-[10px] rounded-full bg-secondaryLightTextColor hover:border hover:border-mainTextColor"
+                      : "h-[10px] w-[10px] rounded-full bg-secondaryLightTextColor group-hover:border group-hover:border-mainTextColor group-focus-visible:border group-focus-visible:border-mainTextColor"
                   }`}
                 />
               </div>
