@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import throttle from "lodash.throttle";
 
 import { IndustrySliderCard } from "../../components";
 
@@ -8,7 +9,7 @@ import { industries, slideInWithFade } from "../../constants";
 
 export const IndustrySlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [scrollState, setScrollState] = useState(false);
+  const [isScrolling, setIsScrolling] = useState(false);
   const { slidePadding, slideHeight } = useDynamicDimensions();
   const sectionRef = useRef<HTMLUListElement>(null);
 
@@ -20,95 +21,74 @@ export const IndustrySlider = () => {
     },
   };
 
-  const smoothScrollToSection = () => {
+  const handleMenuClick = (index: number) => {
+    if (isScrolling) return;
+
+    setCurrentIndex(index);
+    setIsScrolling(true);
+
     if (sectionRef.current) {
-      setScrollState(true);
       sectionRef.current.scrollIntoView({
         behavior: "smooth",
         block: "start",
       });
+
+      setTimeout(() => {
+        setIsScrolling(false);
+      }, 500);
     }
   };
 
-  const handleMenuClick = (index: number) => {
-    setCurrentIndex(index);
-    smoothScrollToSection();
-  };
-
   useEffect(() => {
-    const handleScroll = () => {
-      if (!sectionRef.current) return;
+    const throttledHandleWheel = throttle((e: WheelEvent) => {
+      const section = sectionRef?.current?.getBoundingClientRect();
+      const isElementAtTop = section!.top > -1 && section!.top < 1;
 
-      const { top: sectionTop, bottom: sectionBottom } = sectionRef.current.getBoundingClientRect();
+      if (isScrolling) return;
 
-      if (sectionTop <= 0 && currentIndex < industries.length - 1) {
-        smoothScrollToSection();
-      } else if (sectionTop > 0 || (currentIndex === industries.length - 1 && sectionBottom >= 0)) {
-        setScrollState(false);
+      const direction = e.deltaY > 0 ? 1 : -1;
+
+      if (!isElementAtTop) {
+        if (sectionRef.current) {
+          sectionRef.current.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+        return;
       }
-    };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [currentIndex]);
+      if (currentIndex + direction < 0 || currentIndex + direction >= industries.length) {
+        return;
+      }
 
-  useEffect(() => {
-    let isScrolling = false; // Флаг для контроля прокрутки
-    const scrollDelay = 2000; // Задержка между переходами (800ms)
+      setIsScrolling(true);
 
-    const disableScroll = () => {
-      document.body.style.overflow = "hidden"; // Отключаем скролл
-    };
+      setCurrentIndex((prev) => prev + direction);
 
-    const enableScroll = () => {
-      document.body.style.overflow = ""; // Включаем скролл
-    };
+      setTimeout(() => {
+        setIsScrolling(false);
+      }, 500);
+    }, 500);
 
     const handleWheel = (e: WheelEvent) => {
-      if (!scrollState) {
-        if (currentIndex === industries.length - 1 && e.deltaY < 0 && sectionRef.current) {
-          smoothScrollToSection();
-          return;
-        }
+      if (
+        (currentIndex === 0 && e.deltaY < 0) ||
+        (currentIndex === industries.length - 1 && e.deltaY > 0)
+      )
         return;
-      }
 
-      if (isScrolling) {
-        e.preventDefault(); // Блокируем лишний скролл
-        return;
-      }
-
-      isScrolling = true; // Устанавливаем флаг
-
-      // Отключаем скролл на средних элементах
-      if (currentIndex > 0 && currentIndex < industries.length - 1) {
-        disableScroll();
-      }
-
-      if (e.deltaY > 0 && currentIndex < industries.length - 1) {
-        e.preventDefault();
-        setCurrentIndex((prev) => prev + 1);
-      } else if (e.deltaY < 0 && currentIndex > 0) {
-        e.preventDefault();
-        setCurrentIndex((prev) => prev - 1);
-      }
-
-      // Включаем скролл после завершения перехода
-      setTimeout(() => {
-        isScrolling = false;
-        if (currentIndex === 0 || currentIndex === industries.length - 1) {
-          enableScroll(); // Возвращаем скролл только на крайних элементах
-        }
-      }, scrollDelay);
+      e.preventDefault();
+      throttledHandleWheel(e);
     };
 
     window.addEventListener("wheel", handleWheel, { passive: false });
 
     return () => {
       window.removeEventListener("wheel", handleWheel);
-      enableScroll();
+      throttledHandleWheel.cancel();
     };
-  }, [currentIndex, scrollState]);
+  }, [currentIndex, isScrolling]);
 
   const getIndustrySliderBgColor = (index: number) => {
     switch (index) {
@@ -125,20 +105,18 @@ export const IndustrySlider = () => {
   };
   const slideBackgroundColor = getIndustrySliderBgColor(currentIndex);
 
-  console.log(currentIndex);
-
   return (
-    <section className="h-[calc(100dvh+10px)]">
+    <section className="h-dvh" ref={sectionRef}>
       <motion.div {...industrySliderAnimationProps}>
         <div className="bg-secondaryBgColor transition">
-          <ul className="container flex items-center gap-[20px]" ref={sectionRef}>
+          <ul className="container flex items-center gap-[20px]">
             {industries.map((industry, index) => (
               <li
                 key={index}
-                className={`h-[56px] cursor-pointer px-[20px] py-[15px] ${
+                className={`bold-text h-[56px] cursor-pointer border-t-2 border-transparent px-[20px] py-[15px] ${
                   currentIndex === index
-                    ? "bold-text border-t-2 border-themeAccentColor bg-navMenuBgColor"
-                    : "small-text"
+                    ? "!border-themeAccentColor bg-navMenuBgColor"
+                    : "text-secondaryTextColor"
                 }`}
                 onClick={() => handleMenuClick(index)}
               >
