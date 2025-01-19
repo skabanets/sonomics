@@ -26,7 +26,7 @@ export const OurCoreServices = () => {
           <div className="flex gap-[20px]">
             <button
               onClick={() => swiperRef.current?.slidePrev()}
-              className={`group flex h-[50px] w-[50px] items-center justify-center rounded-[10px] border border-solid transition ${isBeginning ? "cursor-not-allowed border-disabledBtnColor bg-formFieldBgColor" : "border-darkBorderColor bg-sliderBgColor hover:border-themeAccentColor focus-visible:border-themeAccentColor"}`}
+              className={`group flex h-[50px] w-[50px] items-center justify-center rounded-[10px] border border-solid transition ${isBeginning ? "cursor-not-allowed border-disabledBtnColor bg-formFieldBgColor" : "border-darkBorderColor bg-navMenuBgColor hover:border-themeAccentColor focus-visible:border-themeAccentColor"}`}
               aria-label="Previous slide"
               disabled={isBeginning}
             >
@@ -37,7 +37,7 @@ export const OurCoreServices = () => {
             </button>
             <button
               onClick={() => swiperRef.current?.slideNext()}
-              className={`group flex h-[50px] w-[50px] items-center justify-center rounded-[10px] border border-solid transition ${isEnd ? "cursor-not-allowed border-disabledBtnColor bg-formFieldBgColor" : "border-darkBorderColor bg-sliderBgColor hover:border-themeAccentColor focus-visible:border-themeAccentColor"}`}
+              className={`group flex h-[50px] w-[50px] items-center justify-center rounded-[10px] border border-solid transition ${isEnd ? "cursor-not-allowed border-disabledBtnColor bg-formFieldBgColor" : "border-darkBorderColor bg-navMenuBgColor hover:border-themeAccentColor focus-visible:border-themeAccentColor"}`}
               aria-label="Next slide"
               disabled={isEnd}
             >
@@ -65,7 +65,7 @@ export const OurCoreServices = () => {
               {services.map((service) => (
                 <SwiperSlide
                   key={service.id}
-                  className="h-[436px] w-[400px] rounded-[10px] border border-solid border-darkBorderColor bg-sliderBgColor p-[30px] transition hover:bg-secondaryBgColor focus-visible:bg-secondaryBgColor"
+                  className="h-[436px] w-[400px] rounded-[10px] border border-solid border-darkBorderColor bg-navMenuBgColor p-[30px] transition hover:bg-secondaryBgColor focus-visible:bg-secondaryBgColor"
                   tabIndex={0}
                 >
                   <ServiceCard service={service} />

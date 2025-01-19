@@ -39,7 +39,6 @@ export default {
         backdropBgColor: "var(--backdrop-bg)",
         formFieldBgColor: "var(--form-field-bg)",
         fieldBorderColor: "var(--field-border)",
-        sliderBgColor: "var(--slider-bg)",
 
         mainTextColor: "var(--main-text)",
         secondaryTextColor: "var(--secondary-text)",
