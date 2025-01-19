@@ -49,7 +49,7 @@ export const IndustrySliderCard = ({ industry, index }: IndustryProps) => {
       >
         <div className="flex justify-between">
           <div className="w-[590px]">
-            <h2 className="mb-[28px]">{name}</h2>
+            <h2 className="mb-[28px] h-sm:mb-[24px]">{name}</h2>
             {description.map((item, index) => (
               <h6
                 key={index}
@@ -60,10 +60,10 @@ export const IndustrySliderCard = ({ industry, index }: IndustryProps) => {
             ))}
           </div>
           <div
-            className={`w-[590px] rounded-b-[20px] border-t-[4px] border-t-accentOrangeColor p-[30px] h-md:p-[40px] ${slideCardBackgroundColor}`}
+            className={`w-[590px] rounded-b-[20px] border-t-[4px] border-t-accentOrangeColor p-[30px] h-sm:p-[25px] h-md:p-[40px] ${slideCardBackgroundColor}`}
           >
             <h5 className="mb-[10px]">{technologies.title}</h5>
-            <p className="small-text mb-[30px]">{technologies.description}</p>
+            <p className="small-text mb-[30px] h-sm:mb-[24px]">{technologies.description}</p>
             <h5 className="mb-[10px]">{services.title}</h5>
             <p className="small-text">{services.description}</p>
           </div>
@@ -76,7 +76,7 @@ export const IndustrySliderCard = ({ industry, index }: IndustryProps) => {
             height={319}
             width={625}
             loading="lazy"
-            className="h-[30dvh] rounded-[20px] object-cover h-sm:h-[225px] h-md:max-h-[319px] h-lg:h-[33dvh] h-lg:max-h-[350px] h-lg:w-[62dvh] h-lg:max-w-[660px]"
+            className="h-[30dvh] rounded-[20px] object-cover h-sm:h-[25dvhpx] h-md:max-h-[319px] h-lg:h-[33dvh] h-lg:max-h-[350px] h-lg:w-[62dvh] h-lg:max-w-[660px]"
           />
           <div className="flex w-[590px] flex-col items-start justify-center gap-[15px]">
             <h5>{caseStudy.title}</h5>
