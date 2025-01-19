@@ -23,3 +23,4 @@ export * from "./Accordion";
 export * from "./TechnologyCardItem";
 export * from "./FunctionalModuleCard";
 export * from "./SliderWithThumb";
+export * from "./IndustrySliderCard";
