@@ -126,12 +126,12 @@ export const IndustrySlider = () => {
               style={{ height: `${slideHeight}px` }}
               className="h-lg:max-h-[1000px]"
             >
-              <div className="bg-yellow-200">
+              {/* <div className="bg-yellow-200">
                 <h2>{scrollState ? "true" : "false"}</h2>
                 <p>{industries[currentIndex].name}</p>
                 <p>{slideHeight}</p>
                 <p>{slidePadding}</p>
-              </div>
+              </div> */}
               <IndustrySliderCard industry={industries[currentIndex]} index={currentIndex} />
             </motion.div>
 
