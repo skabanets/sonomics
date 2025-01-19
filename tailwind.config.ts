@@ -20,6 +20,10 @@ export default {
       "sm-max": { max: "374.98px" },
       md: "768px",
       lg: "1440px",
+      "h-sm": { raw: "(max-height: 800px)" },
+      "h-md": { raw: "(min-height: 900px)" },
+      "h-lg": { raw: "(min-height: 1000px)" },
+      "h-xl": { raw: "(min-height: 1400px)" },
     },
     extend: {
       colors: {
