@@ -20,16 +20,19 @@ export const IndustrySlider = () => {
     },
   };
 
-  const handleMenuClick = (index: number) => {
-    setCurrentIndex(index);
-    setScrollState(true);
-
+  const smoothScrollToSection = () => {
     if (sectionRef.current) {
+      setScrollState(true);
       sectionRef.current.scrollIntoView({
         behavior: "smooth",
         block: "start",
       });
     }
+  };
+
+  const handleMenuClick = (index: number) => {
+    setCurrentIndex(index);
+    smoothScrollToSection();
   };
 
   useEffect(() => {
@@ -39,10 +42,7 @@ export const IndustrySlider = () => {
       const { top: sectionTop, bottom: sectionBottom } = sectionRef.current.getBoundingClientRect();
 
       if (sectionTop <= 0 && currentIndex < industries.length - 1) {
-        setScrollState(true);
-        sectionRef.current.scrollIntoView({
-          block: "start",
-        });
+        smoothScrollToSection();
       } else if (sectionTop > 0 || (currentIndex === industries.length - 1 && sectionBottom >= 0)) {
         setScrollState(false);
       }
@@ -53,50 +53,82 @@ export const IndustrySlider = () => {
   }, [currentIndex]);
 
   useEffect(() => {
+    let isScrolling = false; // Флаг для контроля прокрутки
+    const scrollDelay = 2000; // Задержка между переходами (800ms)
+
+    const disableScroll = () => {
+      document.body.style.overflow = "hidden"; // Отключаем скролл
+    };
+
+    const enableScroll = () => {
+      document.body.style.overflow = ""; // Включаем скролл
+    };
+
     const handleWheel = (e: WheelEvent) => {
       if (!scrollState) {
         if (currentIndex === industries.length - 1 && e.deltaY < 0 && sectionRef.current) {
-          setScrollState(true);
-          sectionRef.current.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
+          smoothScrollToSection();
           return;
         }
         return;
       }
 
-      if (
-        (currentIndex > 0 && currentIndex < industries.length - 1) ||
-        (currentIndex === 0 && e.deltaY > 0) ||
-        (currentIndex === industries.length - 1 && e.deltaY < 0)
-      ) {
-        e.preventDefault();
+      if (isScrolling) {
+        e.preventDefault(); // Блокируем лишний скролл
+        return;
       }
+
+      isScrolling = true; // Устанавливаем флаг
+
+      // Отключаем скролл на средних элементах
+      if (currentIndex > 0 && currentIndex < industries.length - 1) {
+        disableScroll();
+      }
+
+      if (e.deltaY > 0 && currentIndex < industries.length - 1) {
+        e.preventDefault();
+        setCurrentIndex((prev) => prev + 1);
+      } else if (e.deltaY < 0 && currentIndex > 0) {
+        e.preventDefault();
+        setCurrentIndex((prev) => prev - 1);
+      }
+
+      // Включаем скролл после завершения перехода
+      setTimeout(() => {
+        isScrolling = false;
+        if (currentIndex === 0 || currentIndex === industries.length - 1) {
+          enableScroll(); // Возвращаем скролл только на крайних элементах
+        }
+      }, scrollDelay);
     };
 
     window.addEventListener("wheel", handleWheel, { passive: false });
 
     return () => {
       window.removeEventListener("wheel", handleWheel);
+      enableScroll();
     };
   }, [currentIndex, scrollState]);
 
   const getIndustrySliderBgColor = (index: number) => {
     switch (index) {
+      case 0:
+        return "bg-letsTalkBgColor";
       case 1:
       case 5:
         return "bg-primaryBgColor";
       case 3:
         return "bg-darkBgColor";
       default:
-        return "bg-letsTalkBgColor";
+        return "bg-themeToggleBgColor";
     }
   };
   const slideBackgroundColor = getIndustrySliderBgColor(currentIndex);
 
+  console.log(currentIndex);
+
   return (
-    <section className={`h-[calc(100dvh+10px)] ${slideBackgroundColor}`}>
+    <section className="h-[calc(100dvh+10px)]">
       <motion.div {...industrySliderAnimationProps}>
         <div className="bg-secondaryBgColor transition">
           <ul className="container flex items-center gap-[20px]" ref={sectionRef}>
@@ -116,7 +148,7 @@ export const IndustrySlider = () => {
           </ul>
         </div>
 
-        <div className={`py-[${slidePadding}px] transition`}>
+        <div className={`py-[${slidePadding}px] transition ${slideBackgroundColor}`}>
           <div className={`container relative flex flex-col`}>
             <motion.div
               key={currentIndex}
@@ -126,12 +158,6 @@ export const IndustrySlider = () => {
               style={{ height: `${slideHeight}px` }}
               className="h-lg:max-h-[1000px]"
             >
-              {/* <div className="bg-yellow-200">
-                <h2>{scrollState ? "true" : "false"}</h2>
-                <p>{industries[currentIndex].name}</p>
-                <p>{slideHeight}</p>
-                <p>{slidePadding}</p>
-              </div> */}
               <IndustrySliderCard industry={industries[currentIndex]} index={currentIndex} />
             </motion.div>
 
@@ -148,7 +174,7 @@ export const IndustrySlider = () => {
                   <div
                     className={`transition ${
                       currentIndex === index
-                        ? `${currentIndex === 3 ? "bg-whiteTextColor" : "bg-darkBgColor"} h-[35px] w-[9px] rounded-[70px]`
+                        ? `${currentIndex === 3 ? "bg-whiteTextColor" : "bg-mainTextColor"} h-[35px] w-[9px] rounded-[70px]`
                         : "h-[10px] w-[10px] rounded-full bg-secondaryLightTextColor group-hover:border group-hover:border-mainTextColor group-focus-visible:border group-focus-visible:border-mainTextColor"
                     }`}
                   />
