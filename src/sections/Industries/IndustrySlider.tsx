@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
+import { IndustrySliderCard } from "../../components";
+
 import { useDynamicDimensions } from "../../hooks";
 import { industries, slideInWithFade } from "../../constants";
 
@@ -91,11 +93,10 @@ export const IndustrySlider = () => {
         return "bg-letsTalkBgColor";
     }
   };
-
   const slideBackgroundColor = getIndustrySliderBgColor(currentIndex);
 
   return (
-    <section className={`h-[calc(100dvh+10px)]`}>
+    <section className={`h-[calc(100dvh+10px)] ${slideBackgroundColor}`}>
       <motion.div {...industrySliderAnimationProps}>
         <div className="bg-secondaryBgColor transition">
           <ul className="container flex items-center gap-[20px]" ref={sectionRef}>
@@ -115,19 +116,23 @@ export const IndustrySlider = () => {
           </ul>
         </div>
 
-        <div className={`${slideBackgroundColor} py-[${slidePadding}px] transition`}>
-          <div className={`container relative flex h-full w-full flex-col`}>
+        <div className={`py-[${slidePadding}px] transition`}>
+          <div className={`container relative flex flex-col`}>
             <motion.div
               key={currentIndex}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1.5, ease: "easeOut", delay: 0.25 }}
-              className={`bg-yellow-200 h-[${slideHeight}px]`}
+              style={{ height: `${slideHeight}px` }}
+              className="h-lg:max-h-[1000px]"
             >
-              <h2>{scrollState ? "true" : "false"}</h2>
-              <p>{industries[currentIndex].name}</p>
-              <p>{slideHeight}</p>
-              <p>{slidePadding}</p>
+              <div className="bg-yellow-200">
+                <h2>{scrollState ? "true" : "false"}</h2>
+                <p>{industries[currentIndex].name}</p>
+                <p>{slideHeight}</p>
+                <p>{slidePadding}</p>
+              </div>
+              <IndustrySliderCard industry={industries[currentIndex]} index={currentIndex} />
             </motion.div>
 
             <div className="absolute right-[-38px] top-1/2 flex translate-y-[-50%] flex-col gap-[15px]">

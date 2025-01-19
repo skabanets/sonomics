@@ -7,22 +7,18 @@ export const useDynamicDimensions = () => {
   useEffect(() => {
     const calculateDimensions = () => {
       const currentHeight = window.innerHeight;
-      let padding = 0;
 
-      if (currentHeight < 800) {
-        padding = 20;
-      } else if (currentHeight < 900) {
-        padding = 40;
-      } else if (currentHeight < 1000) {
-        padding = 60;
-      } else if (currentHeight < 1200) {
-        padding = 80;
-      } else if (currentHeight >= 1400) {
-        padding = 100;
-      }
+      const getPadding = (height: number) => {
+        if (height < 800) return 20;
+        if (height < 900) return 30;
+        if (height < 1000) return 60;
+        if (height < 1400) return 80;
+        return 100;
+      };
+
+      const padding = getPadding(currentHeight);
 
       setSlidePadding(padding);
-
       const height = currentHeight - padding * 2 - 56;
       setSlideHeight(height);
     };
