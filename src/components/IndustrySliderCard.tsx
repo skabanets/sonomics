@@ -27,10 +27,25 @@ export const IndustrySliderCard = ({ industry, index }: IndustryProps) => {
   const img = industriesImages[imgs.image as keyof typeof industriesImages];
   const retinaImg = industriesImages[imgs.retinaImage as keyof typeof industriesImages];
 
+  const getIndustrySliderCardBgColor = (index: number) => {
+    switch (index) {
+      case 0:
+        return "bg-formFieldBgColor";
+      case 2:
+      case 4:
+        return "bg-navMenuBgColor";
+      case 3:
+        return "bg-secondaryDarkBgColor";
+      default:
+        return "bg-letsTalkBgColor";
+    }
+  };
+  const slideCardBackgroundColor = getIndustrySliderCardBgColor(index);
+
   return (
     <>
       <div
-        className={`h-sm:gap-[20px] flex h-full flex-col justify-between gap-[30px] ${index % 2 === 0 ? "bg-letsTalkBgColor" : "bg-primaryBgColor"} ${name === "E-commerce" ? "!bg-darkBgColor text-whiteTextColor" : ""}`}
+        className={`flex h-full flex-col justify-between gap-[30px] h-sm:gap-[20px] ${name === "E-commerce" ? "text-whiteTextColor" : ""}`}
       >
         <div className="flex justify-between">
           <div className="w-[590px]">
@@ -38,14 +53,14 @@ export const IndustrySliderCard = ({ industry, index }: IndustryProps) => {
             {description.map((item, index) => (
               <h6
                 key={index}
-                className="h-sm:text-[18px] h-md:mb-[36px] h-lg:mb-[54px] mb-[24px] last:m-0"
+                className="mb-[24px] last:m-0 h-sm:text-[18px] h-md:mb-[36px] h-lg:mb-[54px]"
               >
                 {item}
               </h6>
             ))}
           </div>
           <div
-            className={`h-md:p-[40px] w-[590px] rounded-b-[20px] border-t-[4px] border-t-accentOrangeColor p-[30px] ${index % 2 === 0 ? "bg-formFieldBgColor" : "bg-letsTalkBgColor"} ${name === "E-commerce" && "!bg-secondaryDarkBgColor"}`}
+            className={`w-[590px] rounded-b-[20px] border-t-[4px] border-t-accentOrangeColor p-[30px] h-md:p-[40px] ${slideCardBackgroundColor}`}
           >
             <h5 className="mb-[10px]">{technologies.title}</h5>
             <p className="small-text mb-[30px]">{technologies.description}</p>
@@ -53,8 +68,7 @@ export const IndustrySliderCard = ({ industry, index }: IndustryProps) => {
             <p className="small-text">{services.description}</p>
           </div>
         </div>
-        <div className="h-sm:gap-y-[20px] h-md:gap-y-[65px] flex flex-wrap justify-between gap-y-[25px]">
-          {" "}
+        <div className="flex flex-wrap justify-between gap-y-[25px] h-sm:gap-y-[20px] h-md:gap-y-[65px]">
           <img
             srcSet={`${img} 1x, ${retinaImg} 2x`}
             src={img}
@@ -62,11 +76,11 @@ export const IndustrySliderCard = ({ industry, index }: IndustryProps) => {
             height={319}
             width={625}
             loading="lazy"
-            className="h-lg:max-h-[350px] h-lg:h-[33dvh] h-lg:max-w-[660px] h-lg:w-[62dvh] h-md:max-h-[319px] h-sm:h-[225px] h-[30dvh] rounded-[20px] object-cover"
+            className="h-[30dvh] rounded-[20px] object-cover h-sm:h-[225px] h-md:max-h-[319px] h-lg:h-[33dvh] h-lg:max-h-[350px] h-lg:w-[62dvh] h-lg:max-w-[660px]"
           />
           <div className="flex w-[590px] flex-col items-start justify-center gap-[15px]">
             <h5>{caseStudy.title}</h5>
-            <h2 className="h-sm:font-semibold h-sm:text-[24px] text-[30px] leading-[36px]">
+            <h2 className="text-[30px] leading-[36px] h-sm:text-[24px] h-sm:font-semibold">
               {caseStudy.description}
             </h2>
             <Link to={caseStudy.link} className="view-link before:bg-accentRedColor">
