@@ -73,7 +73,7 @@ export const CaseStudyServices = () => {
                 <li
                   key={index}
                   className={`sticky rounded-[20px] text-whiteTextColor ${itemBgColor}`}
-                  style={{ top: `${105 + index * 15}px` }}
+                  style={{ top: ` ${index === 0 ? 290 : 290 + index * 10}px` }}
                 >
                   <motion.div
                     className="flex justify-between p-[40px] pr-[50px]"
