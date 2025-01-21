@@ -68,8 +68,8 @@ export const IndustrySlider = () => {
 
       setTimeout(() => {
         setIsScrolling(false);
-      }, 500);
-    }, 500);
+      }, 1500);
+    }, 1500);
 
     const handleWheel = (e: WheelEvent) => {
       if (
@@ -132,7 +132,7 @@ export const IndustrySlider = () => {
               key={currentIndex}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 1.5, ease: "easeOut", delay: 0.25 }}
+              transition={{ duration: 2, ease: "easeOut", delay: 0.5 }}
               style={{ height: `${slideHeight}px` }}
               className="h-lg:max-h-[1000px]"
             >
