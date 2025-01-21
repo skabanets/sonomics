@@ -60,7 +60,7 @@ export const IndustrySliderCard = ({ industry, index }: IndustryProps) => {
             ))}
           </div>
           <div
-            className={`w-[590px] rounded-b-[20px] border-t-[4px] border-t-accentOrangeColor p-[30px] h-sm:p-[25px] h-md:p-[40px] ${slideCardBackgroundColor}`}
+            className={`w-[590px] rounded-b-[20px] border-t-[4px] border-t-accentOrangeColor p-[40px] h-sm:py-[25px] ${slideCardBackgroundColor}`}
           >
             <h5 className="mb-[10px]">{technologies.title}</h5>
             <p className="small-text mb-[30px] h-sm:mb-[24px]">{technologies.description}</p>
