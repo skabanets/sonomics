@@ -108,13 +108,13 @@ export const NavMenu = ({ headerRef, listClass, linkClass }: NavMenuProps) => {
             <div
               className={`submenu ${openSubMenuIndex === index ? "visible" : ""} fixed left-0 right-0 bg-navMenuBgColor`}
               style={{
-                top: 120 - scrollPosition + "px",
+                top: 90 - scrollPosition + "px",
               }}
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={handleMouseLeave}
             >
               <div
-                className={`absolute left-0 top-[-42px] h-[42px] w-full bg-navMenuBgColor`}
+                className={`absolute left-0 top-[-30px] h-[30px] w-full bg-navMenuBgColor`}
               ></div>
               <div
                 className="relative mx-auto flex w-[calc(100vw-160px)] max-w-[1760px] items-center justify-between border-t-[1px] border-t-mainTextColor py-[30px]"
