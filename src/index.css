@@ -149,9 +149,21 @@ main {
 }
 
 .full-hd-container {
-  padding-inline: 80px;
-  max-width: 1920px;
+  min-width: 320px;
+  max-width: 390px;
   margin: 0 auto;
+  padding-inline: 15px;
+}
+@media only screen and (min-width: 768px) {
+  .full-hd-container {
+    max-width: 768px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .full-hd-container {
+    padding-inline: 80px;
+    max-width: 1920px;
+  }
 }
 
 h1 {
@@ -159,7 +171,7 @@ h1 {
 }
 
 h2 {
-  @apply text-[40px] font-extrabold leading-[54px] transition;
+  @apply font-extrabold transition md:text-[40px] md:leading-[54px];
 }
 
 h3 {

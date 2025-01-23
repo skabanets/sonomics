@@ -73,19 +73,15 @@ export default {
       addComponents({
         ".container": {
           minWidth: "320px",
-          maxWidth: "375px",
-          marginLeft: "auto",
-          marginRight: "auto",
-          paddingLeft: "20px",
-          paddingRight: "20px",
+          maxWidth: "390px",
+          marginInline: "auto",
+          paddingInline: "15px",
           "@screen md": {
-            paddingLeft: "32px",
-            paddingRight: "32px",
+            paddingInline: "32px",
             maxWidth: "768px",
           },
           "@screen lg": {
-            paddingLeft: "80px",
-            paddingRight: "80px",
+            paddingInline: "80px",
             maxWidth: "1440px",
           },
         },
