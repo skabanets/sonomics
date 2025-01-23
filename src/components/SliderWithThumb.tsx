@@ -27,12 +27,11 @@ export const SliderWithThumb = ({
 
   const handleSliderChange = (value: number) => {
     const newTranslateValue = (maxTranslateValue * value) / 100;
-
-    if (onChange) {
-      onChange({ translateValue: newTranslateValue, totalWidth });
-    }
+    onChange({ translateValue: newTranslateValue, totalWidth });
   };
+
   const value = (sliderValues.translateValue / maxTranslateValue) * 100;
+
   return (
     <div className="group" tabIndex={0}>
       <ReactSlider
