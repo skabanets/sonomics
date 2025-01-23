@@ -139,12 +139,20 @@ export const IndustrySlider = () => {
               <IndustrySliderCard industry={industries[currentIndex]} index={currentIndex} />
             </motion.div>
 
-            <div className="absolute right-[-38px] top-1/2 flex translate-y-[-50%] flex-col gap-[15px]">
+            <ul className="absolute right-[-38px] top-1/2 flex translate-y-[-50%] flex-col gap-[15px]">
               {industries.map((industry, index) => (
-                <div
+                <li
                   key={index}
                   className="group relative cursor-pointer transition"
                   onClick={() => handleMenuClick(index)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      handleMenuClick(index);
+                    }
+                  }}
+                  tabIndex={0}
+                  aria-label={`Menu item: ${industry.name}`}
                 >
                   <span className="absolute right-[15px] top-1/2 translate-y-[-50%] whitespace-nowrap rounded-[10px] bg-navMenuBgColor px-[7px] py-[5px] text-mainTextColor opacity-0 transition group-hover:opacity-100 group-focus-visible:opacity-100">
                     {industry.name}
@@ -156,9 +164,9 @@ export const IndustrySlider = () => {
                         : "h-[10px] w-[10px] rounded-full bg-secondaryLightTextColor group-hover:border group-hover:border-mainTextColor group-focus-visible:border group-focus-visible:border-mainTextColor"
                     }`}
                   />
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </div>
       </motion.div>
