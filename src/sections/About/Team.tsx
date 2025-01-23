@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import Draggable, { DraggableData, DraggableEvent } from "react-draggable";
 
@@ -10,7 +10,8 @@ import type { TeamMember } from "../../types";
 import { images } from "../../assets";
 
 export const Team = () => {
-  const [sliderValues, setSliderValues] = useState({ translateValue: 0, totalWidth: 0 });
+  const [translateValue, setTranslateValue] = useState(0);
+  const [totalWidth, setTotalWidth] = useState(0);
   const [isTransition, setIsTransition] = useState(true);
 
   const nodeRef = useRef(null);
@@ -22,21 +23,28 @@ export const Team = () => {
   const containerWidth = useBreakpointValue([1280, 736, 355]);
   const itemsCount = teamMembers.length;
 
-  const totalWidth = itemsCount * cardWidth + (itemsCount - 1) * gap;
+  useEffect(() => {
+    const calculatedTotalWidth = itemsCount * cardWidth + (itemsCount - 1) * gap;
+    setTotalWidth(calculatedTotalWidth);
+  }, [itemsCount, cardWidth, gap]);
   const maxTranslateValue = Math.max(totalWidth - containerWidth, 0);
 
-  const handleSliderChange = (values: { translateValue: number; totalWidth: number }) => {
-    setSliderValues(values);
+  const handleSliderChange = ({
+    translateValue,
+  }: {
+    translateValue: number;
+    totalWidth: number;
+  }) => {
+    setTranslateValue(translateValue);
   };
 
   const handleDrag = (_e: DraggableEvent, data: DraggableData) => {
     setIsTransition(false);
     const newTranslateValue = Math.min(
-      Math.max(sliderValues.translateValue - data.deltaX, 0),
+      Math.max(translateValue - data.deltaX, 0),
       maxTranslateValue
     );
-
-    setSliderValues({ ...sliderValues, translateValue: newTranslateValue });
+    setTranslateValue(newTranslateValue);
     setTimeout(() => setIsTransition(true), 100);
   };
 
@@ -82,14 +90,14 @@ export const Team = () => {
               left: -maxTranslateValue,
               right: 0,
             }}
-            position={{ x: -sliderValues.translateValue, y: 0 }}
+            position={{ x: -translateValue, y: 0 }}
             onDrag={handleDrag}
           >
             <ul
               ref={nodeRef}
               className="mb-[40px] flex cursor-grab gap-[20px]"
               style={{
-                width: sliderValues.totalWidth || totalWidth,
+                width: totalWidth,
                 transition: !isTransition ? "none" : "transform 0.15s ease-in",
               }}
             >
@@ -105,7 +113,7 @@ export const Team = () => {
               containerWidth,
               cardWidth,
               gap,
-              sliderValues,
+              sliderValues: { translateValue, totalWidth },
               onChange: handleSliderChange,
             }}
           />
