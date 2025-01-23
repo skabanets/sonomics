@@ -25,7 +25,7 @@ export const TeamMemberCard = ({ item, index }: TeamMemberCardProps) => {
         width="340"
         height="340"
         loading="lazy"
-        className="h-[340px] rounded-t-[20px] object-cover"
+        className="pointer-events-none h-[340px] rounded-t-[20px] object-cover"
       />
       <div
         className={`relative rounded-b-[20px] bg-darkBgColor px-[30px] pb-[30px] pt-[50px] before:absolute before:left-[30px] before:top-[30px] before:h-[2px] before:w-[30px] before:${beforeBgColor} before:content-['''']`}

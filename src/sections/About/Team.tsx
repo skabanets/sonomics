@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
+import Draggable, { DraggableData, DraggableEvent } from "react-draggable";
 
 import { Icon, SliderWithThumb, TeamMemberCard } from "../../components";
 
@@ -10,6 +11,9 @@ import { images } from "../../assets";
 
 export const Team = () => {
   const [sliderValues, setSliderValues] = useState({ translateValue: 0, totalWidth: 0 });
+  const [isTransition, setIsTransition] = useState(true);
+
+  const nodeRef = useRef(null);
 
   const { teamImages } = images;
 
@@ -19,9 +23,21 @@ export const Team = () => {
   const itemsCount = teamMembers.length;
 
   const totalWidth = itemsCount * cardWidth + (itemsCount - 1) * gap;
+  const maxTranslateValue = Math.max(totalWidth - containerWidth, 0);
 
   const handleSliderChange = (values: { translateValue: number; totalWidth: number }) => {
     setSliderValues(values);
+  };
+
+  const handleDrag = (_e: DraggableEvent, data: DraggableData) => {
+    setIsTransition(false);
+    const newTranslateValue = Math.min(
+      Math.max(sliderValues.translateValue - data.deltaX, 0),
+      maxTranslateValue
+    );
+
+    setSliderValues({ ...sliderValues, translateValue: newTranslateValue });
+    setTimeout(() => setIsTransition(true), 100);
   };
 
   return (
@@ -59,20 +75,39 @@ export const Team = () => {
         </motion.div>
         <motion.div className="pt-[60px]" {...slideInWithFade}>
           <h2 className="mb-[40px] text-whiteTextColor">Meet the team</h2>
-          <ul
-            className="mb-[40px] flex gap-[20px] transition"
-            style={{
-              width: sliderValues.totalWidth || totalWidth,
-              transform: `translateX(-${sliderValues.translateValue}px)`,
+          <Draggable
+            nodeRef={nodeRef}
+            axis="x"
+            bounds={{
+              left: -maxTranslateValue,
+              right: 0,
             }}
+            position={{ x: -sliderValues.translateValue, y: 0 }}
+            onDrag={handleDrag}
           >
-            {teamMembers.map((member, index) => (
-              <TeamMemberCard key={index} item={member as TeamMember} index={index} />
-            ))}
-          </ul>
+            <ul
+              ref={nodeRef}
+              className="mb-[40px] flex cursor-grab gap-[20px]"
+              style={{
+                width: sliderValues.totalWidth || totalWidth,
+                transition: !isTransition ? "none" : "transform 0.15s ease-in",
+              }}
+            >
+              {teamMembers.map((member, index) => (
+                <TeamMemberCard key={index} item={member as TeamMember} index={index} />
+              ))}
+            </ul>
+          </Draggable>
 
           <SliderWithThumb
-            {...{ itemsCount, containerWidth, cardWidth, gap, onChange: handleSliderChange }}
+            {...{
+              itemsCount,
+              containerWidth,
+              cardWidth,
+              gap,
+              sliderValues,
+              onChange: handleSliderChange,
+            }}
           />
         </motion.div>
       </div>
