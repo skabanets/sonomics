@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { Button, ContactForm, CustomTitle, Modal } from "../../../components";
 
-import { caseStudyColors, routes, services, slideInWithFade } from "../../../constants";
+import { caseStudyColors, services, slideInWithFade } from "../../../constants";
 import { useModal } from "../../../hooks";
 import { images } from "../../../assets";
 
@@ -16,19 +16,13 @@ export const CaseStudyServices = () => {
     "Leveraged Scrum, Kanban, and Hybrid Approaches for iterative and flexible development.",
     "Utilized AWS for cloud deployment, ensuring security and scalability.",
   ];
-  const links = [
-    routes.EndToEndApplicationDevelopment,
-    routes.RequirementAnalysisAndDevelopmentPlanning,
-    routes.AgileMethodologies,
-    routes.CloudIntegration,
-  ];
 
   const items = [services[0], services[3], services[4], services[6]];
   const updatedItems = items.map((item, index) => {
     return {
       name: item.name,
       description: descriptions[index],
-      link: links[index],
+      link: item.link,
       image: item.hero.image,
       retinaImage: item.hero.retinaImage,
     };
@@ -73,7 +67,7 @@ export const CaseStudyServices = () => {
                 <li
                   key={index}
                   className={`sticky rounded-[20px] text-whiteTextColor ${itemBgColor}`}
-                  style={{ top: ` ${index === 0 ? 290 : 290 + index * 10}px` }}
+                  style={{ top: ` ${index === 0 ? 290 : 290 + index * 15}px` }}
                 >
                   <motion.div
                     className="flex justify-between p-[40px] pr-[50px]"
