@@ -72,7 +72,7 @@ export const ContactForm = ({ onClose }: ContactFormProps) => {
             <div className="relative flex w-1/2 flex-col gap-[10px]">
               <label
                 htmlFor={`${onClose ? "modal-first-name" : "first-name"}`}
-                className={`label ${errors.firstName ? "text-errorColor" : "text-mainTextColor"}`}
+                className={`label ${errors.firstName ? "!text-errorColor" : "text-mainTextColor"}`}
               >
                 First name
               </label>
@@ -93,7 +93,7 @@ export const ContactForm = ({ onClose }: ContactFormProps) => {
             <div className="relative flex w-1/2 flex-col gap-[10px]">
               <label
                 htmlFor={`${onClose ? "modal-last-name" : "last-name"}`}
-                className={`label ${errors.lastName ? "text-errorColor" : "text-mainTextColor"}`}
+                className={`label ${errors.lastName ? "!text-errorColor" : "text-mainTextColor"}`}
               >
                 Last name
               </label>
@@ -115,13 +115,13 @@ export const ContactForm = ({ onClose }: ContactFormProps) => {
           <div className="relative flex flex-col gap-[10px]">
             <label
               htmlFor={`${onClose ? "modal-email" : "email"}`}
-              className={`label ${errors.email ? "text-errorColor" : "text-mainTextColor"}`}
+              className={`label ${errors.email ? "!text-errorColor" : "text-mainTextColor"}`}
             >
               Email
             </label>
             <input
               id={`${onClose ? "modal-email" : "email"}`}
-              type="email"
+              type="text"
               {...register("email", {
                 required: "Email is required",
                 pattern: {
@@ -137,7 +137,7 @@ export const ContactForm = ({ onClose }: ContactFormProps) => {
           <div className="relative mb-[10px] flex flex-col gap-[10px]">
             <label
               htmlFor={`${onClose ? "modal-message" : "message"}`}
-              className={`label ${errors.message ? "text-errorColor" : "text-mainTextColor"}`}
+              className={`label ${errors.message ? "!text-errorColor" : "text-mainTextColor"}`}
             >
               Message
             </label>
