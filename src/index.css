@@ -339,8 +339,14 @@ textarea:-webkit-autofill:focus {
 /* Chrome, Safari, Edge */
 @supports selector(::-webkit-scrollbar) {
   .scrollbar::-webkit-scrollbar {
-    width: 7px;
+    width: 5px;
     height: 6px;
+  }
+
+  @media (min-width: 1440px) {
+    .scrollbar::-webkit-scrollbar {
+      width: 7px;
+    }
   }
 
   .scrollbar::-webkit-scrollbar-track {

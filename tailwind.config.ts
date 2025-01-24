@@ -17,7 +17,7 @@ export default {
       montserrat: ["Montserrat", "sans-serif"],
     },
     screens: {
-      "sm-max": { max: "374.98px" },
+      "sm-max": { max: "389.98px" },
       md: "768px",
       lg: "1440px",
       "h-sm": { raw: "(max-height: 800px)" },
