@@ -1,6 +1,6 @@
 import { useMediaQuery } from "react-responsive";
 
-type BreakpointValue<T> = [T, T, T]; // Значения для [desktop, tablet, mobile]
+type BreakpointValue<T> = [T, T, T];
 
 export const useBreakpointValue = <T>(values: BreakpointValue<T>): T => {
   const isDesktop = useMediaQuery({ minWidth: 1440 });

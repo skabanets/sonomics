@@ -6,18 +6,24 @@ import { Icon } from "../components";
 import { useTheme } from "../hooks";
 import { ThemeMode } from "../constants";
 
-export const ThemeToggle = () => {
+interface ThemeToggleProps {
+  isMobileMenu?: boolean;
+}
+
+export const ThemeToggle = ({ isMobileMenu }: ThemeToggleProps) => {
   const { theme, toggleTheme } = useTheme();
 
   const [bgColor, setBgColor] = useState(theme === ThemeMode.LIGHT ? "#f3f2f2" : "#323031");
 
   useEffect(() => {
     const root = document.documentElement;
-    const computedColor = getComputedStyle(root).getPropertyValue("--theme-toggle-bg").trim();
+    const computedColor = getComputedStyle(root)
+      .getPropertyValue(`${isMobileMenu ? "--secondary-dark-bg" : "--theme-toggle-bg"}`)
+      .trim();
     if (computedColor) {
       setBgColor(computedColor);
     }
-  }, [theme]);
+  }, [isMobileMenu, theme]);
 
   const ToggleIndicator = () => (
     <div className="size-[16px] rounded-full bg-accentYellowColor"></div>
@@ -43,7 +49,10 @@ export const ThemeToggle = () => {
       }
       uncheckedIcon={
         <div className="flex h-full w-full items-center justify-end py-[4px] pr-[5px]">
-          <Icon id="moon" className="size-[16px] fill-secondaryTextColor" />
+          <Icon
+            id="moon"
+            className={`size-[16px] ${isMobileMenu ? "fill-[#f3f2f2]" : "fill-secondaryTextColor"}`}
+          />
         </div>
       }
       activeBoxShadow="none"

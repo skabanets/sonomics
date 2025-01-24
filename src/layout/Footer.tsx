@@ -17,7 +17,7 @@ export const Footer = () => {
         </div>
         <nav className="mr-[120px] md:mr-[130px]">
           <NavMenu
-            listClass="flex w-full flex-wrap h-[106px] gap-x-[70px] gap-y-[42px] mb-[30px] md:mb-0 md:h-auto flex-col md:gap-[30px] text-whiteTextColor"
+            listClass="flex w-full flex-wrap h-[106px] gap-x-[70px] gap-y-[40px] mb-[30px] md:mb-0 md:h-auto flex-col md:gap-[30px] text-whiteTextColor"
             linkClass="md:w-auto hover:text-accentYellowColor focus-visible:text-accentYellowColor"
           />
         </nav>
@@ -43,7 +43,7 @@ export const Footer = () => {
               </li>
             </ul>
           </address>
-          <ul className="flex gap-[15px]">
+          <ul className="flex gap-[12px] md:gap-[15px]">
             {socialLinks.map(({ link, text }, index) => (
               <li key={index}>
                 <Link
