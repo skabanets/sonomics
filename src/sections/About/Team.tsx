@@ -45,7 +45,6 @@ export const Team = () => {
       maxTranslateValue
     );
     setTranslateValue(newTranslateValue);
-    setTimeout(() => setIsTransition(true), 100);
   };
 
   return (
@@ -92,6 +91,7 @@ export const Team = () => {
             }}
             position={{ x: -translateValue, y: 0 }}
             onDrag={handleDrag}
+            onStop={() => setIsTransition(true)}
           >
             <ul
               ref={nodeRef}

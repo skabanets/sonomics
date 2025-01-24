@@ -46,7 +46,6 @@ export const CaseStudyTechnologies = ({ technologies }: CaseStudyTechnologiesPro
       maxTranslateValue
     );
     setTranslateValue(newTranslateValue);
-    setTimeout(() => setIsTransition(true), 100);
   };
 
   return (
@@ -62,6 +61,7 @@ export const CaseStudyTechnologies = ({ technologies }: CaseStudyTechnologiesPro
           }}
           position={{ x: -translateValue, y: 0 }}
           onDrag={handleDrag}
+          onStop={() => setIsTransition(true)}
         >
           <ul
             ref={nodeRef}
