@@ -85,7 +85,7 @@ export const services: Service[] = [
         },
       ],
     },
-    caseStudyId: 1,
+    caseStudyId: "fintech-combination",
     expertise: {
       text: "With our end-to-end development approach, you gain a trusted partner who ensures every stage of the development process is executed with precision, efficiency, and reliability",
       accentWords: ["gain a trusted partner"],
@@ -224,7 +224,7 @@ export const services: Service[] = [
         },
       ],
     },
-    caseStudyId: 2,
+    caseStudyId: "fintech-combination",
     expertise: {
       text: "By integrating AI into your operations, we help you scale faster, improve accuracy, and create sustainable competitive advantages, all while reducing operational overhead",
       accentWords: ["we help", "create sustainable competitive advantages"],
@@ -378,7 +378,7 @@ export const services: Service[] = [
         },
       ],
     },
-    caseStudyId: 1,
+    caseStudyId: "fintech-combination",
     expertise: {
       text: "By delivering a working demo early in the process, we minimize uncertainty and set the stage for seamless development, ensuring you feel confident in your investment and our approach",
       accentWords: ["delivering a working demo", "ensuring you feel confident"],
@@ -537,7 +537,7 @@ export const services: Service[] = [
         },
       ],
     },
-    caseStudyId: 2,
+    caseStudyId: "fintech-combination",
     approachAndAdvantages: {
       sectionTitle: "Our approach to requirement analysis & planning",
       items: [
@@ -683,7 +683,7 @@ export const services: Service[] = [
         },
       ],
     },
-    caseStudyId: 1,
+    caseStudyId: "fintech-combination",
     expertise: {
       text: "Whether you need a highly-structured iterative approach, a flexible task-driven workflow, or a customized blend of both, Sonomics has the expertise to align agile methodologies with your goals",
       accentWords: ["highly-structured iterative", "flexible", "has the expertise"],
@@ -864,7 +864,7 @@ export const services: Service[] = [
         },
       ],
     },
-    caseStudyId: 2,
+    caseStudyId: "fintech-combination",
     technologies: {
       sectionTitle: "Technologies that power our tailored systems",
       description:
@@ -1075,7 +1075,7 @@ export const services: Service[] = [
         },
       ],
     },
-    caseStudyId: 1,
+    caseStudyId: "fintech-combination",
     expertise: {
       text: "From migration and infrastructure setup to ongoing monitoring and cost optimization, we deliver cloud solutions that empower your business with a significant reduction in IT overhead",
       accentWords: ["From migration", "deliver cloud solutions"],
