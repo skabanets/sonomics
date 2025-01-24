@@ -5,17 +5,12 @@ import { Button, ContactForm, Modal } from "../../../components";
 import { useModal } from "../../../hooks";
 import { caseStudyColors, slideInWithFade } from "../../../constants";
 
-export const CaseStudyChallenges = () => {
-  const [isOpen, toggleModal, handleClickOnBackdrop] = useModal();
+interface CaseStudyChallengesProps {
+  challenges: string[];
+}
 
-  const challenges = [
-    "Developing a flexible loan management system.",
-    "Implementing a robust system for multi-provider IBAN account creation.",
-    "Supporting currency exchange on user wallets with real-time processing.",
-    "Enhancing card management features to ensure seamless functionality.",
-    "Integrating these services with external providers while maintaining a high standard of security and user experience.",
-    "Enabling fast, secure, and reliable money transfers, including wire transactions, SEPA, and Send Faster Payment.",
-  ];
+export const CaseStudyChallenges = ({ challenges }: CaseStudyChallengesProps) => {
+  const [isOpen, toggleModal, handleClickOnBackdrop] = useModal();
 
   return (
     <>
