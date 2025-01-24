@@ -71,7 +71,7 @@ export interface Service {
   hero: Hero;
   offers: Offers;
   whyChooseSonomics: WhyChooseSonomics;
-  caseStudyId: number;
+  caseStudyId: string;
   expertise?: Expertise;
   technologies?: Technologies;
   approachAndAdvantages?: ApproachAndAdvantages;
