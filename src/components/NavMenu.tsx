@@ -78,7 +78,7 @@ export const NavMenu = ({ isHeader, listClass, linkClass }: NavMenuProps) => {
   return (
     <>
       <ul className={listClass} ref={navMenuRef} onMouseLeave={handleMouseLeave}>
-        {navLinks.map(({ text, link, subLinks }, index) => (
+        {navLinks.map(({ title, link, subLinks }, index) => (
           <li
             key={index}
             onMouseEnter={() => handleMouseEnter(index)}
@@ -90,7 +90,7 @@ export const NavMenu = ({ isHeader, listClass, linkClass }: NavMenuProps) => {
               className={`inline-block py-[2px] transition ${linkClass}`}
               onClick={handleNavLinkClick}
             >
-              {text}
+              {title}
             </NavLink>{" "}
             {subLinks && isHeader && (
               <div
@@ -114,7 +114,7 @@ export const NavMenu = ({ isHeader, listClass, linkClass }: NavMenuProps) => {
                     className="view-link text-themeAccentColor before:h-[2px] before:bg-themeAccentColor"
                     reloadDocument
                   >
-                    <h2>{text}</h2>
+                    <h2>{title}</h2>
                   </Link>
                   <hr className="h-[100px] w-[1px] border-none bg-mainTextColor" />
                   <ul className="flex h-[102px] w-[970px] flex-col flex-wrap gap-x-[30px] gap-y-[20px]">
