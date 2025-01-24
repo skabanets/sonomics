@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import { Button, ContactForm, Icon, Logo, Modal, ThemeToggle } from "../components";
@@ -12,8 +12,6 @@ interface MobileMenuProps {
 }
 
 export const MobileMenu = ({ isOpen, toggleMenu }: MobileMenuProps) => {
-  const [openDetails, setOpenDetails] = useState(false);
-
   const [isOpenModal, toggleModal, handleClickOnBackdrop] = useModal();
 
   const { theme } = useTheme();
@@ -22,7 +20,6 @@ export const MobileMenu = ({ isOpen, toggleMenu }: MobileMenuProps) => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
     } else {
-      setOpenDetails(false);
       document.body.style.overflow = "auto";
     }
   }, [isOpen]);
@@ -75,7 +72,7 @@ export const MobileMenu = ({ isOpen, toggleMenu }: MobileMenuProps) => {
                       </Link>
                       {(subLinks || anchors) && (
                         <>
-                          <details name="sublinks" className="group peer" open={openDetails}>
+                          <details name="sublinks" className="group peer">
                             <summary className="flex h-full w-full cursor-pointer items-center justify-between">
                               <Icon
                                 id="arrow-left"
