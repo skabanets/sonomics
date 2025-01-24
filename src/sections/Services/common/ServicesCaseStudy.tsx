@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { CustomTitle } from "../../../components";
 
 import { slideInWithFade } from "../../../constants";
+import { images } from "../../../assets";
 import type { CaseStudy } from "../../../types";
 
 interface ServicesCaseStudyProps {
@@ -12,14 +13,18 @@ interface ServicesCaseStudyProps {
 
 export const ServicesCaseStudy = ({ caseStudy }: ServicesCaseStudyProps) => {
   const { name, description, link, bgImage1x, bgImage2x } = caseStudy;
+  const { casesImages } = images;
+
+  const img = casesImages[bgImage1x as keyof typeof casesImages];
+  const retinaImg = casesImages[bgImage2x as keyof typeof casesImages];
 
   return (
     <section
       className="bg-blackBgColor py-[80px]"
       style={
         {
-          "--services-case-study-bg-image1x": `url(${bgImage1x})`,
-          "--services-case-study-bg-image2x": `url(${bgImage2x})`,
+          "--services-case-study-bg-image1x": `url(${img})`,
+          "--services-case-study-bg-image2x": `url(${retinaImg})`,
         } as React.CSSProperties
       }
     >
