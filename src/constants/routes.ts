@@ -11,5 +11,10 @@ export enum routes {
   AgileMethodologies = `${Services}/agile-methodologies`,
   OptimizeBusinessProcessesWithCRM = `${Services}/optimize-business-processes-with-crm`,
   CloudIntegration = `${Services}/cloud-integration`,
-  FintechСaseStudy = `${CaseStudy}/fintech`,
+  FintechСaseStudy = `${CaseStudy}/fintech-combination`,
+  CryptoCaseStudy = `${CaseStudy}/advancing-crypto-innovation`,
+  MediaResearchCaseStudy = `${CaseStudy}/optimizing-media-research`,
+  PharmaceuticalDistributionCaseStudy = `${CaseStudy}/pharmaceutical-distribution`,
+  TransformingECommerceCaseStudy = `${CaseStudy}/transforming-e-commerce`,
+  RevolutionInTelecommunicationsCaseStudy = `${CaseStudy}/revolution-in-telecommunications`,
 }
