@@ -24,3 +24,4 @@ export * from "./TechnologyCardItem";
 export * from "./FunctionalModuleCard";
 export * from "./SliderWithThumb";
 export * from "./IndustrySliderCard";
+export * from "./MobileMenu";
