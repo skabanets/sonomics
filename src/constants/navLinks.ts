@@ -1,9 +1,18 @@
 import { routes } from "./routes";
 import { services } from "./services";
 
+const industries = [
+  { title: "Telecommunications", link: "/industries/#telecommunications" },
+  { title: "Media research", link: "/industries/#media-research" },
+  { title: "Fintech", link: "/industries/#fintech" },
+  { title: "E-commerce", link: "/industries/#e-commerce" },
+  { title: "Cryptocurrency", link: "/industries/#cryptocurrency" },
+  { title: "Healthcare", link: "/industries/#healthcare" },
+];
+
 export const navLinks = [
-  { text: "Services", link: routes.Services, subLinks: services },
-  { text: "Industries", link: routes.Industries },
-  { text: "Case study", link: routes.CaseStudy },
-  { text: "About", link: routes.About },
+  { title: "Services", link: routes.Services, subLinks: services },
+  { title: "Industries", link: routes.Industries, anchors: industries },
+  { title: "Case study", link: routes.CaseStudy },
+  { title: "About", link: routes.About },
 ];
