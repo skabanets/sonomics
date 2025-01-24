@@ -1,12 +1,7 @@
-//TODO: Extract ModuleItem type into a separate file
-
-interface ModuleItem {
-  moduleName: string;
-  details: string[];
-}
+import type { FunctionalModule } from "../types";
 
 interface FunctionalModuleCardProps {
-  module: ModuleItem;
+  module: FunctionalModule;
 }
 
 export const FunctionalModuleCard = ({ module }: FunctionalModuleCardProps) => {

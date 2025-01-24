@@ -1,58 +1,18 @@
 import { useEffect, useRef, useState } from "react";
+import Draggable, { DraggableData, DraggableEvent } from "react-draggable";
 import { motion } from "framer-motion";
 
 import { SliderWithThumb } from "../../../components";
 
 import { useBreakpointValue } from "../../../hooks";
 import { slideInWithFade } from "../../../constants";
-import Draggable, { DraggableData, DraggableEvent } from "react-draggable";
+import type { OrdinaryItem } from "../../../types";
 
-const items = [
-  {
-    id: 1,
-    title: "Backend:",
-    description: "Java with Spring framework for modular, scalable microservices.",
-  },
-  {
-    id: 2,
-    title: "Message Queue:",
-    description: "Kafka for reliable, asynchronous communication between services.",
-  },
-  {
-    id: 3,
-    title: "Cloud Deployment:",
-    description:
-      "AWS services, including Lambda for serverless computing and secure, scalable infrastructure.",
-  },
-  {
-    id: 4,
-    title: "Workflow Automation:",
-    description: "Jira for agile project management and GitHub Actions for CI/CD pipelines.",
-  },
-  {
-    id: 5,
-    title: "Backend:",
-    description: "Java with Spring framework for modular, scalable microservices.",
-  },
-  {
-    id: 6,
-    title: "Message Queue:",
-    description: "Kafka for reliable, asynchronous communication between services.",
-  },
-  {
-    id: 7,
-    title: "Cloud Deployment:",
-    description:
-      "AWS services, including Lambda for serverless computing and secure, scalable infrastructure.",
-  },
-  {
-    id: 8,
-    title: "Workflow Automation:",
-    description: "Jira for agile project management and GitHub Actions for CI/CD pipelines.",
-  },
-];
+interface CaseStudyTechnologiesProps {
+  technologies: OrdinaryItem[];
+}
 
-export const CaseStudyTechnologies = () => {
+export const CaseStudyTechnologies = ({ technologies }: CaseStudyTechnologiesProps) => {
   const [translateValue, setTranslateValue] = useState(0);
   const [totalWidth, setTotalWidth] = useState(0);
   const [isTransition, setIsTransition] = useState(true);
@@ -62,7 +22,7 @@ export const CaseStudyTechnologies = () => {
   const cardWidth = 320;
   const gap = 40;
   const containerWidth = useBreakpointValue([1280, 736, 355]);
-  const itemsCount = items.length;
+  const itemsCount = technologies.length;
 
   useEffect(() => {
     const calculatedTotalWidth = itemsCount * cardWidth + (itemsCount - 1) * gap;
@@ -111,9 +71,9 @@ export const CaseStudyTechnologies = () => {
               transition: !isTransition ? "none" : "transform 0.15s ease-in",
             }}
           >
-            {items.map(({ id, title, description }) => (
+            {technologies.map(({ title, description }, index) => (
               <li
-                key={id}
+                key={index}
                 className="w-[320px] rounded-b-[20px] border-t-[5px] border-t-accentYellowColor bg-darkBgColor p-[30px] transition"
               >
                 <h4 className="mb-[20px] text-whiteTextColor">{title}</h4>

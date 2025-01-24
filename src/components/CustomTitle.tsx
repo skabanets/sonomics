@@ -20,7 +20,7 @@ export const CustomTitle = ({
   return (
     <div className={wrapperStyles}>
       <Tag className={titleStyles}>{text}</Tag>
-      <Icon id="arrow" className={`size-[15px] transition ${iconColor}`} />
+      <Icon id="arrow" className={`size-[15px] flex-shrink-0 transition ${iconColor}`} />
     </div>
   );
 };

@@ -5,46 +5,23 @@ import { Button, ContactForm, Modal } from "../../../components";
 import { slideInWithFade } from "../../../constants";
 import { useModal } from "../../../hooks";
 import { images } from "../../../assets";
+import type { Achievements } from "../../../types";
 
-const items = [
-  {
-    id: 1,
-    title: "Improved productivity",
-    description: "Automated IBAN account creation reduced processing times by 60%",
-  },
-  {
-    id: 2,
-    title: "Increased revenue streams:",
-    description:
-      "The loan management system and currency exchange capabilities generated new revenue opportunities",
-  },
-  {
-    id: 3,
-    title: "Enhanced UX:",
-    description: "Real-time money transfers and currency exchange improved customer satisfaction",
-  },
-  {
-    id: 4,
-    title: "Seamless integration",
-    description:
-      "Secure and reliable integration with external providers ensured smooth operation and scalability",
-  },
-  {
-    id: 5,
-    title: "Future-ready platform",
-    description:
-      "Scalable architecture and modular design equipped the client for future growth and feature expansion",
-  },
-];
+interface CaseStudyAchivementsProps {
+  achievements: Achievements;
+}
 
-export const CaseStudyAchivements = () => {
+export const CaseStudyAchivements = ({ achievements }: CaseStudyAchivementsProps) => {
   const [isOpen, toggleModal, handleClickOnBackdrop] = useModal();
+
+  const { items, image, retinaImage } = achievements;
 
   const {
     caseDetails: { achivementsImages },
   } = images;
-  const image = achivementsImages.case_achivements_item1_desk_1x;
-  const retinaImage = achivementsImages.case_achivements_item1_desk_2x;
+
+  const img = achivementsImages[image as keyof typeof achivementsImages];
+  const retinaImg = achivementsImages[retinaImage as keyof typeof achivementsImages];
 
   return (
     <>
@@ -56,9 +33,9 @@ export const CaseStudyAchivements = () => {
           </div>
           <div className="flex">
             <ul className="w-1/2 rounded-l-[40px] bg-accentYellowColor p-[60px] text-darkBgColor">
-              {items.map(({ id, title, description }) => (
+              {items.map(({ title, description }, index) => (
                 <li
-                  key={id}
+                  key={index}
                   className="border-t border-t-blackBgColor py-[30px] first:border-none first:pt-0 last:pb-0"
                 >
                   <h3 className="mb-[10px]">{title}</h3>
@@ -67,8 +44,8 @@ export const CaseStudyAchivements = () => {
               ))}
             </ul>
             <img
-              srcSet={`${image} 1x, ${retinaImage} 2x`}
-              src={image}
+              srcSet={`${img} 1x, ${retinaImg} 2x`}
+              src={img}
               alt="Achivement"
               width="640"
               height="890"

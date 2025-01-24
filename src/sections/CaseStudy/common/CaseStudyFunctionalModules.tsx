@@ -4,47 +4,16 @@ import { Button, ContactForm, FunctionalModuleCard, Modal } from "../../../compo
 
 import { useModal } from "../../../hooks";
 import { cardVariants, industriesContainerVariants, slideInWithFade } from "../../../constants";
+import type { FunctionalModule } from "../../../types";
 
-export const CaseStudyFunctionalModules = () => {
+interface CaseStudyFunctionalModulesProps {
+  functionalModules: FunctionalModule[];
+}
+
+export const CaseStudyFunctionalModules = ({
+  functionalModules,
+}: CaseStudyFunctionalModulesProps) => {
   const [isOpen, toggleModal, handleClickOnBackdrop] = useModal();
-
-  const modulesList = [
-    {
-      moduleName: "IBAN account creation",
-      details: [
-        "Automated multi-provider account creation tailored to client requirements.",
-        "Streamlined onboarding process to improve efficiency.",
-      ],
-    },
-    {
-      moduleName: "Card Management",
-      details: [
-        "Delivered end-to-end card management functionalities, including activation, deactivation, and transaction tracking.",
-        "Enhanced security with multi-factor authentication and fraud detection mechanisms.",
-      ],
-    },
-    {
-      moduleName: "Loan Management System",
-      details: [
-        "Designed a flexible loan system enabling users to apply for and manage loans directly through the platform.",
-        "Implemented automated loan approval workflows and repayment tracking.",
-      ],
-    },
-    {
-      moduleName: "Money transfer (wire, SEPA, faster payments)",
-      details: [
-        "Developed a secure, high-performing system to process various types of money transfers.",
-        "Integrated APIs for real-time transaction monitoring and reconciliation.",
-      ],
-    },
-    {
-      moduleName: "Currency exchange on user wallets",
-      details: [
-        "Built an intuitive currency exchange module allowing users to perform real-time transactions within their wallets.",
-        "Ensured precise exchange rate calculations using external provider integrations and robust backend systems.",
-      ],
-    },
-  ];
 
   return (
     <>
@@ -61,9 +30,9 @@ export const CaseStudyFunctionalModules = () => {
             whileInView="show"
             viewport={{ once: true, amount: 0.3 }}
           >
-            {modulesList.map((module, index) => (
+            {functionalModules.map((module, index) => (
               <motion.li key={index} variants={cardVariants}>
-                <FunctionalModuleCard module={module} />
+                <FunctionalModuleCard module={module as FunctionalModule} />
               </motion.li>
             ))}
           </motion.ul>

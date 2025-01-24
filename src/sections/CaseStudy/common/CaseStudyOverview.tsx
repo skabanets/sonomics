@@ -6,10 +6,14 @@ import { Button, ContactForm, Modal } from "../../../components";
 import { images } from "../../../assets";
 import { useModal } from "../../../hooks";
 import { slideInWithFade } from "../../../constants";
+import type { Overview } from "../../../types";
 
-export const CaseStudyOverview = () => {
+interface CaseStudyOverviewProps {
+  overview: Overview;
+}
+
+export const CaseStudyOverview = ({ overview }: CaseStudyOverviewProps) => {
   const [isOpen, toggleModal, handleClickOnBackdrop] = useModal();
-
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -18,12 +22,13 @@ export const CaseStudyOverview = () => {
 
   const y = useTransform(scrollYProgress, [0, 1], [-125, 125]);
 
+  const { client, technologies, description, image, retinaImage } = overview;
   const {
     caseDetails: { overviewImages },
   } = images;
 
-  const image = overviewImages.fintech_overview_parallax_1x;
-  const retinaImage = overviewImages.fintech_overview_parallax_1x;
+  const img = overviewImages[image as keyof typeof overviewImages];
+  const retinaImg = overviewImages[retinaImage as keyof typeof overviewImages];
 
   const overviewAnimationProps = {
     ...slideInWithFade,
@@ -41,24 +46,15 @@ export const CaseStudyOverview = () => {
             <div className="flex w-[407px] flex-col gap-[36px]">
               <div>
                 <h3>Client</h3>
-                <p className="small-text mt-[15px] text-secondaryTextColor">
-                  A leading financial services company wanted to upgrade its platform to stay
-                  competitive.
-                </p>
+                <p className="small-text mt-[15px] text-secondaryTextColor">{client}</p>
               </div>
               <div>
                 <h3>Technologies</h3>
-                <p className="small-text mt-[15px] text-secondaryTextColor">
-                  Java with Spring framework / Kafka / AWS services / Jira / GitHub / REST APIs{" "}
-                </p>
+                <p className="small-text mt-[15px] text-secondaryTextColor">{technologies}</p>
               </div>
             </div>
             <div className="flex w-[675px] flex-col gap-[40px]">
-              <h3>
-                The business included online money transfers, digital payments, and offering working
-                capital. They aimed to add advanced features, connect with external providers, and
-                improve the user experience.
-              </h3>
+              <h3>{description}</h3>
               <Button label="Let&#8217;s talk" width="w-[152px]" onClick={toggleModal} />
             </div>
           </motion.div>
@@ -69,9 +65,9 @@ export const CaseStudyOverview = () => {
           >
             <motion.img
               style={{ y }}
-              srcSet={`${image} 1x, ${retinaImage} 2x`}
+              srcSet={`${img} 1x, ${retinaImg} 2x`}
               src={image}
-              alt="Parallax Effect"
+              alt="Parallax effect image showing a scenic background"
               width={1280}
               height={750}
               loading="lazy"
