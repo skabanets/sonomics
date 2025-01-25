@@ -171,11 +171,11 @@ main {
 }
 
 h1 {
-  @apply text-[70px] font-extrabold leading-[92px] transition;
+  @apply text-[45px] font-extrabold leading-[64px] transition sm-max:text-[35px] md:text-[70px] md:leading-[92px];
 }
 
 h2 {
-  @apply font-extrabold transition md:text-[40px] md:leading-[54px];
+  @apply text-[34px] font-extrabold leading-[48px] transition md:text-[40px] md:leading-[54px];
 }
 
 h3 {
@@ -191,7 +191,7 @@ h5 {
 }
 
 h6 {
-  @apply text-[20px] font-normal leading-[36px] transition;
+  @apply text-[16px] font-normal leading-[30px] transition md:text-[20px] md:leading-[36px];
 }
 
 input:-webkit-autofill,
