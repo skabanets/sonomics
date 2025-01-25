@@ -21,7 +21,7 @@ export const Header = () => {
 
   return (
     <>
-      <header className="header pt-[22px]">
+      <header className="header pt-[15px] md:pt-[22px]">
         <div className="full-hd-container flex items-center">
           <nav className="relative z-10 flex w-full justify-between">
             <Logo applyThemeColor />

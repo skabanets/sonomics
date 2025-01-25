@@ -28,7 +28,7 @@ export const TeamMemberCard = ({ item, index }: TeamMemberCardProps) => {
         className="pointer-events-none h-[340px] rounded-t-[20px] object-cover"
       />
       <div
-        className={`relative rounded-b-[20px] bg-darkBgColor px-[30px] pb-[30px] pt-[50px] before:absolute before:left-[30px] before:top-[30px] before:h-[2px] before:w-[30px] before:${beforeBgColor} before:content-['''']`}
+        className={`relative rounded-b-[20px] bg-darkBgColor px-[30px] pb-[30px] pt-[50px] before:absolute before:left-[30px] before:top-[30px] before:h-[2px] before:w-[30px] before:${beforeBgColor} `}
       >
         <h5 className="mb-[8px] text-whiteTextColor">{name}</h5>
         <p className="small-text text-secondaryLightTextColor">{role}</p>

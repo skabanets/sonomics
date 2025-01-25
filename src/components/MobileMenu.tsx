@@ -31,7 +31,7 @@ export const MobileMenu = ({ isOpen, toggleMenu }: MobileMenuProps) => {
       >
         {isOpen && (
           <>
-            <div className="sticky top-0 z-[5] mb-[35px] flex justify-between bg-blackBgColor before:absolute before:left-0 before:top-[-15px] before:h-[15px] before:w-full before:bg-blackBgColor before:content-['']">
+            <div className="sticky top-0 z-[5] mb-[35px] flex justify-between bg-blackBgColor before:absolute before:left-0 before:top-[-15px] before:h-[15px] before:w-full before:bg-blackBgColor">
               <Logo className="fill-whiteTextColor" />
               <div className="small-text flex items-center gap-[10px] text-whiteTextColor">
                 Close

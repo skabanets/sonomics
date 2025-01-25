@@ -6,14 +6,12 @@ import { socialLinks } from "../constants";
 
 export const Footer = () => {
   return (
-    <footer className="footer bg-blackBgColor pb-[40px] pt-[80px]">
+    <footer className="footer bg-blackBgColor pb-[40px] pt-[50px] md:pt-[80px]">
       <div className="full-hd-container pb-[30px] md:flex md:pb-[40px]">
         <div className="mb-[30px] flex flex-wrap space-y-[20px] md:mb-0 md:mr-auto md:w-[281px] md:space-y-[22px]">
           {" "}
           <Logo className="fill-whiteTextColor" />
-          <h2 className="text-[34px] leading-[48px] text-whiteTextColor">
-            Let&#8217;s work together
-          </h2>
+          <h2 className="text-whiteTextColor">Let&#8217;s work together</h2>
         </div>
         <nav className="mr-[120px] sm-max:mr-0 md:mr-[130px]">
           <NavMenu
