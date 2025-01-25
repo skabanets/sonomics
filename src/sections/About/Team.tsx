@@ -48,10 +48,10 @@ export const Team = () => {
   };
 
   return (
-    <section className="relative overflow-hidden bg-blackBgColor pb-[60px] pt-[80px] before:absolute before:left-0 before:top-[624px] before:h-[1px] before:w-full before:bg-whiteTextColor before:content-['''']">
+    <section className="relative overflow-hidden bg-blackBgColor pb-[60px] pt-[50px] before:absolute before:bottom-[776px] before:left-0 before:h-[1px] before:w-full before:bg-whiteTextColor md:pb-[60px] md:pt-[80px] md:before:top-[624px]">
       <div className="container">
         <motion.div
-          className="relative mb-[80px] flex items-center gap-[230px]"
+          className="relative mb-[50px] flex flex-col items-center gap-[157px] md:mb-[80px] md:flex-row md:gap-[230px]"
           {...slideInWithFade}
         >
           <img
@@ -61,10 +61,10 @@ export const Team = () => {
             width="555"
             height="464"
             loading="lazy"
-            className="rounded-[20px]"
+            className="h-[300px] w-[360px] rounded-[20px] object-cover md:h-auto md:w-auto"
           />
-          <div className="w-[456px]">
-            <h2 className="mb-[14px] text-whiteTextColor">Alexey Chuhaiov</h2>
+          <div className="md:w-[456px]">
+            <h2 className="mb-[14px] text-[40px] text-whiteTextColor">Alexey Chuhaiov</h2>
             <h5 className="mb-[20px] text-whiteTextColor">CEO at Sonomics</h5>
             <p className="big-text mb-[20px] text-secondaryLightTextColor">
               Our team of talented professionals, with their diverse skill sets and unwavering
@@ -77,7 +77,7 @@ export const Team = () => {
           </div>
           <Icon
             id="quotes"
-            className="absolute left-[635px] top-0 h-[97px] w-[99px] fill-accentYellowColor"
+            className="absolute left-0 top-[330px] h-[97px] w-[99px] fill-accentYellowColor md:left-[635px] md:top-0"
           />
         </motion.div>
         <motion.div className="pt-[60px]" {...slideInWithFade}>
