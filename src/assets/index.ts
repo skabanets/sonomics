@@ -44,14 +44,22 @@ import case_achivements_item1_desk_1x from "./images/case-details/achivements/ac
 import case_achivements_item1_desk_2x from "./images/case-details/achivements/achivements-item1_desk@2x.webp";
 
 // Why Choose Us
-import industry_expertise_desk_1x from "./images/why-choose-us/industry-expertise_desk@1x.webp";
-import industry_expertise_desk_2x from "./images/why-choose-us/industry-expertise_desk@2x.webp";
-import client_centric_approach_desk_1x from "./images/why-choose-us/client-centric-approach_desk@1x.webp";
-import client_centric_approach_desk_2x from "./images/why-choose-us/client-centric-approach_desk@2x.webp";
-import agile_delivery_desk_1x from "./images/why-choose-us/agile-delivery_desk@1x.webp";
-import agile_delivery_desk_2x from "./images/why-choose-us/agile-delivery_desk@2x.webp";
-import innovation_desk_1x from "./images/why-choose-us/innovation_desk@1x.webp";
-import innovation_desk_2x from "./images/why-choose-us/innovation_desk@2x.webp";
+import industry_expertise_light_1x from "./images/why-choose-us/industry-expertise-light@1x.webp";
+import industry_expertise_light_2x from "./images/why-choose-us/industry-expertise-light@2x.webp";
+import industry_expertise_dark_1x from "./images/why-choose-us/industry-expertise-dark@1x.webp";
+import industry_expertise_dark_2x from "./images/why-choose-us/industry-expertise-dark@2x.webp";
+import client_centric_approach_light_1x from "./images/why-choose-us/client-centric-approach-light@1x.webp";
+import client_centric_approach_light_2x from "./images/why-choose-us/client-centric-approach-light@2x.webp";
+import client_centric_approach_dark_1x from "./images/why-choose-us/client-centric-approach-dark@1x.webp";
+import client_centric_approach_dark_2x from "./images/why-choose-us/client-centric-approach-dark@2x.webp";
+import agile_delivery_light_1x from "./images/why-choose-us/agile-delivery-light@1x.webp";
+import agile_delivery_light_2x from "./images/why-choose-us/agile-delivery-light@2x.webp";
+import agile_delivery_dark_1x from "./images/why-choose-us/agile-delivery-dark@1x.webp";
+import agile_delivery_dark_2x from "./images/why-choose-us/agile-delivery-dark@2x.webp";
+import innovation_light_1x from "./images/why-choose-us/innovation-light@1x.webp";
+import innovation_light_2x from "./images/why-choose-us/innovation-light@2x.webp";
+import innovation_dark_1x from "./images/why-choose-us/innovation-dark@1x.webp";
+import innovation_dark_2x from "./images/why-choose-us/innovation-dark@2x.webp";
 
 // Team
 import ceo_1x from "./images/team/ceo@1x.webp";
@@ -208,14 +216,22 @@ export const images = {
     case_lg_1_2x,
   },
   whyChooseUsImages: {
-    industry_expertise_desk_1x,
-    industry_expertise_desk_2x,
-    client_centric_approach_desk_1x,
-    client_centric_approach_desk_2x,
-    agile_delivery_desk_1x,
-    agile_delivery_desk_2x,
-    innovation_desk_1x,
-    innovation_desk_2x,
+    industry_expertise_light_1x,
+    industry_expertise_light_2x,
+    industry_expertise_dark_1x,
+    industry_expertise_dark_2x,
+    client_centric_approach_light_1x,
+    client_centric_approach_light_2x,
+    client_centric_approach_dark_1x,
+    client_centric_approach_dark_2x,
+    agile_delivery_light_1x,
+    agile_delivery_light_2x,
+    agile_delivery_dark_1x,
+    agile_delivery_dark_2x,
+    innovation_light_1x,
+    innovation_light_2x,
+    innovation_dark_1x,
+    innovation_dark_2x,
   },
   teamImages: {
     ceo_1x,
