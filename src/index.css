@@ -175,7 +175,7 @@ h1 {
 }
 
 h2 {
-  @apply text-[34px] font-extrabold leading-[48px] transition md:text-[40px] md:leading-[54px];
+  @apply text-[34px] font-extrabold leading-[48px] transition sm-max:text-[30px] md:text-[40px] md:leading-[54px];
 }
 
 h3 {
@@ -285,7 +285,7 @@ textarea:-webkit-autofill:focus {
 }
 
 .our-services-bg {
-  @apply bg-[length:508px_633px] bg-[position:bottom_0_right_calc(50%-345px)] bg-no-repeat;
+  @apply bg-[length:390px_486px] bg-[position:bottom_0_left_0] bg-no-repeat md:bg-[length:508px_633px] md:bg-[position:bottom_0_right_calc(50%-345px)];
   background-image: url("./assets/images/services/our-services_desk@1x.webp");
 }
 
@@ -294,7 +294,7 @@ textarea:-webkit-autofill:focus {
   background-image: url("./assets/images/services/parallax_desk@1x.webp");
 }
 .services-case-study {
-  @apply relative before:absolute before:left-1/2 before:top-[-80px] before:h-[1px] before:w-full before:max-w-[1280px] before:-translate-x-1/2 before:bg-mainTextColor before:content-[''] after:mt-[25px] after:block after:h-[486px] after:w-full after:rounded-[20px] after:bg-cover after:bg-[position:center_0] after:bg-no-repeat after:content-[''];
+  @apply relative before:absolute before:left-1/2 before:top-[-50px] before:h-[1px] before:w-full before:max-w-[1280px] before:-translate-x-1/2 before:bg-mainTextColor after:mt-[15px] after:block after:h-[300px] after:w-full after:rounded-[20px] after:bg-cover after:bg-[position:center_0] after:bg-no-repeat after:content-[''] md:before:top-[-80px] md:after:mt-[25px] md:after:h-[486px];
 }
 .services-case-study::after {
   background-image: var(--services-case-study-bg-image1x);
