@@ -33,5 +33,6 @@ export * from "./CaseStudy/common/CaseStudyAchivements";
 
 export * from "./Industries/IndustryHero";
 export * from "./Industries/IndustrySlider";
+export * from "./Industries/IndustrySlides";
 
 export * from "./Common/LetsTalk";
