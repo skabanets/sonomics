@@ -1,10 +1,10 @@
-import { IndustryHero, IndustrySlides, LetsTalk } from "../sections";
+import { IndustryHero, IndustrySlider, LetsTalk } from "../sections";
 
 const Industries = () => {
   return (
     <>
       <IndustryHero />
-      <IndustrySlides />
+      <IndustrySlider />
       <LetsTalk />
     </>
   );
