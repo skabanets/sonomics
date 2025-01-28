@@ -19,7 +19,7 @@ export const useDynamicDimensions = () => {
       const padding = getPadding(currentHeight);
 
       setSlidePadding(padding);
-      const height = currentHeight - padding * 2;
+      const height = currentHeight - padding * 2 - 56;
       setSlideHeight(height);
     };
 
