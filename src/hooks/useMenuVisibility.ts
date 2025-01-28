@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
-export const useMenuVisibility = (industriesLength: number, currentIndex: number) => {
+export const useMenuVisibility = (industriesLength: number) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
   const isUserScrolling = useRef(false);
@@ -38,6 +39,8 @@ export const useMenuVisibility = (industriesLength: number, currentIndex: number
             lastSectionVisible ||
             (maxVisibleIndex > 0 && maxVisibleIndex < sectionRefs.current.length - 1)
         );
+
+        setCurrentIndex(maxVisibleIndex);
       },
       {
         threshold: [0.1, 0.25, 0.5, 0.75, 1],
@@ -53,5 +56,5 @@ export const useMenuVisibility = (industriesLength: number, currentIndex: number
     };
   }, [currentIndex, industriesLength]);
 
-  return { isMenuVisible, sectionRefs, isUserScrolling };
+  return { isMenuVisible, sectionRefs, isUserScrolling, currentIndex, setCurrentIndex };
 };
