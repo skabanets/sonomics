@@ -20,7 +20,7 @@ export const ServicesCaseStudy = ({ caseStudy }: ServicesCaseStudyProps) => {
 
   return (
     <section
-      className="bg-blackBgColor py-[80px]"
+      className="bg-blackBgColor py-[50px] md:py-[80px]"
       style={
         {
           "--services-case-study-bg-image1x": `url(${img})`,
