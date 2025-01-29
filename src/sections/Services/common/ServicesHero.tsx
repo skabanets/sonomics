@@ -58,7 +58,7 @@ export const ServicesHero = ({ title, hero }: ServicesHeroProps) => {
               ))}
               <Button
                 label="Let&#8217;s discuss your project"
-                width="w-[300px]"
+                className="w-[300px]"
                 onClick={toggleModal}
               />
             </div>

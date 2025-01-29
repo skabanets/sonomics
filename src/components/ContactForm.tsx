@@ -150,7 +150,7 @@ export const ContactForm = ({ onClose }: ContactFormProps) => {
             />
             {errors.message && <span className="error top-[152px]">{errors.message.message}</span>}
           </div>
-          <Button label="Send request" width="w-fit" type="submit" />
+          <Button label="Send request" className="w-fit" type="submit" />
         </form>
       </div>
       {isLoading && <Loader />}
