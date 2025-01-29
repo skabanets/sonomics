@@ -11,7 +11,7 @@ interface CaseStudyAchivementsProps {
   achievements: Achievements;
 }
 
-export const CaseStudyAchivements = ({ achievements }: CaseStudyAchivementsProps) => {
+export const CaseStudyAchievements = ({ achievements }: CaseStudyAchivementsProps) => {
   const [isOpen, toggleModal, handleClickOnBackdrop] = useModal();
 
   const { items, image, retinaImage } = achievements;
@@ -25,14 +25,14 @@ export const CaseStudyAchivements = ({ achievements }: CaseStudyAchivementsProps
 
   return (
     <>
-      <section className="bg-blackBgColor py-[20px] pb-[80px]">
+      <section className="bg-blackBgColor py-[20px] pb-[50px] md:pb-[80px]">
         <motion.div className="container" {...slideInWithFade}>
-          <div className="mb-[60px] flex items-center justify-between">
+          <div className="mb-[30px] flex flex-col gap-y-[30px] md:mb-[60px] md:flex-row md:items-center md:justify-between">
             <h2 className="text-whiteTextColor">Our achievements</h2>
-            <Button label="Let&#8217;s talk" width="w-[152px]" onClick={toggleModal} />
+            <Button label="Let&#8217;s talk" className="w-[152px]" onClick={toggleModal} />
           </div>
-          <div className="flex">
-            <ul className="w-1/2 rounded-l-[40px] bg-accentYellowColor p-[60px] text-darkBgColor">
+          <div className="md:flex">
+            <ul className="rounded-t-[40px] bg-accentYellowColor p-[20px] text-darkBgColor md:w-1/2 md:rounded-l-[40px] md:rounded-tr-none md:p-[60px]">
               {items.map(({ title, description }, index) => (
                 <li
                   key={index}
@@ -49,7 +49,7 @@ export const CaseStudyAchivements = ({ achievements }: CaseStudyAchivementsProps
               alt="Achivement"
               width="640"
               height="890"
-              className="w-1/2 rounded-r-[40px] object-cover"
+              className="h-[360px] rounded-b-[40px] object-cover md:h-auto md:w-1/2 md:rounded-b-none md:rounded-r-[40px]"
               loading="lazy"
             />
           </div>
