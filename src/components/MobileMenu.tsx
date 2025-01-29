@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import { Button, ContactForm, Icon, Logo, Modal, ThemeToggle } from "../components";
 
@@ -27,7 +27,7 @@ export const MobileMenu = ({ isOpen, toggleMenu }: MobileMenuProps) => {
   return (
     <>
       <div
-        className={`scrollbar fixed right-0 top-0 z-[20] h-full w-full bg-blackBgColor p-[15px] pb-[60px] transition ${isOpen ? "translate-x-0" : "translate-x-full"}`}
+        className={`mobile-menu scrollbar fixed right-0 top-0 z-[20] h-full w-full bg-blackBgColor p-[15px] pb-[60px] transition ${isOpen ? "translate-x-0" : "translate-x-full"}`}
       >
         {isOpen && (
           <>
@@ -51,25 +51,25 @@ export const MobileMenu = ({ isOpen, toggleMenu }: MobileMenuProps) => {
             <nav className="mb-[45px] border-y border-y-secondaryLightTextColor py-[45px]">
               <ul className="mb-[40px] flex flex-col gap-[40px]">
                 <li key="home">
-                  <Link
+                  <NavLink
                     to={routes.Home}
                     className="inline-block w-fit text-whiteTextColor hover:text-accentYellowColor focus-visible:text-accentYellowColor"
                     onClick={toggleMenu}
                     reloadDocument
                   >
                     <h2 className="text-[34px] leading-[48px]">Homepage</h2>
-                  </Link>
+                  </NavLink>
                 </li>
                 {navLinks.map(({ title, link, subLinks, anchors }, index) => (
                   <li key={index}>
                     <div className="flex flex-wrap justify-between">
-                      <Link
+                      <NavLink
                         to={link}
                         className="text-whiteTextColor hover:text-accentYellowColor focus-visible:text-accentYellowColor"
                         onClick={toggleMenu}
                       >
                         <h2 className="text-[34px] leading-[48px]"> {title}</h2>
-                      </Link>
+                      </NavLink>
                       {(subLinks || anchors) && (
                         <>
                           <details name="sublinks" className="group peer">
@@ -86,13 +86,13 @@ export const MobileMenu = ({ isOpen, toggleMenu }: MobileMenuProps) => {
                                 {[...(subLinks || []), ...(anchors || [])].map(
                                   ({ title, link }, index) => (
                                     <li key={index} className="w-[290px]">
-                                      <Link
+                                      <NavLink
                                         to={link}
                                         className="transition hover:text-accentYellowColor focus-visible:text-accentYellowColor"
                                         onClick={toggleMenu}
                                       >
                                         {title}
-                                      </Link>
+                                      </NavLink>
                                     </li>
                                   )
                                 )}

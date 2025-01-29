@@ -5,7 +5,7 @@ import {
   CaseStudyChallenges,
   CaseStudyHero,
   CaseStudyTechnologies,
-  CaseStudyAchivements,
+  CaseStudyAchievements,
   CaseStudyFunctionalModules,
   CaseStudyOverview,
   CaseStudyServices,
@@ -47,7 +47,7 @@ const CaseStudyDetails = () => {
       {services && <CaseStudyServices services={services} />}
       {functionalModules && <CaseStudyFunctionalModules functionalModules={functionalModules} />}
       <CaseStudyTechnologies technologies={technologies} />
-      <CaseStudyAchivements achievements={achievements} />
+      <CaseStudyAchievements achievements={achievements} />
       <LetsTalk />
     </>
   );
