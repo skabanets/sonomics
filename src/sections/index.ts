@@ -29,7 +29,7 @@ export * from "./CaseStudy/common/CaseStudyChallenges";
 export * from "./CaseStudy/common/CaseStudyServices";
 export * from "./CaseStudy/common/CaseStudyFunctionalModules";
 export * from "./CaseStudy/common/CaseStudyTechnologies";
-export * from "./CaseStudy/common/CaseStudyAchivements";
+export * from "./CaseStudy/common/CaseStudyAchievements";
 
 export * from "./Industries/IndustryHero";
 export * from "./Industries/IndustrySlider";

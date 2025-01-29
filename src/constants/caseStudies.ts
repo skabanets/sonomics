@@ -1,4 +1,5 @@
 import { routes } from "../constants";
+import { decodeHTML } from "../helpers";
 
 import type { CaseStudy } from "../types";
 
@@ -39,7 +40,9 @@ export const caseStudies: CaseStudy[] = [
       "Enabling fast, secure, and reliable money transfers, including wire transactions, SEPA, and Send Faster Payment.",
     ],
     services: {
-      text: "To address these challenges, Sonomics applied our End-to-End Application Development expertise, coupled with Requirement Analysis & Development Planning, Agile Methodologies, and Cloud Integration with Leading Providers. Here's how we delivered a comprehensive solution:",
+      text: decodeHTML(
+        "To address these challenges, Sonomics&nbsp;applied our End-to-End Application Development expertise, coupled with Requirement Analysis & Development Planning, Agile Methodologies, and Cloud Integration with Leading Providers. Here's how we delivered a comprehensive solution:"
+      ),
       servicesData: [
         {
           name: "End-to-End Application Development",
