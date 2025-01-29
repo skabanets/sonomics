@@ -93,7 +93,7 @@ export const IndustrySliderCard = ({ industry, index }: IndustryProps) => {
               />
             </Link>
           </div>
-          <Button label={buttonText} width="w-[300px]" onClick={toggleModal} />
+          <Button label={buttonText} className="w-[300px]" onClick={toggleModal} />
         </div>
       </div>
       {isOpen && (

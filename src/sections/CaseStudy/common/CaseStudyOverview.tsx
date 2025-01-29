@@ -55,7 +55,7 @@ export const CaseStudyOverview = ({ overview }: CaseStudyOverviewProps) => {
             </div>
             <div className="flex w-[675px] flex-col gap-[40px]">
               <h3>{description}</h3>
-              <Button label="Let&#8217;s talk" width="w-[152px]" onClick={toggleModal} />
+              <Button label="Let&#8217;s talk" className="w-[152px]" onClick={toggleModal} />
             </div>
           </motion.div>
           <motion.div

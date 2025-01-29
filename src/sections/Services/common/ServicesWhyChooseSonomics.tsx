@@ -26,7 +26,7 @@ export const ServicesWhyChooseSonomics = ({ content }: ServicesWhyChooseSonomics
             <h2 className="max-w-[852px] font-black leading-[58px]">{sectionTitle}</h2>
             <Button
               label="Let&#8217;s discuss your project"
-              width="w-[300px]"
+              className="w-[300px]"
               onClick={toggleModal}
             />
           </motion.div>
