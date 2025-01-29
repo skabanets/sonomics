@@ -102,7 +102,7 @@ export const NavMenu = ({ isHeader, listClass, linkClass }: NavMenuProps) => {
                 onMouseLeave={handleMouseLeave}
               >
                 <div
-                  className={`absolute left-0 top-[-30px] h-[30px] w-full bg-navMenuBgColor`}
+                  className={`absolute left-0 top-[-29px] h-[30px] w-full bg-navMenuBgColor`}
                 ></div>
                 <div
                   className="relative mx-auto flex w-[calc(100vw-160px)] max-w-[1760px] items-center justify-between border-t-[1px] border-t-mainTextColor py-[30px]"
@@ -137,7 +137,7 @@ export const NavMenu = ({ isHeader, listClass, linkClass }: NavMenuProps) => {
         ))}
       </ul>
       <div
-        className={`submenu ${navLinks[openSubMenuIndex as number]?.subLinks ? "visible" : ""} fixed left-0 top-0 z-[-10] h-[60px] w-full bg-navMenuBgColor`}
+        className={`submenu ${navLinks[openSubMenuIndex as number]?.subLinks ? "visible" : ""} fixed left-0 top-0 z-[-10] h-[61px] w-full bg-navMenuBgColor`}
       ></div>
     </>
   );
