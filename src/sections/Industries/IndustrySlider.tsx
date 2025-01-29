@@ -68,8 +68,8 @@ export const IndustrySlider = () => {
 
       setTimeout(() => {
         setIsScrolling(false);
-      }, 1500);
-    }, 1500);
+      }, 1000);
+    }, 1000);
 
     const handleWheel = (e: WheelEvent) => {
       if (
@@ -106,70 +106,65 @@ export const IndustrySlider = () => {
   const slideBackgroundColor = getIndustrySliderBgColor(currentIndex);
 
   return (
-    <section className="h-dvh" ref={sectionRef}>
-      <motion.div {...industrySliderAnimationProps}>
-        <div className="bg-secondaryBgColor transition">
-          <ul className="container flex items-center gap-[20px]">
+    <motion.section className="h-dvh" ref={sectionRef} {...industrySliderAnimationProps}>
+      <div className="bg-secondaryBgColor">
+        <ul className="container flex items-center gap-[20px]">
+          {industries.map((industry, index) => (
+            <li
+              key={index}
+              className={`bold-text h-[56px] cursor-pointer border-t-2 border-transparent px-[20px] py-[15px] ${
+                currentIndex === index
+                  ? "!border-themeAccentColor bg-navMenuBgColor"
+                  : "text-secondaryTextColor"
+              }`}
+              onClick={() => handleMenuClick(index)}
+            >
+              {industry.name}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div className={`py-[${slidePadding}px] transition ${slideBackgroundColor}`}>
+        <div className={`container relative flex flex-col`}>
+          <div
+            key={currentIndex}
+            style={{ height: `${slideHeight}px` }}
+            className="h-lg:max-h-[1000px]"
+          >
+            <IndustrySliderCard industry={industries[currentIndex]} index={currentIndex} />
+          </div>
+
+          <ul className="absolute right-[-38px] top-1/2 flex translate-y-[-50%] flex-col gap-[15px]">
             {industries.map((industry, index) => (
               <li
                 key={index}
-                className={`bold-text h-[56px] cursor-pointer border-t-2 border-transparent px-[20px] py-[15px] ${
-                  currentIndex === index
-                    ? "!border-themeAccentColor bg-navMenuBgColor"
-                    : "text-secondaryTextColor"
-                }`}
+                className="group relative cursor-pointer transition"
                 onClick={() => handleMenuClick(index)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    handleMenuClick(index);
+                  }
+                }}
+                tabIndex={0}
+                aria-label={`Menu item: ${industry.name}`}
               >
-                {industry.name}
+                <span className="absolute right-[15px] top-1/2 translate-y-[-50%] whitespace-nowrap rounded-[10px] bg-navMenuBgColor px-[7px] py-[5px] text-mainTextColor opacity-0 transition group-hover:opacity-100 group-focus-visible:opacity-100">
+                  {industry.name}
+                </span>
+                <div
+                  className={`transition ${
+                    currentIndex === index
+                      ? `${currentIndex === 3 ? "bg-whiteTextColor" : "bg-mainTextColor"} h-[35px] w-[9px] rounded-[70px]`
+                      : "h-[10px] w-[10px] rounded-full bg-secondaryLightTextColor group-hover:border group-hover:border-mainTextColor group-focus-visible:border group-focus-visible:border-mainTextColor"
+                  }`}
+                />
               </li>
             ))}
           </ul>
         </div>
-
-        <div className={`py-[${slidePadding}px] transition ${slideBackgroundColor}`}>
-          <div className={`container relative flex flex-col`}>
-            <motion.div
-              key={currentIndex}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 2, ease: "easeOut", delay: 0.5 }}
-              style={{ height: `${slideHeight}px` }}
-              className="h-lg:max-h-[1000px]"
-            >
-              <IndustrySliderCard industry={industries[currentIndex]} index={currentIndex} />
-            </motion.div>
-
-            <ul className="absolute right-[-38px] top-1/2 flex translate-y-[-50%] flex-col gap-[15px]">
-              {industries.map((industry, index) => (
-                <li
-                  key={index}
-                  className="group relative cursor-pointer transition"
-                  onClick={() => handleMenuClick(index)}
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter" || e.key === " ") {
-                      e.preventDefault();
-                      handleMenuClick(index);
-                    }
-                  }}
-                  tabIndex={0}
-                  aria-label={`Menu item: ${industry.name}`}
-                >
-                  <span className="absolute right-[15px] top-1/2 translate-y-[-50%] whitespace-nowrap rounded-[10px] bg-navMenuBgColor px-[7px] py-[5px] text-mainTextColor opacity-0 transition group-hover:opacity-100 group-focus-visible:opacity-100">
-                    {industry.name}
-                  </span>
-                  <div
-                    className={`transition ${
-                      currentIndex === index
-                        ? `${currentIndex === 3 ? "bg-whiteTextColor" : "bg-mainTextColor"} h-[35px] w-[9px] rounded-[70px]`
-                        : "h-[10px] w-[10px] rounded-full bg-secondaryLightTextColor group-hover:border group-hover:border-mainTextColor group-focus-visible:border group-focus-visible:border-mainTextColor"
-                    }`}
-                  />
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </motion.div>
-    </section>
+      </div>
+    </motion.section>
   );
 };
