@@ -19,9 +19,9 @@ export const CaseStudyTechnologies = ({ technologies }: CaseStudyTechnologiesPro
 
   const nodeRef = useRef(null);
 
-  const cardWidth = 320;
-  const gap = 40;
-  const containerWidth = useBreakpointValue([1280, 736, 355]);
+  const cardWidth = useBreakpointValue([320, 280, 280]);
+  const gap = useBreakpointValue([40, 20, 20]);
+  const containerWidth = useBreakpointValue([1280, 736, 360]);
   const itemsCount = technologies.length;
 
   useEffect(() => {
@@ -49,9 +49,9 @@ export const CaseStudyTechnologies = ({ technologies }: CaseStudyTechnologiesPro
   };
 
   return (
-    <section className="overflow-hidden bg-blackBgColor py-[80px]">
+    <section className="overflow-hidden bg-blackBgColor py-[50px] md:py-[80px]">
       <motion.div className="container" {...slideInWithFade}>
-        <h2 className="mb-[60px] text-whiteTextColor">Technologies used</h2>
+        <h2 className="mb-[40px] text-whiteTextColor md:mb-[60px]">Technologies used</h2>
         <Draggable
           nodeRef={nodeRef}
           axis="x"
@@ -65,7 +65,7 @@ export const CaseStudyTechnologies = ({ technologies }: CaseStudyTechnologiesPro
         >
           <ul
             ref={nodeRef}
-            className="mb-[40px] flex cursor-grab gap-[40px] transition"
+            className="mb-[40px] flex cursor-grab gap-[20px] transition md:gap-[40px]"
             style={{
               width: totalWidth,
               transition: !isTransition ? "none" : "transform 0.15s ease-in",
@@ -74,7 +74,7 @@ export const CaseStudyTechnologies = ({ technologies }: CaseStudyTechnologiesPro
             {technologies.map(({ title, description }, index) => (
               <li
                 key={index}
-                className="w-[320px] rounded-b-[20px] border-t-[5px] border-t-accentYellowColor bg-darkBgColor p-[30px] transition"
+                className="w-[280px] rounded-b-[20px] border-t-[5px] border-t-accentYellowColor bg-darkBgColor p-[30px] transition sm-max:w-[270px] md:w-[320px]"
               >
                 <h4 className="mb-[20px] text-whiteTextColor">{title}</h4>
                 <p className="small-text text-secondaryLightTextColor">{description}</p>
