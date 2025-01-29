@@ -179,7 +179,7 @@ h2 {
 }
 
 h3 {
-  @apply text-[24px] font-semibold leading-[36px] transition;
+  @apply text-[16px] font-semibold leading-[28px] transition md:text-[24px] md:leading-[36px];
 }
 
 h4 {
@@ -213,7 +213,7 @@ textarea:-webkit-autofill:focus {
 }
 
 .big-text {
-  @apply text-[18px] font-normal leading-[30px] transition;
+  @apply text-[16px] font-normal leading-[24px] transition md:text-[18px] md:leading-[30px];
 }
 
 .small-text {
@@ -249,6 +249,7 @@ textarea:-webkit-autofill:focus {
 }
 
 .header .active,
+.mobile-menu .active,
 .footer .active {
   @apply border-b border-themeAccentColor text-themeAccentColor;
 }
