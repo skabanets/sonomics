@@ -249,9 +249,11 @@ textarea:-webkit-autofill:focus {
 }
 
 .header .active,
-.mobile-menu .active,
 .footer .active {
   @apply border-b border-themeAccentColor text-themeAccentColor;
+}
+.mobile-menu .active {
+  @apply border-b border-accentYellowColor text-accentYellowColor;
 }
 
 .footer .active {
