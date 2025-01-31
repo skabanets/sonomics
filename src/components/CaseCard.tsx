@@ -27,7 +27,7 @@ export const CaseCard = ({
   return (
     <div className={`group h-auto ${containerStyles}`} tabIndex={0}>
       <Link to={link}>
-        <div className="relative overflow-hidden rounded-[40px]">
+        <div className="relative overflow-hidden rounded-[20px] md:rounded-[40px]">
           <img
             srcSet={`${img} 1x, ${retinaImg} 2x`}
             src={img}
