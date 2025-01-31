@@ -17,12 +17,16 @@ export const IndustryCard = ({ industry }: IndustryCardProps) => {
   const retinaIcon = industriesImages[imgs.retinaIcon as keyof typeof industriesImages];
 
   return (
-    <Link to={industry.link} className="flex h-[346px] w-[340px] flex-col gap-[38px] p-[30px]">
+    <Link
+      to={industry.link}
+      className="flex h-[346px] w-full flex-col gap-[38px] p-[30px] md:w-[340px]"
+    >
       <img
         srcSet={`${icon} 1x, ${retinaIcon} 2x`}
         src={icon}
         alt={name}
         width={70}
+        height={70}
         loading="lazy"
       />
       <div className="flex flex-col gap-[8px]">
