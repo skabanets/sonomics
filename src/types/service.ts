@@ -1,3 +1,5 @@
+import { images } from "../assets";
+
 export interface Hero {
   image: string;
   retinaImage: string;
@@ -23,11 +25,11 @@ export interface WhyChooseSonomics {
   items: WhyChooseSonomicsItem[];
 }
 
-interface WhyChooseSonomicsItem {
+export interface WhyChooseSonomicsItem {
   title: string;
   description: string;
-  image: string;
-  retinaImage: string;
+  image: keyof typeof images.servicesDetails.whyChooseSonomics;
+  retinaImage: keyof typeof images.servicesDetails.whyChooseSonomics;
 }
 
 export interface Expertise {
