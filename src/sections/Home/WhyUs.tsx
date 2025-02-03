@@ -25,7 +25,7 @@ export const WhyUs = () => {
             <h2 className="text-center">
               We&#8217;re not just about IT solutions — we&#8217;re about driving
               <span className="text-accentYellowColor">
-                your business <br /> growth
+                {``} your business <br /> growth
               </span>
               , ensuring stability and <br /> fostering expertise
             </h2>
