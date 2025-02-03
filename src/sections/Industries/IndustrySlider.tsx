@@ -105,6 +105,8 @@ export const IndustrySlider = () => {
   };
   const slideBackgroundColor = getIndustrySliderBgColor(currentIndex);
 
+  console.log(slideHeight, slidePadding);
+
   return (
     <motion.section className="h-dvh" ref={sectionRef} {...industrySliderAnimationProps}>
       <div className="bg-secondaryBgColor">
@@ -125,7 +127,10 @@ export const IndustrySlider = () => {
         </ul>
       </div>
 
-      <div className={`py-[${slidePadding}px] transition ${slideBackgroundColor}`}>
+      <div
+        className={`pt-[${slidePadding}px] transition ${slideBackgroundColor}`}
+        style={{ paddingTop: `${slidePadding}px`, paddingBottom: `${slidePadding}px` }}
+      >
         <div className={`container relative flex flex-col`}>
           <div
             key={currentIndex}
