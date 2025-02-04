@@ -25,7 +25,7 @@ export const Header = () => {
         <div className="full-hd-container flex items-center">
           <nav className="relative z-10 flex w-full justify-between">
             <Logo applyThemeColor />
-            <div className="hidden items-center gap-[50px] md:flex">
+            <div className="hidden items-center gap-[50px] lg:flex">
               <ThemeToggle />
               <NavMenu
                 listClass="flex gap-[50px] font-medium text-mainTextColor"
@@ -34,7 +34,7 @@ export const Header = () => {
               />
               <Button label="Contact us" onClick={toggleModal} />
             </div>
-            <div className="small-text flex items-center gap-[10px] md:hidden">
+            <div className="small-text flex items-center gap-[10px] lg:hidden">
               Menu{" "}
               <button type="button" className="group" aria-label="Open menu" onClick={toggleMenu}>
                 <Icon
