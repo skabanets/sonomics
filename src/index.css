@@ -160,10 +160,11 @@ main {
 }
 @media only screen and (min-width: 768px) {
   .full-hd-container {
+    padding-inline: 32px;
     max-width: 768px;
   }
 }
-@media only screen and (min-width: 1158px) {
+@media only screen and (min-width: 1440px) {
   .full-hd-container {
     padding-inline: 80px;
     max-width: 1920px;

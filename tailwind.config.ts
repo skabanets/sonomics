@@ -18,6 +18,7 @@ export default {
     },
     screens: {
       "sm-max": { max: "389.98px" },
+      tablet: { min: "768px", max: "1439.98px" },
       md: "768px",
       lg: "1440px",
       "h-sm": { raw: "(max-height: 800px)" },
