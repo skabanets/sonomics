@@ -11,16 +11,16 @@ export const OurServices = () => {
   return (
     <>
       <motion.section
-        className="our-services-bg pb-[516px] pt-[30px] md:pb-[175px] md:pt-[75px]"
+        className="our-services-bg pb-[516px] pt-[30px] md:py-[40px] lg:pb-[175px] lg:pt-[75px]"
         {...slideInWithFade}
       >
         <div className="container">
           <h6 className="mb-[10px] text-secondaryTextColor md:mb-[20px]">Our services</h6>
-          <h1 className="mb-[20px] md:mb-[40px]">
+          <h1 className="mb-[20px] md:mb-[30px] lg:mb-[40px]">
             Pioneering <span className="text-accentYellowColor">IT Solutions</span> for the modern
             business
           </h1>
-          <div className="flex flex-col gap-[10px] md:w-[570px] md:gap-[30px]">
+          <div className="flex flex-col gap-[10px] md:w-[490px] md:gap-[20px] lg:w-[570px] lg:gap-[30px]">
             <h3>
               At Sonomics, we are committed to transforming businesses through cutting-edge
               technologies and strategic innovation.
