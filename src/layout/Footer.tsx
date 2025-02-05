@@ -7,15 +7,15 @@ import { socialLinks } from "../constants";
 export const Footer = () => {
   return (
     <footer className="footer bg-blackBgColor pb-[40px] pt-[50px] lg:pt-[80px]">
-      <div className="full-hd-container tablet:gap-y-[30px] pb-[30px] md:flex md:flex-wrap md:justify-between md:pb-[40px]">
-        <div className="mb-[30px] flex flex-wrap space-y-[20px] md:mb-0 md:w-[420px] md:space-y-[22px] lg:mr-auto lg:w-[281px]">
+      <div className="full-hd-container tablet:gap-y-[30px] tablet:gap-x-[55px] pb-[30px] md:flex md:flex-wrap md:pb-[40px] lg:justify-between">
+        <div className="mb-[30px] flex flex-wrap space-y-[20px] md:mb-0 md:w-[281px] md:space-y-[22px] lg:mr-auto">
           {" "}
           <Logo className="fill-whiteTextColor" />
           <h2 className="text-whiteTextColor">Let&#8217;s work together</h2>
         </div>
         <nav className="mr-[120px] sm-max:mr-0 md:mr-0 lg:mr-[130px]">
           <NavMenu
-            listClass="flex w-full flex-wrap h-[106px] gap-x-[70px] gap-y-[40px] mb-[30px] md:mb-0 md:justify-center lg:h-auto flex-col tablet:gap-[40px] lg:gap-[30px] text-whiteTextColor"
+            listClass="flex w-full flex-wrap h-[106px] gap-x-[70px] gap-y-[40px] mb-[30px] md:mb-0 md:justify-center lg:h-auto flex-col tablet:gap-y-[40px] tablet:gap-x-[60px] lg:gap-[30px] text-whiteTextColor"
             linkClass="md:w-auto hover:text-accentYellowColor focus-visible:text-accentYellowColor"
           />
         </nav>
