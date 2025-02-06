@@ -23,13 +23,13 @@ export const ServicesWhyChooseSonomics = ({ content }: ServicesWhyChooseSonomics
 
   return (
     <>
-      <section className="py-[50px] md:py-[100px]">
+      <section className="py-[50px] lg:py-[100px]">
         <div className="container relative">
           <motion.div
-            className="mb-[50px] flex flex-col gap-y-[20px] md:mb-[40px] md:flex-row md:items-center md:justify-between"
+            className="mb-[50px] flex flex-col gap-y-[20px] md:mb-[40px] lg:flex-row lg:items-center lg:justify-between"
             {...slideInWithFade}
           >
-            <h2 className="font-black md:max-w-[852px] md:leading-[58px]">{sectionTitle}</h2>
+            <h2 className="font-black md:leading-[58px] lg:max-w-[852px]">{sectionTitle}</h2>
             <Button
               label="Let&#8217;s discuss your project"
               className="w-[300px]"
@@ -46,7 +46,7 @@ export const ServicesWhyChooseSonomics = ({ content }: ServicesWhyChooseSonomics
             />
           )}
 
-          <ul className="hidden md:flex md:flex-wrap md:gap-[40px]">
+          <ul className="hidden md:flex md:flex-wrap md:gap-[30px] lg:gap-[40px]">
             {items.map((item, index) => {
               const img = whyChooseSonomics[item.image as keyof typeof whyChooseSonomics];
               const retinaImg =
@@ -54,7 +54,7 @@ export const ServicesWhyChooseSonomics = ({ content }: ServicesWhyChooseSonomics
               return (
                 <motion.li
                   key={index}
-                  className="flex rounded-[40px] bg-letsTalkBgColor transition md:w-[620px]"
+                  className="flex rounded-[40px] bg-letsTalkBgColor transition md:w-full lg:w-[620px]"
                   {...slideInWithFade}
                 >
                   <img
@@ -63,10 +63,10 @@ export const ServicesWhyChooseSonomics = ({ content }: ServicesWhyChooseSonomics
                     alt={sectionTitle}
                     width="286"
                     height="301"
-                    className={`h-full w-[120px] rounded-l-[40px] bg-letsTalkBgColor object-cover md:h-auto md:w-auto`}
+                    className={`h-full w-[280px] rounded-l-[40px] bg-letsTalkBgColor object-cover lg:h-auto lg:w-auto`}
                     loading="lazy"
                   />
-                  <div className="flex flex-col justify-center gap-[7px] px-[15px] py-[28px] md:gap-[10px] md:p-[30px]">
+                  <div className="flex flex-col justify-center md:gap-[10px] md:p-[30px]">
                     {" "}
                     <h5>{item.title}</h5>
                     <p className="small-text text-secondaryTextColor">{item.description}</p>
