@@ -27,10 +27,10 @@ export const ServicesExpertise = ({ expertise }: ServiceExpertiseProps) => {
 
   return (
     <section
-      className={`${id === routes.CloudIntegration.slice(10) ? "md:pt-[40px]" : "md:pt-[100px]"} py-[50px] md:pb-[100px]`}
+      className={`${id === routes.CloudIntegration.slice(10) ? "md:pt-[40px]" : "md:pt-[50px] lg:pt-[100px]"} py-[50px] md:pb-[50px] lg:pb-[100px]`}
     >
       <motion.div className="container" {...slideInWithFade}>
-        <h2 className="text-center md:mx-auto md:max-w-[920px]">
+        <h2 className="text-center md:mx-auto md:max-w-[700px] lg:max-w-[920px]">
           {renderHighlightedText(expertise.text, expertise.accentWords)}
         </h2>
       </motion.div>
