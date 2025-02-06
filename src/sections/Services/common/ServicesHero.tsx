@@ -40,7 +40,7 @@ export const ServicesHero = ({ title, hero }: ServicesHeroProps) => {
 
   return (
     <>
-      <section className="pb-[50px] pt-[30px] md:pb-[80px] md:pt-[100px]">
+      <section className="pb-[50px] pt-[30px] md:pb-[80px] md:pt-[50px] lg:pb-[80px] lg:pt-[100px]">
         <motion.div className="container" {...slideInWithFade}>
           <BackLink
             to={routes.Services}
@@ -52,8 +52,8 @@ export const ServicesHero = ({ title, hero }: ServicesHeroProps) => {
           >
             {title}
           </h1>
-          <div className="flex flex-col gap-y-[30px] md:flex-row md:items-center md:justify-between">
-            <div className="md:max-w-[675px]">
+          <div className="flex flex-col gap-y-[30px] lg:flex-row lg:items-center lg:justify-between">
+            <div className="lg:max-w-[675px]">
               {boldText && <h5 className="mb-[20px]">{boldText}</h5>}
               {text.map((text, index) => (
                 <p key={index} className="big-text mb-[20px] first:mb-[30px] md:first:mb-[40px]">
@@ -72,7 +72,7 @@ export const ServicesHero = ({ title, hero }: ServicesHeroProps) => {
               alt={title}
               width={imageWidth}
               height="406"
-              className={`h-[300px] rounded-t-[20px] object-cover md:h-auto ${id !== routes.CloudIntegration.slice(10) ? "rounded-b-[20px]" : ""}`}
+              className={`h-[300px] rounded-t-[20px] object-cover md:h-auto md:w-full lg:w-auto ${id !== routes.CloudIntegration.slice(10) ? "rounded-b-[20px]" : ""}`}
             />
           </div>
         </motion.div>
