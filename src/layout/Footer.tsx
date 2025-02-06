@@ -7,7 +7,7 @@ import { socialLinks } from "../constants";
 export const Footer = () => {
   return (
     <footer className="footer bg-blackBgColor pb-[40px] pt-[50px] lg:pt-[80px]">
-      <div className="full-hd-container tablet:gap-y-[30px] tablet:gap-x-[55px] pb-[30px] md:flex md:flex-wrap md:pb-[40px] lg:justify-between">
+      <div className="full-hd-container pb-[30px] tablet:gap-x-[55px] tablet:gap-y-[30px] md:flex md:flex-wrap md:pb-[40px] lg:justify-between">
         <div className="mb-[30px] flex flex-wrap space-y-[20px] md:mb-0 md:w-[281px] md:space-y-[22px] lg:mr-auto">
           {" "}
           <Logo className="fill-whiteTextColor" />
@@ -15,11 +15,11 @@ export const Footer = () => {
         </div>
         <nav className="mr-[120px] sm-max:mr-0 md:mr-0 lg:mr-[130px]">
           <NavMenu
-            listClass="flex w-full flex-wrap h-[106px] gap-x-[70px] gap-y-[40px] mb-[30px] md:mb-0 md:justify-center lg:h-auto flex-col tablet:gap-y-[40px] tablet:gap-x-[60px] lg:gap-[30px] text-whiteTextColor"
+            listClass="flex w-full flex-wrap h-[106px] gap-x-[70px] gap-y-[40px] mb-[30px] md:mb-0 lg:justify-center lg:h-auto flex-col tablet:gap-y-[40px] tablet:gap-x-[60px] lg:gap-[30px] text-whiteTextColor"
             linkClass="md:w-auto hover:text-accentYellowColor focus-visible:text-accentYellowColor"
           />
         </nav>
-        <div className="tablet:gap-y-[15px] tablet:flex-row tablet:items-end tablet:w-full flex flex-col justify-between">
+        <div className="flex flex-col justify-between tablet:w-full tablet:flex-row tablet:items-end tablet:gap-y-[15px]">
           <address className="mb-[40px] not-italic sm-max:mb-[30px] md:mb-0">
             <p className="label mb-[15px] text-secondaryLightTextColor">Contact us</p>
             <ul className="bold-text flex flex-row gap-[50px] text-whiteTextColor sm-max:flex-wrap sm-max:gap-[15px] md:flex-col md:gap-[15px]">
