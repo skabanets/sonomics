@@ -23,16 +23,16 @@ export const CaseStudyServices = ({ services }: CaseStudyServicesProps) => {
 
   return (
     <>
-      <section className="py-[50px] md:pb-[80px] md:pt-[100px]">
+      <section className="py-[50px] lg:pb-[80px] lg:pt-[100px]">
         <div className="container">
           <motion.div
-            className="mb-[30px] items-start justify-between md:sticky md:top-[40px] md:flex md:flex-wrap md:gap-y-[20px]"
+            className="mb-[30px] md:flex md:flex-wrap md:items-start md:justify-between md:gap-y-[20px] lg:sticky lg:top-[40px]"
             {...slideInWithFade}
           >
             <h2 className="mb-[30px] md:mb-0 md:max-w-[815px]">Services</h2>
             <Button
               label="Let&#8217;s discuss your project"
-              className="mb-[20px] w-[300px]"
+              className="mb-[20px] w-[300px] md:mb-0"
               onClick={toggleModal}
             />
             {text && <h6 className="">{text}</h6>}
@@ -47,21 +47,21 @@ export const CaseStudyServices = ({ services }: CaseStudyServicesProps) => {
               return (
                 <li
                   key={index}
-                  className={`rounded-[20px] text-whiteTextColor md:sticky ${itemBgColor}`}
+                  className={`rounded-[20px] text-whiteTextColor lg:sticky ${itemBgColor}`}
                   style={{ top: ` ${index === 0 ? 290 : 290 + index * 15}px` }}
                 >
                   <motion.div
-                    className="justify-between px-[15px] py-[30px] md:flex md:p-[40px] md:pr-[50px]"
+                    className="px-[15px] py-[30px] md:p-[40px] md:pr-[50px] lg:flex lg:justify-between"
                     {...slideInWithFade}
                   >
                     <div className="md:max-w-[630px]">
                       <h3 className="mb-[20px]">{name}</h3>
-                      <h6 className="mb-[20px] !text-[20px] !leading-[36px] md:max-w-[450px]">
+                      <h6 className="mb-[20px] !text-[20px] !leading-[36px] lg:max-w-[450px]">
                         {description}
                       </h6>
                       <Link
                         to={link}
-                        className="view-link mb-[30px] inline-block before:bg-whiteTextColor md:mb-0"
+                        className="view-link mb-[30px] inline-block before:bg-whiteTextColor lg:mb-0"
                       >
                         <CustomTitle
                           text="Read more"
@@ -78,7 +78,7 @@ export const CaseStudyServices = ({ services }: CaseStudyServicesProps) => {
                       alt={name}
                       width="492"
                       height="320"
-                      className="h-[300px] rounded-[20px] object-cover md:h-[320px]"
+                      className="h-[300px] rounded-[20px] object-cover md:w-full lg:h-[320px] lg:w-[492px]"
                       loading="lazy"
                     />
                   </motion.div>
