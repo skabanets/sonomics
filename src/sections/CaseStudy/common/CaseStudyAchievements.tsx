@@ -25,14 +25,14 @@ export const CaseStudyAchievements = ({ achievements }: CaseStudyAchivementsProp
 
   return (
     <>
-      <section className="bg-blackBgColor py-[20px] pb-[50px] md:pb-[80px]">
+      <section className="bg-blackBgColor py-[20px] pb-[50px] lg:pb-[80px]">
         <motion.div className="container" {...slideInWithFade}>
-          <div className="mb-[30px] flex flex-col gap-y-[30px] md:mb-[60px] md:flex-row md:items-center md:justify-between">
+          <div className="mb-[30px] flex flex-col gap-y-[30px] md:mb-[40px] md:flex-row md:items-center md:justify-between lg:mb-[60px]">
             <h2 className="text-whiteTextColor">Our achievements</h2>
             <Button label="Let&#8217;s talk" className="w-[152px]" onClick={toggleModal} />
           </div>
-          <div className="md:flex">
-            <ul className="rounded-t-[40px] bg-accentYellowColor p-[20px] text-darkBgColor md:w-1/2 md:rounded-l-[40px] md:rounded-tr-none md:p-[60px]">
+          <div className="lg:flex">
+            <ul className="rounded-t-[40px] bg-accentYellowColor p-[20px] text-darkBgColor md:p-[30px] lg:w-1/2 lg:rounded-l-[40px] lg:rounded-tr-none lg:p-[60px]">
               {items.map(({ title, description }, index) => (
                 <li
                   key={index}
@@ -49,7 +49,7 @@ export const CaseStudyAchievements = ({ achievements }: CaseStudyAchivementsProp
               alt="Achivement"
               width="640"
               height="890"
-              className="h-[360px] rounded-b-[40px] object-cover md:h-auto md:w-1/2 md:rounded-b-none md:rounded-r-[40px]"
+              className="h-[360px] rounded-b-[40px] object-cover tablet:w-full md:h-[680px] lg:h-auto lg:w-1/2 lg:rounded-b-none lg:rounded-r-[40px]"
               loading="lazy"
             />
           </div>
