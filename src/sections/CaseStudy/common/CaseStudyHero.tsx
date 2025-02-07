@@ -17,10 +17,10 @@ export const CaseStudyHero = ({ title, sectionImages }: CaseStudyHeroProps) => {
   } = images;
 
   return (
-    <section className="pb-[50px] pt-[30px] md:py-[80px]">
+    <section className="pb-[50px] pt-[30px] md:py-[50px] lg:py-[80px]">
       <motion.div className="container" {...slideInWithFade}>
         <BackLink to={routes.CaseStudy} label="Back to case studies" className="mb-[20px]" />
-        <h1 className="mb-[20px] md:mb-[60px] md:max-w-[1100px]">{title}</h1>
+        <h1 className="mb-[20px] md:mb-[40px] lg:mb-[60px] lg:max-w-[1100px]">{title}</h1>
       </motion.div>
       <motion.ul className="full-hd-container flex gap-[40px]" {...slideInWithFade}>
         {sectionImages.map((item, index) => {
@@ -37,7 +37,7 @@ export const CaseStudyHero = ({ title, sectionImages }: CaseStudyHeroProps) => {
                 alt={`${title} image ${index + 1}`}
                 width={400}
                 height={210}
-                className="w-full rounded-[20px] object-cover md:aspect-[400/210]"
+                className="w-full rounded-[20px] object-cover tablet:h-[160px] lg:aspect-[400/210]"
               />
             </li>
           );
