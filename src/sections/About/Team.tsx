@@ -20,7 +20,7 @@ export const Team = () => {
 
   const cardWidth = 340;
   const gap = 20;
-  const containerWidth = useBreakpointValue([1280, 736, 360]);
+  const containerWidth = useBreakpointValue([1280, 704, 360]);
   const itemsCount = teamMembers.length;
 
   useEffect(() => {
@@ -48,10 +48,10 @@ export const Team = () => {
   };
 
   return (
-    <section className="relative overflow-hidden bg-blackBgColor pb-[60px] pt-[50px] before:absolute before:bottom-[776px] before:left-0 before:h-[1px] before:w-full before:bg-whiteTextColor md:pb-[60px] md:pt-[80px] md:before:top-[624px]">
+    <section className="relative overflow-hidden bg-blackBgColor pb-[60px] pt-[50px] before:absolute before:bottom-[776px] before:left-0 before:h-[1px] before:w-full before:bg-whiteTextColor md:before:top-[536px] lg:pt-[80px] lg:before:top-[624px]">
       <div className="container">
         <motion.div
-          className="relative mb-[50px] flex flex-col items-center gap-[157px] md:mb-[80px] md:flex-row md:gap-[230px]"
+          className="relative mb-[50px] flex flex-col items-center gap-[157px] md:flex-row md:gap-[40px] lg:mb-[80px] lg:gap-[230px]"
           {...slideInWithFade}
         >
           <img
@@ -61,10 +61,12 @@ export const Team = () => {
             width="555"
             height="464"
             loading="lazy"
-            className="h-[300px] w-[360px] rounded-[20px] object-cover md:h-auto md:w-auto"
+            className="h-[300px] w-[360px] rounded-[20px] object-cover tablet:object-[-42px_0px] md:h-[390px] md:w-[340px] lg:h-auto lg:w-auto"
           />
           <div className="md:w-[456px]">
-            <h2 className="mb-[14px] text-[40px] text-whiteTextColor">Alexey Chuhaiov</h2>
+            <h2 className="mb-[14px] text-[40px] text-whiteTextColor tablet:text-[36px]">
+              Alexey Chuhaiov
+            </h2>
             <h5 className="mb-[20px] text-whiteTextColor">CEO at Sonomics</h5>
             <p className="big-text mb-[20px] text-secondaryLightTextColor">
               Our team of talented professionals, with their diverse skill sets and unwavering
@@ -77,10 +79,10 @@ export const Team = () => {
           </div>
           <Icon
             id="quotes"
-            className="absolute left-0 top-[330px] h-[97px] w-[99px] fill-accentYellowColor md:left-[635px] md:top-0"
+            className="absolute left-0 top-[330px] h-[97px] w-[99px] fill-accentYellowColor tablet:left-[342px] tablet:top-[10px] tablet:h-[35px] tablet:w-[30px] lg:left-[635px] lg:top-0"
           />
         </motion.div>
-        <motion.div className="pt-[60px]" {...slideInWithFade}>
+        <motion.div className="pt-[60px] tablet:pt-[50px]" {...slideInWithFade}>
           <h2 className="mb-[40px] text-whiteTextColor">Meet the team</h2>
           <Draggable
             nodeRef={nodeRef}
