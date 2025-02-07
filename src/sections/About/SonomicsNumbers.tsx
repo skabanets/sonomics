@@ -52,15 +52,15 @@ export const SonomicsNumbers = () => {
   }, [scrollDirection]);
 
   return (
-    <section className="py-[50px] md:py-[100px]">
+    <section className="py-[50px] lg:py-[100px]">
       <div className="container">
         <motion.h2
-          className={`sticky top-[49px] z-10 before:absolute before:left-0 before:top-[-50px] before:z-[-1] before:block before:h-[140px] before:w-full before:bg-primaryBgColor md:top-[100px] md:w-[300px] md:pt-[20px] md:after:block md:after:h-[500px] ${isVisibleLastItem && isMobile ? "-translate-y-[150%]" : ""}`}
+          className={`sticky top-[49px] z-10 before:absolute before:left-0 before:top-[-50px] before:z-[-1] before:block before:h-[140px] before:w-full before:bg-primaryBgColor md:top-[120px] md:w-[270px] md:before:h-0 md:after:block md:after:h-[500px] lg:top-[100px] lg:w-[300px] lg:pt-[20px] ${isVisibleLastItem && isMobile ? "-translate-y-[150%]" : ""}`}
           {...opacityFade}
         >
           Sonomics in numbers
         </motion.h2>
-        <ul className="overflow-hidden md:ml-auto md:mt-[-628px] md:w-[774px]">
+        <ul className="overflow-hidden md:ml-auto md:mt-[-615px] md:w-[400px] lg:mt-[-628px] lg:w-[774px]">
           {sonomicsNumbers.map(({ title, number }, index) => {
             const isLastItem = index === sonomicsNumbers.length - 1;
             return (
@@ -75,9 +75,9 @@ export const SonomicsNumbers = () => {
               >
                 <AnimatedNumber
                   finalNumber={number}
-                  className="text-[120px] font-medium leading-[156px] text-accentRedColor"
+                  className="text-[120px] font-medium leading-[156px] text-accentRedColor tablet:text-[58px] tablet:leading-[86px]"
                 />
-                <h4 className="md:w-[490px]">{title}</h4>
+                <h4 className="md:w-[270px] lg:w-[490px]">{title}</h4>
 
                 {index < sonomicsNumbers.length - 1 && <Divider />}
               </motion.li>
