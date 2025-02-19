@@ -1,17 +1,4 @@
 // Industries
-import telecommunications_1x from "./images/industries/telecommunications@1x.webp";
-import telecommunications_2x from "./images/industries/telecommunications@2x.webp";
-import media_research_1x from "./images/industries/media-research@1x.webp";
-import media_research_2x from "./images/industries/media-research@2x.webp";
-import fintech_1x from "./images/industries/fintech@1x.webp";
-import fintech_2x from "./images/industries/fintech@2x.webp";
-import ecommerce_1x from "./images/industries/ecommerce@1x.webp";
-import ecommerce_2x from "./images/industries/ecommerce@2x.webp";
-import crypto_1x from "./images/industries/crypto@1x.webp";
-import crypto_2x from "./images/industries/crypto@2x.webp";
-import health_care_1x from "./images/industries/health-care@1x.webp";
-import health_care_2x from "./images/industries/health-care@2x.webp";
-
 import fintech_icon_1x from "./images/industries/fintech-icon@1x.webp";
 import fintech_icon_2x from "./images/industries/fintech-icon@2x.webp";
 import ecommerce_icon_1x from "./images/industries/ecommerce-icon@1x.webp";
@@ -20,28 +7,50 @@ import crypto_icon_1x from "./images/industries/crypto-icon@1x.webp";
 import crypto_icon_2x from "./images/industries/crypto-icon@2x.webp";
 
 // Cases
-import case1_1x from "./images/cases/case-1@1x.webp";
-import case1_2x from "./images/cases/case-1@2x.webp";
-import case2_1x from "./images/cases/case-2@1x.webp";
-import case2_2x from "./images/cases/case-2@2x.webp";
-import case_lg_1_1x from "./images/cases/case-lg-1_desk@1x.webp";
-import case_lg_1_2x from "./images/cases/case-lg-2_desk@2x.webp";
+import fintech_main_1x from "./images/cases/fintech/fintech-main@1x.webp";
+import fintech_main_2x from "./images/cases/fintech/fintech-main@2x.webp";
+import fintech_vertical_1x from "./images/cases/fintech/fintech-vertical@1x.webp";
+import fintech_vertical_2x from "./images/cases/fintech/fintech-vertical@2x.webp";
+import fintech_general_page_1x from "./images/cases/fintech/fintech-general-page@1x.webp";
+import fintech_general_page_2x from "./images/cases/fintech/fintech-general-page@2x.webp";
+import fintech_full_screen_block_1x from "./images/cases/fintech/fintech-full-screen-block@1x.webp";
+import fintech_full_screen_block_2x from "./images/cases/fintech/fintech-full-screen-block@2x.webp";
+import fintech_industries_page_1x from "./images/cases/fintech/fintech-industries-page@1x.webp";
+import fintech_industries_page_2x from "./images/cases/fintech/fintech-industries-page@2x.webp";
+import fintech_hp_1x from "./images/cases/fintech/fintech-hp@1x.webp";
+import fintech_hp_2x from "./images/cases/fintech/fintech-hp@2x.webp";
+import fintech_hp_horizontal_1x from "./images/cases/fintech/fintech-hp-horizontal@1x.webp";
+import fintech_hp_horizontal_2x from "./images/cases/fintech/fintech-hp-horizontal@2x.webp";
 
-// Case-details-hero
-import case_details_item1_desk_1x from "./images/case-details/hero/case-details-item1_desk@1x.webp";
-import case_details_item1_desk_2x from "./images/case-details/hero/case-details-item1_desk@2x.webp";
-import case_details_item2_desk_1x from "./images/case-details/hero/case-details-item2_desk@1x.webp";
-import case_details_item2_desk_2x from "./images/case-details/hero/case-details-item2_desk@2x.webp";
-import case_details_item3_desk_1x from "./images/case-details/hero/case-details-item3_desk@1x.webp";
-import case_details_item3_desk_2x from "./images/case-details/hero/case-details-item3_desk@2x.webp";
+import media_main_1x from "./images/cases/media/media-main@1x.webp";
+import media_main_2x from "./images/cases/media/media-main@2x.webp";
+import media_vertical_1x from "./images/cases/media/media-vertical@1x.jpg";
+import media_vertical_2x from "./images/cases/media/media-vertical@2x.jpg";
+import media_general_page_1x from "./images/cases/media/media-general-page@1x.webp";
+import media_general_page_2x from "./images/cases/media/media-general-page@2x.webp";
+import media_full_screen_block_1x from "./images/cases/media/media-full-screen-block@1x.webp";
+import media_full_screen_block_2x from "./images/cases/media/media-full-screen-block@2x.webp";
+import media_industries_page_1x from "./images/cases/media/media-industries-page@1x.webp";
+import media_industries_page_2x from "./images/cases/media/media-industries-page@2x.webp";
+import media_hp_1x from "./images/cases/media/media-hp@1x.webp";
+import media_hp_2x from "./images/cases/media/media-hp@2x.webp";
+import media_hp_horizontal_1x from "./images/cases/media/media-hp-horizontal@1x.webp";
+import media_hp_horizontal_2x from "./images/cases/media/media-hp-horizontal@2x.webp";
 
-//Case-details-overview
-import fintech_overview_parallax_1x from "./images/case-details/overview/fintech-overview-parallax@1x.webp";
-import fintech_overview_parallax_2x from "./images/case-details/overview/fintech-overview-parallax@2x.webp";
-
-// Case-details-achivements
-import case_achivements_item1_desk_1x from "./images/case-details/achivements/achivements-item1_desk@1x.webp";
-import case_achivements_item1_desk_2x from "./images/case-details/achivements/achivements-item1_desk@2x.webp";
+import crypto_main_1x from "./images/cases/crypto/crypto-main@1x.webp";
+import crypto_main_2x from "./images/cases/crypto/crypto-main@2x.webp";
+import crypto_vertical_1x from "./images/cases/crypto/crypto-vertical@1x.webp";
+import crypto_vertical_2x from "./images/cases/crypto/crypto-vertical@2x.webp";
+import crypto_general_page_1x from "./images/cases/crypto/crypto-general-page@1x.webp";
+import crypto_general_page_2x from "./images/cases/crypto/crypto-general-page@2x.webp";
+import crypto_full_screen_block_1x from "./images/cases/crypto/crypto-full-screen-block@1x.webp";
+import crypto_full_screen_block_2x from "./images/cases/crypto/crypto-full-screen-block@2x.webp";
+import crypto_industries_page_1x from "./images/cases/crypto/crypto-industries-page@1x.webp";
+import crypto_industries_page_2x from "./images/cases/crypto/crypto-industries-page@2x.webp";
+import crypto_hp_1x from "./images/cases/crypto/crypto-hp@1x.webp";
+import crypto_hp_2x from "./images/cases/crypto/crypto-hp@2x.webp";
+import crypto_hp_horizontal_1x from "./images/cases/crypto/crypto-hp-horizontal@1x.webp";
+import crypto_hp_horizontal_2x from "./images/cases/crypto/crypto-hp-horizontal@2x.webp";
 
 // Why Choose Us
 import industry_expertise_light_1x from "./images/why-choose-us/industry-expertise-light@1x.webp";
@@ -188,18 +197,6 @@ import cloud_item5_2x from "./images/service-details/why-choose-sonomics/cloud-i
 
 export const images = {
   industriesImages: {
-    fintech_1x,
-    fintech_2x,
-    ecommerce_1x,
-    ecommerce_2x,
-    crypto_1x,
-    crypto_2x,
-    health_care_1x,
-    health_care_2x,
-    media_research_1x,
-    media_research_2x,
-    telecommunications_1x,
-    telecommunications_2x,
     fintech_icon_1x,
     fintech_icon_2x,
     ecommerce_icon_1x,
@@ -208,12 +205,48 @@ export const images = {
     crypto_icon_2x,
   },
   casesImages: {
-    case1_1x,
-    case1_2x,
-    case2_1x,
-    case2_2x,
-    case_lg_1_1x,
-    case_lg_1_2x,
+    fintech_main_1x,
+    fintech_main_2x,
+    fintech_vertical_1x,
+    fintech_vertical_2x,
+    fintech_general_page_1x,
+    fintech_general_page_2x,
+    fintech_full_screen_block_1x,
+    fintech_full_screen_block_2x,
+    fintech_industries_page_1x,
+    fintech_industries_page_2x,
+    fintech_hp_1x,
+    fintech_hp_2x,
+    fintech_hp_horizontal_1x,
+    fintech_hp_horizontal_2x,
+    crypto_main_1x,
+    crypto_main_2x,
+    crypto_vertical_1x,
+    crypto_vertical_2x,
+    crypto_general_page_1x,
+    crypto_general_page_2x,
+    crypto_full_screen_block_1x,
+    crypto_full_screen_block_2x,
+    crypto_industries_page_1x,
+    crypto_industries_page_2x,
+    crypto_hp_1x,
+    crypto_hp_2x,
+    crypto_hp_horizontal_1x,
+    crypto_hp_horizontal_2x,
+    media_main_1x,
+    media_main_2x,
+    media_vertical_1x,
+    media_vertical_2x,
+    media_general_page_1x,
+    media_general_page_2x,
+    media_full_screen_block_1x,
+    media_full_screen_block_2x,
+    media_industries_page_1x,
+    media_industries_page_2x,
+    media_hp_1x,
+    media_hp_2x,
+    media_hp_horizontal_1x,
+    media_hp_horizontal_2x,
   },
   whyChooseUsImages: {
     industry_expertise_light_1x,
@@ -357,24 +390,6 @@ export const images = {
       cloud_item4_2x,
       cloud_item5_1x,
       cloud_item5_2x,
-    },
-  },
-  caseDetails: {
-    heroImages: {
-      case_details_item1_desk_1x,
-      case_details_item1_desk_2x,
-      case_details_item2_desk_1x,
-      case_details_item2_desk_2x,
-      case_details_item3_desk_1x,
-      case_details_item3_desk_2x,
-    },
-    overviewImages: {
-      fintech_overview_parallax_1x,
-      fintech_overview_parallax_2x,
-    },
-    achivementsImages: {
-      case_achivements_item1_desk_1x,
-      case_achivements_item1_desk_2x,
     },
   },
 };
