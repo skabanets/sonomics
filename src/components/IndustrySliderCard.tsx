@@ -14,7 +14,7 @@ interface IndustryProps {
 export const IndustrySliderCard = ({ industry, index }: IndustryProps) => {
   const [isOpen, toggleModal, handleClickOnBackdrop] = useModal();
 
-  const { industriesImages } = images;
+  const { casesImages } = images;
   const {
     name,
     description,
@@ -24,8 +24,8 @@ export const IndustrySliderCard = ({ industry, index }: IndustryProps) => {
     images: imgs,
     buttonText,
   } = industry;
-  const img = industriesImages[imgs.image as keyof typeof industriesImages];
-  const retinaImg = industriesImages[imgs.retinaImage as keyof typeof industriesImages];
+  const img = casesImages[imgs.image as keyof typeof casesImages];
+  const retinaImg = casesImages[imgs.retinaImage as keyof typeof casesImages];
 
   const getIndustrySliderCardBgColor = (index: number) => {
     switch (index) {
