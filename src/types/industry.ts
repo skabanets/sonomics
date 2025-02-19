@@ -18,8 +18,8 @@ export interface Industry {
   images: {
     image: string;
     retinaImage: string;
-    icon: string;
-    retinaIcon: string;
+    icon?: string;
+    retinaIcon?: string;
   };
   buttonText: string;
 }
