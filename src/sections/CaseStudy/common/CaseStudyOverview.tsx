@@ -6,13 +6,14 @@ import { Button, ContactForm, Modal } from "../../../components";
 import { images } from "../../../assets";
 import { useModal } from "../../../hooks";
 import { slideInWithFade } from "../../../constants";
-import type { Overview } from "../../../types";
+import type { Overview, caseStudyImage } from "../../../types";
 
 interface CaseStudyOverviewProps {
   overview: Overview;
+  sectionImages: caseStudyImage;
 }
 
-export const CaseStudyOverview = ({ overview }: CaseStudyOverviewProps) => {
+export const CaseStudyOverview = ({ overview, sectionImages }: CaseStudyOverviewProps) => {
   const [isOpen, toggleModal, handleClickOnBackdrop] = useModal();
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -22,13 +23,11 @@ export const CaseStudyOverview = ({ overview }: CaseStudyOverviewProps) => {
 
   const y = useTransform(scrollYProgress, [0, 1], [-125, 125]);
 
-  const { client, technologies, description, image, retinaImage } = overview;
-  const {
-    caseDetails: { overviewImages },
-  } = images;
+  const { client, technologies, description } = overview;
+  const { casesImages } = images;
 
-  const img = overviewImages[image as keyof typeof overviewImages];
-  const retinaImg = overviewImages[retinaImage as keyof typeof overviewImages];
+  const img = casesImages[sectionImages.image as keyof typeof casesImages];
+  const retinaImg = casesImages[sectionImages.retinaImage as keyof typeof casesImages];
 
   const overviewAnimationProps = {
     ...slideInWithFade,
@@ -41,8 +40,8 @@ export const CaseStudyOverview = ({ overview }: CaseStudyOverviewProps) => {
   return (
     <>
       <section className="bg-letsTalkBgColor pt-[80px]">
-        <div className="full-hd-container">
-          <motion.div className="container flex justify-between" {...overviewAnimationProps}>
+        <motion.div className="container" {...overviewAnimationProps}>
+          <div className="flex justify-between">
             <div className="flex w-[407px] flex-col gap-[36px]">
               <div>
                 <h3>Client</h3>
@@ -57,24 +56,20 @@ export const CaseStudyOverview = ({ overview }: CaseStudyOverviewProps) => {
               <h3>{description}</h3>
               <Button label="Let&#8217;s talk" className="w-[152px]" onClick={toggleModal} />
             </div>
-          </motion.div>
-          <motion.div
-            className="relative mt-[80px] h-[500px] overflow-hidden rounded-[20px]"
-            ref={ref}
-            {...slideInWithFade}
-          >
+          </div>
+          <div className="relative mt-[80px] h-[500px] overflow-hidden rounded-[20px]" ref={ref}>
             <motion.img
               style={{ y }}
               srcSet={`${img} 1x, ${retinaImg} 2x`}
-              src={image}
+              src={img}
               alt="Parallax effect image showing a scenic background"
               width={1280}
               height={750}
               loading="lazy"
               className="absolute left-0 top-[-125px] h-[750px] w-full object-cover"
             />
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
       </section>
       {isOpen && (
         <Modal {...{ toggleModal, handleClickOnBackdrop }}>

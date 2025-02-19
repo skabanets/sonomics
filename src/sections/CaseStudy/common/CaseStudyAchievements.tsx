@@ -5,23 +5,23 @@ import { Button, ContactForm, Modal } from "../../../components";
 import { slideInWithFade } from "../../../constants";
 import { useModal } from "../../../hooks";
 import { images } from "../../../assets";
-import type { Achievements } from "../../../types";
+import type { OrdinaryItem, caseStudyImage } from "../../../types";
 
 interface CaseStudyAchivementsProps {
-  achievements: Achievements;
+  achievements: OrdinaryItem[];
+  sectionImages: caseStudyImage;
 }
 
-export const CaseStudyAchievements = ({ achievements }: CaseStudyAchivementsProps) => {
+export const CaseStudyAchievements = ({
+  achievements,
+  sectionImages,
+}: CaseStudyAchivementsProps) => {
   const [isOpen, toggleModal, handleClickOnBackdrop] = useModal();
 
-  const { items, image, retinaImage } = achievements;
+  const { casesImages } = images;
 
-  const {
-    caseDetails: { achivementsImages },
-  } = images;
-
-  const img = achivementsImages[image as keyof typeof achivementsImages];
-  const retinaImg = achivementsImages[retinaImage as keyof typeof achivementsImages];
+  const img = casesImages[sectionImages.image as keyof typeof casesImages];
+  const retinaImg = casesImages[sectionImages.retinaImage as keyof typeof casesImages];
 
   return (
     <>
@@ -33,7 +33,7 @@ export const CaseStudyAchievements = ({ achievements }: CaseStudyAchivementsProp
           </div>
           <div className="lg:flex">
             <ul className="rounded-t-[40px] bg-accentYellowColor p-[20px] text-darkBgColor md:p-[30px] lg:w-1/2 lg:rounded-l-[40px] lg:rounded-tr-none lg:p-[60px]">
-              {items.map(({ title, description }, index) => (
+              {achievements.map(({ title, description }, index) => (
                 <li
                   key={index}
                   className="border-t border-t-blackBgColor py-[30px] first:border-none first:pt-0 last:pb-0"

@@ -3,13 +3,13 @@ import { useNavigate, useParams } from "react-router-dom";
 
 import {
   CaseStudyChallenges,
-  CaseStudyHero,
   CaseStudyTechnologies,
   CaseStudyAchievements,
   CaseStudyFunctionalModules,
   CaseStudyOverview,
   CaseStudyServices,
   LetsTalk,
+  CaseStudyHero,
 } from "../sections";
 
 import { caseStudies, routes } from "../constants";
@@ -30,24 +30,24 @@ const CaseStudyDetails = () => {
 
   const {
     name,
-    heroImages,
     overview,
     challenges,
     services,
     functionalModules,
     technologies,
     achievements,
+    images,
   } = caseStudy;
 
   return (
     <>
-      <CaseStudyHero title={name} sectionImages={heroImages} />
-      <CaseStudyOverview overview={overview} />
+      <CaseStudyHero title={name} />
+      <CaseStudyOverview overview={overview} sectionImages={images.main} />
       <CaseStudyChallenges challenges={challenges} />
       {services && <CaseStudyServices services={services} />}
       {functionalModules && <CaseStudyFunctionalModules functionalModules={functionalModules} />}
       <CaseStudyTechnologies technologies={technologies} />
-      <CaseStudyAchievements achievements={achievements} />
+      <CaseStudyAchievements achievements={achievements} sectionImages={images.vertical} />
       <LetsTalk />
     </>
   );
