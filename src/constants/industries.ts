@@ -1,4 +1,6 @@
-export const industries = [
+import type { Industry } from "../types";
+
+export const industries: Industry[] = [
   {
     name: "Telecommunications",
     description: [
@@ -23,10 +25,8 @@ export const industries = [
       link: "/case-study",
     },
     images: {
-      image: "telecommunications_1x",
-      retinaImage: "telecommunications_2x",
-      icon: "",
-      retinaIcon: "",
+      image: "fintech_industries_page_1x",
+      retinaImage: "fintech_industries_page_2x",
     },
     buttonText: "Start your project",
   },
@@ -52,10 +52,8 @@ export const industries = [
       link: "/case-study",
     },
     images: {
-      image: "media_research_1x",
-      retinaImage: "media_research_2x",
-      icon: "",
-      retinaIcon: "",
+      image: "media_industries_page_1x",
+      retinaImage: "media_industries_page_2x",
     },
     buttonText: "Start your fintech project",
   },
@@ -83,8 +81,8 @@ export const industries = [
       link: "/case-study",
     },
     images: {
-      image: "fintech_1x",
-      retinaImage: "fintech_2x",
+      image: "fintech_industries_page_1x",
+      retinaImage: "fintech_industries_page_2x",
       icon: "fintech_icon_1x",
       retinaIcon: "fintech_icon_2x",
     },
@@ -114,8 +112,8 @@ export const industries = [
       link: "/case-study",
     },
     images: {
-      image: "ecommerce_1x",
-      retinaImage: "ecommerce_2x",
+      image: "fintech_industries_page_1x",
+      retinaImage: "fintech_industries_page_2x",
       icon: "ecommerce_icon_1x",
       retinaIcon: "ecommerce_icon_2x",
     },
@@ -145,8 +143,8 @@ export const industries = [
       link: "/case-study",
     },
     images: {
-      image: "crypto_1x",
-      retinaImage: "crypto_2x",
+      image: "crypto_industries_page_1x",
+      retinaImage: "crypto_industries_page_2x",
       icon: "crypto_icon_1x",
       retinaIcon: "crypto_icon_2x",
     },
@@ -175,8 +173,8 @@ export const industries = [
       link: "/case-study",
     },
     images: {
-      image: "health_care_1x",
-      retinaImage: "health_care_2x",
+      image: "fintech_industries_page_1x",
+      retinaImage: "fintech_industries_page_2x",
       icon: "",
       retinaIcon: "",
     },
