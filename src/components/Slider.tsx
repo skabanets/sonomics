@@ -45,19 +45,25 @@ export const Slider = ({ slides }: SliderProps) => {
           className="mySwiper"
           ref={swiperRef}
         >
-          {slides.map((slide) => (
-            <SwiperSlide key={slide.id}>
-              <img
-                srcSet={`${casesImages[slide.image]} 1x, ${casesImages[slide.retinaImage]} 2x`}
-                src={casesImages[slide.image]}
-                alt={slide.name}
-                width={600}
-                height={530}
-                loading="lazy"
-                className="h-[290px] w-full object-cover md:h-[530px] md:w-[600xp]"
-              />
-            </SwiperSlide>
-          ))}
+          {slides.map(({ id, name, images }) => {
+            const { generalPage } = images;
+            const img = casesImages[generalPage.image as keyof typeof casesImages];
+            const retinaImg = casesImages[generalPage.retinaImage as keyof typeof casesImages];
+
+            return (
+              <SwiperSlide key={id}>
+                <img
+                  srcSet={`${img} 1x, ${retinaImg} 2x`}
+                  src={img}
+                  alt={name}
+                  width={600}
+                  height={530}
+                  loading="lazy"
+                  className="h-[290px] w-full object-cover md:h-[530px] md:w-[600px]"
+                />
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
         {activeSlide && (
           <div className="absolute bottom-0 z-50 flex h-[74px] w-full items-center justify-between overflow-hidden bg-gradient-to-b from-[rgba(0,0,0,0)] to-black px-[20px] pb-[20px] pt-[27px] md:h-[137px] md:px-[30px] md:pb-[33px] md:pt-[68px]">
