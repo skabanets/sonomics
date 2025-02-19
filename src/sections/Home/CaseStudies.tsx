@@ -5,12 +5,13 @@ import { motion } from "framer-motion";
 import { CaseCard, CustomTitle } from "../../components";
 
 import { slideInWithFade, caseStudieStyles, caseStudies, routes } from "../../constants";
-import { CaseStudy } from "../../types";
+import { CaseStudy, CaseStudyCardType } from "../../types";
 
 export const CaseStudies = () => {
   const styledCaseStudies = caseStudies.map((caseStudy, index) => ({
     ...caseStudy,
     styles: caseStudieStyles[index],
+    type: (index === 0 || index === 3 ? "vertical" : "horizontal") as CaseStudyCardType,
   }));
 
   const columns = [styledCaseStudies.slice(0, 2), styledCaseStudies.slice(2, 4)];
@@ -39,6 +40,7 @@ export const CaseStudies = () => {
                   <motion.div className="w-[620px]" key={caseStudy.id} {...slideInWithFade}>
                     <CaseCard
                       caseStudy={caseStudy as CaseStudy}
+                      type={caseStudy.type}
                       containerStyles={caseStudy.styles.containerStyles}
                       imageWidth={caseStudy.styles.width}
                       imageHeight={caseStudy.styles.height}
@@ -53,6 +55,7 @@ export const CaseStudies = () => {
                 <motion.div className="w-full" key={caseStudy.id} {...slideInWithFade}>
                   <CaseCard
                     caseStudy={caseStudy as CaseStudy}
+                    type="general"
                     containerStyles="w-full"
                     imageWidth={360}
                     imageHeight={300}
