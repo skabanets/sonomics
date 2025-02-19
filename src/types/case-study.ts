@@ -1,10 +1,3 @@
-import { images } from "../assets";
-
-export interface HeroImage {
-  image: string;
-  retinaImage: string;
-}
-
 export interface Overview {
   client: string;
   technologies: string;
@@ -36,26 +29,38 @@ export interface OrdinaryItem {
   description: string;
 }
 
-export interface Achievements {
-  items: OrdinaryItem[];
+export interface caseStudyImage {
   image: string;
   retinaImage: string;
+}
+
+interface caseStudyImages {
+  main: caseStudyImage;
+  vertical: caseStudyImage;
+  generalPage: caseStudyImage;
+  fullScreenBlock: caseStudyImage;
+  hp: caseStudyImage;
+  hpHorizontal: caseStudyImage;
 }
 
 export interface CaseStudy {
   id: string;
   link: string;
   name: string;
-  heroImages: HeroImage[];
   overview: Overview;
   challenges: string[];
   services?: CaseStudyServicesType;
   functionalModules?: FunctionalModule[];
   technologies: OrdinaryItem[];
-  achievements: Achievements;
+  achievements: OrdinaryItem[];
   description: string;
-  image: keyof typeof images.casesImages;
-  retinaImage: keyof typeof images.casesImages;
-  bgImage1x: keyof typeof images.casesImages;
-  bgImage2x: keyof typeof images.casesImages;
+  images: caseStudyImages;
 }
+
+export type CaseStudyCardType = "general" | "vertical" | "horizontal";
+
+export type CaseStudyTypeMap = {
+  general: "generalPage";
+  vertical: "hp";
+  horizontal: "hpHorizontal";
+};

@@ -8,20 +8,6 @@ export const caseStudies: CaseStudy[] = [
     id: "fintech-combination",
     link: routes.FintechСaseStudy,
     name: "Fintech transformation success",
-    heroImages: [
-      {
-        image: "case_details_item1_desk_1x",
-        retinaImage: "case_details_item1_desk_2x",
-      },
-      {
-        image: "case_details_item1_desk_1x",
-        retinaImage: "case_details_item1_desk_2x",
-      },
-      {
-        image: "case_details_item1_desk_1x",
-        retinaImage: "case_details_item1_desk_2x",
-      },
-    ],
     overview: {
       client:
         "A leading financial services company wanted to upgrade its platform to stay competitive.",
@@ -158,61 +144,65 @@ export const caseStudies: CaseStudy[] = [
         description: "Jira for agile project management and GitHub Actions for CI/CD pipelines.",
       },
     ],
-    achievements: {
-      items: [
-        {
-          title: "Improved productivity",
-          description: "Automated IBAN account creation reduced processing times by 60%",
-        },
-        {
-          title: "Increased revenue streams:",
-          description:
-            "The loan management system and currency exchange capabilities generated new revenue opportunities",
-        },
-        {
-          title: "Enhanced UX:",
-          description:
-            "Real-time money transfers and currency exchange improved customer satisfaction",
-        },
-        {
-          title: "Seamless integration",
-          description:
-            "Secure and reliable integration with external providers ensured smooth operation and scalability",
-        },
-        {
-          title: "Future-ready platform",
-          description:
-            "Scalable architecture and modular design equipped the client for future growth and feature expansion",
-        },
-      ],
-      image: "case_achivements_item1_desk_1x",
-      retinaImage: "case_achivements_item1_desk_2x",
-    },
+    achievements: [
+      {
+        title: "Improved productivity",
+        description: "Automated IBAN account creation reduced processing times by 60%",
+      },
+      {
+        title: "Increased revenue streams:",
+        description:
+          "The loan management system and currency exchange capabilities generated new revenue opportunities",
+      },
+      {
+        title: "Enhanced UX:",
+        description:
+          "Real-time money transfers and currency exchange improved customer satisfaction",
+      },
+      {
+        title: "Seamless integration",
+        description:
+          "Secure and reliable integration with external providers ensured smooth operation and scalability",
+      },
+      {
+        title: "Future-ready platform",
+        description:
+          "Scalable architecture and modular design equipped the client for future growth and feature expansion",
+      },
+    ],
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
-    image: "case1_1x",
-    retinaImage: "case1_2x",
-    bgImage1x: "case_lg_1_1x",
-    bgImage2x: "case_lg_1_2x",
+    images: {
+      main: {
+        image: "fintech_main_1x",
+        retinaImage: "fintech_main_2x",
+      },
+      vertical: {
+        image: "fintech_vertical_1x",
+        retinaImage: "fintech_vertical_2x",
+      },
+      generalPage: {
+        image: "fintech_general_page_1x",
+        retinaImage: "fintech_general_page_2x",
+      },
+      fullScreenBlock: {
+        image: "fintech_full_screen_block_1x",
+        retinaImage: "fintech_full_screen_block_2x",
+      },
+      hp: {
+        image: "fintech_hp_1x",
+        retinaImage: "fintech_hp_2x",
+      },
+      hpHorizontal: {
+        image: "fintech_hp_horizontal_1x",
+        retinaImage: "fintech_hp_horizontal_2x",
+      },
+    },
   },
   {
     id: "advancing-crypto-innovation",
     link: routes.CryptoCaseStudy,
     name: "Revolutionizing Crypto Services for Seamless User Experience",
-    heroImages: [
-      {
-        image: "case_details_item1_desk_1x",
-        retinaImage: "case_details_item1_desk_2x",
-      },
-      {
-        image: "case_details_item1_desk_1x",
-        retinaImage: "case_details_item1_desk_2x",
-      },
-      {
-        image: "case_details_item1_desk_1x",
-        retinaImage: "case_details_item1_desk_2x",
-      },
-    ],
     overview: {
       client:
         "A pioneering cryptocurrency company sought to expand its ecosystem by delivering innovative solutions for crypto transactions, lending, staking, and passive earning.",
@@ -325,62 +315,65 @@ export const caseStudies: CaseStudy[] = [
         description: "Secure, decentralized databases for transaction and user data.",
       },
     ],
-    achievements: {
-      items: [
-        {
-          title: "Enhanced Ecosystem Expansion",
-          description:
-            "Enabled external platforms to integrate crypto purchasing features, driving transaction growth",
-        },
-        {
-          title: "Improved User Retention",
-          description:
-            "Flexible loan structures, high-yield staking, and earning options attracted a wide user base",
-        },
-        {
-          title: "Increased Earning Potential",
-          description:
-            "Delivered low-cost transactions and attractive earning mechanisms to maximize user benefits",
-        },
-        {
-          title: "Robust Compliance and Security",
-          description:
-            "Adherence to global crypto regulations boosted user trust and platform credibility",
-        },
-        {
-          title: "Future-Ready Scalability",
-          description:
-            "Implemented solutions primed for evolving user demands and market conditions",
-        },
-      ],
-      image: "case_achivements_item1_desk_1x",
-      retinaImage: "case_achivements_item1_desk_2x",
-    },
+    achievements: [
+      {
+        title: "Enhanced Ecosystem Expansion",
+        description:
+          "Enabled external platforms to integrate crypto purchasing features, driving transaction growth",
+      },
+      {
+        title: "Improved User Retention",
+        description:
+          "Flexible loan structures, high-yield staking, and earning options attracted a wide user base",
+      },
+      {
+        title: "Increased Earning Potential",
+        description:
+          "Delivered low-cost transactions and attractive earning mechanisms to maximize user benefits",
+      },
+      {
+        title: "Robust Compliance and Security",
+        description:
+          "Adherence to global crypto regulations boosted user trust and platform credibility",
+      },
+      {
+        title: "Future-Ready Scalability",
+        description: "Implemented solutions primed for evolving user demands and market conditions",
+      },
+    ],
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
-    image: "case1_1x",
-    retinaImage: "case1_2x",
-    bgImage1x: "case_lg_1_1x",
-    bgImage2x: "case_lg_1_2x",
+    images: {
+      main: {
+        image: "crypto_main_1x",
+        retinaImage: "crypto_main_2x",
+      },
+      vertical: {
+        image: "fintech_vertical_1x",
+        retinaImage: "fintech_vertical_2x",
+      },
+      generalPage: {
+        image: "crypto_general_page_1x",
+        retinaImage: "crypto_general_page_2x",
+      },
+      fullScreenBlock: {
+        image: "crypto_full_screen_block_1x",
+        retinaImage: "crypto_full_screen_block_2x",
+      },
+      hp: {
+        image: "crypto_hp_1x",
+        retinaImage: "crypto_hp_2x",
+      },
+      hpHorizontal: {
+        image: "crypto_hp_horizontal_1x",
+        retinaImage: "crypto_hp_horizontal_2x",
+      },
+    },
   },
   {
     id: "optimizing-media-research",
     link: routes.MediaResearchCaseStudy,
     name: "Optimizing Media Research",
-    heroImages: [
-      {
-        image: "case_details_item1_desk_1x",
-        retinaImage: "case_details_item1_desk_2x",
-      },
-      {
-        image: "case_details_item1_desk_1x",
-        retinaImage: "case_details_item1_desk_2x",
-      },
-      {
-        image: "case_details_item1_desk_1x",
-        retinaImage: "case_details_item1_desk_2x",
-      },
-    ],
     overview: {
       client:
         "Our client, a global leader in audience measurement and data analytics, focuses on refining the process of media consumption analysis to provide accurate insights.",
@@ -494,62 +487,66 @@ export const caseStudies: CaseStudy[] = [
           "MongoDB, Netezza, and Oracle for secure data storage, fast retrieval, and seamless integration of both structured and unstructured data.",
       },
     ],
-    achievements: {
-      items: [
-        {
-          title: "Improved Audience Insights",
-          description:
-            "AI-driven audience segmentation and big data analytics allowed the client to gain more precise insights into audience behavior, enhancing the effectiveness of media planning and ad targeting",
-        },
-        {
-          title: "Real-Time Data Access",
-          description:
-            "The integration of real-time data processing enabled the client to provide up-to-the-minute audience insights, empowering media planners and advertisers to make timely decisions",
-        },
-        {
-          title: "Enhanced Predictive Capabilities",
-          description:
-            "With machine learning models in place, the client was able to better predict audience behavior, providing actionable insights for content strategy and ad optimization",
-        },
-        {
-          title: "Streamlined CRM Operations",
-          description:
-            "The CRM integration enhanced client engagement and allowed for more personalized service, leading to improved client satisfaction and stronger business relationships",
-        },
-        {
-          title: "Scalable Solutions",
-          description:
-            "The cloud-optimized platform provided the scalability needed to handle growing datasets, ensuring the system could continue to support the client's expanding needs",
-        },
-      ],
-      image: "case_achivements_item1_desk_1x",
-      retinaImage: "case_achivements_item1_desk_2x",
-    },
+    achievements: [
+      {
+        title: "Improved Audience Insights",
+        description:
+          "AI-driven audience segmentation and big data analytics allowed the client to gain more precise insights into audience behavior, enhancing the effectiveness of media planning and ad targeting",
+      },
+      {
+        title: "Real-Time Data Access",
+        description:
+          "The integration of real-time data processing enabled the client to provide up-to-the-minute audience insights, empowering media planners and advertisers to make timely decisions",
+      },
+      {
+        title: "Enhanced Predictive Capabilities",
+        description:
+          "With machine learning models in place, the client was able to better predict audience behavior, providing actionable insights for content strategy and ad optimization",
+      },
+      {
+        title: "Streamlined CRM Operations",
+        description:
+          "The CRM integration enhanced client engagement and allowed for more personalized service, leading to improved client satisfaction and stronger business relationships",
+      },
+      {
+        title: "Scalable Solutions",
+        description:
+          "The cloud-optimized platform provided the scalability needed to handle growing datasets, ensuring the system could continue to support the client's expanding needs",
+      },
+    ],
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
-    image: "case1_1x",
-    retinaImage: "case1_2x",
-    bgImage1x: "case_lg_1_1x",
-    bgImage2x: "case_lg_1_2x",
+    images: {
+      main: {
+        image: "media_main_1x",
+        retinaImage: "media_main_2x",
+      },
+      vertical: {
+        image: "media_vertical_1x",
+        retinaImage: "media_vertical_2x",
+      },
+      generalPage: {
+        image: "media_general_page_1x",
+        retinaImage: "media_general_page_2x",
+      },
+      fullScreenBlock: {
+        image: "media_full_screen_block_1x",
+        retinaImage: "media_full_screen_block_2x",
+      },
+      hp: {
+        image: "media_hp_1x",
+        retinaImage: "media_hp_2x",
+      },
+      hpHorizontal: {
+        image: "media_hp_horizontal_1x",
+        retinaImage: "media_hp_horizontal_2x",
+      },
+    },
   },
   {
     id: "pharmaceutical-distribution",
     link: routes.PharmaceuticalDistributionCaseStudy,
     name: "Driving Innovation in Pharmaceutical Distribution",
-    heroImages: [
-      {
-        image: "case_details_item1_desk_1x",
-        retinaImage: "case_details_item1_desk_2x",
-      },
-      {
-        image: "case_details_item1_desk_1x",
-        retinaImage: "case_details_item1_desk_2x",
-      },
-      {
-        image: "case_details_item1_desk_1x",
-        retinaImage: "case_details_item1_desk_2x",
-      },
-    ],
     overview: {
       client:
         "Our client is a global distributor specializing in pharmaceutical products, veterinary supplies, dietary supplements, and medical devices.",
@@ -601,57 +598,61 @@ export const caseStudies: CaseStudy[] = [
         description: "Grafana, Selenium, Postman for API testing",
       },
     ],
-    achievements: {
-      items: [
-        {
-          title: "Enhanced Accessibility",
-          description:
-            "Created a centralized hub for accessing product information, fostering better user experiences for diverse stakeholders",
-        },
-        {
-          title: "Streamlined Operations",
-          description:
-            "Automated processes reduced bottlenecks in tender management and product updates, boosting efficiency",
-        },
-        {
-          title: "Improved Collaboration",
-          description:
-            "Enabled real-time communication tools that facilitated seamless interaction between suppliers, distributors, and healthcare providers",
-        },
-        {
-          title: "Regulatory Compliance",
-          description:
-            "Delivered a platform that meets stringent industry regulations, including pharmacovigilance and product licensing standards",
-        },
-      ],
-      image: "case_achivements_item1_desk_1x",
-      retinaImage: "case_achivements_item1_desk_2x",
-    },
+    achievements: [
+      {
+        title: "Enhanced Accessibility",
+        description:
+          "Created a centralized hub for accessing product information, fostering better user experiences for diverse stakeholders",
+      },
+      {
+        title: "Streamlined Operations",
+        description:
+          "Automated processes reduced bottlenecks in tender management and product updates, boosting efficiency",
+      },
+      {
+        title: "Improved Collaboration",
+        description:
+          "Enabled real-time communication tools that facilitated seamless interaction between suppliers, distributors, and healthcare providers",
+      },
+      {
+        title: "Regulatory Compliance",
+        description:
+          "Delivered a platform that meets stringent industry regulations, including pharmacovigilance and product licensing standards",
+      },
+    ],
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
-    image: "case1_1x",
-    retinaImage: "case1_2x",
-    bgImage1x: "case_lg_1_1x",
-    bgImage2x: "case_lg_1_2x",
+    images: {
+      main: {
+        image: "fintech_main_1x",
+        retinaImage: "fintech_main_2x",
+      },
+      vertical: {
+        image: "fintech_vertical_1x",
+        retinaImage: "fintech_vertical_2x",
+      },
+      generalPage: {
+        image: "fintech_general_page_1x",
+        retinaImage: "fintech_general_page_2x",
+      },
+      fullScreenBlock: {
+        image: "fintech_full_screen_block_1x",
+        retinaImage: "fintech_full_screen_block_2x",
+      },
+      hp: {
+        image: "fintech_hp_1x",
+        retinaImage: "fintech_hp_2x",
+      },
+      hpHorizontal: {
+        image: "fintech_hp_horizontal_1x",
+        retinaImage: "fintech_hp_horizontal_2x",
+      },
+    },
   },
   {
     id: "transforming-e-commerce",
     link: routes.TransformingECommerceCaseStudy,
     name: "Transforming E-Commerce with Advanced Technology",
-    heroImages: [
-      {
-        image: "case_details_item1_desk_1x",
-        retinaImage: "case_details_item1_desk_2x",
-      },
-      {
-        image: "case_details_item1_desk_1x",
-        retinaImage: "case_details_item1_desk_2x",
-      },
-      {
-        image: "case_details_item1_desk_1x",
-        retinaImage: "case_details_item1_desk_2x",
-      },
-    ],
     overview: {
       client:
         "A leading European manufacturer of personalized lifestyle products partnered with us to enhance their e-commerce platform.",
@@ -694,59 +695,63 @@ export const caseStudies: CaseStudy[] = [
         description: "REST, OpenAPI/Swagger for seamless integrations.",
       },
     ],
-    achievements: {
-      items: [
-        {
-          title: "System Modernization",
-          description: "Successfully migrated legacy code to a modern, scalable architecture",
-        },
-        {
-          title: "Enhanced Performance",
-          description: "Reduced page load times and increased system reliability.",
-        },
-        {
-          title: "Efficient Logistics",
-          description:
-            "Integrated APIs streamlined transportation processes, reducing delivery delays",
-        },
-        {
-          title: "Secure Transactions",
-          description: "Implemented payment gateways ensured compliance and boosted customer trust",
-        },
-        {
-          title: "Improved Customer Engagement",
-          description:
-            "The CRM system enabled personalized interactions, driving higher retention and satisfaction",
-        },
-      ],
-      image: "case_achivements_item1_desk_1x",
-      retinaImage: "case_achivements_item1_desk_2x",
-    },
+    achievements: [
+      {
+        title: "System Modernization",
+        description: "Successfully migrated legacy code to a modern, scalable architecture",
+      },
+      {
+        title: "Enhanced Performance",
+        description: "Reduced page load times and increased system reliability.",
+      },
+      {
+        title: "Efficient Logistics",
+        description:
+          "Integrated APIs streamlined transportation processes, reducing delivery delays",
+      },
+      {
+        title: "Secure Transactions",
+        description: "Implemented payment gateways ensured compliance and boosted customer trust",
+      },
+      {
+        title: "Improved Customer Engagement",
+        description:
+          "The CRM system enabled personalized interactions, driving higher retention and satisfaction",
+      },
+    ],
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
-    image: "case1_1x",
-    retinaImage: "case1_2x",
-    bgImage1x: "case_lg_1_1x",
-    bgImage2x: "case_lg_1_2x",
+    images: {
+      main: {
+        image: "fintech_main_1x",
+        retinaImage: "fintech_main_2x",
+      },
+      vertical: {
+        image: "fintech_vertical_1x",
+        retinaImage: "fintech_vertical_2x",
+      },
+      generalPage: {
+        image: "fintech_general_page_1x",
+        retinaImage: "fintech_general_page_2x",
+      },
+      fullScreenBlock: {
+        image: "fintech_full_screen_block_1x",
+        retinaImage: "fintech_full_screen_block_2x",
+      },
+      hp: {
+        image: "fintech_hp_1x",
+        retinaImage: "fintech_hp_2x",
+      },
+      hpHorizontal: {
+        image: "fintech_hp_horizontal_1x",
+        retinaImage: "fintech_hp_horizontal_2x",
+      },
+    },
   },
   {
     id: "revolution-in-telecommunications",
     link: routes.RevolutionInTelecommunicationsCaseStudy,
     name: "Revolution in Telecommunications with ISP Platform",
-    heroImages: [
-      {
-        image: "case_details_item1_desk_1x",
-        retinaImage: "case_details_item1_desk_2x",
-      },
-      {
-        image: "case_details_item1_desk_1x",
-        retinaImage: "case_details_item1_desk_2x",
-      },
-      {
-        image: "case_details_item1_desk_1x",
-        retinaImage: "case_details_item1_desk_2x",
-      },
-    ],
     overview: {
       client:
         "A leading telecom company sought to develop a global platform enabling users to search, compare, and select Internet Service Providers (ISPs) worldwide.",
@@ -832,37 +837,55 @@ export const caseStudies: CaseStudy[] = [
         description: "Implemented to enhance ISP recommendations and improve user experience.",
       },
     ],
-    achievements: {
-      items: [
-        {
-          title: "40% Faster Response Times",
-          description:
-            "Performance optimization reduced query response times, delivering real-time results",
-        },
-        {
-          title: "Enhanced User Engagement",
-          description:
-            "Intuitive features and personalized recommendations drove a 30% increase in user satisfaction",
-        },
-        {
-          title: "Global Scalability",
-          description:
-            "Platform successfully supported millions of users worldwide, enabling seamless ISP comparisons",
-        },
-        {
-          title: "Improved Collaboration",
-          description:
-            "Efficient coordination within the distributed team ensured timely delivery and high-quality results",
-        },
-      ],
-      image: "case_achivements_item1_desk_1x",
-      retinaImage: "case_achivements_item1_desk_2x",
-    },
+    achievements: [
+      {
+        title: "40% Faster Response Times",
+        description:
+          "Performance optimization reduced query response times, delivering real-time results",
+      },
+      {
+        title: "Enhanced User Engagement",
+        description:
+          "Intuitive features and personalized recommendations drove a 30% increase in user satisfaction",
+      },
+      {
+        title: "Global Scalability",
+        description:
+          "Platform successfully supported millions of users worldwide, enabling seamless ISP comparisons",
+      },
+      {
+        title: "Improved Collaboration",
+        description:
+          "Efficient coordination within the distributed team ensured timely delivery and high-quality results",
+      },
+    ],
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
-    image: "case1_1x",
-    retinaImage: "case1_2x",
-    bgImage1x: "case_lg_1_1x",
-    bgImage2x: "case_lg_1_2x",
+    images: {
+      main: {
+        image: "fintech_main_1x",
+        retinaImage: "fintech_main_2x",
+      },
+      vertical: {
+        image: "fintech_vertical_1x",
+        retinaImage: "fintech_vertical_2x",
+      },
+      generalPage: {
+        image: "fintech_general_page_1x",
+        retinaImage: "fintech_general_page_2x",
+      },
+      fullScreenBlock: {
+        image: "fintech_full_screen_block_1x",
+        retinaImage: "fintech_full_screen_block_2x",
+      },
+      hp: {
+        image: "fintech_hp_1x",
+        retinaImage: "fintech_hp_2x",
+      },
+      hpHorizontal: {
+        image: "fintech_hp_horizontal_1x",
+        retinaImage: "fintech_hp_horizontal_2x",
+      },
+    },
   },
 ];
