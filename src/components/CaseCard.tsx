@@ -3,13 +3,15 @@ import { Link } from "react-router-dom";
 import { CustomTitle } from "../components";
 
 import { images } from "../assets";
-import { CaseStudy } from "../types";
+import { CaseStudy, CaseStudyCardType } from "../types";
+import { getCaseStudyType } from "../helpers";
 
 interface CaseCardProps {
   caseStudy: CaseStudy;
   containerStyles?: string;
   imageWidth?: number;
   imageHeight?: number;
+  type?: CaseStudyCardType;
 }
 
 export const CaseCard = ({
@@ -17,12 +19,15 @@ export const CaseCard = ({
   containerStyles = "w-[600px]",
   imageWidth = 600,
   imageHeight = 500,
+  type = "general",
 }: CaseCardProps) => {
-  const { name, description, link, image, retinaImage } = caseStudy;
+  const { name, description, link, images: imgCases } = caseStudy;
+
+  const caseStudyType = getCaseStudyType(type);
 
   const { casesImages } = images;
-  const img = casesImages[image as keyof typeof casesImages];
-  const retinaImg = casesImages[retinaImage as keyof typeof casesImages];
+  const img = casesImages[imgCases[caseStudyType].image as keyof typeof casesImages];
+  const retinaImg = casesImages[imgCases[caseStudyType].retinaImage as keyof typeof casesImages];
 
   return (
     <div className={`group h-auto ${containerStyles}`} tabIndex={0}>
