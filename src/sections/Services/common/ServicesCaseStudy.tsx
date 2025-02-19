@@ -12,11 +12,11 @@ interface ServicesCaseStudyProps {
 }
 
 export const ServicesCaseStudy = ({ caseStudy }: ServicesCaseStudyProps) => {
-  const { name, description, link, bgImage1x, bgImage2x } = caseStudy;
+  const { name, description, link, images: imgs } = caseStudy;
   const { casesImages } = images;
 
-  const img = casesImages[bgImage1x as keyof typeof casesImages];
-  const retinaImg = casesImages[bgImage2x as keyof typeof casesImages];
+  const img = casesImages[imgs.fullScreenBlock.image as keyof typeof casesImages];
+  const retinaImg = casesImages[imgs.fullScreenBlock.retinaImage as keyof typeof casesImages];
 
   return (
     <section
