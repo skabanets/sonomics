@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import throttle from "lodash.throttle";
 
@@ -14,7 +14,6 @@ export const IndustrySlider = () => {
   const { slidePadding, slideHeight } = useDynamicDimensions();
   const sectionRef = useRef<HTMLUListElement>(null);
 
-  const navigate = useNavigate();
   const location = useLocation();
   const activeIndex = location.state?.activeIndex ?? 0;
 
@@ -33,7 +32,7 @@ export const IndustrySlider = () => {
   const handleMenuClick = (index: number) => {
     if (isScrolling) return;
 
-    navigate(location.pathname, { replace: true, state: {} });
+    window.history.replaceState({}, document.title, location.pathname);
     setCurrentIndex(index);
     setIsScrolling(true);
 
@@ -71,7 +70,7 @@ export const IndustrySlider = () => {
       if (currentIndex + direction < 0 || currentIndex + direction >= industries.length) {
         return;
       }
-      navigate(location.pathname, { replace: true, state: {} });
+      window.history.replaceState({}, document.title, location.pathname);
       setIsScrolling(true);
       setCurrentIndex((prev) => prev + direction);
 
@@ -97,7 +96,7 @@ export const IndustrySlider = () => {
       window.removeEventListener("wheel", handleWheel);
       throttledHandleWheel.cancel();
     };
-  }, [currentIndex, isScrolling]);
+  }, [currentIndex, isScrolling, location.pathname]);
 
   const getIndustrySliderBgColor = (index: number) => {
     switch (index) {
