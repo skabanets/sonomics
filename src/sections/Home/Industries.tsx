@@ -14,7 +14,7 @@ import type { Industry } from "../../types";
 
 export const Industries = () => {
   return (
-    <section className="bg-blackBgColor py-[50px] md:py-[60px]">
+    <section className="overflow-hidden bg-blackBgColor py-[50px] md:py-[60px]">
       <motion.div className="container" {...slideInWithFade}>
         <h2 className="text-whiteTextColor">Industries</h2>
         <motion.ul
@@ -31,7 +31,7 @@ export const Industries = () => {
               className="rounded-[20px] border border-solid border-transparent bg-darkBgColor transition hover:border-accentYellowColor focus-visible:border-accentYellowColor"
               tabIndex={0}
             >
-              <IndustryCard industry={industry as Industry} />
+              <IndustryCard index={index} industry={industry as Industry} />
             </motion.li>
           ))}
           <motion.li

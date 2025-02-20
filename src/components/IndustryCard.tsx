@@ -6,10 +6,11 @@ import type { Industry } from "../types";
 import { images } from "../assets";
 
 interface IndustryCardProps {
+  index: number;
   industry: Industry;
 }
 
-export const IndustryCard = ({ industry }: IndustryCardProps) => {
+export const IndustryCard = ({ index, industry }: IndustryCardProps) => {
   const { industriesImages } = images;
   const { name, description, images: imgs } = industry;
 
@@ -19,6 +20,7 @@ export const IndustryCard = ({ industry }: IndustryCardProps) => {
   return (
     <Link
       to={industry.link}
+      state={{ activeIndex: index + 2 }}
       className="flex h-[346px] w-full flex-col gap-[38px] p-[30px] md:w-[340px]"
     >
       <img

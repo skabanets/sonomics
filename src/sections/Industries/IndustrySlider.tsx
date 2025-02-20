@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import throttle from "lodash.throttle";
 
@@ -13,6 +14,14 @@ export const IndustrySlider = () => {
   const { slidePadding, slideHeight } = useDynamicDimensions();
   const sectionRef = useRef<HTMLUListElement>(null);
 
+  const navigate = useNavigate();
+  const location = useLocation();
+  const activeIndex = location.state?.activeIndex ?? 0;
+
+  useEffect(() => {
+    setCurrentIndex(activeIndex);
+  }, [activeIndex]);
+
   const industrySliderAnimationProps = {
     ...slideInWithFade,
     transition: {
@@ -24,6 +33,7 @@ export const IndustrySlider = () => {
   const handleMenuClick = (index: number) => {
     if (isScrolling) return;
 
+    navigate(location.pathname, { replace: true, state: {} });
     setCurrentIndex(index);
     setIsScrolling(true);
 
@@ -61,9 +71,8 @@ export const IndustrySlider = () => {
       if (currentIndex + direction < 0 || currentIndex + direction >= industries.length) {
         return;
       }
-
+      navigate(location.pathname, { replace: true, state: {} });
       setIsScrolling(true);
-
       setCurrentIndex((prev) => prev + direction);
 
       setTimeout(() => {
@@ -104,8 +113,6 @@ export const IndustrySlider = () => {
     }
   };
   const slideBackgroundColor = getIndustrySliderBgColor(currentIndex);
-
-  console.log(slideHeight, slidePadding);
 
   return (
     <motion.section className="h-dvh" ref={sectionRef} {...industrySliderAnimationProps}>
