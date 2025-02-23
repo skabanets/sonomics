@@ -85,7 +85,7 @@ const CaseStudyDetails = () => {
         const elementHeight = rect.height;
         const visibleHeight = Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0);
 
-        if (visibleHeight >= elementHeight * 0.6) {
+        if (visibleHeight >= elementHeight * 0.45) {
           newIndex = index;
         }
       }
