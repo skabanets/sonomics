@@ -28,7 +28,7 @@ export const CaseStudyServices = ({ id, services }: CaseStudyServicesProps) => {
   useEffect(() => {
     const updateHeight = () => {
       if (headerRef.current) {
-        setStickyOffset(headerRef.current.offsetHeight + 30);
+        setStickyOffset(headerRef.current.offsetHeight + 116);
       }
     };
 
@@ -44,7 +44,7 @@ export const CaseStudyServices = ({ id, services }: CaseStudyServicesProps) => {
         <div className="container">
           <motion.div
             ref={headerRef}
-            className="mb-[30px] md:flex md:flex-wrap md:items-start md:justify-between md:gap-y-[20px] lg:sticky lg:top-0"
+            className="mb-[30px] md:flex md:flex-wrap md:items-start md:justify-between md:gap-y-[20px] lg:sticky lg:top-[86px]"
             {...slideInWithFade}
           >
             <h2 className="mb-[30px] md:mb-0 md:max-w-[815px]">Services</h2>
