@@ -42,6 +42,7 @@ const CaseStudyDetails = () => {
   } = caseStudy;
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isManualScroll, setIsManualScroll] = useState(false);
 
   const rawOptions: (CaseStudyMenuItem | null)[] = [
     { id: "overview", name: "Overview" },
@@ -57,15 +58,23 @@ const CaseStudyDetails = () => {
   );
 
   const handleMenuClick = (index: number) => {
+    setIsManualScroll(true);
     setCurrentIndex(index);
+
     const sectionId = caseStudyOptions[index].id;
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: "smooth", block: "start" });
+
+      setTimeout(() => {
+        setIsManualScroll(false);
+      }, 500);
     }
   };
 
   const handleScroll = useCallback(() => {
+    if (isManualScroll) return;
+
     const windowHeight = window.innerHeight;
     let newIndex = currentIndex;
 
@@ -76,7 +85,7 @@ const CaseStudyDetails = () => {
         const elementHeight = rect.height;
         const visibleHeight = Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0);
 
-        if (visibleHeight >= elementHeight * 0.3) {
+        if (visibleHeight >= elementHeight * 0.6) {
           newIndex = index;
         }
       }
@@ -85,11 +94,10 @@ const CaseStudyDetails = () => {
     if (newIndex !== currentIndex) {
       setCurrentIndex(newIndex);
     }
-  }, [caseStudyOptions, currentIndex]);
+  }, [caseStudyOptions, currentIndex, isManualScroll]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
