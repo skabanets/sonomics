@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -7,7 +8,6 @@ import { caseStudyColors, slideInWithFade } from "../../../constants";
 import { useModal } from "../../../hooks";
 import { images } from "../../../assets";
 import type { CaseStudyServicesType } from "../../../types";
-import { useEffect, useRef, useState } from "react";
 
 interface CaseStudyServicesProps {
   id: string;
