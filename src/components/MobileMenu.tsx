@@ -27,7 +27,7 @@ export const MobileMenu = ({ isOpen, toggleMenu }: MobileMenuProps) => {
   return (
     <>
       <div
-        className={`mobile-menu scrollbar fixed right-0 top-0 z-[20] h-full w-full bg-blackBgColor p-[15px] pb-[60px] transition md:p-[40px] lg:hidden ${isOpen ? "translate-x-0" : "translate-x-full"}`}
+        className={`mobile-menu scrollbar fixed right-0 top-0 z-[55] h-full w-full bg-blackBgColor p-[15px] pb-[60px] transition md:p-[40px] lg:hidden ${isOpen ? "translate-x-0" : "translate-x-full"}`}
       >
         {isOpen && (
           <>
@@ -49,7 +49,7 @@ export const MobileMenu = ({ isOpen, toggleMenu }: MobileMenuProps) => {
               </div>
             </div>
             <nav className="mb-[45px] border-y border-y-secondaryLightTextColor py-[45px]">
-              <ul className="tablet:w-[250px] mb-[40px] flex flex-col gap-[40px]">
+              <ul className="mb-[40px] flex flex-col gap-[40px] tablet:w-[250px]">
                 <li key="home">
                   <NavLink
                     to={routes.Home}

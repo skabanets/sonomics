@@ -23,7 +23,7 @@ export const Modal = ({ children, toggleModal, handleClickOnBackdrop }: ModalPro
 
   return ReactDOM.createPortal(
     <motion.div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-backdropBgColor"
+      className="fixed inset-0 z-[60] flex items-center justify-center bg-backdropBgColor"
       onClick={(e) => handleClickOnBackdrop(e)}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
