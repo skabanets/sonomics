@@ -7,17 +7,19 @@ import { cardVariants, industriesContainerVariants, slideInWithFade } from "../.
 import type { FunctionalModule } from "../../../types";
 
 interface CaseStudyFunctionalModulesProps {
+  id: string;
   functionalModules: FunctionalModule[];
 }
 
 export const CaseStudyFunctionalModules = ({
+  id,
   functionalModules,
 }: CaseStudyFunctionalModulesProps) => {
   const [isOpen, toggleModal, handleClickOnBackdrop] = useModal();
 
   return (
     <>
-      <section className="bg-letsTalkBgColor py-[80px]">
+      <section className="bg-letsTalkBgColor py-[80px]" id={id}>
         <motion.div className="container" {...slideInWithFade}>
           <div className="flex items-center justify-between">
             <h2>Functional Modules Delivered</h2>

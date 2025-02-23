@@ -9,10 +9,11 @@ import { slideInWithFade } from "../../../constants";
 import type { OrdinaryItem } from "../../../types";
 
 interface CaseStudyTechnologiesProps {
+  id: string;
   technologies: OrdinaryItem[];
 }
 
-export const CaseStudyTechnologies = ({ technologies }: CaseStudyTechnologiesProps) => {
+export const CaseStudyTechnologies = ({ technologies, id }: CaseStudyTechnologiesProps) => {
   const [translateValue, setTranslateValue] = useState(0);
   const [totalWidth, setTotalWidth] = useState(0);
   const [isTransition, setIsTransition] = useState(true);
@@ -49,7 +50,10 @@ export const CaseStudyTechnologies = ({ technologies }: CaseStudyTechnologiesPro
   };
 
   return (
-    <section className="overflow-hidden bg-blackBgColor py-[50px] lg:py-[80px]">
+    <section
+      className="overflow-hidden bg-blackBgColor py-[50px] lg:py-[80px] lg:pb-[20px]"
+      id={id}
+    >
       <motion.div className="container" {...slideInWithFade}>
         <h2 className="mb-[40px] text-whiteTextColor lg:mb-[60px]">Technologies used</h2>
         <Draggable

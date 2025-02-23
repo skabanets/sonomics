@@ -8,11 +8,13 @@ import { images } from "../../../assets";
 import type { OrdinaryItem, caseStudyImage } from "../../../types";
 
 interface CaseStudyAchivementsProps {
+  id: string;
   achievements: OrdinaryItem[];
   sectionImages: caseStudyImage;
 }
 
 export const CaseStudyAchievements = ({
+  id,
   achievements,
   sectionImages,
 }: CaseStudyAchivementsProps) => {
@@ -25,7 +27,7 @@ export const CaseStudyAchievements = ({
 
   return (
     <>
-      <section className="bg-blackBgColor py-[20px] pb-[50px] lg:pb-[80px]">
+      <section className="bg-blackBgColor pb-[50px] pt-[80px] lg:pb-[80px]" id={id}>
         <motion.div className="container" {...slideInWithFade}>
           <div className="mb-[30px] flex flex-col gap-y-[30px] md:mb-[40px] md:flex-row md:items-center md:justify-between lg:mb-[60px]">
             <h2 className="text-whiteTextColor">Our achievements</h2>
