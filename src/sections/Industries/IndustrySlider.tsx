@@ -3,10 +3,10 @@ import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import throttle from "lodash.throttle";
 
-import { IndustrySliderCard } from "../../components";
+import { IndustrySliderCard, ItemsMenu } from "../../components";
 
-import { useDynamicDimensions } from "../../hooks";
 import { industries, slideInWithFade } from "../../constants";
+import { useDynamicDimensions } from "../../hooks";
 
 export const IndustrySlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -115,23 +115,7 @@ export const IndustrySlider = () => {
 
   return (
     <motion.section className="h-dvh" ref={sectionRef} {...industrySliderAnimationProps}>
-      <div className="bg-secondaryBgColor">
-        <ul className="container flex items-center gap-[20px]">
-          {industries.map((industry, index) => (
-            <li
-              key={index}
-              className={`bold-text h-[56px] cursor-pointer border-t-2 border-transparent px-[20px] py-[15px] ${
-                currentIndex === index
-                  ? "!border-themeAccentColor bg-navMenuBgColor"
-                  : "text-secondaryTextColor"
-              }`}
-              onClick={() => handleMenuClick(index)}
-            >
-              {industry.name}
-            </li>
-          ))}
-        </ul>
-      </div>
+      <ItemsMenu items={industries} currentIndex={currentIndex} handleMenuClick={handleMenuClick} />
 
       <div
         className={`pt-[${slidePadding}px] transition ${slideBackgroundColor}`}

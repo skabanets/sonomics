@@ -26,3 +26,4 @@ export * from "./SliderWithThumb";
 export * from "./IndustrySliderCard";
 export * from "./MobileMenu";
 export * from "./CustomSwiper";
+export * from "./ItemsMenu";
