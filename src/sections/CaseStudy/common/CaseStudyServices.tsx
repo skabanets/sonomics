@@ -9,10 +9,11 @@ import { images } from "../../../assets";
 import type { CaseStudyServicesType } from "../../../types";
 
 interface CaseStudyServicesProps {
+  id: string;
   services: CaseStudyServicesType;
 }
 
-export const CaseStudyServices = ({ services }: CaseStudyServicesProps) => {
+export const CaseStudyServices = ({ id, services }: CaseStudyServicesProps) => {
   const [isOpen, toggleModal, handleClickOnBackdrop] = useModal();
 
   const { text, servicesData } = services;
@@ -23,10 +24,10 @@ export const CaseStudyServices = ({ services }: CaseStudyServicesProps) => {
 
   return (
     <>
-      <section className="py-[50px] lg:pb-[80px] lg:pt-[100px]">
+      <section className="py-[50px] lg:pb-[80px] lg:pt-[100px]" id={id}>
         <div className="container">
           <motion.div
-            className="mb-[30px] md:flex md:flex-wrap md:items-start md:justify-between md:gap-y-[20px] lg:sticky lg:top-[40px]"
+            className="mb-[30px] md:flex md:flex-wrap md:items-start md:justify-between md:gap-y-[20px] lg:sticky lg:top-[96px]"
             {...slideInWithFade}
           >
             <h2 className="mb-[30px] md:mb-0 md:max-w-[815px]">Services</h2>
@@ -48,7 +49,7 @@ export const CaseStudyServices = ({ services }: CaseStudyServicesProps) => {
                 <li
                   key={index}
                   className={`rounded-[20px] text-whiteTextColor lg:sticky ${itemBgColor}`}
-                  style={{ top: ` ${index === 0 ? 290 : 290 + index * 15}px` }}
+                  style={{ top: ` ${index === 0 ? 320 : 320 + index * 15}px` }}
                 >
                   <motion.div
                     className="px-[15px] py-[30px] md:p-[40px] md:pr-[50px] lg:flex lg:justify-between"

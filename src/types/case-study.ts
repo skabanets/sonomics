@@ -64,3 +64,8 @@ export type CaseStudyTypeMap = {
   vertical: "hp";
   horizontal: "hpHorizontal";
 };
+
+export interface CaseStudyMenuItem {
+  id: string;
+  name: string;
+}

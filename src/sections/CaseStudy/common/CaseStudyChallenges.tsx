@@ -6,15 +6,16 @@ import { useModal } from "../../../hooks";
 import { caseStudyColors, slideInWithFade } from "../../../constants";
 
 interface CaseStudyChallengesProps {
+  id: string;
   challenges: string[];
 }
 
-export const CaseStudyChallenges = ({ challenges }: CaseStudyChallengesProps) => {
+export const CaseStudyChallenges = ({ id, challenges }: CaseStudyChallengesProps) => {
   const [isOpen, toggleModal, handleClickOnBackdrop] = useModal();
 
   return (
     <>
-      <section className="bg-letsTalkBgColor py-[80px]">
+      <section className="bg-letsTalkBgColor py-[80px]" id={id}>
         <motion.div className="container flex justify-between" {...slideInWithFade}>
           <div className="flex flex-col gap-[40px]">
             <h2>Challenges</h2>

@@ -9,11 +9,12 @@ import { slideInWithFade } from "../../../constants";
 import type { Overview, caseStudyImage } from "../../../types";
 
 interface CaseStudyOverviewProps {
+  id: string;
   overview: Overview;
   sectionImages: caseStudyImage;
 }
 
-export const CaseStudyOverview = ({ overview, sectionImages }: CaseStudyOverviewProps) => {
+export const CaseStudyOverview = ({ id, overview, sectionImages }: CaseStudyOverviewProps) => {
   const [isOpen, toggleModal, handleClickOnBackdrop] = useModal();
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -39,7 +40,7 @@ export const CaseStudyOverview = ({ overview, sectionImages }: CaseStudyOverview
 
   return (
     <>
-      <section className="bg-letsTalkBgColor pt-[80px]">
+      <section className="bg-letsTalkBgColor pt-[80px]" id={id}>
         <motion.div className="container" {...overviewAnimationProps}>
           <div className="flex justify-between">
             <div className="flex w-[407px] flex-col gap-[36px]">
