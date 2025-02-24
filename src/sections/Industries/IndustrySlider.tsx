@@ -19,6 +19,10 @@ export const IndustrySlider = () => {
 
   useEffect(() => {
     setCurrentIndex(activeIndex);
+    if (sectionRef.current) {
+      const top = sectionRef.current.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({ top, behavior: "smooth" });
+    }
   }, [activeIndex]);
 
   const industrySliderAnimationProps = {
