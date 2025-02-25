@@ -65,9 +65,9 @@ export const CaseStudyOverview = ({ id, overview, sectionImages }: CaseStudyOver
               src={img}
               alt="Parallax effect image showing a scenic background"
               width={1280}
-              height={750}
+              height={700}
               loading="lazy"
-              className="absolute left-0 top-[-125px] h-[750px] w-full object-cover"
+              className="absolute left-0 top-[-100px] h-[700px] w-full object-cover"
             />
           </div>
         </motion.div>
