@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 import {
@@ -15,6 +15,7 @@ import { ItemsMenu } from "../components";
 
 import { caseStudies, routes } from "../constants";
 import type { CaseStudyMenuItem } from "../types";
+import { useItemsMenuNavigation } from "../hooks";
 
 const CaseStudyDetails = () => {
   const { id } = useParams();
@@ -41,9 +42,6 @@ const CaseStudyDetails = () => {
     images,
   } = caseStudy;
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isManualScroll, setIsManualScroll] = useState(false);
-
   const rawOptions: (CaseStudyMenuItem | null)[] = [
     { id: "overview", name: "Overview" },
     { id: "challenges", name: "Challenges" },
@@ -57,51 +55,9 @@ const CaseStudyDetails = () => {
     (option): option is CaseStudyMenuItem => option !== null
   );
 
-  const handleMenuClick = (index: number) => {
-    setIsManualScroll(true);
-    setCurrentIndex(index);
-
-    const sectionId = caseStudyOptions[index].id;
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth", block: "start" });
-
-      setTimeout(() => {
-        setIsManualScroll(false);
-      }, 500);
-    }
-  };
-
-  const handleScroll = useCallback(() => {
-    if (isManualScroll) return;
-
-    const windowHeight = window.innerHeight;
-    let newIndex = currentIndex;
-
-    caseStudyOptions.forEach((option, index) => {
-      const element = document.getElementById(option.id);
-      if (element) {
-        const rect = element.getBoundingClientRect();
-        const elementHeight = rect.height;
-        const visibleHeight = Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0);
-
-        if (visibleHeight >= elementHeight * 0.45) {
-          newIndex = index;
-        }
-      }
-    });
-
-    if (newIndex !== currentIndex) {
-      setCurrentIndex(newIndex);
-    }
-  }, [caseStudyOptions, currentIndex, isManualScroll]);
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [handleScroll]);
+  const { currentIndex, handleMenuClick } = useItemsMenuNavigation({
+    menuOptions: caseStudyOptions,
+  });
 
   return (
     <>
