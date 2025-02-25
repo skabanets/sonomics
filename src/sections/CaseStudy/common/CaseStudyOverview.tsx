@@ -59,7 +59,7 @@ export const CaseStudyOverview = ({ id, overview, sectionImages }: CaseStudyOver
             width={1280}
             height={700}
             loading="lazy"
-            className="absolute left-0 top-[-100px] h-[700px] w-full object-cover"
+            className="absolute left-0 top-[-100px] h-[700px] w-full rounded-[20px] object-cover"
           />
         </div>
       </motion.div>
