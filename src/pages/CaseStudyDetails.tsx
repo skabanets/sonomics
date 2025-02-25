@@ -31,7 +31,7 @@ const CaseStudyDetails = () => {
   if (!caseStudy) return null;
 
   const {
-    name,
+    pageTitle,
     overview,
     challenges,
     services,
@@ -105,7 +105,7 @@ const CaseStudyDetails = () => {
 
   return (
     <>
-      <CaseStudyHero title={name} />
+      <CaseStudyHero title={pageTitle} />
       {
         <div>
           <ItemsMenu

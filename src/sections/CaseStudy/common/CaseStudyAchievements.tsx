@@ -1,9 +1,6 @@
 import { motion } from "framer-motion";
 
-import { Button, ContactForm, Modal } from "../../../components";
-
 import { slideInWithFade } from "../../../constants";
-import { useModal } from "../../../hooks";
 import { images } from "../../../assets";
 import type { OrdinaryItem, caseStudyImage } from "../../../types";
 
@@ -18,8 +15,6 @@ export const CaseStudyAchievements = ({
   achievements,
   sectionImages,
 }: CaseStudyAchivementsProps) => {
-  const [isOpen, toggleModal, handleClickOnBackdrop] = useModal();
-
   const { casesImages } = images;
 
   const img = casesImages[sectionImages.image as keyof typeof casesImages];
@@ -31,7 +26,6 @@ export const CaseStudyAchievements = ({
         <motion.div className="container" {...slideInWithFade}>
           <div className="mb-[30px] flex flex-col gap-y-[30px] md:mb-[40px] md:flex-row md:items-center md:justify-between lg:mb-[60px]">
             <h2 className="text-whiteTextColor">Our achievements</h2>
-            <Button label="Let&#8217;s talk" className="w-[152px]" onClick={toggleModal} />
           </div>
           <div className="lg:flex">
             <ul className="rounded-t-[40px] bg-accentYellowColor p-[20px] text-darkBgColor md:p-[30px] lg:w-1/2 lg:rounded-l-[40px] lg:rounded-tr-none lg:p-[60px]">
@@ -57,11 +51,6 @@ export const CaseStudyAchievements = ({
           </div>
         </motion.div>
       </section>
-      {isOpen && (
-        <Modal {...{ toggleModal, handleClickOnBackdrop }}>
-          <ContactForm onClose={toggleModal} />
-        </Modal>
-      )}
     </>
   );
 };

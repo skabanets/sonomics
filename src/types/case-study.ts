@@ -43,10 +43,16 @@ interface caseStudyImages {
   hpHorizontal: caseStudyImage;
 }
 
+export interface pageTitle {
+  text: string;
+  accentWords: string[];
+}
+
 export interface CaseStudy {
   id: string;
   link: string;
   name: string;
+  pageTitle: pageTitle;
   overview: Overview;
   challenges: string[];
   services?: CaseStudyServicesType;
