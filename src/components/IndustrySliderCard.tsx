@@ -1,10 +1,9 @@
 import { Link } from "react-router-dom";
 
-import { Button, CustomTitle, Modal, ContactForm } from "../components";
+import { CustomTitle } from "../components";
 
-import type { Industry } from "../types";
-import { useModal } from "../hooks";
 import { images } from "../assets";
+import type { Industry } from "../types";
 
 interface IndustryProps {
   industry: Industry;
@@ -12,18 +11,8 @@ interface IndustryProps {
 }
 
 export const IndustrySliderCard = ({ industry, index }: IndustryProps) => {
-  const [isOpen, toggleModal, handleClickOnBackdrop] = useModal();
-
   const { casesImages } = images;
-  const {
-    name,
-    description,
-    technologies,
-    services,
-    caseStudy,
-    images: imgs,
-    buttonText,
-  } = industry;
+  const { name, description, technologies, services, caseStudy, images: imgs } = industry;
   const img = casesImages[imgs.image as keyof typeof casesImages];
   const retinaImg = casesImages[imgs.retinaImage as keyof typeof casesImages];
 
@@ -93,14 +82,8 @@ export const IndustrySliderCard = ({ industry, index }: IndustryProps) => {
               />
             </Link>
           </div>
-          <Button label={buttonText} className="w-[300px]" onClick={toggleModal} />
         </div>
       </div>
-      {isOpen && (
-        <Modal {...{ toggleModal, handleClickOnBackdrop }}>
-          <ContactForm onClose={toggleModal} />
-        </Modal>
-      )}
     </>
   );
 };

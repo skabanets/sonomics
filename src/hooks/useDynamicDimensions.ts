@@ -10,9 +10,9 @@ export const useDynamicDimensions = () => {
 
       const getPadding = (height: number) => {
         if (height < 800) return 20;
-        if (height < 900) return 30;
-        if (height < 1000) return 60;
-        if (height < 1400) return 80;
+        // if (height < 900) return 30;
+        // if (height < 1000) return 60;
+        // if (height < 1400) return 80;
         return 100;
       };
 
