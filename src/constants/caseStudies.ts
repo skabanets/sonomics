@@ -7,13 +7,17 @@ export const caseStudies: CaseStudy[] = [
   {
     id: "fintech-combination",
     link: routes.FintechСaseStudy,
-    name: "Fintech transformation success",
+    name: "Fintech Transformation Success",
+    pageTitle: {
+      text: "Fintech Transformation Success: A Case Study on Innovation",
+      accentWords: ["Fintech Transformation"],
+    },
     overview: {
       client:
         "A leading financial services company wanted to upgrade its platform to stay competitive.",
       technologies: "Java with Spring framework / Kafka / AWS services / Jira / GitHub / REST APIs",
       description:
-        "Their business included online money transfers, digital payments, and offering working capital. They aimed to add advanced features, connect with external providers, and improve the user experience.",
+        "Their business encompassed online money transfers, digital payments, and working capital offerings. They also sought to enhance their platform's scalability to support future growth. The primary goals included adding advanced features, integrating with external providers, and enhancing user experience.",
       image: "fintech_overview_parallax_1x",
       retinaImage: "fintech_overview_parallax_2x",
     },
@@ -103,45 +107,50 @@ export const caseStudies: CaseStudy[] = [
         moduleName: "User Notifications and Alerts System",
         details: [
           "Implemented a comprehensive notification system for users, including email, SMS, and in-app alerts.",
-          "Customizable notification preferences to improve user engagement and satisfaction.",
           "Real-time alerts for transaction status, account updates, and promotional offers.",
         ],
       },
     ],
     technologies: [
       {
-        title: "Backend:",
-        description: "Java with Spring framework for modular, scalable microservices.",
+        title: "Backend Development:",
+        description:
+          "Java with Spring framework, providing a robust and scalable foundation for financial applications.",
       },
       {
-        title: "Message Queue:",
-        description: "Kafka for reliable, asynchronous communication between services.",
+        title: "Message Queue Processing:",
+        description:
+          "Kafka, ensuring efficient, real-time asynchronous communication between microservices.",
       },
       {
         title: "Cloud Deployment:",
         description:
-          "AWS services, including Lambda for serverless computing and secure, scalable infrastructure.",
+          " AWS, utilizing Lambda for serverless computing, EC2 for scalable infrastructure, and S3 for secure data storage.",
       },
       {
-        title: "Workflow Automation:",
-        description: "Jira for agile project management and GitHub Actions for CI/CD pipelines.",
-      },
-      {
-        title: "Backend:",
-        description: "Java with Spring framework for modular, scalable microservices.",
-      },
-      {
-        title: "Message Queue:",
-        description: "Kafka for reliable, asynchronous communication between services.",
-      },
-      {
-        title: "Cloud Deployment:",
+        title: "DevOps & Workflow Automation:",
         description:
-          "AWS services, including Lambda for serverless computing and secure, scalable infrastructure.",
+          "Jira for agile project management, GitHub Actions for CI/CD pipelines, and Terraform for infrastructure as code.",
       },
       {
-        title: "Workflow Automation:",
-        description: "Jira for agile project management and GitHub Actions for CI/CD pipelines.",
+        title: "System Integration:",
+        description:
+          "RESTful APIs for seamless third-party connectivity, WebSockets for real-time transaction updates, and OAuth for secure authentication.",
+      },
+      {
+        title: "Data Analytics & Monitoring:",
+        description:
+          "Prometheus and Grafana for real-time system monitoring and performance tracking.",
+      },
+      {
+        title: "Security & Compliance:",
+        description:
+          "HashiCorp Vault for secrets management and OWASP security principles for secure application development.",
+      },
+      {
+        title: "Containerization & Orchestration:",
+        description:
+          "Docker for containerized applications and Kubernetes for efficient workload management and scaling.",
       },
     ],
     achievements: [
@@ -171,7 +180,7 @@ export const caseStudies: CaseStudy[] = [
       },
     ],
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+      "A leading financial services company wanted to upgrade its platform to stay competitive",
     images: {
       main: {
         image: "fintech_main_1x",
@@ -202,7 +211,11 @@ export const caseStudies: CaseStudy[] = [
   {
     id: "advancing-crypto-innovation",
     link: routes.CryptoCaseStudy,
-    name: "Revolutionizing Crypto Services for Seamless User Experience",
+    name: "Advancing Crypto Innovation",
+    pageTitle: {
+      text: "Advancing Crypto Innovation: A Breakthrough in Digital Finance",
+      accentWords: ["Crypto Innovation:"],
+    },
     overview: {
       client:
         "A pioneering cryptocurrency company sought to expand its ecosystem by delivering innovative solutions for crypto transactions, lending, staking, and passive earning.",
@@ -342,7 +355,7 @@ export const caseStudies: CaseStudy[] = [
       },
     ],
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+      "A pioneering cryptocurrency company sought to expand its ecosystem by delivering innovative solutions for crypto transactions, lending, staking, and passive earning",
     images: {
       main: {
         image: "crypto_main_1x",
@@ -374,6 +387,10 @@ export const caseStudies: CaseStudy[] = [
     id: "optimizing-media-research",
     link: routes.MediaResearchCaseStudy,
     name: "Optimizing Media Research",
+    pageTitle: {
+      text: "Optimizing Media Research: A Data-Driven Approach to Insights",
+      accentWords: ["Media Research:"],
+    },
     overview: {
       client:
         "Our client, a global leader in audience measurement and data analytics, focuses on refining the process of media consumption analysis to provide accurate insights.",
@@ -515,7 +532,7 @@ export const caseStudies: CaseStudy[] = [
       },
     ],
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+      "Our client, a global leader in audience measurement and data analytics, focuses on refining the process of media consumption analysis to provide accurate insights",
     images: {
       main: {
         image: "media_main_1x",
@@ -546,7 +563,11 @@ export const caseStudies: CaseStudy[] = [
   {
     id: "pharmaceutical-distribution",
     link: routes.PharmaceuticalDistributionCaseStudy,
-    name: "Driving Innovation in Pharmaceutical Distribution",
+    name: "Pharmaceutical Distribution",
+    pageTitle: {
+      text: "Pharmaceutical Distribution: Modernizing Supply Chains for Efficiency",
+      accentWords: ["Pharmaceutical Distribution:"],
+    },
     overview: {
       client:
         "Our client is a global distributor specializing in pharmaceutical products, veterinary supplies, dietary supplements, and medical devices.",
@@ -621,7 +642,7 @@ export const caseStudies: CaseStudy[] = [
       },
     ],
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+      "Our client is a global distributor specializing in pharmaceutical products, veterinary supplies, dietary supplements, and medical devices",
     images: {
       main: {
         image: "fintech_main_1x",
@@ -652,7 +673,11 @@ export const caseStudies: CaseStudy[] = [
   {
     id: "transforming-e-commerce",
     link: routes.TransformingECommerceCaseStudy,
-    name: "Transforming E-Commerce with Advanced Technology",
+    name: "Transforming E-Commerce",
+    pageTitle: {
+      text: "Transforming E-Commerce: A Technology-Driven Evolution",
+      accentWords: ["E-Commerce:"],
+    },
     overview: {
       client:
         "A leading European manufacturer of personalized lifestyle products partnered with us to enhance their e-commerce platform.",
@@ -720,7 +745,7 @@ export const caseStudies: CaseStudy[] = [
       },
     ],
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+      "A leading European manufacturer of personalized lifestyle products partnered with us to enhance their e-commerce platform",
     images: {
       main: {
         image: "fintech_main_1x",
@@ -751,7 +776,11 @@ export const caseStudies: CaseStudy[] = [
   {
     id: "revolution-in-telecommunications",
     link: routes.RevolutionInTelecommunicationsCaseStudy,
-    name: "Revolution in Telecommunications with ISP Platform",
+    name: "Revolution in Telecommunications",
+    pageTitle: {
+      text: "Revolution in Telecommunications: A New Era of Connectivity",
+      accentWords: ["Telecommunications:"],
+    },
     overview: {
       client:
         "A leading telecom company sought to develop a global platform enabling users to search, compare, and select Internet Service Providers (ISPs) worldwide.",
@@ -860,7 +889,7 @@ export const caseStudies: CaseStudy[] = [
       },
     ],
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+      "A leading telecom company sought to develop a global platform enabling users to search, compare, and select Internet Service Providers (ISPs) worldwide",
     images: {
       main: {
         image: "fintech_main_1x",

@@ -4,7 +4,7 @@ export const industries: Industry[] = [
   {
     name: "Telecommunications",
     description: [
-      "Empowering telcos in their journey to TechCos – building future-ready intelligent connectivity solutions",
+      "Empowering telcos in their journey to TechCos – building future-ready intelligent connectivity solutions.",
       "Designing next-generation, AI-driven products and interconnected solutions that adapt to the evolving digital ecosystem and facilitate the expansion new use cases.",
     ],
     link: "/industries",
