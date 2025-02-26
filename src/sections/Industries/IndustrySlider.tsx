@@ -15,9 +15,11 @@ export const IndustrySlider = () => {
   const sectionRef = useRef<HTMLUListElement>(null);
 
   const location = useLocation();
-  const activeIndex = location.state?.activeIndex ?? 0;
+  const activeIndex = location.state?.activeIndex;
 
   useEffect(() => {
+    if (!activeIndex) return;
+
     setCurrentIndex(activeIndex);
     if (sectionRef.current) {
       const top = sectionRef.current.getBoundingClientRect().top + window.scrollY - 80;

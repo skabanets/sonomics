@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
+import { useLocation } from "react-router-dom";
 
 import type { CaseStudyMenuItem } from "../types";
 
@@ -9,6 +10,26 @@ interface UseItemsMenuNavigationProps {
 export const useItemsMenuNavigation = ({ menuOptions }: UseItemsMenuNavigationProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isManualScroll, setIsManualScroll] = useState(false);
+
+  const location = useLocation();
+  const activeIndex = location.state?.activeIndex;
+
+  useEffect(() => {
+    if (!activeIndex) return;
+
+    setIsManualScroll(true);
+    setCurrentIndex(activeIndex);
+
+    const sectionId = menuOptions[activeIndex].id;
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+      window.history.replaceState({}, document.title, location.pathname);
+      setTimeout(() => {
+        setIsManualScroll(false);
+      }, 500);
+    }
+  }, [activeIndex]);
 
   const handleMenuClick = (index: number) => {
     setIsManualScroll(true);
