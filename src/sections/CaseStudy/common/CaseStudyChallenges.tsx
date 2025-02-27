@@ -19,7 +19,7 @@ export const CaseStudyChallenges = ({ id, challenges }: CaseStudyChallengesProps
         <motion.div className="container flex justify-between" {...slideInWithFade}>
           <div className="flex flex-col gap-[40px]">
             <h2>Challenges</h2>
-            <Button label="Let&#8217;s talk" className="w-[152px]" onClick={toggleModal} />
+            <Button label="Get in Touch" className="w-[186px]" onClick={toggleModal} />
           </div>
           <ul className="flex w-[810px] flex-wrap gap-x-[90px] gap-y-[60px]">
             {challenges.map((challenge, index) => {
