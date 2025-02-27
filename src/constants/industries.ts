@@ -172,5 +172,3 @@ export const industries: Industry[] = [
     },
   },
 ];
-
-export const homeIndustries = [industries[2], industries[3], industries[4]];
