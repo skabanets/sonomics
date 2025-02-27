@@ -75,7 +75,7 @@ export const SonomicsNumbers = () => {
               >
                 <AnimatedNumber
                   finalNumber={number}
-                  className="text-[120px] font-medium leading-[156px] text-accentRedColor tablet:text-[58px] tablet:leading-[86px]"
+                  className="text-[120px] font-medium leading-[156px] text-themeAccentColor tablet:text-[58px] tablet:leading-[86px]"
                 />
                 <h4 className="md:w-[270px] lg:w-[490px]">{title}</h4>
 
