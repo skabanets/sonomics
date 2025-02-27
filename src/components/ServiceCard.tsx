@@ -27,8 +27,8 @@ export const ServiceCard = ({ service }: IServiceCardProps) => {
       <CustomTitle
         type="p"
         wrapperStyles="flex items-center gap-[10px] transition"
-        titleStyles="text-accentRedColor big-text"
-        iconColor="fill-accentRedColor"
+        titleStyles="text-themeAccentColor big-text"
+        iconColor="fill-themeAccentColor"
         text="Discover more"
       />
     </Link>
