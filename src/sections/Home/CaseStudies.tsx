@@ -27,8 +27,8 @@ export const CaseStudies = () => {
             <CustomTitle
               type="h5"
               wrapperStyles="flex items-center gap-[10px]"
-              iconColor="fill-accentRedColor"
-              titleStyles="text-accentRedColor"
+              iconColor="fill-themeAccentColor"
+              titleStyles="text-themeAccentColor"
             />
           </Link>
         </motion.div>
