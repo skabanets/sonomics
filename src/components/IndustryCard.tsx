@@ -2,8 +2,9 @@ import { Link } from "react-router-dom";
 
 import { CustomTitle } from "../components";
 
-import type { Industry } from "../types";
 import { images } from "../assets";
+import { routes } from "../constants";
+import type { Industry } from "../types";
 
 interface IndustryCardProps {
   index: number;
@@ -19,8 +20,8 @@ export const IndustryCard = ({ index, industry }: IndustryCardProps) => {
 
   return (
     <Link
-      to={industry.link}
-      state={{ activeIndex: index + 2 }}
+      to={routes.Industries}
+      state={{ activeIndex: index }}
       className="flex h-[346px] w-full flex-col gap-[38px] p-[30px] md:w-[340px]"
     >
       <img
