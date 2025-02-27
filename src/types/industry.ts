@@ -1,7 +1,6 @@
 export interface Industry {
   name: string;
   description: string[];
-  link: string;
   technologies: {
     title: string;
     description: string;
@@ -21,5 +20,4 @@ export interface Industry {
     icon?: string;
     retinaIcon?: string;
   };
-  buttonText: string;
 }
