@@ -8,11 +8,13 @@ import {
   routes,
   industriesContainerVariants,
   cardVariants,
-  homeIndustries,
+  industries,
 } from "../../constants";
 import type { Industry } from "../../types";
 
 export const Industries = () => {
+  const homeIndustries = industries.slice(0, 3);
+
   return (
     <section className="overflow-hidden bg-blackBgColor py-[50px] md:py-[60px]">
       <motion.div className="container" {...slideInWithFade}>
