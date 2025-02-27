@@ -34,7 +34,7 @@ export const IndustrySliderCard = ({ industry, index }: IndustryProps) => {
   return (
     <>
       <div
-        className={`flex h-full flex-col justify-between gap-[30px] h-sm:gap-[20px] ${name === "E-commerce" ? "text-whiteTextColor" : ""}`}
+        className={`flex h-full flex-col justify-between gap-[30px] h-sm:gap-[20px] ${index === 3 ? "text-whiteTextColor" : ""}`}
       >
         <div className="flex justify-between">
           <div className="w-[590px]">
@@ -49,7 +49,7 @@ export const IndustrySliderCard = ({ industry, index }: IndustryProps) => {
             ))}
           </div>
           <div
-            className={`w-[590px] rounded-b-[20px] border-t-[4px] border-t-accentOrangeColor p-[40px] h-sm:py-[25px] ${slideCardBackgroundColor}`}
+            className={`w-[590px] rounded-b-[20px] border-t-[4px] border-t-themeAccentColor p-[40px] h-sm:py-[25px] ${slideCardBackgroundColor}`}
           >
             <h5 className="mb-[10px]">{technologies.title}</h5>
             <p className="small-text mb-[30px] h-sm:mb-[24px]">{technologies.description}</p>
@@ -72,13 +72,13 @@ export const IndustrySliderCard = ({ industry, index }: IndustryProps) => {
             <h2 className="text-[30px] leading-[36px] h-sm:text-[24px] h-sm:font-semibold">
               {caseStudy.description}
             </h2>
-            <Link to={caseStudy.link} className="view-link before:bg-accentRedColor">
+            <Link to={caseStudy.link} className="view-link before:bg-themeAccentColor">
               <CustomTitle
                 text="Read more"
                 type="h5"
                 wrapperStyles="flex items-center gap-[10px] "
-                iconColor="fill-accentRedColor"
-                titleStyles="text-accentRedColor"
+                iconColor="fill-themeAccentColor"
+                titleStyles="text-themeAccentColor"
               />
             </Link>
           </div>
