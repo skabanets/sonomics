@@ -281,7 +281,7 @@ textarea:-webkit-autofill:focus {
 }
 
 .view-link {
-  @apply relative transition-all before:absolute before:bottom-0 before:left-0 before:h-[1.5px] before:w-0 before:bg-accentRedColor before:duration-300 before:ease-in hover:before:w-full focus-visible:before:w-full;
+  @apply relative transition-all before:absolute before:bottom-0 before:left-0 before:h-[1.5px] before:w-0 before:bg-themeAccentColor before:duration-300 before:ease-in hover:before:w-full focus-visible:before:w-full;
 }
 
 .scale-on-hover {

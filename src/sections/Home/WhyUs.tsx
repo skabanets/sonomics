@@ -24,7 +24,7 @@ export const WhyUs = () => {
           {isTablet ? (
             <h2 className="text-center">
               We&#8217;re not just about IT solutions — we&#8217;re about driving
-              <span className="text-accentYellowColor">
+              <span className="text-themeAccentColor transition">
                 {``} your business <br /> growth
               </span>
               , ensuring stability and <br /> fostering expertise
@@ -33,7 +33,7 @@ export const WhyUs = () => {
             <h2 className="text-center">
               We&#8217;re not just about IT <br />
               solutions — we&#8217;re about driving
-              <span className="text-accentYellowColor">
+              <span className="text-themeAccentColor transition">
                 <br />
                 your business growth
               </span>
