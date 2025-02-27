@@ -17,8 +17,8 @@ export const OurServices = () => {
         <div className="container">
           <h6 className="mb-[10px] text-secondaryTextColor md:mb-[20px]">Our services</h6>
           <h1 className="mb-[20px] md:mb-[30px] lg:mb-[40px]">
-            Pioneering <span className="text-accentYellowColor">IT Solutions</span> for the modern
-            business
+            Pioneering <span className="text-themeAccentColor transition">IT Solutions</span> for
+            the modern business
           </h1>
           <div className="flex flex-col gap-[10px] md:w-[490px] md:gap-[20px] lg:w-[570px] lg:gap-[30px]">
             <h3>
