@@ -2,7 +2,7 @@ export enum routes {
   Home = "/",
   Services = "/services",
   Industries = "/industries",
-  CaseStudy = "/case-study",
+  CaseStudy = "/case-studies",
   About = "/about",
   EndToEndApplicationDevelopment = `${Services}/end-to-end-application-development`,
   ArtificialIntelligence = `${Services}/artificial-intelligence`,

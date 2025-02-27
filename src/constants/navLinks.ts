@@ -13,6 +13,6 @@ const industries = [
 export const navLinks = [
   { title: "Services", link: routes.Services, subLinks: services },
   { title: "Industries", link: routes.Industries, anchors: industries },
-  { title: "Case study", link: routes.CaseStudy },
+  { title: "Case studies", link: routes.CaseStudy },
   { title: "About", link: routes.About },
 ];

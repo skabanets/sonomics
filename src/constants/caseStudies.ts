@@ -9,13 +9,14 @@ export const caseStudies: CaseStudy[] = [
     link: routes.FintechСaseStudy,
     name: "Fintech Transformation Success",
     pageTitle: {
-      text: "Fintech Transformation Success: A Case Study on Innovation",
+      text: "Fintech Transformation Success: A Case Study of Innovation",
       accentWords: ["Fintech Transformation"],
     },
     overview: {
       client:
         "A leading financial services company wanted to upgrade its platform to stay competitive.",
-      technologies: "Java with Spring framework / Kafka / AWS services / Jira / GitHub / REST APIs",
+      technologies:
+        "Java with Spring Framework / Kafka / AWS Services / REST APIs / Docker / Kubernetes / GraphQL / Terraform / OAuth 2.0 / ELK Stack",
       description:
         "Their business encompassed online money transfers, digital payments, and working capital offerings. They also sought to enhance their platform's scalability to support future growth. The primary goals included adding advanced features, integrating with external providers, and enhancing user experience.",
       image: "fintech_overview_parallax_1x",
@@ -31,7 +32,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     services: {
       text: decodeHTML(
-        "To address these challenges, Sonomics&nbsp;applied our End-to-End Application Development expertise, coupled with Requirement Analysis & Development Planning, Agile Methodologies, and Cloud Integration with Leading Providers. Here's how we delivered a comprehensive solution:"
+        "To address these challenges, Sonomics applied our End-to-End Application Development expertise, coupled with Requirement Analysis & Development Planning, Agile Methodologies, and Cloud Integration with Leading Providers. Here's how we delivered a comprehensive solution:"
       ),
       servicesData: [
         {
@@ -53,14 +54,15 @@ export const caseStudies: CaseStudy[] = [
         {
           name: "Agile Methodologies",
           description:
-            "Leveraged Scrum, Kanban, and Hybrid Approaches for iterative and flexible development.",
+            "Implemented Scrum, Kanban, and Hybrid Approaches for iterative and flexible development, enhancing responsiveness to change.",
           link: routes.AgileMethodologies,
           image: "agile_1x",
           retinaImage: "agile_2x",
         },
         {
           name: "Cloud Integration with Leading Providers",
-          description: "Utilized AWS for cloud deployment, ensuring security and scalability.",
+          description:
+            "Cloud Integration with Leading Providers: Utilized AWS for cloud deployment, ensuring security, scalability, and seamless integration with existing services.",
           link: routes.CloudIntegration,
           image: "cloud_1x",
           retinaImage: "cloud_2x",
@@ -113,12 +115,12 @@ export const caseStudies: CaseStudy[] = [
     ],
     technologies: [
       {
-        title: "Backend Development:",
+        title: "Backend:",
         description:
           "Java with Spring framework, providing a robust and scalable foundation for financial applications.",
       },
       {
-        title: "Message Queue Processing:",
+        title: "Messaging:",
         description:
           "Kafka, ensuring efficient, real-time asynchronous communication between microservices.",
       },
@@ -128,27 +130,27 @@ export const caseStudies: CaseStudy[] = [
           " AWS, utilizing Lambda for serverless computing, EC2 for scalable infrastructure, and S3 for secure data storage.",
       },
       {
-        title: "DevOps & Workflow Automation:",
+        title: "DevOps:",
         description:
           "Jira for agile project management, GitHub Actions for CI/CD pipelines, and Terraform for infrastructure as code.",
       },
       {
-        title: "System Integration:",
+        title: "Integration:",
         description:
           "RESTful APIs for seamless third-party connectivity, WebSockets for real-time transaction updates, and OAuth for secure authentication.",
       },
       {
-        title: "Data Analytics & Monitoring:",
+        title: "Analytics Tools:",
         description:
           "Prometheus and Grafana for real-time system monitoring and performance tracking.",
       },
       {
-        title: "Security & Compliance:",
+        title: "Security:",
         description:
           "HashiCorp Vault for secrets management and OWASP security principles for secure application development.",
       },
       {
-        title: "Containerization & Orchestration:",
+        title: "Containerization:",
         description:
           "Docker for containerized applications and Kubernetes for efficient workload management and scaling.",
       },
@@ -220,9 +222,9 @@ export const caseStudies: CaseStudy[] = [
       client:
         "A pioneering cryptocurrency company sought to expand its ecosystem by delivering innovative solutions for crypto transactions, lending, staking, and passive earning.",
       technologies:
-        "Smart contracts / Java / Node.js / REST APIs / Advanced Security Protocols / decentralized databases",
+        "Java / Node.js / React / AWS / Smart Contracts / REST APIs / Docker / Kubernetes / Terraform / Swagger / Blockchain / Security Protocols",
       description:
-        "Their vision was to create a user-friendly, secure platform with diverse income opportunities and seamless integration tools to support external platforms and scalability.",
+        "The goal was to create a secure, user-friendly platform with seamless crypto-fiat transactions, diverse earning opportunities, and advanced integration tools. The platform needed to support high scalability, automated financial processes, and effortless third-party integrations to enhance accessibility and adoption.",
       image: "fintech_overview_parallax_1x",
       retinaImage: "fintech_overview_parallax_2x",
     },
@@ -230,23 +232,25 @@ export const caseStudies: CaseStudy[] = [
       "Developing a solution to enable seamless transactions in both crypto and fiat currencies.",
       "Providing tools to allow external services to embed crypto purchasing and transaction functionalities.",
       "Catering to various user profiles with options like staking, lending, and passive earning.",
-      "Addressing the need for robust security measures while ensuring compliance with global crypto regulations.",
+      "Implementing robust security measures to safeguard user funds and data.",
+      "Optimizing the system to handle high transaction volumes.",
+      "Reducing processing latency for real-time crypto operations.",
     ],
     services: {
-      text: "To address these challenges, we leveraged our End-to-End Application Development expertise alongside Comprehensive Requirement Analysis, Agile Development Methodologies, and Advanced Blockchain Integration. Here's how we delivered a robust solution:",
+      text: "To address these challenges, Sonomics applied our End-to-End Application Development expertise, alongside Blockchain Solutions, Agile Methodologies, and Cloud Integration with Leading Providers. Here’s how we delivered a robust solution:",
       servicesData: [
         {
           name: "End-to-End Application Development",
           description:
-            "Designed and implemented functionalities for seamless crypto-fiat transactions, secure wallet management, and automated financial workflows.",
+            "Designed and implemented functionalities for seamless crypto-fiat transactions and secure wallet management. Developed automated financial workflows to streamline user operations.",
           link: routes.EndToEndApplicationDevelopment,
           image: "end_to_end_1x",
           retinaImage: "end_to_end_2x",
         },
         {
-          name: "Comprehensive Requirement Analysis",
+          name: "Requirement Analysis & Development Planning",
           description:
-            "Conducted detailed client consultations and stakeholder workshops to align the platform's features with business objectives and user expectations.",
+            "Conducted stakeholder interviews and market research to define precise platform requirements. Ensured alignment with business goals and regulatory standards.",
           link: routes.RequirementAnalysisAndDevelopmentPlanning,
           image: "analysis_and_planning_1x",
           retinaImage: "analysis_and_planning_2x",
@@ -254,7 +258,7 @@ export const caseStudies: CaseStudy[] = [
         {
           name: "Agile Development Methodologies",
           description:
-            "Adopted Scrum and Hybrid Agile practices to ensure iterative, adaptable development that addressed evolving requirements.",
+            "Applied iterative development strategies to accelerate time-to-market. Enabled continuous feedback loops for enhanced flexibility and improvement.",
           link: routes.AgileMethodologies,
           image: "agile_1x",
           retinaImage: "agile_2x",
@@ -262,7 +266,7 @@ export const caseStudies: CaseStudy[] = [
         {
           name: "Cloud-Optimized Architecture",
           description:
-            "Deployed the platform on AWS, ensuring high scalability, robust security, and reliable performance for all services.",
+            "Deployed the platform on AWS, ensuring high scalability and 99.9% uptime. Enabled robust security and optimized performance for seamless global access.",
           link: routes.CloudIntegration,
           image: "cloud_1x",
           retinaImage: "cloud_2x",
@@ -271,61 +275,77 @@ export const caseStudies: CaseStudy[] = [
     },
     functionalModules: [
       {
-        moduleName: "Crypto Purchase Integration",
+        moduleName: "Crypto Purchase",
         details: [
-          "Lightweight APIs for third-party platforms to enable crypto transactions.",
-          "Secure fiat-to-crypto conversion with multi-wallet support.",
+          "Developed lightweight APIs for third-party platforms to integrate crypto transactions.",
+          "Implemented secure fiat-to-crypto conversion with multi-wallet support.",
         ],
       },
       {
-        moduleName: "Lending System",
+        moduleName: "Collateral Management",
         details: [
-          "Customizable loan products with flexible repayment options.",
-          "Automated collateral management via on-chain assets.",
+          "Designed customizable loan products with flexible repayment options.",
+          "Automated collateral management using on-chain asset verification.",
         ],
       },
       {
-        moduleName: "Staking and Passive Earning",
+        moduleName: "Staking & Passive Income",
         details: [
-          "High-performance staking engine for instant fund accessibility.",
-          "Diverse passive earning plans with competitive returns.",
+          "Built a high-performance staking engine ensuring instant fund accessibility.",
+          "Integrated diverse earning plans with competitive returns and automated payouts.",
         ],
       },
       {
-        moduleName: "Exchange Features",
+        moduleName: "Transaction Tracking",
         details: [
-          "Low-fee cryptocurrency exchanges with intuitive portfolio management tools.",
-          "Advanced transaction tracking and reconciliation features.",
+          "Developed a low-fee cryptocurrency exchange with intuitive portfolio management.",
+          "Implemented real-time transaction tracking and reconciliation tools.",
         ],
       },
       {
-        moduleName: "Security and Compliance",
+        moduleName: "Security & Compliance",
         details: [
-          "Encrypted biometric onboarding for secure user verification.",
-          "Built-in compliance mechanisms aligned with global cryptocurrency regulations.",
+          "Integrated encrypted biometric onboarding for secure user verification.",
+          "Built-in compliance mechanisms ensuring adherence to global cryptocurrency regulations.",
+        ],
+      },
+      {
+        moduleName: "Digital Asset Management",
+        details: [
+          "Enabled seamless minting, trading, and storage of NFTs on multiple blockchains.",
+          "Developed smart contract-based royalty mechanisms for creators and investors.",
         ],
       },
     ],
     technologies: [
       {
+        title: "Backend:",
+        description: "Java and Node.js for high-performance, scalable logic.",
+      },
+      {
+        title: "Frontend:",
+        description: "React for an intuitive and responsive user interface.",
+      },
+      {
         title: "Blockchain:",
-        description: "Smart contracts for automated staking, lending, and passive earning systems.",
+        description: "Smart contracts enabling secure staking, lending, and passive earning.",
       },
       {
-        title: "API Development:",
-        description: "RESTful APIs enabling seamless external integrations.",
+        title: "Cloud Deployment:",
+        description: "AWS for hosting and database management.",
       },
       {
-        title: "Advanced Security Protocols:",
-        description: "Encryption and cryptographic measures to protect user data.",
+        title: "Security:",
+        description: "Advanced encryption and cryptographic protocols for user data protection.",
       },
       {
-        title: "Backend Architecture:",
-        description: "Scalable, high-performance solutions built with Java and Node.js.",
+        title: "DevOps:",
+        description:
+          "Docker, Kubernetes, and T erraform for eﬃcient CI/CD and cloud infrastructure.",
       },
       {
-        title: "Data Management:",
-        description: "Secure, decentralized databases for transaction and user data.",
+        title: "Data & Analytics:",
+        description: "Real-time monitoring, AI-driven insights.",
       },
     ],
     achievements: [
@@ -395,9 +415,9 @@ export const caseStudies: CaseStudy[] = [
       client:
         "Our client, a global leader in audience measurement and data analytics, focuses on refining the process of media consumption analysis to provide accurate insights.",
       technologies:
-        "Apache Kafka / Spark / Hadoop / AWS / Google Cloud / MongoDB / Netezza / Oracle",
+        "Scala / Python / AWS / Apache Kafka / Spark / MongoDB / Salesforce / Google Cloud / Machine Learning / Data Analytics",
       description:
-        "They specialize in collecting data on what content people engage with, who is watching it, and how they interact with various media channels. The goal is to deliver precise audience insights to clients, empowering advertisers and media planners to make informed decisions.",
+        "Client is specialised in collecting data on what content people engage with, who is watching it, and how they interact with various media channels. The goal is to deliver precise audience insights to clients, empowering advertisers and media planners to make informed decisions.",
       image: "fintech_overview_parallax_1x",
       retinaImage: "fintech_overview_parallax_2x",
     },
@@ -407,14 +427,15 @@ export const caseStudies: CaseStudy[] = [
       "Providing fast, up-to-date audience insights to support timely media planning and ad optimization.",
       "Leveraging artificial intelligence to enhance the accuracy of predictions and improve media behavior modeling.",
       "Strengthening relationships with clients by delivering tailored insights and improving customer support.",
+      "Enabling personalized communication and engagement strategies based on client data.",
     ],
     services: {
-      text: "To address these challenges, we employed a comprehensive set of services, combining AI, machine learning, big data analytics, and CRM system integration. Here's how we delivered a sophisticated solution:",
+      text: "To address these challenges, we employed a comprehensive set of services, combining AI, machine learning, big data analytics, and CRM system integration. Here’s how we delivered a sophisticated solution:",
       servicesData: [
         {
           name: "End-to-End Application Development",
           description:
-            "We created a robust platform that integrates audience measurement, demographic profiling, and real-time analytics, enabling the client to track and analyze user behavior across a variety of media channels.",
+            "Created a robust platform that integrates audience measurement, demographic profiling, and real-time analytics. Enabled the client to track and analyze user behavior across various media channels.",
           link: routes.EndToEndApplicationDevelopment,
           image: "end_to_end_1x",
           retinaImage: "end_to_end_2x",
@@ -422,7 +443,7 @@ export const caseStudies: CaseStudy[] = [
         {
           name: "Artificial Intelligence & Machine Learning",
           description:
-            "We implemented machine learning algorithms to enhance predictive capabilities, enabling the client to forecast audience behavior, trends, and engagement. AI also assisted in refining audience segmentation, improving the precision of targeting and engagement metrics.",
+            "Implemented machine learning algorithms to enhance predictive capabilities and forecast audience behavior. Improved audience segmentation, precision targeting, and engagement metrics.",
           link: routes.ArtificialIntelligence,
           image: "ai_1x",
           retinaImage: "ai_2x",
@@ -430,7 +451,7 @@ export const caseStudies: CaseStudy[] = [
         {
           name: "Real-Time Data Processing",
           description:
-            "We employed cloud-based solutions to handle real-time data processing, ensuring that audience insights were updated continuously, providing media planners and advertisers with up-to-the-minute information.",
+            "Employed cloud-based solutions to handle real-time data processing, ensuring continuous updates to audience insights. Provided media planners and advertisers with up-to-the-minute information for strategic decision-making.",
           link: routes.CloudIntegration,
           image: "cloud_1x",
           retinaImage: "cloud_2x",
@@ -438,7 +459,7 @@ export const caseStudies: CaseStudy[] = [
         {
           name: "CRM Integration",
           description:
-            "By integrating a CRM system, we enabled the client to personalize client interactions, improve service delivery, and track key performance metrics for client success. The CRM allowed for a more tailored approach in understanding and meeting client needs.",
+            "Integrated a CRM system to personalize client interactions and improve service delivery. Enabled tracking of key performance metrics for client success and engagement.",
           link: routes.OptimizeBusinessProcessesWithCRM,
           image: "crm_1x",
           retinaImage: "crm_2x",
@@ -447,33 +468,45 @@ export const caseStudies: CaseStudy[] = [
     },
     functionalModules: [
       {
-        moduleName: "Audience Segmentation and Profiling",
+        moduleName: "Audience Segmentation",
         details: [
-          "Using AI and machine learning, we created detailed audience segments based on demographics, viewing patterns, and engagement metrics, allowing the client to gain deeper insights into different viewer profiles.",
+          "Created detailed audience segments based on demographics, viewing patterns, and engagement metrics.",
+          "Allowed the client to gain deeper insights into diﬀerent viewer profiles.",
         ],
       },
       {
         moduleName: "Big Data Analytics Platform",
         details: [
-          "We developed a scalable platform to process and analyze large volumes of data from multiple sources, providing the client with the tools to perform advanced analytics and reporting.",
+          "Developed a scalable platform for processing and analyzing large volumes of data from multiple sources.",
+          "Provided tools for advanced analytics and reporting to support client needs.",
         ],
       },
       {
         moduleName: "Real-Time Analytics Dashboard",
         details: [
-          "A dynamic dashboard that displays live data on audience behavior, media consumption trends, and engagement metrics, empowering clients to make timely, data-driven decisions.",
+          "A dynamic dashboard displaying live data on audience behavior, media consumption trends, and engagement metrics.",
+          "Empowered clients to make timely, data-driven decisions.",
         ],
       },
       {
-        moduleName: "Predictive Modeling & AI Integration",
+        moduleName: "Predictive Modeling",
         details: [
-          "Implemented AI-driven models that predict audience behavior, helping the client improve forecasting accuracy for media planning and content strategy.",
+          "Implemented AI-driven models that predict audience behavior and improve forecasting accuracy.",
+          "Enhanced media planning and content strategy through data-driven insights.",
         ],
       },
       {
-        moduleName: "CRM Integration for Enhanced Client Engagement",
+        moduleName: "CRM Integration",
         details: [
-          "Integrated a CRM system that provided the client with actionable insights into their customer base, allowing for personalized marketing, better service delivery, and strengthened client relationships.",
+          "Integrated a CRM system that provided actionable insights into the customer base.",
+          "Enabled personalized marketing and better service delivery to strengthen client relationships.",
+        ],
+      },
+      {
+        moduleName: "Automated Reporting",
+        details: [
+          "Developed an automated reporting system with customizable dashboards and scheduled reports.",
+          "Provided data-driven recommendations to optimize content strategy and audience targeting.",
         ],
       },
     ],
@@ -481,27 +514,42 @@ export const caseStudies: CaseStudy[] = [
       {
         title: "AI & Machine Learning:",
         description:
-          "Deep learning algorithms and machine learning models for audience segmentation, trend forecasting, and predictive analytics.",
+          "Deep learning algorithms for audience segmentation, trend forecasting, and predictive analytics.",
       },
       {
-        title: "Big Data Technologies",
+        title: "Big Data Technologies:",
         description:
           "Apache Kafka for real-time data streaming, Spark for distributed data processing, and Hadoop for large-scale data analytics.",
       },
       {
         title: "CRM Tools:",
         description:
-          "Salesforce integration for managing customer interactions, providing insights into client needs, and optimizing service delivery.",
+          "Salesforce integration for managing customer interactions and optimizing service delivery.",
       },
       {
-        title: "Cloud-Based Real-Time Processing:",
+        title: "Cloud:",
         description:
-          "AWS and Google Cloud for scalable, cloud-based data processing infrastructure that supports real-time analytics and data storage.",
+          "AWS and Google Cloud for scalable infrastructure supporting real-time analytics.",
       },
       {
         title: "Data Management:",
         description:
-          "MongoDB, Netezza, and Oracle for secure data storage, fast retrieval, and seamless integration of both structured and unstructured data.",
+          "MongoDB, Netezza, and Oracle for secure data storage and seamless integration of structured and unstructured data.",
+      },
+      {
+        title: "Data Visualization:",
+        description:
+          "Tableau and Power BI for creating interactive dashboards and visualizations, enabling clients to easily interpret audience insights and trends.",
+      },
+      {
+        title: "Microservices:",
+        description:
+          "Implementation of microservices for improved system modularity and easier integration of new features and updates.",
+      },
+      {
+        title: "Containerization:",
+        description:
+          "Docker and Kubernetes for eﬃcient deployment, scaling, and management of applications in a cloud environment.",
       },
     ],
     achievements: [
@@ -572,9 +620,9 @@ export const caseStudies: CaseStudy[] = [
       client:
         "Our client is a global distributor specializing in pharmaceutical products, veterinary supplies, dietary supplements, and medical devices.",
       technologies:
-        "Python (Django) / Ruby on Rails / Angular / TypeScript / MySQL / Redis / Azure / Terraform / Grafana / Selenium / Postman",
+        "Python / Azure / Django / Angular / TypeScript / Ruby on Rails / MySQL / Redis / Terraform / Grafana / Selenium / Postman / Kubernetes / Elasticsearch",
       description:
-        "The company collaborates with manufacturers, healthcare providers, and government agencies to streamline supply chains and ensure the availability of high-quality healthcare products across diverse markets.",
+        "The client aimed to modernize their digital infrastructure to improve supply chain eﬃciency, enhance regulatory compliance, and oﬀer seamless access to product catalogs, licensing services, and tender management tools. Their goal was to create a scalable, secure platform tailored to the needs of healthcare providers, business partners, and regulatory bodies.",
       image: "fintech_overview_parallax_1x",
       retinaImage: "fintech_overview_parallax_2x",
     },
@@ -585,38 +633,111 @@ export const caseStudies: CaseStudy[] = [
       "Offering intuitive tools for product discovery and feedback while maintaining high security and regulatory compliance.",
     ],
     services: {
-      text: "To address these challenges, we employed a comprehensive set of services, combining AI, machine learning, big data analytics, and CRM system integration. Here's how we delivered a sophisticated solution:",
+      text: "To address these challenges, we employed a comprehensive set of services, End-to-End Platform Development, Secure and Scalable Infrastructure and CRM system integration. Here's how we delivered a sophisticated solution:",
       servicesData: [
+        {
+          name: "End-to-End Platform Development",
+          description:
+            "Built an interactive application enabling seamless access to product catalogs, tender submission, and licensing management. Designed role-specific interfaces for healthcare providers.",
+          link: routes.EndToEndApplicationDevelopment,
+          image: "end_to_end_1x",
+          retinaImage: "end_to_end_2x",
+        },
+        {
+          name: "Secure and Scalable Infrastructure",
+          description:
+            "Implemented multi-layered security measures to protect sensitive pharmacovigilance and licensing data. Ensured cloud scalability to support a growing number of suppliers.",
+          link: routes.CloudIntegration,
+          image: "cloud_1x",
+          retinaImage: "cloud_2x",
+        },
         {
           name: "CRM and Communication Tools",
           description:
-            "Deployed a CRM system tailored to manage relationships with distributors and suppliers effectively. Integrated real-time chat and feedback features to enhance communication across stakeholders.",
+            "Integrated a custom CRM system to streamline distributor and supplier relationship management. Added real-time messaging and feedback mechanisms to enhance collaboration among stakeholders.",
           link: routes.OptimizeBusinessProcessesWithCRM,
           image: "crm_1x",
           retinaImage: "crm_2x",
         },
       ],
     },
+    functionalModules: [
+      {
+        moduleName: "Automated Tender Management System",
+        details: [
+          "Implemented an AI-powered workflow to automate tender submissions, bid evaluations, and contract approvals.",
+          "Reduced manual workload by streamlining document processing and compliance verification.",
+        ],
+      },
+      {
+        moduleName: "Scalable Supply Chain and Inventory Management",
+        details: [
+          "Developed an intelligent inventory tracking system to optimize stock management and prevent shortages.",
+          "Integrated real-time analytics for demand forecasting and supplier performance evaluation.",
+        ],
+      },
+      {
+        moduleName: "Regulatory Compliance & Security Framework",
+        details: [
+          "Built-in compliance mechanisms to align with global pharmaceutical distribution regulations, including pharmacovigilance standards.",
+          "Implemented robust encryption protocols to safeguard sensitive licensing and product data.",
+        ],
+      },
+      {
+        moduleName: "Advanced CRM & Communication System",
+        details: [
+          "Deployed a cloud-based CRM with automated tracking of distributor and supplier interactions.",
+          "Integrated real-time chat and feedback tools to improve customer engagement and issue resolution.",
+        ],
+      },
+      {
+        moduleName: "Data Analytics & Reporting Dashboard",
+        details: [
+          "Created an interactive dashboard with key business intelligence insights.",
+          "Provided real-time reporting on sales trends, supply chain performance, and regulatory compliance metrics.",
+        ],
+      },
+      {
+        moduleName: "AI-Driven Market Insights Module",
+        details: [
+          "Implemented machine learning models to analyze market trends and provide data-driven recommendations.",
+          "Enabled predictive analytics to help stakeholders make informed business decisions.",
+        ],
+      },
+    ],
     technologies: [
       {
-        title: "Backend:",
-        description: "Python (Django), Ruby on Rails",
+        title: "Backend Development:",
+        description:
+          "Python / Ruby on Rails – for high-performance application logic and API services.",
       },
       {
-        title: "Frontend:",
-        description: "Angular, TypeScript",
-      },
-      {
-        title: "Databases:",
-        description: "MySQL, Redis",
+        title: "Frontend Development:",
+        description: "Angular / TypeScript – for building a responsive, user-friendly interface.",
       },
       {
         title: "Cloud Services:",
-        description: "Azure (Blob Storage, Virtual Machines), Terraform for infrastructure as code",
+        description:
+          "Azure (Blob Storage, Virtual Machines) / Terraform / Kubernetes – for scalable cloud hosting and infrastructure automation.",
       },
       {
-        title: "Monitoring and QA:",
-        description: "Grafana, Selenium, Postman for API testing",
+        title: "Data Processing:",
+        description:
+          "MySQL / Redis / Elasticsearch – for fast, reliable data storage, caching, and search indexing.",
+      },
+      {
+        title: "Security:",
+        description:
+          "Built-in encryption protocols – ensuring data privacy and compliance with pharmaceutical regulations.",
+      },
+      {
+        title: "Quality Assurance:",
+        description:
+          "Grafana / Selenium / Postman – for real-time monitoring, automated testing, and API validation.",
+      },
+      {
+        title: "DevOps:",
+        description: "Jenkins / ArgoCD – for deployment automation, CI/CD, and release management.",
       },
     ],
     achievements: [
@@ -639,6 +760,11 @@ export const caseStudies: CaseStudy[] = [
         title: "Regulatory Compliance",
         description:
           "Delivered a platform that meets stringent industry regulations, including pharmacovigilance and product licensing standards",
+      },
+      {
+        title: "Localization for Global Reach",
+        description:
+          "Supported multi-language capabilities and region-specific compliance features for international expansion",
       },
     ],
     description:
@@ -680,44 +806,124 @@ export const caseStudies: CaseStudy[] = [
     },
     overview: {
       client:
-        "A leading European manufacturer of personalized lifestyle products partnered with us to enhance their e-commerce platform.",
+        "Our client, a leading European manufacturer of personalized lifestyle products, partnered with us to modernize their e-commerce platform and enhance operational eﬃciency.",
       technologies:
-        "Java / JavaEE / JSF / PrimeFaces / AWS / PostgreSQL / Instana / Kibana / Jenkins / Maven / Git / SonarQube / REST / OpenAPI",
+        "Java / AWS / Apache Kafka / Angular / PostgreSQL / Instana / Kibana / Jenkins / SonarQube / REST API / OpenAPI / Machine Learning / Data Analytics",
       description:
-        "The client's goal was to modernize their system, improve operational efficiency, and deliver an exceptional shopping experience to a global customer base.",
+        "The company specializes in oﬀering high-quality, customizable lifestyle products through an online marketplace. Their primary objective was to improve scalability, streamline backend processes, and integrate new functionalities to enhance the shopping experience for a global customer base.",
       image: "fintech_overview_parallax_1x",
       retinaImage: "fintech_overview_parallax_2x",
     },
     challenges: [
-      "Modernizing outdated code while ensuring system stability.",
-      "Streamlining logistics through transportation APIs and enabling secure online transactions via card payment systems.",
-      "Developing a robust CRM system to manage customer interactions effectively.",
-      "Enhancing system performance to handle increasing traffic and transactions seamlessly.",
+      "Updating Old Systems improving and rewriting outdated code while keeping the platform stable.",
+      "Integrating APIs and Payment Gateways streamlining logistics and making sure transactions are secure and efficient.",
+      "Implementing a CRM for Customer Management improving customer engagement and retention with a customized CRM system.",
+      "Enhancing Scalability and Performance optimizing the infrastructure to handle increasing traffic and transaction volumes effectively.",
+      "Ensuring Data Security and Compliance applying strong encryption and following industry regulations to protect user data.",
+      "Improving User Experience redesigning the interface to make navigation easier, reduce loading times, and enhance accessibility.",
+    ],
+    services: {
+      text: "To address these challenges, we provided a comprehensive set of solutions, combining cloud technologies, backend optimization, and customer experience enhancements:",
+      servicesData: [
+        {
+          name: "End-to-End Platform Development",
+          description:
+            "Upgraded core system functionalities with modern, scalable architecture for enhanced performance and reliability.",
+          link: routes.EndToEndApplicationDevelopment,
+          image: "end_to_end_1x",
+          retinaImage: "end_to_end_2x",
+        },
+        {
+          name: "CRM System Implementation",
+          description:
+            "Designed a cloud-based CRM solution to enhance customer relationship management and streamline business processes effectively.",
+          link: routes.OptimizeBusinessProcessesWithCRM,
+          image: "crm_1x",
+          retinaImage: "crm_2x",
+        },
+        {
+          name: "Performance Optimization & Cloud Migration",
+          description:
+            "Improved system efficiency using scalable AWS cloud infrastructure to support growing business needs and demands.",
+          link: routes.CloudIntegration,
+          image: "cloud_1x",
+          retinaImage: "cloud_2x",
+        },
+      ],
+    },
+    functionalModules: [
+      {
+        moduleName: "Modernized E-Commerce Architecture",
+        details: [
+          "Redesigned core infrastructure for enhanced scalability and maintainability.",
+          "Optimized backend processes to reduce technical debt and improve performance.",
+        ],
+      },
+      {
+        moduleName: "Seamless Logistics & Payment Integration",
+        details: [
+          "Integrated transportation APIs for automated logistics and real-time delivery tracking.",
+          "Implemented secure, PCI-compliant payment gateways, ensuring seamless and reliable transactions.",
+        ],
+      },
+      {
+        moduleName: "Customer Relationship Management System",
+        details: [
+          "Developed a cloud-based CRM platform to improve customer data management and engagement.",
+          "Enhanced marketing and service quality using customer insights for personalized interactions.",
+        ],
+      },
+      {
+        moduleName: "Scalability & Performance Optimization",
+        details: [
+          "Conducted detailed performance analysis to identify and resolve system bottlenecks.",
+          "Deployed AWS-based cloud solutions for high availability, scalability, and system reliability.",
+        ],
+      },
+      {
+        moduleName: "Automated Order Processing & Inventory Management",
+        details: [
+          "Implemented AI-driven automation for order validation, reducing manual workload.",
+          "Developed an intelligent inventory tracking system to prevent stock shortages and optimize supply chain eﬃciency.",
+        ],
+      },
+      {
+        moduleName: "Personalized Shopping Experience",
+        details: [
+          "Integrated machine learning algorithms to provide personalized product recommendations.",
+          "Enhanced customer engagement by optimizing search and filtering based on user preferences and behavior.",
+        ],
+      },
     ],
     technologies: [
       {
-        title: "Programming Languages and Frameworks:",
-        description: "Java, JavaEE, JSF, PrimeFaces.",
+        title: "Languages:",
+        description: "Java, Python, JavaEE, Angular, PrimeFaces.",
       },
       {
-        title: "Cloud and Infrastructure:",
-        description: "AWS (S3, EC2, RDS) for scalable and secure hosting.",
+        title: "Cloud Infrastructure:",
+        description: "AWS (S3, EC2, RDS) for scalable, secure platform hosting.",
+      },
+      {
+        title: "Data Processing:",
+        description: "Apache Kafka, Spark for real-time and distributed data processing.",
       },
       {
         title: "Database Management:",
-        description: "PostgreSQL for robust data handling.",
+        description: "PostgreSQL, MongoDB for reliable and eﬃcient data storage.",
       },
       {
-        title: "Performance and Monitoring Tools:",
-        description: "Instana, Kibana.",
+        title: "Monitoring Tools:",
+        description: "Instana, Kibana for real-time analytics and performance tracking.",
       },
       {
-        title: "Development Tools:",
-        description: "Jenkins, Maven, Git, SonarQube for CI/CD and code quality assurance.",
+        title: "CI/CD Tools:",
+        description:
+          "Jenkins, Maven, Git, SonarQube for automated deployment and code quality control.",
       },
       {
         title: "API Standards:",
-        description: "REST, OpenAPI/Swagger for seamless integrations.",
+        description: "REST, OpenAPI/Swagger for seamless third-party service integrations.",
       },
     ],
     achievements: [
@@ -784,9 +990,10 @@ export const caseStudies: CaseStudy[] = [
     overview: {
       client:
         "A leading telecom company sought to develop a global platform enabling users to search, compare, and select Internet Service Providers (ISPs) worldwide.",
-      technologies: "Java / Scala / React / AWS / MySQL",
+      technologies:
+        "Java / Scala / React / AWS / MySQL / REST APIs / Docker / Kubernetes / Terraform / Swagger / AI & Machine Learning / Big Data Tools",
       description:
-        "The solution aimed to provide intuitive access to ISP services, empower users with comprehensive comparison tools, and drive informed decision-making.",
+        "The solution aimed to provide intuitive access to ISP services by aggregating data from multiple providers, oﬀering a seamless way for users to search, compare, and select the best options based on their needs. The platform needed to support real-time service availability checks, detailed ISP profiling.",
       image: "fintech_overview_parallax_1x",
       retinaImage: "fintech_overview_parallax_2x",
     },
@@ -794,9 +1001,12 @@ export const caseStudies: CaseStudy[] = [
       "Designing a platform capable of handling high volumes of global users and real-time data interactions.",
       "Creating an intuitive interface with seamless navigation and comprehensive comparison features.",
       "Implementing dynamic price calculation for ISP services based on user preferences and geographic location.",
-      "Coordinating a distributed team of 20+ professionals to ensure efficient development and timely delivery.",
+      "Coordinating a distributed team of 20+ professionals to ensure eﬃcient development and timely delivery.",
+      "Ensuring up-to-date and precise ISP data collection from multiple sources while avoiding inconsistencies.",
+      "Implementing robust security measures to protect sensitive user data and ensuring compliance with regional regulations.",
     ],
     services: {
+      text: "To address these challenges, Sonomics applied our End-to-End Application Development expertise, coupled with AI Solutions, Agile Methodologies, Cloud Integration, and Business Process Optimization. Here’s how we delivered a comprehensive solution:",
       servicesData: [
         {
           name: "End-to-End Application Development",
@@ -807,12 +1017,20 @@ export const caseStudies: CaseStudy[] = [
           retinaImage: "end_to_end_2x",
         },
         {
-          name: "AI & Big Data Analytics",
+          name: "Artificial Intelligence",
           description:
-            "Implemented AI-driven models to enhance ISP comparison algorithms, offering personalized recommendations and dynamic pricing adjustments based on user behavior and regional data.",
+            "Implemented AI-driven models to enhance ISP comparison algorithms, oﬀering personalized recommendations and dynamic pricing adjustments based on user behavior and regional data.",
           link: routes.ArtificialIntelligence,
           image: "ai_1x",
           retinaImage: "ai_2x",
+        },
+        {
+          name: "Experience Our Demo Version",
+          description:
+            "Delivered a functional prototype within two weeks, allowing the client to test and refine key features early in development.",
+          link: routes.DemoVersion,
+          image: "demo_version_1x",
+          retinaImage: "demo_version_2x",
         },
         {
           name: "Cloud Integration",
@@ -826,44 +1044,79 @@ export const caseStudies: CaseStudy[] = [
     },
     functionalModules: [
       {
-        moduleName: "Dynamic ISP Search and Comparison",
-        details: [
-          "Users can search for ISPs, compare services, and view tailored recommendations based on location and preferences.",
-        ],
-      },
-      {
         moduleName: "Price Calculation Logic",
-        details: ["Integrated robust pricing algorithms for accurate, real-time cost comparisons."],
+        details: [
+          "Implements robust pricing algorithms for real-time cost comparisons.",
+          "Adjusts pricing dynamically based on user preferences and geographic location.",
+        ],
       },
       {
         moduleName: "User-Friendly Interface",
         details: [
-          "Developed a responsive, intuitive front-end using React and JavaScript to enhance accessibility and user satisfaction.",
+          "Developed with React and JavaScript for a seamless and responsive experience.",
+          "Designed to enhance accessibility with intuitive navigation and interactive elements.",
         ],
       },
       {
-        moduleName: "Performance Monitoring:",
+        moduleName: "Performance Monitoring",
         details: [
-          "Real-time monitoring tools to ensure reliability and efficiency under varying user loads.",
+          "Utilizes real-time tracking tools to ensure system reliability and eﬃciency.",
+          "Implements proactive issue detection for smooth user interactions.",
+        ],
+      },
+      {
+        moduleName: "Dynamic ISP Search and Comparison",
+        details: [
+          "Enables users to search for ISPs and compare services based on key factors.",
+          "Provides tailored recommendations using location-based filtering.",
+        ],
+      },
+      {
+        moduleName: "Automated Service Availability Checks",
+        details: [
+          "Verifies ISP coverage in real time based on the user’s location.",
+          "Ensures accurate service options by integrating multiple data sources.",
+        ],
+      },
+      {
+        moduleName: "AI-Powered Personalized Recommendations",
+        details: [
+          "Analyzes user behavior and preferences to suggest the most suitable ISP plans.",
+          "Adapts dynamically to market trends and user interaction patterns.",
         ],
       },
     ],
     technologies: [
       {
-        title: "Programming Languages:",
-        description: "Java, Scala, and React.",
+        title: "Backend:",
+        description: "Java and Scala for scalable, high-performance application logic.",
       },
       {
-        title: "Cloud Solutions:",
+        title: "Frontend:",
+        description:
+          "React, along with Redux for efficient state management and Websockets for real-time communication.",
+      },
+      {
+        title: "Cloud Deployment:",
         description: "AWS for hosting and MySQL for database management.",
       },
       {
-        title: "Big Data Tools:",
+        title: "Big Data:",
         description: "Utilized for processing large datasets and providing dynamic insights.",
       },
       {
         title: "AI & Machine Learning:",
         description: "Implemented to enhance ISP recommendations and improve user experience.",
+      },
+      {
+        title: "DevOps:",
+        description:
+          "Docker, Kubernetes, and T erraform for eﬃcient CI/CD and cloud infrastructure management.",
+      },
+      {
+        title: "Microservices:",
+        description:
+          "Adopted to enable modular development and deployment of services, improving scalability and maintainability.",
       },
     ],
     achievements: [
@@ -886,6 +1139,11 @@ export const caseStudies: CaseStudy[] = [
         title: "Improved Collaboration",
         description:
           "Efficient coordination within the distributed team ensured timely delivery and high-quality results",
+      },
+      {
+        title: "Higher Platform Uptime",
+        description:
+          "Achieved 99.9% uptime through AWS cloud infrastructure and proactive monitoring",
       },
     ],
     description:
