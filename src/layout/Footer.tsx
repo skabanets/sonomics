@@ -59,7 +59,7 @@ export const Footer = () => {
       </div>
       <div className="full-hd-container relative left-0 flex items-center justify-between pt-[30px] before:absolute before:top-0 before:h-[1px] before:w-[calc(100vw-30px)] before:max-w-[360px] before:bg-grey600Color md:pt-[20px] md:before:max-w-[702px] lg:before:w-[calc(100vw-160px)] lg:before:max-w-[1760px]">
         <p className="small-text w-[186px] text-white sm-max:text-[14px] md:w-auto">
-          &copy; 2025 Sonomics, Inc. All&nbsp;rights reserved
+          &copy; {new Date().getFullYear()} Sonomics, Inc. All&nbsp;rights reserved
         </p>
         <div className="small-text flex items-center justify-end gap-[15px] text-whiteTextColor sm-max:text-[14px]">
           <span> To top </span>
