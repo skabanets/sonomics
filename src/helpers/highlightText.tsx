@@ -3,7 +3,7 @@ export const highlightText = (text: string, accentWords: string[]) => {
 
   return text.split(regex).map((part, index) =>
     accentWords.includes(part) ? (
-      <span key={index} className="text-themeAccentColor">
+      <span key={index} className="text-themeAccentColor transition">
         {part}
       </span>
     ) : (
