@@ -8,9 +8,9 @@ export const AboutSonomics = () => {
       <motion.div className="container" {...slideInWithFade}>
         <h6 className="mb-[10px] text-secondaryTextColor md:mb-[20px]">About Sonomics</h6>
         <h1>
-          We&#8217;re <span className="text-accentYellowColor"> driving </span> your
-          <span className="text-accentYellowColor"> business</span> growth, ensuring stability and
-          fostering expertise
+          We&#8217;re <span className="text-themeAccentColor transition"> driving </span> your
+          <span className="text-themeAccentColor transition"> business</span> growth, ensuring
+          stability and fostering expertise
         </h1>
       </motion.div>
     </section>
