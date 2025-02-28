@@ -1,25 +1,21 @@
 import { motion } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
 
-import { Button, ContactForm, CustomSwiper, Modal } from "../../../components";
+import { CustomSwiper } from "../../../components";
 
-import { useModal } from "../../../hooks";
 import { slideInWithFade } from "../../../constants";
-import type { WhyChooseSonomics } from "../../../types";
 import { images } from "../../../assets";
+import type { WhyChooseSonomicsItem } from "../../../types";
 
 interface ServicesWhyChooseSonomicsProps {
-  content: WhyChooseSonomics;
+  items: WhyChooseSonomicsItem[];
 }
 
-export const ServicesWhyChooseSonomics = ({ content }: ServicesWhyChooseSonomicsProps) => {
-  const [isOpen, toggleModal, handleClickOnBackdrop] = useModal();
-
+export const ServicesWhyChooseSonomics = ({ items }: ServicesWhyChooseSonomicsProps) => {
   const isMobile = useMediaQuery({ query: "(max-width: 767.98px)" });
   const {
     servicesDetails: { whyChooseSonomics },
   } = images;
-  const { sectionTitle, items } = content;
 
   return (
     <>
@@ -29,12 +25,7 @@ export const ServicesWhyChooseSonomics = ({ content }: ServicesWhyChooseSonomics
             className="mb-[50px] flex flex-col gap-y-[20px] md:mb-[40px] lg:flex-row lg:items-center lg:justify-between"
             {...slideInWithFade}
           >
-            <h2 className="font-black md:leading-[58px] lg:max-w-[852px]">{sectionTitle}</h2>
-            <Button
-              label="Let&#8217;s discuss your project"
-              className="w-[300px]"
-              onClick={toggleModal}
-            />
+            <h2 className="font-black md:leading-[58px] lg:max-w-[852px]">Why choose Sonomics</h2>
           </motion.div>
 
           {isMobile && (
@@ -60,7 +51,7 @@ export const ServicesWhyChooseSonomics = ({ content }: ServicesWhyChooseSonomics
                   <img
                     srcSet={`${img} 1x, ${retinaImg} 2x`}
                     src={img}
-                    alt={sectionTitle}
+                    alt="Why choose Sonomics image"
                     width="286"
                     height="301"
                     className={`h-full w-[280px] rounded-l-[40px] bg-letsTalkBgColor object-cover lg:h-auto lg:w-auto`}
@@ -77,11 +68,6 @@ export const ServicesWhyChooseSonomics = ({ content }: ServicesWhyChooseSonomics
           </ul>
         </div>
       </section>
-      {isOpen && (
-        <Modal {...{ toggleModal, handleClickOnBackdrop }}>
-          <ContactForm onClose={toggleModal} />
-        </Modal>
-      )}
     </>
   );
 };

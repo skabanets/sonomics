@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
 
-import { Accordion, Button, ContactForm, Modal } from "../../../components";
+import { Accordion } from "../../../components";
 
 import { slideInWithFade } from "../../../constants";
-import { useModal } from "../../../hooks";
 import { images } from "../../../assets";
 import type { Offers } from "../../../types";
 
@@ -12,8 +11,6 @@ interface ServicesWhatWeOfferProps {
 }
 
 export const ServicesWhatWeOffer = ({ offers }: ServicesWhatWeOfferProps) => {
-  const [isOpen, toggleModal, handleClickOnBackdrop] = useModal();
-
   const { sectionTitle, image, retinaImage, offersList } = offers;
   const {
     servicesDetails: { offersImages },
@@ -26,14 +23,7 @@ export const ServicesWhatWeOffer = ({ offers }: ServicesWhatWeOfferProps) => {
     <>
       <section className="bg-letsTalkBgColor py-[80px]">
         <motion.div className="container" {...slideInWithFade}>
-          <div className="flex items-center justify-between">
-            <h2>{sectionTitle}</h2>
-            <Button
-              label="Let&#8217;s discuss your project"
-              className="w-auto"
-              onClick={toggleModal}
-            />
-          </div>
+          <h2>{sectionTitle}</h2>
           <div className="flex items-start justify-between pt-[40px]">
             <img
               srcSet={`${img} 1x, ${retinaImg} 2x`}
@@ -48,11 +38,6 @@ export const ServicesWhatWeOffer = ({ offers }: ServicesWhatWeOfferProps) => {
           </div>
         </motion.div>
       </section>
-      {isOpen && (
-        <Modal {...{ toggleModal, handleClickOnBackdrop }}>
-          <ContactForm onClose={toggleModal} />
-        </Modal>
-      )}
     </>
   );
 };
