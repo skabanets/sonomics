@@ -54,8 +54,8 @@ export const industries: Industry[] = [
       link: routes.TransformingECommerceCaseStudy,
     },
     images: {
-      image: "fintech_industries_page_1x",
-      retinaImage: "fintech_industries_page_2x",
+      image: "ecommerce_industries_page_1x",
+      retinaImage: "ecommerce_industries_page_2x",
       icon: "ecommerce_icon_1x",
       retinaIcon: "ecommerce_icon_2x",
     },
@@ -140,8 +140,8 @@ export const industries: Industry[] = [
       link: routes.RevolutionInTelecommunicationsCaseStudy,
     },
     images: {
-      image: "fintech_industries_page_1x",
-      retinaImage: "fintech_industries_page_2x",
+      image: "telecom_industries_page_1x",
+      retinaImage: "telecom_industries_page_2x",
     },
   },
   {

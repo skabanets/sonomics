@@ -52,6 +52,36 @@ import crypto_hp_2x from "./images/cases/crypto/crypto-hp@2x.webp";
 import crypto_hp_horizontal_1x from "./images/cases/crypto/crypto-hp-horizontal@1x.webp";
 import crypto_hp_horizontal_2x from "./images/cases/crypto/crypto-hp-horizontal@2x.webp";
 
+import telecom_main_1x from "./images/cases/telecom/telecom-main@1x.webp";
+import telecom_main_2x from "./images/cases/telecom/telecom-main@2x.webp";
+import telecom_vertical_1x from "./images/cases/telecom/telecom-vertical@1x.webp";
+import telecom_vertical_2x from "./images/cases/telecom/telecom-vertical@2x.webp";
+import telecom_general_page_1x from "./images/cases/telecom/telecom-general-page@1x.webp";
+import telecom_general_page_2x from "./images/cases/telecom/telecom-general-page@2x.webp";
+import telecom_full_screen_block_1x from "./images/cases/telecom/telecom-full-screen-block@1x.webp";
+import telecom_full_screen_block_2x from "./images/cases/telecom/telecom-full-screen-block@2x.webp";
+import telecom_industries_page_1x from "./images/cases/telecom/telecom-industries-page@1x.webp";
+import telecom_industries_page_2x from "./images/cases/telecom/telecom-industries-page@2x.webp";
+import telecom_hp_1x from "./images/cases/telecom/telecom-hp@1x.webp";
+import telecom_hp_2x from "./images/cases/telecom/telecom-hp@2x.webp";
+import telecom_hp_horizontal_1x from "./images/cases/telecom/telecom-hp-horizontal@1x.webp";
+import telecom_hp_horizontal_2x from "./images/cases/telecom/telecom-hp-horizontal@2x.webp";
+
+import ecommerce_main_1x from "./images/cases/ecommerce/ecommerce-main@1x.webp";
+import ecommerce_main_2x from "./images/cases/ecommerce/ecommerce-main@2x.webp";
+import ecommerce_vertical_1x from "./images/cases/ecommerce/ecommerce-vertical@1x.webp";
+import ecommerce_vertical_2x from "./images/cases/ecommerce/ecommerce-vertical@2x.webp";
+import ecommerce_general_page_1x from "./images/cases/ecommerce/ecommerce-general-page@1x.webp";
+import ecommerce_general_page_2x from "./images/cases/ecommerce/ecommerce-general-page@2x.webp";
+import ecommerce_full_screen_block_1x from "./images/cases/ecommerce/ecommerce-full-screen-block@1x.webp";
+import ecommerce_full_screen_block_2x from "./images/cases/ecommerce/ecommerce-full-screen-block@2x.webp";
+import ecommerce_industries_page_1x from "./images/cases/ecommerce/ecommerce-industries-page@1x.webp";
+import ecommerce_industries_page_2x from "./images/cases/ecommerce/ecommerce-industries-page@2x.webp";
+import ecommerce_hp_1x from "./images/cases/ecommerce/ecommerce-hp@1x.webp";
+import ecommerce_hp_2x from "./images/cases/ecommerce/ecommerce-hp@2x.webp";
+import ecommerce_hp_horizontal_1x from "./images/cases/ecommerce/ecommerce-hp-horizontal@1x.webp";
+import ecommerce_hp_horizontal_2x from "./images/cases/ecommerce/ecommerce-hp-horizontal@2x.webp";
+
 // Why Choose Us
 import industry_expertise_light_1x from "./images/why-choose-us/industry-expertise-light@1x.webp";
 import industry_expertise_light_2x from "./images/why-choose-us/industry-expertise-light@2x.webp";
@@ -247,6 +277,34 @@ export const images = {
     media_hp_2x,
     media_hp_horizontal_1x,
     media_hp_horizontal_2x,
+    telecom_main_1x,
+    telecom_main_2x,
+    telecom_vertical_1x,
+    telecom_vertical_2x,
+    telecom_general_page_1x,
+    telecom_general_page_2x,
+    telecom_full_screen_block_1x,
+    telecom_full_screen_block_2x,
+    telecom_industries_page_1x,
+    telecom_industries_page_2x,
+    telecom_hp_1x,
+    telecom_hp_2x,
+    telecom_hp_horizontal_1x,
+    telecom_hp_horizontal_2x,
+    ecommerce_main_1x,
+    ecommerce_main_2x,
+    ecommerce_vertical_1x,
+    ecommerce_vertical_2x,
+    ecommerce_general_page_1x,
+    ecommerce_general_page_2x,
+    ecommerce_full_screen_block_1x,
+    ecommerce_full_screen_block_2x,
+    ecommerce_industries_page_1x,
+    ecommerce_industries_page_2x,
+    ecommerce_hp_1x,
+    ecommerce_hp_2x,
+    ecommerce_hp_horizontal_1x,
+    ecommerce_hp_horizontal_2x,
   },
   whyChooseUsImages: {
     industry_expertise_light_1x,
