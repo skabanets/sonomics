@@ -18,7 +18,7 @@ export const caseStudies: CaseStudy[] = [
       technologies:
         "Java with Spring Framework / Kafka / AWS Services / REST APIs / Docker / Kubernetes / GraphQL / Terraform / OAuth 2.0 / ELK Stack",
       description:
-        "Their business encompassed online money transfers, digital payments, and working capital offerings. They also sought to enhance their platform's scalability to support future growth. The primary goals included adding advanced features, integrating with external providers, and enhancing user experience.",
+        "The client's business focused on online money transfers, digital payments, and working capital solutions. They aimed to enhance platform scalability for future growth by adding advanced features, integrating with external providers, and improving the user experience.",
       image: "fintech_overview_parallax_1x",
       retinaImage: "fintech_overview_parallax_2x",
     },

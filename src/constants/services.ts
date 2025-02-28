@@ -52,39 +52,49 @@ export const services: Service[] = [
         },
       ],
     },
-    whyChooseSonomics: {
-      sectionTitle: "Why choose Sonomics",
-      items: [
-        {
-          title: "End-to-end cloud expertise",
-          description:
-            "We handle every phase, from planning and development to post-launch support.",
-          image: "end_to_end_item1_1x",
-          retinaImage: "end_to_end_item1_2x",
-        },
-        {
-          title: "Scalable and Future-Ready Solutions",
-          description:
-            "Applications built for long-term growth, capable of scaling alongside your business needs.",
-          image: "end_to_end_item2_1x",
-          retinaImage: "end_to_end_item2_2x",
-        },
-        {
-          title: "User-centric design",
-          description:
-            "We prioritize usability, ensuring exceptional experiences for customers and internal teams.",
-          image: "end_to_end_item3_1x",
-          retinaImage: "end_to_end_item3_2x",
-        },
-        {
-          title: "Reliable performance",
-          description:
-            "Optimized applications that deliver speed, stability, and efficiency across platforms.",
-          image: "end_to_end_item4_1x",
-          retinaImage: "end_to_end_item4_2x",
-        },
-      ],
-    },
+    whyChooseSonomics: [
+      {
+        title: "End-to-end cloud expertise",
+        description: "We handle every phase, from planning and development to post-launch support.",
+        image: "end_to_end_item1_1x",
+        retinaImage: "end_to_end_item1_2x",
+      },
+      {
+        title: "Scalable Solutions",
+        description:
+          "Applications built for long-term growth, capable of scaling alongside your business needs.",
+        image: "end_to_end_item2_1x",
+        retinaImage: "end_to_end_item2_2x",
+      },
+      {
+        title: "User-centric design",
+        description:
+          "We prioritize usability, ensuring exceptional experiences for customers and internal teams.",
+        image: "end_to_end_item3_1x",
+        retinaImage: "end_to_end_item3_2x",
+      },
+      {
+        title: "Reliable performance",
+        description:
+          "Optimized applications that deliver speed, stability, and efficiency across platforms.",
+        image: "end_to_end_item4_1x",
+        retinaImage: "end_to_end_item4_2x",
+      },
+      {
+        title: "Security-first approach",
+        description:
+          "Implementing robust security measures to protect data, prevent threats, and ensure compliance.",
+        image: "end_to_end_item1_1x",
+        retinaImage: "end_to_end_item1_2x",
+      },
+      {
+        title: "Seamless integrations",
+        description:
+          "Connecting your systems with APIs and third-party services for streamlined operations.",
+        image: "end_to_end_item2_1x",
+        retinaImage: "end_to_end_item2_2x",
+      },
+    ],
     caseStudyId: "fintech-combination",
     expertise: {
       text: "With our end-to-end development approach, you gain a trusted partner who ensures every stage of the development process is executed with precision, efficiency, and reliability",
@@ -107,20 +117,28 @@ export const services: Service[] = [
           ],
         },
         {
-          technologyTitle: "Legacy system support and modernization:",
+          technologyTitle: "Legacy system support:",
           technologyProperties: [
             {
-              name: "We upgrade and maintain systems",
-              text: "built on PHP, Java, and JavaScript, optimizing codebases for improved efficiency and extending their lifecycle.",
+              name: "Codebase Optimization:",
+              text: "We upgrade and maintain systems built on PHP, Java, and JavaScript, improving efficiency, security, and extending their lifecycle.",
+            },
+            {
+              name: "Migration Strategies:",
+              text: "Transitioning legacy systems to modern architectures while minimizing downtime and ensuring data integrity.",
             },
           ],
         },
         {
-          technologyTitle: "Cloud platforms for deployment and scaling:",
+          technologyTitle: "Cloud platforms:",
           technologyProperties: [
             {
-              name: "AWS, Google Cloud Platform (GCP), Microsoft Azure",
-              text: "built on PHP, Java, and JavaScript, optimizing codebases for improved efficiency and extending their lifecycle.",
+              name: "Cloud Providers:",
+              text: "AWS, Google Cloud Platform (GCP), Microsoft Azure — ensuring high availability, security, and performance at scale.",
+            },
+            {
+              name: "Cloud-Native Development:",
+              text: "Building containerized applications with Kubernetes and Docker for enhanced flexibility and efficient resource management.",
             },
           ],
         },
@@ -128,8 +146,12 @@ export const services: Service[] = [
           technologyTitle: "Full-Stack Integration:",
           technologyProperties: [
             {
-              name: "Combining frontend, backend, and cloud infrastructure",
-              text: "for seamless workflows and modern applications.",
+              name: "Seamless Workflows:",
+              text: "Combining frontend, backend, and cloud infrastructure to create modern, high-performing applications.",
+            },
+            {
+              name: "API Development:",
+              text: "Building RESTful and GraphQL APIs for smooth data exchange between services and platforms.",
             },
           ],
         },
@@ -186,48 +208,52 @@ export const services: Service[] = [
         },
       ],
     },
-    whyChooseSonomics: {
-      sectionTitle: "Why choose Sonomics for AI integration",
-      items: [
-        {
-          title: "Customized AI solutions",
-          description:
-            "Tailored strategies and AI tools designed specifically for your business goals and industry challenges.",
-          image: "ai_item1_1x",
-          retinaImage: "ai_item1_2x",
-        },
-        {
-          title: "Improved Operational Efficiency",
-          description: "Automate manual processes, reducing costs and maximizing productivity.",
-          image: "ai_item2_1x",
-          retinaImage: "ai_item2_2x",
-        },
-        {
-          title: "Data-driven insights",
-          description:
-            "Leverage AI to uncover hidden opportunities, optimize performance, and improve decision-making accuracy.",
-          image: "ai_item3_1x",
-          retinaImage: "ai_item3_2x",
-        },
-        {
-          title: "Enhanced Customer Engagement",
-          description:
-            "Intelligent chatbots and personalized solutions that create seamless, satisfying user experiences.",
-          image: "ai_item4_1x",
-          retinaImage: "ai_item4_2x",
-        },
-        {
-          title: "Scalable and future-ready artificial intelligence",
-          description: "Systems designed to adapt and scale alongside your business as it evolves.",
-          image: "ai_item5_1x",
-          retinaImage: "ai_item5_2x",
-        },
-      ],
-    },
+    whyChooseSonomics: [
+      {
+        title: "Customized AI solutions",
+        description:
+          "Tailored strategies and AI tools designed specifically for your business goals and industry challenges.",
+        image: "ai_item1_1x",
+        retinaImage: "ai_item1_2x",
+      },
+      {
+        title: "Improved Operational Efficiency",
+        description: "Automate manual processes, reducing costs and maximizing productivity.",
+        image: "ai_item2_1x",
+        retinaImage: "ai_item2_2x",
+      },
+      {
+        title: "Data-driven insights",
+        description:
+          "Leverage AI to uncover hidden opportunities, optimize performance, and improve decision-making accuracy.",
+        image: "ai_item3_1x",
+        retinaImage: "ai_item3_2x",
+      },
+      {
+        title: "Enhanced Customer Engagement",
+        description:
+          "Intelligent chatbots and personalized solutions that create seamless, satisfying user experiences.",
+        image: "ai_item4_1x",
+        retinaImage: "ai_item4_2x",
+      },
+      {
+        title: "Scalable and future-ready artificial intelligence",
+        description: "Systems designed to adapt and scale alongside your business as it evolves.",
+        image: "ai_item5_1x",
+        retinaImage: "ai_item5_2x",
+      },
+      {
+        title: "Ethical and transparent AI",
+        description:
+          "AI solutions built with fairness, accountability, and compliance in mind, ensuring responsible innovation.",
+        image: "ai_item2_1x",
+        retinaImage: "ai_item2_2x",
+      },
+    ],
     caseStudyId: "fintech-combination",
     expertise: {
       text: "By integrating AI into your operations, we help you scale faster, improve accuracy, and create sustainable competitive advantages, all while reducing operational overhead",
-      accentWords: ["we help", "create sustainable competitive advantages"],
+      accentWords: ["scale faster", "advantages"],
     },
     technologies: {
       sectionTitle: "Technologies we use",
@@ -259,7 +285,7 @@ export const services: Service[] = [
           ],
         },
         {
-          technologyTitle: "Robotic process automation (RPA):",
+          technologyTitle: "Robotic process automation:",
           technologyProperties: [
             {
               name: "Platforms:",
@@ -338,60 +364,64 @@ export const services: Service[] = [
         },
       ],
     },
-    whyChooseSonomics: {
-      sectionTitle: "Why choose Sonomics for rapid prototyping",
-      items: [
-        {
-          title: "Speed and efficiency",
-          description:
-            "Get a tangible prototype delivered in just two weeks to see early results and quick value.",
-          image: "demo_version_item1_1x",
-          retinaImage: "demo_version_item1_2x",
-        },
-        {
-          title: "Iterative improvements",
-          description:
-            "We prioritize your feedback to refine and customize the demo based on real user needs and insights.",
-          image: "demo_version_item2_1x",
-          retinaImage: "demo_version_item2_2x",
-        },
-        {
-          title: "Risk reduction",
-          description:
-            "Validate concepts and test ideas in a controlled environment before committing to full-scale implementation.",
-          image: "demo_version_item3_1x",
-          retinaImage: "demo_version_item3_2x",
-        },
-        {
-          title: "Cost-effective approach",
-          description:
-            "Save time and resources by focusing on core functionalities first and scaling later.",
-          image: "demo_version_item4_1x",
-          retinaImage: "demo_version_item4_2x",
-        },
-        {
-          title: "Seamless cloud integration",
-          description:
-            "Deploy your demo version on leading cloud platforms for performance, scalability, and reliability.",
-          image: "demo_version_item5_1x",
-          retinaImage: "demo_version_item5_2x",
-        },
-      ],
-    },
+    whyChooseSonomics: [
+      {
+        title: "Speed and efficiency",
+        description:
+          "Get a tangible prototype delivered in just two weeks to see early results and quick value.",
+        image: "demo_version_item1_1x",
+        retinaImage: "demo_version_item1_2x",
+      },
+      {
+        title: "Iterative improvements",
+        description:
+          "We prioritize your feedback to refine and customize the demo based on real user needs and insights.",
+        image: "demo_version_item2_1x",
+        retinaImage: "demo_version_item2_2x",
+      },
+      {
+        title: "Risk reduction",
+        description:
+          "Validate concepts and test ideas in a controlled environment before committing to full-scale implementation.",
+        image: "demo_version_item3_1x",
+        retinaImage: "demo_version_item3_2x",
+      },
+      {
+        title: "Cost-effective approach",
+        description:
+          "Save time and resources by focusing on core functionalities first and scaling later.",
+        image: "demo_version_item4_1x",
+        retinaImage: "demo_version_item4_2x",
+      },
+      {
+        title: "Seamless cloud integration",
+        description:
+          "Deploy your demo version on leading cloud platforms for performance, scalability, and reliability.",
+        image: "demo_version_item5_1x",
+        retinaImage: "demo_version_item5_2x",
+      },
+      {
+        title: "User-centered design",
+        description:
+          "We ensure intuitive, engaging, and accessible user experiences tailored to your audience.",
+        image: "demo_version_item2_1x",
+        retinaImage: "demo_version_item2_2x",
+      },
+    ],
     caseStudyId: "fintech-combination",
     expertise: {
       text: "By delivering a working demo early in the process, we minimize uncertainty and set the stage for seamless development, ensuring you feel confident in your investment and our approach",
-      accentWords: ["delivering a working demo", "ensuring you feel confident"],
+      accentWords: ["working demo", "our approach"],
     },
     technologies: {
-      sectionTitle: "Technological highlights",
+      sectionTitle: "Technologies we use",
       cards: [
         {
           technologyTitle: "Rapid prototyping for web and mobile applications:",
           technologyProperties: [
             {
               name: "Frameworks:",
-              text: "React Native, Flutter, Node.js — enabling the rapid development of cross-platform prototypes that run smoothly on web and mobile.",
+              text: "React Native, Flutter, Node.js — development of cross-platform prototypes.",
             },
             {
               name: "Benefits:",
@@ -413,6 +443,19 @@ export const services: Service[] = [
           ],
         },
         {
+          technologyTitle: "Cloud deployment for speed and reliability:",
+          technologyProperties: [
+            {
+              name: "Platforms:",
+              text: "AWS Lambda, Azure Functions, and Firebase — enabling rapid, serverless deployment.",
+            },
+            {
+              name: "Benefits:",
+              text: "Scalability, minimal infrastructure costs, and fast deployment with reduced overhead.",
+            },
+          ],
+        },
+        {
           technologyTitle: "Automated testing for precision and quality:",
           technologyProperties: [
             {
@@ -422,19 +465,6 @@ export const services: Service[] = [
             {
               name: "Benefits:",
               text: "Early bug detection, optimized performance, and consistent quality.",
-            },
-          ],
-        },
-        {
-          technologyTitle: "Cloud Deployment for Speed and Reliability:",
-          technologyProperties: [
-            {
-              name: "Platforms",
-              text: "AWS Lambda, Azure Functions, and Firebase for swift, serverless deployment.",
-            },
-            {
-              name: "Benefits:",
-              text: "Scalability, minimal infrastructure costs, and fast deployment with reduced overhead.",
             },
           ],
         },
@@ -497,46 +527,50 @@ export const services: Service[] = [
         },
       ],
     },
-    whyChooseSonomics: {
-      sectionTitle: "Why choose Sonomics for requirement analysis & planning",
-      items: [
-        {
-          title: "Strategic Clarity",
-          description:
-            "A structured, transparent process that eliminates guesswork and provides a clear roadmap to success.",
-          image: "analysis_and_planning_item1_1x",
-          retinaImage: "analysis_and_planning_item1_2x",
-        },
-        {
-          title: "Client-Centric Approach",
-          description:
-            "We collaborate with stakeholders to ensure all requirements reflect your unique business priorities.",
-          image: "analysis_and_planning_item2_1x",
-          retinaImage: "analysis_and_planning_item2_2x",
-        },
-        {
-          title: "Risk Mitigation",
-          description:
-            "Thorough analysis and meticulous planning help identify risks early and mitigate them before they impact the project.",
-          image: "analysis_and_planning_item3_1x",
-          retinaImage: "analysis_and_planning_item3_2x",
-        },
-        {
-          title: "Scalable Architecture",
-          description:
-            "Our deployment plans ensure systems remain adaptable, future-ready, and capable of handling business growth.",
-          image: "analysis_and_planning_item4_1x",
-          retinaImage: "analysis_and_planning_item4_2x",
-        },
-        {
-          title: "Timely Delivery",
-          description:
-            "Agile milestones and real-time tracking ensure projects remain on schedule without compromising quality.",
-          image: "analysis_and_planning_item5_1x",
-          retinaImage: "analysis_and_planning_item5_2x",
-        },
-      ],
-    },
+    whyChooseSonomics: [
+      {
+        title: "Strategic Clarity",
+        description:
+          "A structured, transparent process that eliminates guesswork and provides a clear roadmap to success.",
+        image: "analysis_and_planning_item1_1x",
+        retinaImage: "analysis_and_planning_item1_2x",
+      },
+      {
+        title: "Client-Centric Approach",
+        description:
+          "We collaborate with stakeholders to ensure all requirements reflect your unique business priorities.",
+        image: "analysis_and_planning_item2_1x",
+        retinaImage: "analysis_and_planning_item2_2x",
+      },
+      {
+        title: "Risk Mitigation",
+        description:
+          "Thorough analysis and meticulous planning help identify risks early and mitigate them before they impact the project.",
+        image: "analysis_and_planning_item3_1x",
+        retinaImage: "analysis_and_planning_item3_2x",
+      },
+      {
+        title: "Scalable Architecture",
+        description:
+          "Our deployment plans ensure systems remain adaptable, future-ready, and capable of handling business growth.",
+        image: "analysis_and_planning_item4_1x",
+        retinaImage: "analysis_and_planning_item4_2x",
+      },
+      {
+        title: "Timely Delivery",
+        description:
+          "Agile milestones and real-time tracking ensure projects remain on schedule without compromising quality.",
+        image: "analysis_and_planning_item5_1x",
+        retinaImage: "analysis_and_planning_item5_2x",
+      },
+      {
+        title: "Data-Driven Decision Making",
+        description:
+          "We leverage analytics and research to create solutions that align with market trends and business goals.",
+        image: "analysis_and_planning_item2_1x",
+        retinaImage: "analysis_and_planning_item2_2x",
+      },
+    ],
     caseStudyId: "fintech-combination",
     approachAndAdvantages: {
       sectionTitle: "Our approach to requirement analysis & planning",
@@ -605,11 +639,6 @@ export const services: Service[] = [
             "The Scrum framework divides your project into short, time-boxed iterations known as sprints (usually 2–4 weeks).",
             "At the end of each sprint, we deliver a tangible output, ensuring continuous progress and alignment with your expectations.",
           ],
-          keyBenefits: [
-            "Regular feedback loops to refine features and stay aligned with business priorities.",
-            "Defined roles and responsibilities (Scrum Master, Product Owner, Development Team) for organized execution.",
-            "Transparency and accountability through daily stand-ups, sprint reviews, and retrospectives.",
-          ],
         },
         {
           offerName: "Kanban for Continuous Delivery",
@@ -617,22 +646,12 @@ export const services: Service[] = [
             "Kanban focuses on real-time task visualization and managing workflow efficiently using boards.",
             "By breaking down tasks into manageable units and limiting work-in-progress (WIP), we ensure a smooth and flexible development cycle.",
           ],
-          keyBenefits: [
-            "Continuous improvement with flexibility to adjust priorities in real time.",
-            "Streamlined workflows that identify and eliminate bottlenecks.",
-            "Enhanced visibility for all stakeholders through visual task boards.",
-          ],
         },
         {
           offerName: "Pilot projects for testing and validation",
           details: [
             "For projects that require both iterative sprints and flexible task handling, we combine the best of Scrum and Kanban into a Hybrid methodology.",
             "This approach is tailored to your project's unique scope, priorities, and timelines.",
-          ],
-          keyBenefits: [
-            "Scalability to meet evolving project demands.",
-            "Customization of workflows to balance structure and agility.",
-            "Integration of automated pipelines to ensure continuous delivery and quality assurance.",
           ],
         },
         {
@@ -643,50 +662,54 @@ export const services: Service[] = [
         },
       ],
     },
-    whyChooseSonomics: {
-      sectionTitle: "Why Sonomics excels with agile methodologies",
-      items: [
-        {
-          title: "Adaptive development",
-          description:
-            "We tailor Agile frameworks to suit your specific project requirements, ensuring optimal efficiency and flexibility.",
-          image: "agile_item1_1x",
-          retinaImage: "agile_item1_2x",
-        },
-        {
-          title: "Faster time-to-market",
-          description:
-            "Incremental delivery and real-time collaboration allow us to bring features to life faster.",
-          image: "agile_item2_1x",
-          retinaImage: "agile_item2_2x",
-        },
-        {
-          title: "Enhanced collaboration",
-          description:
-            "Regular communication, feedback loops, and task visibility keep stakeholders engaged and aligned.",
-          image: "agile_item3_1x",
-          retinaImage: "agile_item3_2x",
-        },
-        {
-          title: "Continuous improvement",
-          description:
-            "Agile's iterative nature ensures ongoing evaluation and improvement of processes and deliverables.",
-          image: "agile_item4_1x",
-          retinaImage: "agile_item4_2x",
-        },
-        {
-          title: "Scalable solutions",
-          description:
-            "Whether your business requires structured sprints, flexible workflows, or a hybrid blend, our Agile processes adapt to your growth and evolving goals.",
-          image: "agile_item5_1x",
-          retinaImage: "agile_item5_2x",
-        },
-      ],
-    },
+    whyChooseSonomics: [
+      {
+        title: "Adaptive development",
+        description:
+          "We tailor Agile frameworks to suit your specific project requirements, ensuring optimal efficiency and flexibility.",
+        image: "agile_item1_1x",
+        retinaImage: "agile_item1_2x",
+      },
+      {
+        title: "Faster time-to-market",
+        description:
+          "Incremental delivery and real-time collaboration allow us to bring features to life faster.",
+        image: "agile_item2_1x",
+        retinaImage: "agile_item2_2x",
+      },
+      {
+        title: "Enhanced collaboration",
+        description:
+          "Regular communication, feedback loops, and task visibility keep stakeholders engaged and aligned.",
+        image: "agile_item3_1x",
+        retinaImage: "agile_item3_2x",
+      },
+      {
+        title: "Continuous improvement",
+        description:
+          "Agile's iterative nature ensures ongoing evaluation and improvement of processes and deliverables.",
+        image: "agile_item4_1x",
+        retinaImage: "agile_item4_2x",
+      },
+      {
+        title: "Scalable solutions",
+        description:
+          "Whether your business requires structured sprints, flexible workflows, or a hybrid blend, our Agile processes adapt to your growth and evolving goals.",
+        image: "agile_item5_1x",
+        retinaImage: "agile_item5_2x",
+      },
+      {
+        title: "Risk-Responsive Development",
+        description:
+          "Agile allows us to quickly adapt to new challenges, pivot strategies, and mitigate risks before they impact project success.",
+        image: "agile_item2_1x",
+        retinaImage: "agile_item2_2x",
+      },
+    ],
     caseStudyId: "fintech-combination",
     expertise: {
       text: "Whether you need a highly-structured iterative approach, a flexible task-driven workflow, or a customized blend of both, Sonomics has the expertise to align agile methodologies with your goals",
-      accentWords: ["highly-structured iterative", "flexible", "has the expertise"],
+      accentWords: ["highly-structured iterative", "expertise"],
     },
     technologies: {
       sectionTitle: "Technologies powering our agile frameworks",
@@ -707,7 +730,7 @@ export const services: Service[] = [
           ],
         },
         {
-          technologyTitle: "Kanban Workflows for Flexibility:",
+          technologyTitle: "Kanban Workflows:",
           technologyProperties: [
             {
               name: "Tools:",
@@ -720,7 +743,7 @@ export const services: Service[] = [
           ],
         },
         {
-          technologyTitle: "Hybrid Development with Automation:",
+          technologyTitle: "Hybrid Development:",
           technologyProperties: [
             {
               name: "Tools:",
@@ -733,7 +756,7 @@ export const services: Service[] = [
           ],
         },
         {
-          technologyTitle: "Communication and Progress Tracking:",
+          technologyTitle: "Progress Tracking:",
           technologyProperties: [
             {
               name: "Tools:",
@@ -795,10 +818,10 @@ export const services: Service[] = [
       retinaImage: "crm_offers_2x",
       offersList: [
         {
-          offerName: "Customized business process management (BPM) systems",
+          offerName: "Customized business process management",
           details: [
             "We design and implement custom BPM systems to ensure your business processes are optimized, standardized, and aligned with your objectives.",
-            "Whether it’s automating workflows, reducing redundancies, or enhancing visibility, our systems drive measurable improvements in efficiency and productivity.",
+            "Whether it’s automating workflows, reducing redundancies, or enhancing visibility.",
           ],
         },
         {
@@ -824,46 +847,50 @@ export const services: Service[] = [
         },
       ],
     },
-    whyChooseSonomics: {
-      sectionTitle: "Why choose Sonomics for business process optimization",
-      items: [
-        {
-          title: "Tailored approach",
-          description:
-            "We create systems specifically designed to meet your business goals and operational requirements.",
-          image: "crm_item1_1x",
-          retinaImage: "crm_item1_2x",
-        },
-        {
-          title: "Data-driven insights",
-          description:
-            "We analyze your processes to identify gaps and inefficiencies, delivering solutions that drive measurable results.",
-          image: "crm_item2_1x",
-          retinaImage: "crm_item2_2x",
-        },
-        {
-          title: "Seamless integration",
-          description:
-            "Our experts ensure compatibility with your existing tools and systems for a unified workflow.",
-          image: "crm_item3_1x",
-          retinaImage: "crm_item3_2x",
-        },
-        {
-          title: "Expertise you can trust",
-          description:
-            "Backed by years of experience and industry-leading tools, we optimize processes to help you stay ahead of the competition.",
-          image: "crm_item4_1x",
-          retinaImage: "crm_item4_2x",
-        },
-        {
-          title: "Sustainable results",
-          description:
-            "Our solutions are scalable, adaptable, and future-ready, ensuring your business is positioned for long-term success.",
-          image: "crm_item5_1x",
-          retinaImage: "crm_item5_2x",
-        },
-      ],
-    },
+    whyChooseSonomics: [
+      {
+        title: "Tailored approach",
+        description:
+          "We create systems specifically designed to meet your business goals and operational requirements.",
+        image: "crm_item1_1x",
+        retinaImage: "crm_item1_2x",
+      },
+      {
+        title: "Data-driven insights",
+        description:
+          "We analyze your processes to identify gaps and inefficiencies, delivering solutions that drive measurable results.",
+        image: "crm_item2_1x",
+        retinaImage: "crm_item2_2x",
+      },
+      {
+        title: "Seamless integration",
+        description:
+          "Our experts ensure compatibility with your existing tools and systems for a unified workflow.",
+        image: "crm_item3_1x",
+        retinaImage: "crm_item3_2x",
+      },
+      {
+        title: "Expertise you can trust",
+        description:
+          "Backed by years of experience and industry-leading tools, we optimize processes to help you stay ahead of the competition.",
+        image: "crm_item4_1x",
+        retinaImage: "crm_item4_2x",
+      },
+      {
+        title: "Sustainable results",
+        description:
+          "Our solutions are scalable, adaptable, and future-ready, ensuring your business is positioned for long-term success.",
+        image: "crm_item5_1x",
+        retinaImage: "crm_item5_2x",
+      },
+      {
+        title: "Enhanced automation",
+        description:
+          "We streamline repetitive tasks and optimize workflows, freeing up valuable time for strategic growth.",
+        image: "crm_item2_1x",
+        retinaImage: "crm_item2_2x",
+      },
+    ],
     caseStudyId: "fintech-combination",
     technologies: {
       sectionTitle: "Technologies that power our tailored systems",
@@ -892,7 +919,7 @@ export const services: Service[] = [
           technologyProperties: [
             {
               name: "Platforms:",
-              text: "Slack APIs, Zapier, and Microsoft Power Automate",
+              text: "Slack APIs and Zapier",
             },
             {
               name: "Benefits:",
@@ -1007,7 +1034,6 @@ export const services: Service[] = [
           details: [
             "Seamlessly migrate your on-premise systems, applications, and workloads to the cloud with minimal disruption.",
             "Design and set up a robust cloud infrastructure tailored to your unique business needs and performance goals.",
-            "Conduct comprehensive assessments to determine the right cloud provider and architecture for your organization.",
           ],
         },
         {
@@ -1015,7 +1041,6 @@ export const services: Service[] = [
           details: [
             "Implement end-to-end security protocols to safeguard your cloud infrastructure, applications, and sensitive data.",
             "Set up proactive monitoring solutions to detect, analyze, and resolve issues in real time, ensuring system reliability.",
-            "Develop a comprehensive disaster recovery strategy to minimize downtime, protect against data loss, and ensure business continuity.",
           ],
         },
         {
@@ -1030,51 +1055,55 @@ export const services: Service[] = [
           details: [
             "Optimize your cloud resources to ensure you get the best performance at the lowest possible cost.",
             "Utilize tools for serverless computing and auto-scaling to align cloud resource usage with actual demand, minimizing waste.",
-            "Monitor and manage cloud spending with detailed insights to maximize ROI.",
           ],
         },
       ],
     },
-    whyChooseSonomics: {
-      sectionTitle: "Why choose Sonomics for cloud integration",
-      items: [
-        {
-          title: "End-to-end cloud expertise",
-          description:
-            "From strategy and planning to deployment and optimization, we handle every aspect of cloud integration.",
-          image: "cloud_item1_1x",
-          retinaImage: "cloud_item1_2x",
-        },
-        {
-          title: "Tailored solutions",
-          description:
-            "We customize cloud architectures to align with your business goals, ensuring maximum performance and efficiency.",
-          image: "cloud_item2_1x",
-          retinaImage: "cloud_item2_2x",
-        },
-        {
-          title: "Security-centric approach",
-          description:
-            "Our focus on cloud security ensures your data and systems remain protected at all times.",
-          image: "cloud_item3_1x",
-          retinaImage: "cloud_item3_2x",
-        },
-        {
-          title: "Cost-effective solutions",
-          description:
-            "Through strategic resource management and optimization, we help you reduce cloud expenses while maximizing value.",
-          image: "cloud_item4_1x",
-          retinaImage: "cloud_item4_2x",
-        },
-        {
-          title: "Reliable performance",
-          description:
-            "Our solutions guarantee high uptime, scalability, and availability, empowering you to meet growing demands.",
-          image: "cloud_item5_1x",
-          retinaImage: "cloud_item5_2x",
-        },
-      ],
-    },
+    whyChooseSonomics: [
+      {
+        title: "End-to-end cloud expertise",
+        description:
+          "From strategy and planning to deployment and optimization, we handle every aspect of cloud integration.",
+        image: "cloud_item1_1x",
+        retinaImage: "cloud_item1_2x",
+      },
+      {
+        title: "Tailored solutions",
+        description:
+          "We customize cloud architectures to align with your business goals, ensuring maximum performance and efficiency.",
+        image: "cloud_item2_1x",
+        retinaImage: "cloud_item2_2x",
+      },
+      {
+        title: "Security-centric approach",
+        description:
+          "Our focus on cloud security ensures your data and systems remain protected at all times.",
+        image: "cloud_item3_1x",
+        retinaImage: "cloud_item3_2x",
+      },
+      {
+        title: "Cost-effective solutions",
+        description:
+          "Through strategic resource management and optimization, we help you reduce cloud expenses while maximizing value.",
+        image: "cloud_item4_1x",
+        retinaImage: "cloud_item4_2x",
+      },
+      {
+        title: "Reliable performance",
+        description:
+          "Our solutions guarantee high uptime, scalability, and availability, empowering you to meet growing demands.",
+        image: "cloud_item5_1x",
+        retinaImage: "cloud_item5_2x",
+      },
+      {
+        title: "Seamless integration",
+        description:
+          "We ensure smooth cloud adoption by integrating with your existing systems, minimizing disruption and maximizing efficiency.",
+        image: "cloud_item2_1x",
+        retinaImage: "cloud_item2_2x",
+      },
+    ],
+
     caseStudyId: "fintech-combination",
     expertise: {
       text: "From migration and infrastructure setup to ongoing monitoring and cost optimization, we deliver cloud solutions that empower your business with a significant reduction in IT overhead",
@@ -1090,45 +1119,49 @@ export const services: Service[] = [
           technologyProperties: [
             {
               name: "AWS (Amazon Web Services):",
-              text: "scalable cloud solutions with services like EC2, S3, and AWS Lambda for serverless computing.",
+              text: "Scalable cloud solutions with EC2, S3, and AWS Lambda for serverless computing.",
             },
             {
               name: "Microsoft Azure:",
-              text: "robust infrastructure for enterprise-grade applications, featuring tools like Azure Virtual Machines and Azure Kubernetes Service (AKS).",
+              text: "Robust infrastructure with Azure Virtual Machines and Kubernetes Service (AKS).",
             },
             {
               name: "Google Cloud Platform (GCP):",
-              text: "high-performance solutions with services like Google Compute Engine and Google Kubernetes Engine (GKE).",
+              text: "High-performance solutions with Compute Engine and Kubernetes Engine (GKE).",
             },
           ],
         },
         {
-          technologyTitle: "Monitoring and disaster recovery:",
+          technologyTitle: "Disaster Recovery:",
           technologyProperties: [
             {
-              name: "AWS cloudWatch:",
-              text: "real-time monitoring and performance insights for AWS-based infrastructure.",
+              name: "AWS CloudWatch:",
+              text: "Real-time monitoring and performance insights for AWS-based infrastructure.",
             },
             {
-              name: "Azure monitor:",
-              text: "comprehensive monitoring and diagnostics for Azure systems.",
+              name: "Azure Monitor:",
+              text: "Comprehensive monitoring and diagnostics for Azure systems.",
             },
             {
-              name: "Google stackdriver:",
-              text: "unified logging, monitoring, and error reporting for Google Cloud environments.",
+              name: "Google Stackdriver:",
+              text: "Unified logging, monitoring, and error reporting for Google Cloud environments.",
             },
           ],
         },
         {
-          technologyTitle: "Cost optimization and resource management:",
+          technologyTitle: "Cost Optimization:",
           technologyProperties: [
             {
-              name: "Serverless computing:",
-              text: "utilize tools like AWS Lambda, Azure Functions, and Google Cloud Functions to reduce resource costs and improve efficiency.",
+              name: "Serverless Computing:",
+              text: "Use AWS Lambda, Azure Functions, and Google Cloud Functions to cut costs and boost efficiency.",
             },
             {
-              name: "Container orchestration:",
-              text: "implement Kubernetes and Docker to manage containerized applications with ease, enabling scalability and flexibility.",
+              name: "Container Orchestration:",
+              text: "Manage containers with Kubernetes and Docker for scalability and flexibility.",
+            },
+            {
+              name: "Autoscaling Solutions:",
+              text: "Adjust compute resources dynamically with AWS Auto Scaling, Azure Scale Sets, and GCP.",
             },
           ],
         },

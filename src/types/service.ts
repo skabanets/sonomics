@@ -17,12 +17,6 @@ export interface Offers {
 export interface OfferDate {
   offerName: string;
   details: string[];
-  keyBenefits?: string[];
-}
-
-export interface WhyChooseSonomics {
-  sectionTitle: string;
-  items: WhyChooseSonomicsItem[];
 }
 
 export interface WhyChooseSonomicsItem {
@@ -72,7 +66,7 @@ export interface Service {
   features: string[];
   hero: Hero;
   offers: Offers;
-  whyChooseSonomics: WhyChooseSonomics;
+  whyChooseSonomics: WhyChooseSonomicsItem[];
   caseStudyId: string;
   expertise?: Expertise;
   technologies?: Technologies;
