@@ -82,6 +82,21 @@ import ecommerce_hp_2x from "./images/cases/ecommerce/ecommerce-hp@2x.webp";
 import ecommerce_hp_horizontal_1x from "./images/cases/ecommerce/ecommerce-hp-horizontal@1x.webp";
 import ecommerce_hp_horizontal_2x from "./images/cases/ecommerce/ecommerce-hp-horizontal@2x.webp";
 
+import pharmaceutical_main_1x from "./images/cases/pharmaceutical/pharmaceutical-main@1x.webp";
+import pharmaceutical_main_2x from "./images/cases/pharmaceutical/pharmaceutical-main@2x.webp";
+import pharmaceutical_vertical_1x from "./images/cases/pharmaceutical/pharmaceutical-vertical@1x.webp";
+import pharmaceutical_vertical_2x from "./images/cases/pharmaceutical/pharmaceutical-vertical@2x.webp";
+import pharmaceutical_general_page_1x from "./images/cases/pharmaceutical/pharmaceutical-general-page@1x.webp";
+import pharmaceutical_general_page_2x from "./images/cases/pharmaceutical/pharmaceutical-general-page@2x.webp";
+import pharmaceutical_full_screen_block_1x from "./images/cases/pharmaceutical/pharmaceutical-full-screen-block@1x.webp";
+import pharmaceutical_full_screen_block_2x from "./images/cases/pharmaceutical/pharmaceutical-full-screen-block@2x.webp";
+import pharmaceutical_industries_page_1x from "./images/cases/pharmaceutical/pharmaceutical-industries-page@1x.webp";
+import pharmaceutical_industries_page_2x from "./images/cases/pharmaceutical/pharmaceutical-industries-page@2x.webp";
+import pharmaceutical_hp_1x from "./images/cases/pharmaceutical/pharmaceutical-hp@1x.webp";
+import pharmaceutical_hp_2x from "./images/cases/pharmaceutical/pharmaceutical-hp@2x.webp";
+import pharmaceutical_hp_horizontal_1x from "./images/cases/pharmaceutical/pharmaceutical-hp-horizontal@1x.webp";
+import pharmaceutical_hp_horizontal_2x from "./images/cases/pharmaceutical/pharmaceutical-hp-horizontal@2x.webp";
+
 // Why Choose Us
 import industry_expertise_light_1x from "./images/why-choose-us/industry-expertise-light@1x.webp";
 import industry_expertise_light_2x from "./images/why-choose-us/industry-expertise-light@2x.webp";
@@ -305,6 +320,20 @@ export const images = {
     ecommerce_hp_2x,
     ecommerce_hp_horizontal_1x,
     ecommerce_hp_horizontal_2x,
+    pharmaceutical_main_1x,
+    pharmaceutical_main_2x,
+    pharmaceutical_vertical_1x,
+    pharmaceutical_vertical_2x,
+    pharmaceutical_general_page_1x,
+    pharmaceutical_general_page_2x,
+    pharmaceutical_full_screen_block_1x,
+    pharmaceutical_full_screen_block_2x,
+    pharmaceutical_industries_page_1x,
+    pharmaceutical_industries_page_2x,
+    pharmaceutical_hp_1x,
+    pharmaceutical_hp_2x,
+    pharmaceutical_hp_horizontal_1x,
+    pharmaceutical_hp_horizontal_2x,
   },
   whyChooseUsImages: {
     industry_expertise_light_1x,
