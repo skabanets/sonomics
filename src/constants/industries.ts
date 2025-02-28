@@ -111,8 +111,8 @@ export const industries: Industry[] = [
       link: routes.PharmaceuticalDistributionCaseStudy,
     },
     images: {
-      image: "fintech_industries_page_1x",
-      retinaImage: "fintech_industries_page_2x",
+      image: "pharmaceutical_industries_page_1x",
+      retinaImage: "pharmaceutical_industries_page_2x",
       icon: "",
       retinaIcon: "",
     },

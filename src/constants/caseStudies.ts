@@ -771,28 +771,28 @@ export const caseStudies: CaseStudy[] = [
       "Our client is a global distributor specializing in pharmaceutical products, veterinary supplies, dietary supplements, and medical devices",
     images: {
       main: {
-        image: "fintech_main_1x",
-        retinaImage: "fintech_main_2x",
+        image: "pharmaceutical_main_1x",
+        retinaImage: "pharmaceutical_main_2x",
       },
       vertical: {
-        image: "fintech_vertical_1x",
-        retinaImage: "fintech_vertical_2x",
+        image: "pharmaceutical_vertical_1x",
+        retinaImage: "pharmaceutical_vertical_2x",
       },
       generalPage: {
-        image: "fintech_general_page_1x",
-        retinaImage: "fintech_general_page_2x",
+        image: "pharmaceutical_general_page_1x",
+        retinaImage: "pharmaceutical_general_page_2x",
       },
       fullScreenBlock: {
-        image: "fintech_full_screen_block_1x",
-        retinaImage: "fintech_full_screen_block_2x",
+        image: "pharmaceutical_full_screen_block_1x",
+        retinaImage: "pharmaceutical_full_screen_block_2x",
       },
       hp: {
-        image: "fintech_hp_1x",
-        retinaImage: "fintech_hp_2x",
+        image: "pharmaceutical_hp_1x",
+        retinaImage: "pharmaceutical_hp_2x",
       },
       hpHorizontal: {
-        image: "fintech_hp_horizontal_1x",
-        retinaImage: "fintech_hp_horizontal_2x",
+        image: "pharmaceutical_hp_horizontal_1x",
+        retinaImage: "pharmaceutical_hp_horizontal_2x",
       },
     },
   },
