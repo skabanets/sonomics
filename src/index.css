@@ -285,7 +285,7 @@ textarea:-webkit-autofill:focus {
 }
 
 .scale-on-hover {
-  @apply transform transition-transform duration-500 group-hover:scale-110 group-focus-visible:scale-110;
+  @apply transform transition-transform duration-500 group-hover:scale-105 group-focus-visible:scale-105;
 }
 
 .our-services-bg {
