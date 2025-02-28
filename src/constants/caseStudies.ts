@@ -954,28 +954,28 @@ export const caseStudies: CaseStudy[] = [
       "A leading European manufacturer of personalized lifestyle products partnered with us to enhance their e-commerce platform",
     images: {
       main: {
-        image: "fintech_main_1x",
-        retinaImage: "fintech_main_2x",
+        image: "ecommerce_main_1x",
+        retinaImage: "ecommerce_main_2x",
       },
       vertical: {
-        image: "fintech_vertical_1x",
-        retinaImage: "fintech_vertical_2x",
+        image: "ecommerce_vertical_1x",
+        retinaImage: "ecommerce_vertical_2x",
       },
       generalPage: {
-        image: "fintech_general_page_1x",
-        retinaImage: "fintech_general_page_2x",
+        image: "ecommerce_general_page_1x",
+        retinaImage: "ecommerce_general_page_2x",
       },
       fullScreenBlock: {
-        image: "fintech_full_screen_block_1x",
-        retinaImage: "fintech_full_screen_block_2x",
+        image: "ecommerce_full_screen_block_1x",
+        retinaImage: "ecommerce_full_screen_block_2x",
       },
       hp: {
-        image: "fintech_hp_1x",
-        retinaImage: "fintech_hp_2x",
+        image: "ecommerce_hp_1x",
+        retinaImage: "ecommerce_hp_2x",
       },
       hpHorizontal: {
-        image: "fintech_hp_horizontal_1x",
-        retinaImage: "fintech_hp_horizontal_2x",
+        image: "ecommerce_hp_horizontal_1x",
+        retinaImage: "ecommerce_hp_horizontal_2x",
       },
     },
   },
@@ -1150,28 +1150,28 @@ export const caseStudies: CaseStudy[] = [
       "A leading telecom company sought to develop a global platform enabling users to search, compare, and select Internet Service Providers (ISPs) worldwide",
     images: {
       main: {
-        image: "fintech_main_1x",
-        retinaImage: "fintech_main_2x",
+        image: "telecom_main_1x",
+        retinaImage: "telecom_main_2x",
       },
       vertical: {
-        image: "fintech_vertical_1x",
-        retinaImage: "fintech_vertical_2x",
+        image: "telecom_vertical_1x",
+        retinaImage: "telecom_vertical_2x",
       },
       generalPage: {
-        image: "fintech_general_page_1x",
-        retinaImage: "fintech_general_page_2x",
+        image: "telecom_general_page_1x",
+        retinaImage: "telecom_general_page_2x",
       },
       fullScreenBlock: {
-        image: "fintech_full_screen_block_1x",
-        retinaImage: "fintech_full_screen_block_2x",
+        image: "telecom_full_screen_block_1x",
+        retinaImage: "telecom_full_screen_block_2x",
       },
       hp: {
-        image: "fintech_hp_1x",
-        retinaImage: "fintech_hp_2x",
+        image: "telecom_hp_1x",
+        retinaImage: "telecom_hp_2x",
       },
       hpHorizontal: {
-        image: "fintech_hp_horizontal_1x",
-        retinaImage: "fintech_hp_horizontal_2x",
+        image: "telecom_hp_horizontal_1x",
+        retinaImage: "telecom_hp_horizontal_2x",
       },
     },
   },
