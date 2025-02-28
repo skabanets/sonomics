@@ -29,7 +29,7 @@ export const TechnologyCardItem = ({ card, cardHeight }: TechnologyCardItemProps
                   {technology.text.map((info, index) => (
                     <li
                       key={index}
-                      className="small-text relative pl-[12px] text-secondaryLightTextColor before:absolute before:left-0 before:top-[10.5px] before:h-[3px] before:w-[3px] before:rounded-full before:bg-mainTextColor"
+                      className="small-text relative pl-[12px] text-secondaryLightTextColor before:absolute before:left-0 before:top-[10.5px] before:h-[3px] before:w-[3px] before:rounded-full before:bg-secondaryLightTextColor"
                     >
                       {info}
                     </li>

@@ -78,7 +78,7 @@ const ServiceDetails = () => {
           <ServicesTechnologies technologies={service.technologies} id={service.id} />
         </>
       )}
-      <ServicesWhyChooseSonomics content={service.whyChooseSonomics} />
+      <ServicesWhyChooseSonomics items={service.whyChooseSonomics} />
       {caseStudyData && <ServicesCaseStudy caseStudy={caseStudyData as CaseStudy} />}
       <LetsTalk />
     </>

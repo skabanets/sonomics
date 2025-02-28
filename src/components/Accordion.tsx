@@ -90,22 +90,6 @@ export const Accordion = ({ offersList }: AccordionProps) => {
                   <li key={index}>{detail}</li>
                 ))}
               </ul>
-
-              {offer?.keyBenefits && (
-                <div className="mt-[10px]">
-                  <p className="font-semibold">Key Benefits:</p>
-                  <ul className="pl-[12px]">
-                    {offer.keyBenefits?.map((benefit, index) => (
-                      <li
-                        key={index}
-                        className="relative pl-[12px] before:absolute before:left-0 before:top-[13.5px] before:h-[3px] before:w-[3px] before:rounded-full before:bg-mainTextColor"
-                      >
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
             </div>
           </div>
           <Divider />

@@ -29,7 +29,7 @@ export const ServicesTechnologies = ({ technologies, id }: ServicesTechnologiesP
       case routes.OptimizeBusinessProcessesWithCRM.slice(10):
         return "h-[415px]";
       case routes.CloudIntegration.slice(10):
-        return "h-[455px]";
+        return "h-[400px]";
       default:
         return "h-[345px]";
     }
