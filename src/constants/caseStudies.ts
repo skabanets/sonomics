@@ -382,8 +382,8 @@ export const caseStudies: CaseStudy[] = [
         retinaImage: "crypto_main_2x",
       },
       vertical: {
-        image: "fintech_vertical_1x",
-        retinaImage: "fintech_vertical_2x",
+        image: "crypto_vertical_1x",
+        retinaImage: "crypto_vertical_2x",
       },
       generalPage: {
         image: "crypto_general_page_1x",
