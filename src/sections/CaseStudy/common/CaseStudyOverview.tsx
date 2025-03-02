@@ -18,7 +18,7 @@ export const CaseStudyOverview = ({ id, overview, sectionImages }: CaseStudyOver
     offset: ["start start", "end end"],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], [-125, 125]);
+  const y = useTransform(scrollYProgress, [0, 1], [-100, 100]);
 
   const { client, technologies, description } = overview;
   const { casesImages } = images;
