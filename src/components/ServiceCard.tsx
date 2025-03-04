@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 import { CustomTitle } from "../components";
 
-import { Service } from "../types";
+import type { Service } from "../types";
 
 interface IServiceCardProps {
   service: Service;
