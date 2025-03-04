@@ -62,14 +62,14 @@ export const ContactForm = ({ onClose }: ContactFormProps) => {
 
   return (
     <>
-      <div className="w-[527px]">
-        <div className={`mb-[30px] ${onClose ? "text-center" : "text-start"}`}>
-          <h2 className="mb-[20px]">Let&#8217;s talk</h2>
+      <div className="w-full lg:w-[527px]">
+        <div className={`mb-[10px] lg:mb-[30px] ${onClose ? "text-center" : "text-start"}`}>
+          <h2 className="mb-[10px] lg:mb-[20px]">Let&#8217;s talk</h2>
           <p className="big-text">Any question or remarks? Just write us a message!</p>
         </div>
         <form className="flex flex-col gap-[20px]" onSubmit={handleSubmit(onSubmit)}>
           <div className="fex-row flex gap-[30px]">
-            <div className="relative flex w-1/2 flex-col gap-[10px]">
+            <div className="relative flex w-[calc(50%-15px)] flex-col gap-[10px]">
               <label
                 htmlFor={`${onClose ? "modal-first-name" : "first-name"}`}
                 className={`label ${errors.firstName ? "!text-errorColor" : "text-mainTextColor"}`}
@@ -90,7 +90,7 @@ export const ContactForm = ({ onClose }: ContactFormProps) => {
                 <span className="error top-[72px]">{errors.firstName.message}</span>
               )}
             </div>
-            <div className="relative flex w-1/2 flex-col gap-[10px]">
+            <div className="relative flex w-[calc(50%-15px)] flex-col gap-[10px]">
               <label
                 htmlFor={`${onClose ? "modal-last-name" : "last-name"}`}
                 className={`label ${errors.lastName ? "!text-errorColor" : "text-mainTextColor"}`}
@@ -150,7 +150,7 @@ export const ContactForm = ({ onClose }: ContactFormProps) => {
             />
             {errors.message && <span className="error top-[152px]">{errors.message.message}</span>}
           </div>
-          <Button label="Send request" className="w-fit" type="submit" />
+          <Button label="Send request" className="mt-[10px] w-fit" type="submit" />
         </form>
       </div>
       {isLoading && <Loader />}
