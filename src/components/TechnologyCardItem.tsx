@@ -8,7 +8,7 @@ interface TechnologyCardItemProps {
 export const TechnologyCardItem = ({ card, cardHeight }: TechnologyCardItemProps) => {
   return (
     <div
-      className={`flex w-[400px] ${cardHeight} flex-col items-start gap-[20px] rounded-bl-[20px] rounded-br-[20px] border-t-[5px] border-solid border-accentYellowColor bg-darkBgColor p-[30px]`}
+      className={`flex w-[360px] md:w-[342px] lg:w-[400px] ${cardHeight} flex-col items-start gap-[20px] rounded-bl-[20px] rounded-br-[20px] border-t-[5px] border-solid border-accentYellowColor bg-darkBgColor p-[30px] md:p-[20px] lg:p-[30px]`}
     >
       <h4 className="text-whiteTextColor">{card.technologyTitle}</h4>
       <ul className="flex flex-col gap-[10px]">
