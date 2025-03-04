@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useMediaQuery } from "react-responsive";
 
 import { CustomTitle } from "../../../components";
 
@@ -14,9 +15,13 @@ interface ServicesCaseStudyProps {
 export const ServicesCaseStudy = ({ caseStudy }: ServicesCaseStudyProps) => {
   const { name, description, link, images: imgs } = caseStudy;
   const { casesImages } = images;
+  const isDesktop = useMediaQuery({ query: "(min-width: 1440px)" });
 
-  const img = casesImages[imgs.fullScreenBlock.image as keyof typeof casesImages];
-  const retinaImg = casesImages[imgs.fullScreenBlock.retinaImage as keyof typeof casesImages];
+  const image = isDesktop ? imgs.fullScreenBlock.image : imgs.generalPage.image;
+  const retinaImage = isDesktop ? imgs.fullScreenBlock.retinaImage : imgs.generalPage.retinaImage;
+
+  const img = casesImages[image as keyof typeof casesImages];
+  const retinaImg = casesImages[retinaImage as keyof typeof casesImages];
 
   return (
     <section
