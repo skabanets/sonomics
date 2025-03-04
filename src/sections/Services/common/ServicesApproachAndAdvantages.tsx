@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useMediaQuery } from "react-responsive";
 
 import { Icon } from "../../../components";
 
@@ -8,7 +9,7 @@ import {
   routes,
   slideInWithFade,
 } from "../../../constants";
-import { ApproachAndAdvantages } from "../../../types";
+import type { ApproachAndAdvantages } from "../../../types";
 
 interface ServicesApproachAndAdvantagesProps {
   approachAndAdvantages: ApproachAndAdvantages;
@@ -21,6 +22,9 @@ export const ServicesApproachAndAdvantages = ({
 }: ServicesApproachAndAdvantagesProps) => {
   const { sectionTitle, items } = approachAndAdvantages;
 
+  const isTablet = useMediaQuery({ query: "(min-width: 768px)" });
+  const isDesktop = useMediaQuery({ query: "(min-width: 1440px)" });
+
   const case1 = id === routes.RequirementAnalysisAndDevelopmentPlanning.slice(10);
   const case2 = id === routes.AgileMethodologies.slice(10);
   const case3 =
@@ -29,19 +33,26 @@ export const ServicesApproachAndAdvantages = ({
 
   if (case1) {
     return (
-      <section className="py-[100px]">
-        <motion.div className="container flex justify-between" {...slideInWithFade}>
-          <h2 className="w-[430px]">{sectionTitle}</h2>
+      <section className="pb-[50px] lg:py-[100px]">
+        <motion.div
+          className="container flex-row lg:flex-col lg:justify-between"
+          {...slideInWithFade}
+        >
+          <h2 className="mb-[40px] w-full lg:w-[430px]">{sectionTitle}</h2>
           <motion.ul
-            className="grid grid-cols-2 gap-[40px]"
-            variants={industriesContainerVariants}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.3 }}
+            className="flex flex-col gap-[30px] md:grid md:grid-cols-2 lg:gap-[40px]"
+            {...(isTablet
+              ? {
+                  variants: industriesContainerVariants,
+                  initial: "hidden",
+                  whileInView: "show",
+                  viewport: { once: true, amount: 0.3 },
+                }
+              : {})}
           >
             {items.map((item, index) => (
               <motion.li key={index} variants={cardVariants}>
-                <div className="flex h-[390px] w-[370px] flex-col items-start gap-[30px] rounded-bl-[20px] rounded-br-[20px] border-t-2 border-solid border-themeAccentColor bg-letsTalkBgColor px-[30px] py-[40px] transition">
+                <div className="flex h-[390px] w-full flex-col items-start gap-[30px] rounded-bl-[20px] rounded-br-[20px] border-t-2 border-solid border-themeAccentColor bg-letsTalkBgColor px-[30px] py-[40px] transition md:w-[337px] lg:w-[370px]">
                   <div className="flex items-center gap-[20px]">
                     <Icon
                       id={item.icon}
@@ -70,20 +81,24 @@ export const ServicesApproachAndAdvantages = ({
   if (case2) {
     return (
       <section>
-        <motion.div className="container flex flex-col gap-[40px]" {...slideInWithFade}>
+        <motion.div className="container flex flex-col gap-[50px]" {...slideInWithFade}>
           <h2>{sectionTitle}</h2>
           <motion.ul
-            className="flex justify-between"
-            variants={industriesContainerVariants}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.3 }}
+            className="flex flex-col gap-[30px] md:flex-row md:flex-wrap lg:flex-nowrap"
+            {...(isTablet
+              ? {
+                  variants: industriesContainerVariants,
+                  initial: "hidden",
+                  whileInView: "show",
+                  viewport: { once: true, amount: 0.3 },
+                }
+              : {})}
           >
             {items.map((item, index) => (
               <motion.li
                 key={index}
                 variants={cardVariants}
-                className="flex h-[260px] w-[300px] flex-col items-start gap-[20px] rounded-bl-[20px] rounded-br-[20px] border-t-2 border-solid border-themeAccentColor bg-letsTalkBgColor px-[30px] pt-[40px] transition"
+                className="flex h-[260px] w-full flex-col items-start gap-[20px] rounded-bl-[20px] rounded-br-[20px] border-t-2 border-solid border-themeAccentColor bg-letsTalkBgColor px-[30px] pt-[40px] transition md:w-[337px] lg:w-[300px]"
               >
                 <Icon
                   id={item.icon}
@@ -100,22 +115,29 @@ export const ServicesApproachAndAdvantages = ({
 
   if (case3) {
     return (
-      <section className="py-[100px]">
-        <motion.div className="container relative flex justify-end" {...slideInWithFade}>
-          <h2 className="absolute left-[80px] top-0 w-[269px]">{sectionTitle}</h2>
+      <section className="py-[50px] lg:py-[100px]">
+        <motion.div
+          className="container relative flex flex-col gap-[50px] lg:flex-row lg:justify-end"
+          {...slideInWithFade}
+        >
+          <h2 className="relative top-0 w-[269px] lg:absolute lg:left-[80px]">{sectionTitle}</h2>
           <motion.ul
-            className="grid-card-container"
-            variants={industriesContainerVariants}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.3 }}
+            className="lg:grid-card-container lg:flex-end flex flex-col gap-[30px] md:flex-row md:flex-wrap lg:ml-auto lg:w-[1170px]"
+            {...(isTablet
+              ? {
+                  variants: industriesContainerVariants,
+                  initial: "hidden",
+                  whileInView: "show",
+                  viewport: { once: true, amount: 0.3 },
+                }
+              : {})}
           >
-            <li className="empty-cell"></li>
+            {isDesktop && <li className="w-[370px]"></li>}
             {items.map((item, index) => (
               <motion.li
                 key={index}
                 variants={cardVariants}
-                className={`flex h-[310px] w-[370px] flex-col items-start gap-[30px] rounded-bl-[20px] rounded-br-[20px] border-t-2 border-solid border-themeAccentColor bg-letsTalkBgColor px-[30px] py-[40px] transition item-${index + 1}`}
+                className={`flex h-[310px] w-full flex-col items-start gap-[30px] rounded-bl-[20px] rounded-br-[20px] border-t-2 border-solid border-themeAccentColor bg-letsTalkBgColor px-[30px] py-[40px] transition md:w-[337px] lg:w-[370px] ${isDesktop ? `item-${index + 1}` : `item-${index}`}`}
               >
                 <Icon
                   id={item.icon}
