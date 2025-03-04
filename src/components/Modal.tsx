@@ -32,7 +32,7 @@ export const Modal = ({ children, toggleModal, handleClickOnBackdrop }: ModalPro
       <div
         ref={modalRef}
         tabIndex={-1}
-        className="modal relative z-10 max-h-[95dvh] min-h-[300px] min-w-[300px] rounded-[20px] bg-secondaryBgColor p-[50px] outline-none"
+        className="modal relative z-10 max-h-[95dvh] min-h-[300px] min-w-[300px] rounded-[20px] bg-secondaryBgColor p-[25px] outline-none md:p-[50px]"
       >
         <div className="small-text absolute right-[20px] top-[20px] flex items-center gap-[10px]">
           Close
