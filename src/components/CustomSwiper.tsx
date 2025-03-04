@@ -84,7 +84,7 @@ export const CustomSwiper = ({
               className="size-[15px] fill-mainTextColor transition group-hover:fill-themeAccentColor group-focus-visible:fill-themeAccentColor"
             />
           </button>
-          <div className="flex w-[40px] gap-[5px]">
+          <div className="flex gap-[5px]">
             {items.map((_, index) => (
               <div
                 key={index}
