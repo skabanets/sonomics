@@ -21,10 +21,10 @@ export const ServicesWhatWeOffer = ({ offers }: ServicesWhatWeOfferProps) => {
 
   return (
     <>
-      <section className="bg-letsTalkBgColor py-[80px]">
+      <section className="bg-letsTalkBgColor py-[50px] lg:py-[80px]">
         <motion.div className="container" {...slideInWithFade}>
           <h2>{sectionTitle}</h2>
-          <div className="flex items-start justify-between pt-[40px]">
+          <div className="flex flex-col items-start gap-[57px] pt-[40px] lg:flex-row lg:justify-between">
             <img
               srcSet={`${img} 1x, ${retinaImg} 2x`}
               src={img}
@@ -32,7 +32,7 @@ export const ServicesWhatWeOffer = ({ offers }: ServicesWhatWeOfferProps) => {
               width={530}
               height={510}
               loading="lazy"
-              className="h-[510px] rounded-[15px] object-cover"
+              className="h-[300px] w-full rounded-[15px] object-cover md:h-[510px]"
             />
             <Accordion offersList={offersList} />
           </div>

@@ -56,7 +56,7 @@ export const Accordion = ({ offersList }: AccordionProps) => {
   }, [offersList.length]);
 
   return (
-    <ul ref={accordionRef} className="w-[680px] pt-[45px]">
+    <ul ref={accordionRef} className="w-full lg:w-[680px] lg:pt-[45px]">
       <Divider />
       {offersList.map((offer, index) => (
         <li key={offer.offerName}>
