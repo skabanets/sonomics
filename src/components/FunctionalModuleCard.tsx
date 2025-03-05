@@ -6,7 +6,7 @@ interface FunctionalModuleCardProps {
 
 export const FunctionalModuleCard = ({ module }: FunctionalModuleCardProps) => {
   return (
-    <div className="flex h-[318px] w-[410px] flex-col gap-[20px] rounded-[10px] border border-solid border-blackBgColor bg-formFieldBgColor p-[30px]">
+    <div className="flex h-[340px] flex-col gap-[20px] rounded-[10px] border border-solid border-blackBgColor bg-formFieldBgColor p-[30px] md:w-[338px] lg:h-[318px] lg:w-[410px]">
       <h4>{module.moduleName}</h4>
       <ul className="flex flex-col gap-[10px]">
         {module.details.map((text, index) => (
