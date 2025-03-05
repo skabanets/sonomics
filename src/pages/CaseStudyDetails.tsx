@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
 
 import {
   CaseStudyChallenges,
@@ -13,15 +14,16 @@ import {
 } from "../sections";
 import { ItemsMenu } from "../components";
 
+import { useItemsMenuNavigation } from "../hooks";
 import { caseStudies, routes } from "../constants";
 import type { CaseStudyMenuItem } from "../types";
-import { useItemsMenuNavigation } from "../hooks";
 
 const CaseStudyDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
   const caseStudy = caseStudies.find((caseStudy) => caseStudy.id === id);
+  const isDesktop = useMediaQuery({ query: "(min-width: 1440px)" });
 
   useEffect(() => {
     if (!caseStudy) {
@@ -64,13 +66,15 @@ const CaseStudyDetails = () => {
       <CaseStudyHero title={pageTitle} />
       {
         <div>
-          <ItemsMenu
-            items={caseStudyOptions}
-            currentIndex={currentIndex}
-            handleMenuClick={handleMenuClick}
-            styles="sticky top-0 opacity-100 z-50"
-          />
-          <CaseStudyOverview id="overview" overview={overview} sectionImages={images.main} />
+          {isDesktop && (
+            <ItemsMenu
+              items={caseStudyOptions}
+              currentIndex={currentIndex}
+              handleMenuClick={handleMenuClick}
+              styles="sticky top-0 opacity-100 z-50"
+            />
+          )}
+          <CaseStudyOverview id="overview" overview={overview} sectionImages={images} />
           <CaseStudyChallenges id="challenges" challenges={challenges} />
           {services && <CaseStudyServices id="services" services={services} />}
           {functionalModules && (

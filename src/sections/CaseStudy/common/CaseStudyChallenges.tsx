@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useMediaQuery } from "react-responsive";
 
 import { Button, ContactForm, Modal } from "../../../components";
 
@@ -13,15 +14,23 @@ interface CaseStudyChallengesProps {
 export const CaseStudyChallenges = ({ id, challenges }: CaseStudyChallengesProps) => {
   const [isOpen, toggleModal, handleClickOnBackdrop] = useModal();
 
+  const isTablet = useMediaQuery({ query: "(min-width: 768px)" });
+  //  const isDesktop = useMediaQuery({ query: "(min-width: 1440px)" });
+
   return (
     <>
-      <section className="bg-letsTalkBgColor py-[80px]" id={id}>
-        <motion.div className="container flex justify-between" {...slideInWithFade}>
-          <div className="flex flex-col gap-[40px]">
+      <section className="bg-letsTalkBgColor py-[50px] lg:py-[80px]" id={id}>
+        <motion.div
+          className="container flex flex-col gap-[30px] md:flex-row md:justify-between"
+          {...slideInWithFade}
+        >
+          <div className="flex flex-col gap-[30px] lg:gap-[40px]">
             <h2>Challenges</h2>
-            <Button label="Get in Touch" className="w-[186px]" onClick={toggleModal} />
+            {isTablet && (
+              <Button label="Get in Touch" className="w-[186px]" onClick={toggleModal} />
+            )}
           </div>
-          <ul className="flex w-[810px] flex-wrap gap-x-[90px] gap-y-[60px]">
+          <ul className="flex w-[360px] flex-wrap gap-[20px] lg:w-[810px] lg:gap-x-[90px] lg:gap-y-[60px]">
             {challenges.map((challenge, index) => {
               const itemBorderColor = `border-${caseStudyColors[Math.floor(index / 2) % caseStudyColors.length]}`;
 

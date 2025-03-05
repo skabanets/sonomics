@@ -1,14 +1,15 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useMediaQuery } from "react-responsive";
 
 import { images } from "../../../assets";
 import { slideInWithFade } from "../../../constants";
-import type { Overview, caseStudyImage } from "../../../types";
+import type { Overview, caseStudyImages } from "../../../types";
 
 interface CaseStudyOverviewProps {
   id: string;
   overview: Overview;
-  sectionImages: caseStudyImage;
+  sectionImages: caseStudyImages;
 }
 
 export const CaseStudyOverview = ({ id, overview, sectionImages }: CaseStudyOverviewProps) => {
@@ -23,8 +24,15 @@ export const CaseStudyOverview = ({ id, overview, sectionImages }: CaseStudyOver
   const { client, technologies, description } = overview;
   const { casesImages } = images;
 
-  const img = casesImages[sectionImages.image as keyof typeof casesImages];
-  const retinaImg = casesImages[sectionImages.retinaImage as keyof typeof casesImages];
+  const isDesktop = useMediaQuery({ query: "(min-width: 1440px)" });
+
+  const image = isDesktop ? sectionImages.main.image : sectionImages.hpHorizontal.image;
+  const retinaImage = isDesktop
+    ? sectionImages.main.retinaImage
+    : sectionImages.hpHorizontal.retinaImage;
+
+  const img = casesImages[image as keyof typeof casesImages];
+  const retinaImg = casesImages[retinaImage as keyof typeof casesImages];
 
   const overviewAnimationProps = {
     ...slideInWithFade,
@@ -35,10 +43,10 @@ export const CaseStudyOverview = ({ id, overview, sectionImages }: CaseStudyOver
   };
 
   return (
-    <section className="bg-letsTalkBgColor pt-[80px]" id={id}>
+    <section className="bg-letsTalkBgColor pt-[50px] lg:pt-[80px]" id={id}>
       <motion.div className="container" {...overviewAnimationProps}>
-        <div className="flex justify-between">
-          <div className="flex w-[407px] flex-col gap-[36px]">
+        <div className="flex flex-col gap-[30px] md:flex-row md:justify-between">
+          <div className="flex w-full flex-col gap-[30px] md:w-[320px] lg:w-[407px] lg:gap-[36px]">
             <div>
               <h3>Client</h3>
               <p className="small-text mt-[15px] text-secondaryTextColor">{client}</p>
@@ -48,20 +56,32 @@ export const CaseStudyOverview = ({ id, overview, sectionImages }: CaseStudyOver
               <p className="small-text mt-[15px] text-secondaryTextColor">{technologies}</p>
             </div>
           </div>
-          <h3 className="w-[675px]">{description}</h3>
+          <h3 className="w-full md:w-[360px] lg:w-[675px]">{description}</h3>
         </div>
-        <div className="relative mt-[80px] h-[500px] overflow-hidden rounded-[20px]" ref={ref}>
+        {isDesktop ? (
+          <div className="relative mt-[80px] h-[500px] overflow-hidden rounded-[20px]" ref={ref}>
+            <motion.img
+              style={{ y }}
+              srcSet={`${img} 1x, ${retinaImg} 2x`}
+              src={img}
+              alt="Parallax effect image showing a scenic background"
+              width={1280}
+              height={700}
+              loading="lazy"
+              className="absolute left-0 top-[-100px] h-[700px] w-[1280px] rounded-[20px] object-cover"
+            />
+          </div>
+        ) : (
           <motion.img
-            style={{ y }}
             srcSet={`${img} 1x, ${retinaImg} 2x`}
             src={img}
-            alt="Parallax effect image showing a scenic background"
-            width={1280}
-            height={700}
+            alt="Case study overview image"
+            width={360}
+            height={300}
             loading="lazy"
-            className="absolute left-0 top-[-100px] h-[700px] w-full rounded-[20px] object-cover"
+            className="mt-[50px] h-[300px] w-full rounded-[20px] object-cover"
           />
-        </div>
+        )}
       </motion.div>
     </section>
   );
