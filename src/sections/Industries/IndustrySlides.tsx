@@ -46,12 +46,17 @@ export const IndustrySlides = () => {
         return (
           <section
             key={index}
-            className={`h-dvh py-[${slidePadding}px] transition ${slideBackgroundColor}`}
+            className={`h-dvh transition ${slideBackgroundColor} flex items-center`}
+            style={{
+              // height: `calc(100dvh - 56px)`,
+              paddingTop: `${slidePadding}px`,
+              paddingBottom: `${slidePadding}px`,
+            }}
             id={industry.name}
           >
             <motion.div
               {...slideInWithFade}
-              className={`container relative flex flex-col h-lg:max-h-[1000px]`}
+              className={`container relative flex w-full flex-col h-lg:max-h-[1000px]`}
               style={{ height: `${slideHeight}px` }}
             >
               <IndustrySliderCard industry={industry} index={index} />
