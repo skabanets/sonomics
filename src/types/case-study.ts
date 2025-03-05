@@ -34,7 +34,7 @@ export interface caseStudyImage {
   retinaImage: string;
 }
 
-interface caseStudyImages {
+export interface caseStudyImages {
   main: caseStudyImage;
   vertical: caseStudyImage;
   generalPage: caseStudyImage;
